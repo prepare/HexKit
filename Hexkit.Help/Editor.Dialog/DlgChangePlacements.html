@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Placement Sites Dialog</title>
+</head>
+<body>
+  <h1>Change Placement Sites Dialog</h1>
+  <p>This dialog allows you to edit the placement sites associated with the entity class specified in the dialog’s title bar. These are the map locations where a faction may place entities of that class.</p>
+  <ul>
+    <li><a href="#Map">Map View</a></li>
+    <li><a href="#Default">Allow Default Sites</a></li>
+    <li><a href="#Sites">Site List</a></li>
+    <li><a href="#Site">Selected Site</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Map">Map View</a> and <a href="#Sites">Site List</a> to adjust their respective share of the current dialog width.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> when the focus is not on another button to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. You may define placement sites that are initially unowned, or not owned by the faction that would build entities of this class. In that case, the faction will have to capture (or otherwise acquire) that map site before it can place entities there.</p>
+  <p>2. Changing the <a href="#Default">Allow Default Sites</a> option marks the Entities section as changed. However, changing the <a href="#Sites">Site List</a> marks the Areas section as changed because all map locations are stored in that section.</p>
+  <h2><a name="Map">Map View</a></h2>
+  <p>The left side of this dialog is taken up by a map view. If the <a href="#Sites">Site List</a> is not empty, the site corresponding to its first entry is initially centered and selected.</p>
+  <ul>
+    <li><b>Highlighted</b> sites indicate placement sites. Each highlighted site corresponds to one entry in the <b>Site List</b>.</li>
+    <li><b>Left-click</b> on a site to select it. If the site is highlighted, its corresponding entry is also selected in the <b>Site List</b>.</li>
+    <li><b>Double-click</b> on a site to toggle its status.
+      <ul>
+        <li>Highlighted sites are <b>removed</b> from the <b>Site List</b>, as with the <b>Remove Site</b> button. The site is no longer highlighted.</li>
+        <li>Other sites are <b>added</b> to the <b>Site List</b>, as with the <b>Add Site</b> button. The site is now highlighted.</li>
+      </ul>
+    </li>
+  </ul>
+  <h2><a name="Default">Allow Default Sites</a></h2>
+  <p>If the <b>Allow Default Sites (Alt+D)</b> option is checked, entities of the specified class may be placed on any default sites defined by Hexkit Game or by the rule script, in addition to any sites defined in the <a href="#Sites">Site List</a>.</p>
+  <p>If this option is unchecked, only the placement sites defined in the <b>Site List</b> are valid, and all default sites are ignored. If this option is unchecked and the <b>Site List</b> is empty, entities of the specified class cannot be placed.</p>
+  <h2><a name="Sites">Site List</a></h2>
+  <p>This list shows the map coordinates of all placement sites that are currently defined for this entity class.</p>
+  <ul>
+    <li>Column <b>Owner</b> shows the unique internal identifier of the faction that owns each site, or “(unowned)” if the site has no owner.</li>
+    <li><b>Left-click</b> on an entry to select it. The corresponding site is also selected in the <a href="#Map">Map View</a>, and scrolled into view if necessary.</li>
+  </ul>
+  <h2><a name="Site">Selected Site</a></h2>
+  <p>This box shows information on the selected site, if any. Click on a site in the <a href="#Map">Map View</a> to select it. You can also click on its corresponding entry in the <a href="#Sites">Site List</a>.</p>
+  <ul>
+    <li><b>Site</b> (in the box title) shows the map coordinates of the selected site.</li>
+    <li><b>Owner</b> shows the unique internal identifiers of the faction that owns the selected site, or “(unowned)” if the site has no owner.</li>
+    <li><b>Units Can Capture</b> shows a check mark if the selected site contains at least one terrain with the <b>Capture</b> ability.</li>
+    <li>Choose <b>Add Site (Alt+A)</b> to add the coordinates of the selected site to the <b>Site List</b>. This button is disabled if the selected site is already in the list.</li>
+    <li>Choose <b>Remove Site (Alt+R)</b> to remove the selected site from the <b>Site List</b>. This button is disabled if the coordinates of the selected site are not in the list.</li>
+  </ul>
+</body>
+</html>

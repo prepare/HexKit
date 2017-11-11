@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Player Setup: Selected Human Player</title>
+</head>
+<body>
+  <h1>Player Setup: Selected Human Player</h1>
+  <p>This box appears on the <a href="DlgChangePlayers.html">Player Setup</a> dialog when the selected faction is controlled by a human player.</p>
+  <ul>
+    <li>Use the <b>Name (Alt+N)</b> field to change the player’s name. Clearing this field reverts the player to a default name. This is “Human Player <em>n</em>” where <em>n</em> is the player index.</li>
+    <li>Choose <b>Change E-mail Address (Alt+E)</b> to display a <a href="DlgChangeEmail.html">Change E-mail</a> dialog, allowing you to change the player’s e-mail address.</li>
+    <li>Choose <b>Clear (Alt+C)</b> to clear the player’s e-mail address. This sets the player to local/hotseat mode.</li>
+    <li>Choose <b>Browse Address Book… (Alt+B)</b> to browse your e-mail client’s address book for player names and addresses. The current player’s name and e-mail address will be set to the first selected recipient. (Selecting a recipient is usually accomplished with a <b>To</b> button.)</li>
+    <li>Choose <b>Find… (Alt+F)</b> to look up the e-mail address for the player’s name in your e-mail client’s address book. You may be prompted with a list of address book entries if the player name does not match exactly one e-mail address.</li>
+    <li>See <a href="DlgChangePlayers.html">Player Setup</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Browse</b> and <b>Find</b> buttons use the Simple MAPI protocol to access your e-mail client’s address book. This can be tricky, especially when you’re not using a Microsoft e-mail program. Please consult the ReadMe.html file (see <a href="Introduction.html">Introduction</a>) if these buttons do not work as expected.</p>
+  <p>2. You cannot mix local/hotseat and play-by-email modes in the same game. All human players that are assigned to a faction must either use local/hotseat mode, or they must all have a valid e-mail address. You cannot dismiss the <a href="DlgChangePlayers.html">Player Setup</a> dialog until one of these conditions is true.</p>
+  <p>3. During a game, Hexkit will automatically detect when two consecutive human players share the same e-mail address and perform this particular changeover in hotseat mode. So if several human players in a PBEM game are sharing the same computer, simply set them to an identical e-mail address.</p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>View Menu</title>
+</head>
+<body>
+  <h1>View Menu</h1>
+  <p>All menu options except for <b>Save Window</b> affect only the <a href="GameViewMap.html">Map View</a>. They are disabled if no game is active.</p>
+  <ul>
+    <li><a name="Animation"><b>Animation (Ctrl+Shift+A)</b></a> enables or disables random animation for all graphical tiles that can be animated. This menu item is disabled if the current scenario does not use any such tiles.</li>
+    <li><a name="ShowFlags"><b>Show Flags (Ctrl+Shift+F)</b></a> shows or hides flags that indicate the owner, size, and status of unit stacks. See <a href="#Remarks">Remarks</a> for details.</li>
+    <li><a name="ShowGrid"><b>Show Grid (Ctrl+Shift+G)</b></a> shows or hides a black grid outline separating adjacent map sites. The map view may look more pleasant without the outline but distances may be harder to judge.</li>
+    <li><a name="ShowOwner"><b>Show Owner (Ctrl+Shift+O)</b></a> adds or removes color shading indicating the faction that owns each map site. When this option is checked, owned sites are tinted in the appropriate faction color, and unowned sites are dimmed.</li>
+    <li><a name="ShowGauges"><b>Show Gauges (Ctrl+Shift+U)</b></a> displays the <a href="DlgShowGauges.html">Show Gauges</a> dialog, allowing you to select a unit resource to show in depletion gauges on the map view.</li>
+    <li><a name="ShowVariable"><b>Show Variable (Ctrl+Shift+V)</b></a> displays the <a href="DlgShowVariable.html">Show Variable</a> dialog, allowing you to select an attribute or resource whose values are shown on the map view.</li>
+    <li><a name="CenterSite"><b>Center Site (C)</b></a> centers the map view on the <a href="GameViewMap.html#Mouse">Selected Site</a>.</li>
+    <li><a name="Zoom"><b>Zoom</b></a> opens a submenu with three commands to select one of the available zoom levels for the map view:
+      <ul>
+        <li><a name="ZoomStd"><b>Standard (Ctrl+Z)</b></a> restores the standard zoom level, showing the graphical tiles at their original size. Clicking the mouse wheel (or the middle mouse button) has the same effect.</li>
+        <li><a name="ZoomIn"><b>Zoom In (Z)</b></a> increases the zoom level. Moving the mouse wheel forward has the same effect.</li>
+        <li><a name="ZoomOut"><b>Zoom Out (X)</b></a> decreases the zoom level. Moving the mouse wheel backward has the same effect.</li>
+      </ul>
+      <p><b>Zoom In</b> and <b>Zoom Out</b> are disabled if the map view is already at the highest or the lowest zoom level, respectively.</p>
+    </li>
+    <li><a name="Performance"><b>Performance</b></a> opens a submenu with three options that may improve the performance of map view displays:
+      <ul>
+        <li><a name="BitmapGrid"><b>Use Bitmap Grid</b></a> draws the map grid requested by <a href="#ShowGrid">Show Grid</a> using fast but inaccurate bitmaps, rather than slower but more accurate WPF drawing commands.</li>
+        <li><a name="OpaqueImages"><b>Use Opaque Images</b></a> treats images as fully opaque, unless explicitly marked as translucent by the scenario designer. Opaque images are drawn using simple pixel copying. This is faster than alpha blending but may cause ugly seams around scaled images.</li>
+        <li><a name="StaticArrows"><b>Use Static Arrows</b></a> shows static red or blue arrows for planned attacks or movements, without a bright spot flowing along the arrow. Animation puts a heavy load on the CPU and may irritate some users.</li>
+        <li><a name="StaticMarker"><b>Use Static Marker</b></a> shows a static white outline to mark the selected site, instead of a pulsating color band. Animation puts a heavy load on the CPU and may irritate some users.</li>
+      </ul>
+    </li>
+    <li><a name="Theme"><b>Display Theme</b> opens a submenu with seven options to change the application’s display theme. Changes take effect only after the application has been restarted.</a>
+      <ul>
+        <li><a name="ThemeSystem"><b>System</b></a> selects the default theme most appropriate for your Windows configuration.</li>
+        <li><a name="ThemeClassic"><b>Classic</b></a> selects the Classic theme used by Windows 2000 and earlier.</li>
+        <li><a name="ThemeLuna"><b>Luna</b></a> selects the Luna theme used by Windows XP.</li>
+        <li><a name="ThemeLunaHomestead"><b>Luna Homestead</b></a> selects the Homestead (green) variant of the Luna theme.</li>
+        <li><a name="ThemeLunaMetallic"><b>Luna Metallic</b></a> selects the Metallic (silver) variant of the Luna theme.</li>
+        <li><a name="ThemeRoyale"><b>Royale</b></a> selects the Royale theme used by Windows XP Media Center Edition.</li>
+        <li><a name="ThemeAero"><b>Aero</b></a> selects the Aero theme used by Windows Vista and Windows 7.</li>
+        <li><a name="ThemeAero2"><b>Aero 2</b></a> selects the Aero 2 theme used by Windows 8 and later.</li>
+        <li><a name="ThemeAeroLite"><b>Aero Lite</b></a> selects the Aero Lite theme used by Windows 8 and later.</li>
+      </ul>
+    </li>
+    <li><a name="SaveWindow"><b>Save Window</b></a> saves the current application window size and location as the new start-up default for the current user and the current Windows desktop resolution.</li>
+  </ul>
+  <h3><a name="Remarks">Remarks</a></h3>
+  <p>1. Whenever a map view option changes, it is automatically saved as the new default for the current user. All options are saved separately for Hexkit Game and Hexkit Editor.</p>
+  <p>2. Turning on <b>Animation</b> may have no visible effect if none of the graphical tiles that are capable of animation are currently shown on the map view. Also, if there are only a few such tiles it may take a while for a random animation effect to occur.</p>
+  <p>3. When the <b>Show Flags</b> option is checked, a flag appears on each map site that contains one or more units. On small zoom levels, the flag covers the entire site; otherwise, it appears in the upper-right corner.</p>
+  <ul>
+    <li>The flag is white if the active faction owns the unit stack, and at least one unit in the stack may still move during the current turn.</li>
+    <li>Otherwise, the flag shows the color of the faction that owns the unit stack.</li>
+    <li>The symbols on the flag indicate the stack size.
+      <ul>
+        <li>One, two, or three dots indicate the same number of individual units.</li>
+        <li>One, two, or three vertical bars indicate 4–7, 8–11, and 12–15 units, respectively.</li>
+        <li>A diagonal cross indicates 16 or more units.</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

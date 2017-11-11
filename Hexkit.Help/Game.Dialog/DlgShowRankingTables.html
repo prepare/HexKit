@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css" />
+  <title>Faction Ranking: Tables Page</title>
+</head>
+<body>
+  <h1>Faction Ranking: Tables Page</h1>
+  <p>This tab page of the <a href="DlgShowRanking.html">Faction Ranking</a> dialog ranks all surviving factions in the game by their current possessions.</p>
+  <ul>
+    <li><a href="#Compare">Compare List</a></li>
+    <li><a href="#Defeat">Defeat Threshold</a></li>
+    <li><a href="#Victory">Victory Threshold</a></li>
+    <li><a href="#Factions">Faction List</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Compare">Compare List</a> and <a href="#Factions">Faction List</a> to adjust their respective share of the current window width.</li>
+    <li>See <a href="DlgShowRanking.html">Faction Ranking</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Compare">Compare List</a></h2>
+  <p>This list allows you to select a possession as the basis for comparison.</p>
+  <ul>
+    <li><b>Units</b> ranks factions by the number of units they own.</li>
+    <li><b>Unit Strength</b> ranks factions by the total strength of all their units.</li>
+    <li><b>Unit Values</b> ranks factions by the combined value of the units they own.</li>
+    <li><b>Sites</b> ranks factions by the number of map sites they own.</li>
+    <li><b>Site Values</b> ranks factions by the combined value of the map sites they own.</li>
+    <li>The remaining entries, if any, represent all <b>Resources</b> that are owned by at least one faction. Each entry ranks factions by their stockpiles of a specific resource.</li>
+    <li><b>Left-click</b> on an entry to select it. The <b>Faction List</b> reflects the selected entry.</li>
+    <li><b>Double-click</b> on a resource name to show its <a href="DlgShowVariables.html">Variables</a> dialog.</li>
+  </ul>
+  <h2><a name="Defeat">Defeat Threshold</a></h2>
+  <p>This text box shows the defeat threshold for a selected possession.</p>
+  <ul>
+    <li>A <b>dash</b> indicates that there is no defeat condition associated with the selected possession.</li>
+    <li>A <b>number</b> indicates that any faction will lose the game when it owns the specified amount or less of the selected possession.</li>
+    <li>An <b>asterisk</b> indicates that different factions associate conflicting defeat conditions with the selected possession. Please refer to the <a href="DlgShowFactionsConditions.html">Faction Status</a> dialog for the defeat conditions of each individual faction.</li>
+  </ul>
+  <h2><a name="Victory">Victory Threshold</a></h2>
+  <p>This text box shows the victory threshold for a selected possession.</p>
+  <ul>
+    <li>A <b>dash</b> indicates that there is no victory condition associated with the selected possession.</li>
+    <li>A <b>number</b> indicates that any faction will win the game when it owns the specified amount or more of the selected possession.</li>
+    <li>An <b>asterisk</b> indicates that different factions associate conflicting victory conditions with the selected possession. Please refer to the <a href="DlgShowFactionsConditions.html">Faction Status</a> dialog for the victory conditions of each individual faction.</li>
+  </ul>
+  <h2><a name="Factions">Faction List</a></h2>
+  <p>This list shows the names of all surviving factions, underlaid with their <b>Color Codes</b> and ranked by the selected possession in the <a href="#Compare">Compare List</a>.</p>
+  <ul>
+    <li>Column <b>Rank</b> shows the rank of each faction according to the selected possession. Two factions with equal possessions are ranked in the order in which they become active during a turn.</li>
+    <li>Column <b>Value</b> shows the amount of the selected possession that each faction owns. The more a faction owns, the higher it ranks.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowFactions.html">Faction Status</a> dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>When <b>Unit Values</b> or <b>Site Values</b> is selected in the <a href="#Compare">Compare List</a>, the values shown in the <b>Faction List</b> are scenario-specific and not necessarily useful to gauge a faction’s chance of victory.</p>
+</body>
+</html>

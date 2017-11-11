@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Property List</title>
+</head>
+<body>
+  <h1>Property List</h1>
+  <p>The <a href="GameViewData.html">Data View</a> and several <a href="GameDialogs.html">Game Dialogs</a> show the properties, or statistics, of a selected entity in a common list format.</p>
+  <p>Properties include numerical variables describing attributes and resources, and abilities that are either present or absent.</p>
+  <ul>
+    <li>Column <b>Property</b> shows the name of each variable.</li>
+    <li>Column <a href="#Value">Value</a> shows the current basic and modifier values for each variable.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowVariables.html">Variables</a> dialog.</li>
+  </ul>
+  <p>Properties usually appear in the following sequence:</p>
+  <ol>
+    <li>Abilities, if present (see below).</li>
+    <li>Strength resource for units, if defined.</li>
+    <li>Any other resources, in alphabetical order.</li>
+    <li>Any attributes, in alphabetical order.</li>
+  </ol>
+  <p>Separator bars appear between abilities, resources, and attributes.</p>
+  <h3><a name="#Value">Value Column</a></h3>
+  <p>The <b>Value</b> column of a depletable resource shows a colored bar to indicate its state of depletion. A long green bar appears while the resource is fully replenished. As the resource is depleted, the bar grows shorter and changes color, first to yellow and then to red.</p>
+  <p>Basic values otherwise appear as simple numbers. The display of modifier values depends on their target:</p>
+  <ul>
+    <li><b>Self</b> affects the entity itself and appears in parentheses, e.g. “(+3)”. A basic value for the same variable precedes the modifier value, e.g. “10 (+1)”.</li>
+    <li><b>Owner</b> affects the resources of the entity’s current owner, if any.</li>
+    <li><b>Units</b> affects any units, regardless of their owner, except when overriden by an <b>Owner Units</b> modifier.</li>
+    <li><b>Owner Units</b> affects units with the same owner as the entity, and overrides a corresponding <b>Units</b> modifier.</li>
+    <li><b>Units</b> and <b>Owner Units</b> normally affect only units in the entity’s current map site. If the entity is an upgrade, these modifiers affect units in the home site of the upgrade’s owner.</li>
+    <li><b>Units</b> and <b>Owner Units</b> may also appear in ranged variants that affect units within a certain range around the current or home site. The range precedes the modifier value, e.g. “Units 1/+2”. An infinity symbol (∞) indicates a range that comprises the entire map.</li>
+  </ul>
+  <p>When a unit defines an <b>Owner Units</b> modifier for its current map site, that modifier also affects the unit itself and is cumulative with any <b>Self</b> modifier defined by the same unit.</p>
+  <h3>Unit Abilities</h3>
+  <p>An additional “Abilities” row appears for units, followed by a combination of ability indicators.</p>
+  <ul>
+    <li><b>A</b> indicates that the unit can still attack this turn.</li>
+    <li><b>M</b> indicates that the unit can still move this turn.</li>
+    <li><b>B</b> indicates that the owner may build units of this class.</li>
+    <li><b>C</b> indicates that the unit can capture map sites.</li>
+  </ul>
+  <p>A dash indicates that the unit does not have the corresponding ability.</p>
+  <h3>Terrain Abilities</h3>
+  <p>An additional “Abilities” row may appear for terrains.</p>
+  <ul>
+    <li><b>Can Capture</b> indicates that the map site containing the terrain can be captured by occupying units. At least one unit must be of a class that also has the “Capture” ability.</li>
+    <li><b>Can Destroy</b> indicates that the owner may destroy the terrain at will. Terrains without this ability are indestructible under the default rules.</li>
+    <li><b>Can Capt./Dest.</b> indicates that the terrain has both abilities.</li>
+  </ul>
+</body>
+</html>

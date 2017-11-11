@@ -1,0 +1,35 @@
+﻿<Window x:Class="Hexkit.Game.Dialog.ChangeTurn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tw="clr-namespace:Tektosyne.Windows;assembly=Tektosyne.Windows"
+    ResizeMode="CanMinimize" ShowInTaskbar="False" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Label Grid.Column="0" Grid.Row="0" Target="{Binding ElementName=TurnUpDownHost}">Select _Turn:</Label>
+    <tw:WindowsFormsHostEx x:Name="TurnUpDownHost" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Width="160">
+      <tw:NumericUpDownHost x:Name="TurnUpDown" x:FieldModifier="private" Minimum="1" TextAlign="Right" ThousandsSeparator="True" />
+    </tw:WindowsFormsHostEx>
+    <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsDefault="True" Click="OnAccept" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button IsCancel="True" Style="{StaticResource dialogButtonStyle}">Cancel</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+  </Grid>
+</Window>

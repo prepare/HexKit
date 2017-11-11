@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Entity Class: Images Page</title>
+</head>
+<body>
+  <h1>Change Entity Class: Images Page</h1>
+  <p>This tab page of the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog allows you to edit the image stack that visually represents an entity class.</p>
+  <ul>
+    <li><a href="#Images">Image Stack</a></li>
+    <li><a href="#Preview">Image Preview</a></li>
+    <li><a href="#Position">Positioning</a></li>
+    <li><a href="#Color">Color Shift</a></li>
+    <li><a href="#Usage">Feature Use</a></li>
+    <li><a href="#Available">Available Images</a></li>
+    <li>See <a href="DlgChangeEntity.html">Change Entity Class</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Images">Image Stack</a></h2>
+  <p>This list shows the current image stack as a list of image identifiers. Click on an entry to select it, which will also select the corresponding entry in the <a href="#Available">Available Images</a> list.</p>
+  <ul>
+    <li>Choose <font face="Wingdings">&#111;</font> <b>(Add Image)</b> to add the selected <a href="#Available">Available Image</a> to the image stack. An image can appear multiple times in the stack.</li>
+    <li>Choose <font face="Wingdings">&#120;</font> <b>(Remove Image)</b> to remove the selected image stack entry.</li>
+    <li>Choose <font face="Wingdings">&#241;</font> <b>(Move Image Up)</b> to move the selected image stack entry towards the top of the list.</li>
+    <li>Choose <font face="Wingdings">&#242;</font> <b>(Move Image Down)</b> to move the selected image stack entry towards the bottom of the list.</li>
+    <li>Choose <font face="Wingdings">&#240;</font> <b>(Find Image In List)</b> to find the image in the <a href="#Available">Available Images</a> list that corresponds to the selected image stack entry.</li>
+  </ul>
+  <h2><a name="Preview">Image Preview</a></h2>
+  <p>This box shows a preview of the current stack of overlaid images as defined by the <b>Image Stack</b>, or an “invalid” icon (red circle with a slash) if the list is empty.</p>
+  <h3>Remarks</h3>
+  <p>For multi-frame images that are using all frames, only the first frame is shown in this preview.</p>
+  <h2><a name="Usage">Feature Use</a></h2>
+  <p>This box allows you change the use of connections, scaling, and multiple frames by the selected image stack entry.</p>
+  <ul>
+    <li>Use the <b>Unconnected (Alt+C)</b> option to disable neighbor connections for all frames used by the selected entry. This option is disabled if the selected entry does not use any frames that define neighbor connections.</li>
+    <li>Use the <b>Unscaled (Alt+S)</b> option to use the selected entry without scaling. This option is disabled if the selected entry is an unscaled image.</li>
+    <li>An informational display of the <b>Frame Use</b>, total <b>Frame Count</b>, and <b>Animation</b> settings for the selected entry appears below.</li>
+    <li>Choose <b>Use One… (Alt+O)</b> to display the <a href="DlgChangeFrame.html">Change Frame</a> dialog for the selected entry, allowing you to select a single frame to use. This also disables animation for animated images.</li>
+    <li>Choose <b>Use All (Alt+A)</b> to use all frames defined by a multi-frame image. This also enables animation for animated images.</li>
+  </ul>
+  <p>The <b>Use All</b> and <b>Use One</b> buttons are disabled if the selected image stack entry contains only a single frame. The <b>Use All</b> button is also disabled if all frames are already being used, which is the default.</p>
+  <h3>Remarks</h3>
+  <p>The total number of image frames defined for the entity equals the maximum number of frames used by any <a href="#Images">Image Stack</a> entry. The animation settings for the entity equal the highest settings defined by any entry which is using two or more image frames.</p>
+  <p>The entity’s first frame (shown in the <a href="#Preview">Image Preview</a>) combines each image’s first frame. The entity’s second frame combines each image’s second frame, and so on. When an image defines less than the maximum number of frames its existing frames are copied repeatedly, starting over from the image’s first frame as often as necessary.</p>
+  <p>An image stack entry that uses only a single frame out of multiple frames defined by its image provides that single frame to all of the entity’s frame positions.</p>
+  <h2><a name="Position">Positioning</a></h2>
+  <p>This box allows you change the position and orientation of the selected image stack entry.</p>
+  <ul>
+    <li>Use <b>X (Alt+X)</b> and <b>Y (Alt+Y)</b> to change the horizontal or vertical position of the selected entry.</li>
+    <li>Use <b>X-Mirror (Alt+M)</b> and <b>Y-Mirror (Alt+I)</b> to mirror the selected entry across the horizontal or vertical axis.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. <b>X</b> and <b>Y</b> are zero by default. This centers each stack image within its map polygon. Positive or negative values indicate an offset from the centered position, by the specified number of screen pixels at the default zoom level.</p>
+  <p>2. Checking <b>X-Mirror</b> and/or <b>Y-Mirror</b> also mirrors all neighbor connections for any frames of the stack image, assuming the <b>Unconnected</b> option is not checked.</p>
+  <h2><a name="Color">Color Shift</a></h2>
+  <p>This box allows you adjust the colors of the selected image stack entry.</p>
+  <ul>
+    <li>Use <b>R (Alt+R)</b> to shift the red color channel of the selected entry.</li>
+    <li>Use <b>G (Alt+G)</b> to shift the green color channel of the selected entry.</li>
+    <li>Use <b>B (Alt+B)</b> to shift the blue color channel of the selected entry.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The image’s transparency information, i.e. the alpha channel of each pixel, is unaffected by color adjustments.</p>
+  <p>2. Shifting a color channel also affects the overall brightness of the image. Increase all channels to make the image brighter; decrease all channels to make it darker; and decrease one channel while increasing another to change the image’s hue only.</p>
+  <h2><a name="Available">Available Images</a></h2>
+  <p>This window shows all images currently defined on the <a href="EditorTabImages.html">Images Page</a>. These images may be used to compose the image stack of an entity class.</p>
+  <ul>
+    <li>Each image is labelled with its <b>identifier</b>. The list entries are sorted by identifiers.</li>
+    <li>Each image is represented by its <b>first frame</b>, surrounded by a polygon outline as defined on the <a href="EditorTabAreas.html">Areas Page</a>. Frames with invalid coordinates or an invalid source file will display an “invalid” icon (red circle with a slash).</li>
+    <li><b>Left-click</b> on an image to select it.</li>
+    <li><b>Double-click</b> on an image to add it to the <a href="#Images">Image Stack</a>, as with the <b>Add Image</b> button.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Available Images</b> window temporarily appears while this tab page is selected. The window closes automatically when you close the dialog or switch to a different tab page.</p>
+  <p>2. The window appears to the right of the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog by default. You may reposition and resize the window as desired.</p>
+  <p>3. If you accidentally close the window, switch to a different tab page and back again to re-open the window.</p>
+</body>
+</html>

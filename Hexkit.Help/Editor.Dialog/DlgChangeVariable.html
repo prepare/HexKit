@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Variable Dialog</title>
+</head>
+<body>
+  <h1>Change Variable Dialog</h1>
+  <p>This dialog allows you to edit the definition of a numerical variable (attribute or resource), as specified in the dialog’s title bar.</p>
+  <ul>
+    <li>Use the <b>Variable Name (Alt+N)</b> field to enter or change the name that the game will display for this variable.</li>
+    <li>Use the large <b>Informational Text (Alt+I)</b> field to enter additional descriptive text for this variable. Text will wrap automatically to fit the display; you should only press <b>Enter</b> when you want to end a paragraph. You can also use blank lines (press <b>Enter</b> twice or more) to separate paragraphs.</li>
+    <li><a href="#Range">Target Range</a></li>
+    <li><a href="#Resource">Resource Options</a></li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> when the focus is not on the <b>Informational Text</b> field to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h2><a name="Range">Target Range</a></h2>
+  <p>This box shows the result range and display scale for this variable.</p>
+  <ul>
+    <li>Use the <b>Minimum (Alt+M)</b> field to change the smallest possible result for calculations based on this variable.</li>
+    <li>Use the <b>Maximum (Alt+X)</b> field to change the greatest possible result for calculations based on this variable.</li>
+    <li>Use the <b>Display Scale (Alt+S)</b> field to change the display scale for this variable. Hexkit Game will divide variable values by their display scale before showing them to the user. For instance, the value 2 will appear as 0.2 if the scale is 10.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>A variable’s target range is not the same as the legal range for variable values. For example, a “Defense” attribute might have a minimum value of one but terrains could still define a negative Defense value. This would reduce an occupying unit’s defense, but not below one (the minimum value).</p>
+  <h2><a name="Resource">Resource Options</a></h2>
+  <p>This box shows additional options for resources. It is disabled when editing attributes.</p>
+  <ul>
+    <li>Check the <b>Defeat (Alt+D)</b> option to define a defeat condition based on this faction resource. When checked, use the associated field to change the defeat threshold. A faction will lose the game if its stockpile is equal to or smaller than this value at the end of any turn.</li>
+    <li>Check the <b>Victory (Alt+V)</b> option to define a victory condition based on this faction resource. When checked, use the associated field to change the victory threshold. A faction will win the game if its stockpile is equal to or greater than this value at the start of its turn.</li>
+    <li>Check the <b>Reset (Alt+R)</b> option to indicate that Hexkit Game should reset faction resources of this type to their initial values before adding modifiers, and that the resource should be recalculated for all factions at the end of each turn.</li>
+    <li>Check the <b>Limit (Alt+L)</b> option to indicate that Hexkit Game should limit entity resources of this type to their initial values. When disabled, entity resources are limited only by the <b>Maximum</b> value.</li>
+    <li>Check the <b>Deplete (Alt+P)</b> option to indicate that Hexkit Game should consider resources of this type depletable, and visualize their current depletion level with a color bar.</li>
+  </ul>
+  <p><b>Limit</b> and <b>Deplete</b> only affect entity resources while the other settings only affect faction resources.</p>
+  <h3>Remarks</h3>
+  <p>The <em>initial value</em> used by the <b>Reset</b> and <b>Limit</b> options is the resource value defined by the scenario for the faction or entity in question. If no scenario value is defined, the initial value is the first resource value defined by the rule script.</p>
+</body>
+</html>

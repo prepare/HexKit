@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css" />
+  <title>Faction Ranking: Graphs Page</title>
+</head>
+<body>
+  <h1>Faction Ranking: Graphs Page</h1>
+  <p>This tab page of the <a href="DlgShowRanking.html">Faction Ranking</a> dialog ranks all factions in the game, including defeated ones, by their historical possessions.</p>
+  <ul>
+    <li><a href="#Compare">Compare List</a></li>
+    <li><a href="#History">History Graph</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Compare">Compare List</a> and <a href="#History">History Graph</a> to adjust their respective share of the current window width.</li>
+    <li>See <a href="DlgShowRanking.html">Faction Ranking</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Compare">Compare List</a></h2>
+  <p>This list allows you to select a possession or faction as the basis of comparison.</p>
+  <ul>
+    <li><b>Units</b> shows the number of units owned by each faction.</li>
+    <li><b>Unit Strength</b> shows the total strength of all units owned by each faction.</li>
+    <li><b>Sites</b> shows the number of map sites owned by each faction.</li>
+    <li>The remaining entries, if any, represent all <b>Factions</b> that participated in the game, underlaid with their <b>Color Codes</b>. Each entry shows the number of units and sites owned by a specific faction.</li>
+    <li><b>Left-click</b> on an entry to select it. The <b>History Graph</b> reflects the selected entry.</li>
+    <li><b>Double-click</b> on a faction name to show its <a href="DlgShowFactions.html">Faction Status</a> dialog.</li>
+  </ul>
+  <h2><a name="History">History Graph</a></h2>
+  <p>This graph shows the amount of the selected possession(s) in the <a href="#Compare">Compare List</a> that the selected faction(s) possessed at the end of each game turn.</p>
+  <ul>
+    <li>The <b>X-Axis</b> counts the elapsed game turns.</li>
+    <li>The <b>Y-Axis</b> counts the displayed possessions.</li>
+    <li>If <b>Units</b>, <b>Unit Strength</b>, or <b>Sites</b> is selected, the graph shows one line per faction that indicates the historical values of the selected possession for each faction. Each line is drawn in the faction’s <b>Color Code</b>.</li>
+    <li>If a <b>Faction</b> is selected, the graph shows a red line indicating the faction’s units, and a blue line indicating the faction’s map sites.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. History graphs are available only for those factions that have completed at least one game turn. If no faction has yet issued an <b>End Turn</b> command, all graphs will be empty.</p>
+  <p>2. A faction’s defeat or resignation are indicated by all its possessions dropping to zero.</p>
+  <p>3. Faction graphs do not show total unit strengths because they are usually much greater than site counts or unit counts.</p>
+</body>
+</html>

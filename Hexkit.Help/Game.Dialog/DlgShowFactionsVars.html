@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Faction Status: Resources Page</title>
+</head>
+<body>
+  <h1>Faction Status: Resources Page</h1>
+  <p>This tab page of the <a href="DlgShowFactions.html">Faction Status</a> dialog shows information on the selected faction’s resources.</p>
+  <ul>
+    <li>The <b>Resource List</b> shows the resources owned by the selected faction.
+      <ul>
+        <li>Column <b>Value</b> shows the current stockpile of each resource, followed by its default modifier in parentheses. Either value may be missing.</li>
+        <li>Each resource may be affected by additional modifiers, as detailed in the <b>Modifier List</b>.</li>
+        <li><b>Double-click</b> on a resource to show its <a href="DlgShowVariables.html">Variables</a> dialog.</li>
+      </ul>
+    </li>
+    <li>The <b>Modifier List</b> shows a breakdown of all modifiers that affect the selected resource.
+      <ul>
+        <li><b>Units</b> sums up the modifiers of all units owned by selected faction that are currently placed on the map. The <b>Units</b> value is usually negative, representing maintenance costs.</li>
+        <li><b>Terrains</b> and <b>Effects</b> sum up the modifiers of all terrains and effects, respectively, that are present on any map site owned by the selected faction.</li>
+        <li><b>Upgrades</b> sums up the modifiers of all upgrades that the selected faction has obtained.</li>
+        <li><b>Other</b> shows the default modifier from the <b>Resource List</b>, plus or minus any additional adjustment defined by the rule script.</li>
+        <li><b>Total</b> shows the sum of all other values. This is the value that will be added to or subtracted from the selected resource at the end of the selected faction’s turn.</li>
+      </ul>
+      All rows show dashes if no resource is selected.</li>
+    <li>See <a href="DlgShowFactions.html">Faction Status</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Resource List</b> and <b>Modifier List</b> are both empty if the selected faction has already been eliminated from the game.</p>
+  <p>2. The values in the <b>Resource List</b> are usually calculated at the <em>beginning</em> of a faction’s turn, whereas the values in the <b>Modifier List</b> may change at any time. You must wait until the beginning of the faction’s <em>next</em> turn before its current modifiers will be reflected in its resource stockpiles.</p>
+</body>
+</html>

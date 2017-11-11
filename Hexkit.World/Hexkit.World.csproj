@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F478772-4BAF-441B-9445-11F5C2F00144}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Hexkit.World</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hexkit.World</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>obj\</OutputPath>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.World.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <OutputPath>obj\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.World.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Core\Tektosyne.Core.csproj">
+      <Project>{52F55B71-58AD-4231-8AB9-D2DF79ECCB73}</Project>
+      <Name>Tektosyne.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Windows\Tektosyne.Windows.csproj">
+      <Project>{2DAF2FD2-A2CF-4630-873A-CBCFFC5C91F1}</Project>
+      <Name>Tektosyne.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Global\Hexkit.Global.csproj">
+      <Name>Hexkit.Global</Name>
+      <Project>{F8FA30DD-F2B7-4446-A615-534749AF3FF7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Scenario\Hexkit.Scenario.csproj">
+      <Name>Hexkit.Scenario</Name>
+      <Project>{B5C0FEF9-C7E4-4735-A53F-025311B60E51}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\SetEntityVariableInitialInstruction.cs" />
+    <Compile Include="Instructions\SetFactionVariableInitialInstruction.cs" />
+    <Compile Include="Upgrade.cs" />
+    <Compile Include="CombatResults.cs" />
+    <Compile Include="Commands\AttackCommand.cs" />
+    <Compile Include="Commands\AutomateCommand.cs" />
+    <Compile Include="Commands\BeginTurnCommand.cs" />
+    <Compile Include="Commands\BuildCommand.cs" />
+    <Compile Include="Commands\ClassesCommand.cs" />
+    <Compile Include="Commands\CommandExecutor.cs" />
+    <Compile Include="Commands\DestroyCommand.cs" />
+    <Compile Include="Commands\EndTurnCommand.cs" />
+    <Compile Include="Commands\EntitiesCommand.cs" />
+    <Compile Include="Commands\EntitiesTargetCommand.cs" />
+    <Compile Include="Commands\MoveCommand.cs" />
+    <Compile Include="Commands\PlaceCommand.cs" />
+    <Compile Include="Commands\RenameCommand.cs" />
+    <Compile Include="Commands\ResignCommand.cs" />
+    <Compile Include="Effect.cs" />
+    <Compile Include="Finder.cs" />
+    <Compile Include="Instructions\AdvanceFactionInstruction.cs" />
+    <Compile Include="Instructions\BooleanInstruction.cs" />
+    <Compile Include="Instructions\CreateEntityInstruction.cs" />
+    <Compile Include="Instructions\CreateFactionInstruction.cs" />
+    <Compile Include="Instructions\DeleteEntityInstruction.cs" />
+    <Compile Include="Instructions\DeleteFactionInstruction.cs" />
+    <Compile Include="Instructions\ImageInstruction.cs" />
+    <Compile Include="Instructions\InstructionCategory.cs" />
+    <Compile Include="Instructions\InstructionResults.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\IntegerInstruction.cs" />
+    <Compile Include="Instructions\MessageInstruction.cs" />
+    <Compile Include="Instructions\MoveEntityToTopInstruction.cs" />
+    <Compile Include="Instructions\MoveImageInstruction.cs" />
+    <Compile Include="Instructions\PointInstruction.cs" />
+    <Compile Include="Instructions\SelectEntityInstruction.cs" />
+    <Compile Include="Instructions\SetEntityClassInstruction.cs" />
+    <Compile Include="Instructions\SetEntityDisplayClassInstruction.cs" />
+    <Compile Include="Instructions\SetEntityFrameOffsetInstruction.cs" />
+    <Compile Include="Instructions\SetEntityNameInstruction.cs" />
+    <Compile Include="Instructions\SetEntityOwnerInstruction.cs" />
+    <Compile Include="Instructions\SetEntitySiteInstruction.cs" />
+    <Compile Include="Instructions\SetEntityUniqueNameInstruction.cs" />
+    <Compile Include="Instructions\SetEntityVariableInstruction.cs" />
+    <Compile Include="Instructions\SetEntityVariableModifierInstruction.cs" />
+    <Compile Include="Instructions\SetFactionResignedInstruction.cs" />
+    <Compile Include="Instructions\SetFactionUnitsCanAttackInstruction.cs" />
+    <Compile Include="Instructions\SetFactionUnitsCanMoveInstruction.cs" />
+    <Compile Include="Instructions\SetFactionVariableInstruction.cs" />
+    <Compile Include="Instructions\SetFactionVariableModifierInstruction.cs" />
+    <Compile Include="Instructions\SetSiteOwnerInstruction.cs" />
+    <Compile Include="Instructions\SetSiteUnitOwnerInstruction.cs" />
+    <Compile Include="Instructions\SetUnitCanAttackInstruction.cs" />
+    <Compile Include="Instructions\SetUnitCanMoveInstruction.cs" />
+    <Compile Include="Instructions\SetWinningFactionInstruction.cs" />
+    <Compile Include="Instructions\ShowImageInstruction.cs" />
+    <Compile Include="Instructions\ShowMessageDialogInstruction.cs" />
+    <Compile Include="Instructions\ShowMessageInstruction.cs" />
+    <Compile Include="Instructions\StringBooleanInstruction.cs" />
+    <Compile Include="Instructions\StringInstruction.cs" />
+    <Compile Include="Instructions\StringIntegerInstruction.cs" />
+    <Compile Include="PlayerSettings.cs" />
+    <Compile Include="SiteConnection.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ExecutionContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ExecutionCounters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Delegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityClassCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityHistory.cs" />
+    <Compile Include="EntityReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Faction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FactionHistory.cs" />
+    <Compile Include="FactionReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instructions\Instruction.cs" />
+    <Compile Include="InvalidCommandException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRulesFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RangeCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Site.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Terrain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Unit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VariableModifierContainer.cs" />
+    <Compile Include="WorldUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValuableComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Variable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VariableContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VariablePurpose.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorldState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlSerializable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

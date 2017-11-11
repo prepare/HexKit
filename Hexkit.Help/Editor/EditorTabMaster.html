@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Master Page</title>
+</head>
+<body>
+  <h1>Master Page</h1>
+  <p>This tab page consists of the common <a href="EditorViewLocation.html">Section Location</a> controls and the following editing facilities for the Master section:</p>
+  <ul>
+    <li><a href="#Title">Scenario Title (Alt+T)</a></li>
+    <li><a href="#Rules">Rule Script</a></li>
+    <li><a href="#Sections">Subsection Locations</a></li>
+    <li><a href="#Information">Scenario Information (Alt+I)</a></li>
+  </ul>
+  <h2><a name="Title">Scenario Title</a> (<b>Alt+T</b>)</h2>
+  <p>Click on the text box to enter or change the scenario title. Once a title is defined it is also shown in the title bar of Hexkit Editor.</p>
+  <h2><a name="Rules">Rule Script</a></h2>
+  <p>This read-only text box shows the current rule script path, relative to the <code>Scenario\Rules</code> subdirectory of your Hexit directory. The default is a pre-defined file called <code>Default Rules.cs</code> which contains placeholder C# source code.</p>
+  <ul>
+    <li>Choose <b>Browse… (Alt+R)</b> to display a standard Windows “Open” dialog, allowing you to select another existing rule script file.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. You cannot display, create, edit, or compile rules script files from within Hexkit Editor. You can use Notepad for editing source code but a dedicated programmer’s editor is recommended.</p>
+  <p>2. The rule script may be supplied in source code format. In this case, the entire script must be contained in a single source file, written either in C#, JScript .NET, or Visual Basic .NET. The source code will be compiled by Hexkit Game as the scenario is loaded.</p>
+  <p>3. Alternatively, the rule script may be supplied as a DLL file containing a precompiled .NET assembly. This allows you to use arbitrary .NET languages and distribute the source code over multiple source files.</p>
+  <h2><a name="Sections">Subsection Locations</a></h2>
+  <p>This box shows the currently defined locations of the five subsections, which is either a section file path or “(inline)” if the subsection data is placed within the Master section file. Use the corresponding tab page to change subsection locations.</p>
+  <h2><a name="Information">Scenario Information</a> (<b>Alt+I</b>)</h2>
+  <p>Click this button to display the <a href="DlgChangeInformation.html">Scenario Information</a> dialog, allowing you to edit various informational text associated with the scenario.</p>
+</body>
+</html>

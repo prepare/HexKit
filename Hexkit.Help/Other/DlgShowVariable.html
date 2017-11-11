@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Show Variable Dialog</title>
+</head>
+<body>
+  <h1>Show Variable Dialog</h1>
+  <p>This dialog allows you to select an attribute, resource, or hidden counter whose values are shown on the map view. Each map site shows the sum of all values of the selected variable defined by any present entity. The calculation for <a href="#Modifiers">Modifier Values</a> is described below.</p>
+  <ul>
+    <li>The <b>Display</b> box allows you to select a display mode.
+      <ul>
+        <li>Check <b>Basic (Alt+B)</b> to show basic values.</li>
+        <li>Check <b>Modifier (Alt+M)</b> to show modifier values.</li>
+        <li>Check <b>Numbers (Alt+N)</b> to show the selected values as numbers. Modifier values that equal zero are never shown. Otherwise, they appear signed and in parentheses.</li>
+        <li>Check <b>Shades (Alt+S)</b> to show the selected values as shades. Brighter shades represent higher values. Modifier values are ignored while <b>Basic</b> is checked.</li>
+        <li>Uncheck both <b>Basic</b> and <b>Modifier</b>, or both <b>Numbers</b> and <b>Shades</b>, to disable the variable display.</li>
+      </ul>
+    </li>
+    <li>The <b>Category</b> box allows you to select a variable category.
+      <ul>
+        <li>Choose <b>Attribute (Alt+A)</b> to show all attributes.</li>
+        <li>Choose <b>Counter (Alt+C)</b> to show all hidden counters.</li>
+        <li>Choose <b>Resource (Alt+R)</b> to show all resources.</li>
+      </ul>
+    </li>
+    <li>The <b>Variable List</b> shows all variables in the selected category.
+      <ul>
+        <li><b>Left-click</b> on an entry to select the variable whose values will be shown.</li>
+      </ul>
+    </li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3><a name="Modifiers">Modifier Values</a></h3>
+  <p>When the <b>Modifier</b> option is checked, each map site displays the sum of the following modifier values:</p>
+  <ul>
+    <li><b>Self</b> – the matching modifiers of any local entity that affect the entity itself.</li>
+    <li><b>Owner</b> – the matching modifiers of any local entity that affect the entity’s owner. These values are added even if the defining entity is currently unowned, showing a map site’s hypothetical contribution to its owner’s resources.</li>
+    <li><b>Units</b> &amp; <b>Owner Units</b> – the matching modifiers of any entity (local or not) that affect the local units, if any; otherwise, any such modifiers that would affect hypothetical units owned by the active faction.</li>
+  </ul>
+  <p>If a given scenario defines multiple modifiers for the same variable but for different targets, only a fraction may apply to any given target. For example, if an entity defines a Gold +1 modifier for itself, and another local entity defines a Gold +2 modifier for its owner, then the displayed value is (+3) even though no single target actually receives a +3 modifier.</p>
+  <h3>Remarks</h3>
+  <p>1. The <b>Modifier</b> option has no effect if <b>Counter</b> is checked since counter variables have no modifiers. You must check the <b>Basic</b> option in order to display counter values.</p>
+  <p>2. When the <b>Numbers</b> option is checked along with the <b>Basic</b> and <b>Modifier</b> options, you may have to reduce the zoom level of the map view so that both numbers fit in each map polygon.</p>
+  <p>3. When the <b>Shades</b> option is checked, the shading of each map polygon is based on its local variable value as compared to the minimum and maximum variable values on the entire map. Calculating the minimum and maximum values is expensive, so the calculation is only performed once, at the time when <b>Shades</b> is enabled.</p>
+  <p>As you keep playing the game (or editing the map), the minimum or maximum values of the selected variable may change. In this case the shading will no longer accurately reflect the distribution of variable values across the map. To update the shading, simply bring up this dialog again and choose <b>OK</b>.</p>
+</body>
+</html>

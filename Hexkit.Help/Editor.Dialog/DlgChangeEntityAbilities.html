@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Entity Class: Abilities Page</title>
+</head>
+<body>
+  <h1>Change Entity Class: Abilities Page</h1>
+  <p>This tab page of the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog allows you to edit the abilities and options of an entity class.</p>
+  <ul>
+    <li><a href="#Abilities">Abilities</a></li>
+    <li><a href="#Options">Options</a></li>
+    <li>See <a href="DlgChangeEntity.html">Change Entity Class</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Abilities">Abilities</a></h2>
+  <p>This box shows various abilities, depending on the category of the specified entity class.</p>
+  <ul>
+    <li>Use the <b>Blocks Attack (Alt+T)</b> option to toggle the “Blocks Attack” ability of the entity class, indicating whether entities of this class obstruct the line of sight for ranged attacks. This applies only to attackers whose “Ranged Attack Mode” is set to <b>Line</b>.</li>
+    <li>The <b>Blocks Attack</b> option has no effect for upgrade classes under the default rules, as upgrades are never placed on the map.</li>
+    <li>Use the <b>Resource Transfer (Alt+R)</b> option to determine whether entities of this class automatically transfer resources to local units (for placed entities) or to their owning faction (for upgrades).
+      <ul>
+        <li><b>None</b> disables automatic resource transfer.</li>
+        <li><b>Retain</b> enables the ability and retains exhausted entities.</li>
+        <li><b>Delete</b> enables the ability and deletes exhausted entities.</li>
+      </ul>
+    </li>
+    <li>The <b>Resource Transfer</b> option has no effect for unit classes under the default rules, as units never automatically transfer resources.</li>
+  </ul>
+  <p>The remaining abilities are exclusive to unit and terrain classes, respectively.</p>
+  <h3><a name="AbilitiesUnit">Unit Class</a></h3>
+  <ul>
+    <li>Use the <b>Can Capture Sites (Alt+C)</b> option to toggle the “Capture” ability of the unit class, indicating whether units of this class capture the map site they occupy. The site must contain at least one terrain of a class that also has the “Capture” ability.</li>
+    <li>Use the <b>Can Defend Only (Alt+D)</b> option to toggle the “Defend Only” ability of the unit class, indicating whether units of this class are limited to passive defense. This is a negative ability that prevents combat units from actively attacking during their faction’s turn.</li>
+    <li>Use the <b>Can Heal Damage (Alt+H)</b> option to toggle the “Healing” ability of the unit class, indicating whether units of this class may replenish their strength after taking damage. Enabling this ability does not actually heal injured units but merely informs computer player algorithms that such units are capable of healing.</li>
+  </ul>
+  <h3><a name="AbilitiesTerrain">Terrain Class</a></h3>
+  <ul>
+    <li>Use the <b>Units Can Capture (Alt+C)</b> option to toggle the “Capture” ability of the terrain class, indicating whether map sites that contain at least one terrain of this class can be captured by occupying units. At least one unit must be of a class that also has the “Capture” ability.</li>
+    <li>Use the <b>Owner Can Destroy (Alt+D)</b> option to toggle the “Destroy” ability of the terrain class, indicating whether the owner may destroy terrains of this class at will. This ability has no effect if the “Background Terrain” option is enabled.</li>
+  </ul>
+  <h2><a name="Options">Options</a></h2>
+  <p>This box shows additional options, depending on the category of the specified entity class. Only unit and terrain classes provide additional options.</p>
+  <h3><a name="OptionsUnit">Unit Class</a></h3>
+  <p>Use the <b>Ranged Attack Mode (Alt+G)</b> option to determine valid targets when a unit of this class performs ranged attacks.</p>
+  <ul>
+    <li><b>Any</b> specifies that any target is valid, including those hidden by fog of war.</li>
+    <li><b>View</b> specifies that targets must be visible, though not necessarily to the active unit.</li>
+    <li><b>Line</b> specifies that targets must share a clear line of sight with the active unit. The line of sight is obstructed by any entities between attacker and target that have the “Blocks Attack” ability.</li>
+  </ul>
+  <p>The option has no effect for units that cannot perform ranged attacks.</p>
+  <p>The remaining options determine the variables used by the default rules. Selecting “(none)” indicates that the default rules should substitute the constant value one. When selecting a variable identifier, make sure that the <a href="DlgChangeEntityVars.html">Variables Page</a> defines a basic value for that variable.</p>
+  <ul>
+    <li>Use the <b>Attack Range Attribute (Alt+A)</b> option to indicate which of the unit’s attributes represents its attack range. Zero indicates non-combat units, and one indicates units capable of close combat (mêlée) only.</li>
+    <li>Use the <b>Movement Attribute (Alt+M)</b> option to indicate which of the unit’s attributes represents its movement range, i.e. the maximum cost it can expend on the combined difficulty values of the traversed terrains.</li>
+    <li>Use the <b>Morale Resource (Alt+O)</b> option to indicate which of the unit’s resources represents its current morale. The unit cannot attack unless this value is positive.</li>
+    <li>Use the <b>Strength Resource (Alt+S)</b> option to indicate which of the unit’s resources represents its current strength or health. Taking damage reduces this value, and the unit is destroyed when it reaches zero.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The default rules do not currently use the Strength resource, but the described behavior is recommended for custom rules.</p>
+  <h3><a name="OptionsTerrain">Terrain Class</a></h3>
+  <p>Use the <b>Background Terrain (Alt+B)</b> option to determine whether the terrain class represents background terrain. The terrain stack of every map site must include at least one background terrain. Any stack entries below the topmost background terrain are deleted when the game map is created.</p>
+  <p>Background terrains should be associated with opaque images that fill an entire map polygon. Enabling this option suppresses the “Destroy” ability, but has no other gameplay effects once the game map has been created.</p>
+  <p>The remaining options determine the variables used by the default rules. Selecting “(none)” indicates that the default rules should substitute the constant value zero. When selecting a variable identifier, make sure that the <a href="DlgChangeEntityVars.html">Variables Page</a> defines a basic value for that variable.</p>
+  <ul>
+    <li>Use the <b>Difficulty Attribute (Alt+D)</b> option to indicate which of the terrain’s attributes represents its difficulty, i.e. the movement cost that counts against a unit’s movement range for each step that contains the terrain.</li>
+    <li>Use the <b>Elevation Attribute (Alt+E)</b> option to indicate which of the terrain’s attributes represents its elevation compared to a scenario-specific standard, e.g. meters above sea level.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. Since pathfinding requires positive movement costs, the default rules adjust the total difficulty of a site’s terrains to the constant value one if the actual sum is zero.</p>
+  <p>2. The default rules do not currently use the Elevation attribute, but the described behavior is recommended for custom rules.</p>
+</body>
+</html>

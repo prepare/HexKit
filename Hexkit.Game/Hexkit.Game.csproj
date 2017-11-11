@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43FFB250-5EB7-4AD5-B21B-8F725070D47B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Hexkit.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Hexkit.Game</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hexkit.Game</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Hexkit.Game.GameApplication</StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>..\bin\</OutputPath>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.Game.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.Game.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Core\Tektosyne.Core.csproj">
+      <Project>{52F55B71-58AD-4231-8AB9-D2DF79ECCB73}</Project>
+      <Name>Tektosyne.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Windows\Tektosyne.Windows.csproj">
+      <Project>{2DAF2FD2-A2CF-4630-873A-CBCFFC5C91F1}</Project>
+      <Name>Tektosyne.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Global\Hexkit.Global.csproj">
+      <Name>Hexkit.Global</Name>
+      <Project>{F8FA30DD-F2B7-4446-A615-534749AF3FF7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Graphics\Hexkit.Graphics.csproj">
+      <Name>Hexkit.Graphics</Name>
+      <Project>{AB3DFFBA-2A71-4178-86CE-42045699AB76}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Options\Hexkit.Options.csproj">
+      <Name>Hexkit.Options</Name>
+      <Project>{40B9E5F5-F3B0-4BA2-B59F-540348015A67}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Players\Hexkit.Players.csproj">
+      <Name>Hexkit.Players</Name>
+      <Project>{9F34A9F9-2A3F-4AD1-B461-C913B27BC37C}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Scenario\Hexkit.Scenario.csproj">
+      <Name>Hexkit.Scenario</Name>
+      <Project>{B5C0FEF9-C7E4-4735-A53F-025311B60E51}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.World\Hexkit.World.csproj">
+      <Name>Hexkit.World</Name>
+      <Project>{7F478772-4BAF-441B-9445-11F5C2F00144}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AsyncAction.cs" />
+    <Compile Include="Dialog\AboutScenario.xaml.cs">
+      <DependentUpon>AboutScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\AttackFromSite.xaml.cs">
+      <DependentUpon>AttackFromSite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\AttackSite.xaml.cs">
+      <DependentUpon>AttackSite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\BuildEntities.xaml.cs">
+      <DependentUpon>BuildEntities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\BuildListItem.cs" />
+    <Compile Include="Dialog\ChangeEmail.xaml.cs">
+      <DependentUpon>ChangeEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangePlayers.xaml.cs">
+      <DependentUpon>ChangePlayers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeTurn.xaml.cs">
+      <DependentUpon>ChangeTurn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\CreateSession.xaml.cs">
+      <DependentUpon>CreateSession.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\RankingListItem.cs" />
+    <Compile Include="Dialog\ShowEvent.xaml.cs">
+      <DependentUpon>ShowEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\MoveUnits.xaml.cs">
+      <DependentUpon>MoveUnits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\RenameEntity.xaml.cs">
+      <DependentUpon>RenameEntity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowClasses.xaml.cs">
+      <DependentUpon>ShowClasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowCommands.xaml.cs">
+      <DependentUpon>ShowCommands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowEntities.xaml.cs">
+      <DependentUpon>ShowEntities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowEntitiesMode.cs" />
+    <Compile Include="Dialog\ShowEvents.xaml.cs">
+      <DependentUpon>ShowEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowFactions.xaml.cs">
+      <DependentUpon>ShowFactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowPlacements.xaml.cs">
+      <DependentUpon>ShowPlacements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowRanking.xaml.cs">
+      <DependentUpon>ShowRanking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ShowVariables.xaml.cs">
+      <DependentUpon>ShowVariables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyListView.xaml.cs">
+      <DependentUpon>PropertyListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameApplication.xaml.cs">
+      <DependentUpon>GameApplication.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HumanAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyListItem.cs" />
+    <Compile Include="ReplayManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReplayState.cs" />
+    <Compile Include="Session.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionExecutor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TargetSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Hexkit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="GameApplication.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Commands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\AboutScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\AttackFromSite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\AttackSite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\BuildEntities.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangePlayers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeTurn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\CreateSession.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowEvent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\MoveUnits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\RenameEntity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowClasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowCommands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowEntities.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowEvents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowFactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowPlacements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowRanking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ShowVariables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PropertyListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

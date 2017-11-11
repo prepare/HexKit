@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Debug Menu</title>
+</head>
+<body>
+  <h1>Debug Menu</h1>
+  <p>This menu is disabled if no game is active.</p>
+  <ul>
+    <li><a name="Areas"><b>Save Map Contents</b></a> writes the current map contents to an Areas XML file. See <a href="#Remarks">Remarks</a> for details.</li>
+    <li><a name="Scenario"><b>Save Scenario File</b></a> writes the current scenario description to a debug XML file. See <a href="#Remarks">Remarks</a> for details.</li>
+    <li><a name="Bitmaps"><b>Show Bitmap Catalogs</b></a> shows the original bitmap catalog created for the current scenario and the scaled bitmap catalog used for the current map view.</li>
+    <li><a name="Counters"><b>Show Command Counters</b></a> shows the total number of game commands and HCL instructions that were executed since the Hexkit Game application was started. These numbers do not include commands and instructions that were read from a saved game.</li>
+    <li><a name="Events"><b>Show Event History</b></a> shows the <a href="DlgShowEvents.html">Event History</a> dialog.</li>
+  </ul>
+  <h3><a name="Remarks">Remarks</a></h3>
+  <p>1. Choosing a <b>Debug</b> menu option other than <b>Show Bitmap Catalogs</b> while a human player command is executing or during an interactive game replay will automatically complete the execution or stop the replay, respectively.</p>
+  <p>2. <b>Save Map Contents</b> shows a standard Windows “Save” dialog, defaulting to an XML file in the <code>Areas</code> section folder, with a name composed of the current scenario title and the current turn and faction indices.</p>
+  <p>This file contains all data of the current map, as far as it can be represented as scenario data. It can be read into the <a href="EditorTabAreas.html">Areas Page</a> of Hexkit Editor for analysis, editing, and combination with other scenarios.</p>
+  <p>3. <b>Save Scenario File</b> creates an XML file named <code>Scenario.Debug.xml</code> in the current user’s <code>Hexkit</code> folder. Any existing file with this name will be overwritten.</p>
+  <p>This file contains all the data that Hexkit Game extracted from the current scenario XML file, including any data that was originally read from subsection files through <code>include</code> pseudo-tags. It can be read back into Hexkit Game with <a href="GameMenuFile.html#New">File: New</a>, or into the <a href="EditorTabMaster.html">Master Page</a> of Hexkit Editor with <a href="EditorMenuFile.html#Open">File: Open</a> or <a href="EditorViewLocation.html#Browse">Browse</a>.</p>
+  <p>Scenario authors might use the debug file to make temporary changes to their scenarios, or to check for discrepancies between the debug file and their own XML file(s).</p>
+  <p>4. <b>Show Command Counters</b> also displays the number of event instructions and ineffectual instructions.</p>
+  <p>Event instructions show a map view or message event. They always remain in the HCL program but their execution is skipped during silent replays.</p>
+  <p>Ineffectual instructions had no effect on the current state of the game world, and were therefore eliminated from the HCL program before the associated command is added to the command history.</p>
+</body>
+</html>

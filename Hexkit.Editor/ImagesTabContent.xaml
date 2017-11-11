@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Hexkit.Editor.ImagesTabContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:hg="clr-namespace:Hexkit.Graphics;assembly=Hexkit.Graphics">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="2*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+      <CheckBox Name="ColorToggle" x:FieldModifier="private" Click="OnTransparency">Add _Transparency</CheckBox>
+      <Button Click="OnColorChange">Change _Color…</Button>
+    </StackPanel>
+    <ListView Name="FileList" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnFileActivate">
+      <ListView.View>
+        <GridView>
+          <!-- column widths are set by FileList.ActualWidth.ValueChanged -->
+          <GridViewColumn x:Name="FileIdColumn" x:FieldModifier="private" Header="Image File ID" DisplayMemberBinding="{Binding Id}" />
+          <GridViewColumn x:Name="FilePathColumn" x:FieldModifier="private" Header="Image File Path" DisplayMemberBinding="{Binding Path}" />
+        </GridView>
+      </ListView.View>
+    </ListView>
+    <Button Name="ChangeFileIdButton" x:FieldModifier="private" Grid.Column="0" Grid.Row="2" Click="OnFileId">Change ID…</Button>
+    <Button Name="ChangeFileButton" x:FieldModifier="private" Grid.Column="1" Grid.Row="2" Click="OnFileChange">Change Path…</Button>
+    <Button Name="AddFileButton" x:FieldModifier="private" Grid.Column="0" Grid.Row="3" Click="OnFileAdd">Add File…</Button>
+    <Button Name="RemoveFileButton" x:FieldModifier="private" Grid.Column="1" Grid.Row="3" Click="OnFileRemove">Remove File</Button>
+    <GridSplitter Grid.Column="3" Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Center" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="4" />
+    <hg:ImageListBox Name="ImageList" x:FieldModifier="private" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" hg:ImageListBoxItem.MouseDoubleClick="OnImageActivate" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <WrapPanel Orientation="Vertical" />
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+    </hg:ImageListBox>
+    <Button Name="ChangeImageIdButton" x:FieldModifier="private" Grid.Column="5" Grid.Row="2" Click="OnImageId">Change ID…</Button>
+    <Button Name="ChangeImageButton" x:FieldModifier="private" Grid.Column="6" Grid.Row="2" Click="OnImageChange">Change Image…</Button>
+    <Button Name="AddImageButton" x:FieldModifier="private" Grid.Column="5" Grid.Row="3" Click="OnImageAdd">Add Image…</Button>
+    <Button Name="RemoveImageButton" x:FieldModifier="private" Grid.Column="6" Grid.Row="3" Click="OnImageRemove">Remove Image</Button>
+    <Button Name="GraphicsInfoButton" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="4" HorizontalAlignment="Center" Click="OnGraphicsInfo">_Graphics Information…</Button>
+  </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Event View</title>
+</head>
+<body>
+  <h1>Event View</h1>
+  <p>The event view panel occupies the bottom left part of the Hexkit Game window. This panel shows two kinds of data:</p>
+  <ul>
+    <li><a href="#Command">Last Command</a> (first line)</li>
+    <li><a href="#Message">Event Messages</a> (starting with a dash)</li>
+  </ul>
+  <p></p>
+  <h2><a name="Command">Last Command</a></h2>
+  <p>The first line of text shows the last command that was executed by the active faction. During interactive replay, the currently replayed command is shown instead.</p>
+  <p>The displayed text includes the name of the command; the coordinates of the command’s source and target sites, if any; and the entities that are affected by the command.</p>
+  <p>Commands that affect multiple entities, e.g. moving an entire stack of units, may occupy several consecutive lines as the text wraps around.</p>
+  <h2><a name="Message">Event Messages</a></h2>
+  <p>Below the <a href="#Command">Last Command</a>, messages may appear to notify you of events that occurred while the command was executed. Reported events include map sites captured and losses taken in combat, among others.</p>
+  <p>Each message starts on a new line with a dash; followed by the faction affected by the event, if any; and a brief summary of what happened.</p>
+  <p>Depending on the event, the following lines may show additional details and/or the entities affected by the event.</p>
+  <h3>Remarks</h3>
+  <p>Important events, such as faction defeat or victory, are also shown in an <a href="DlgShowEvent.html">Event Message</a> dialog.</p>
+</body>
+</html>

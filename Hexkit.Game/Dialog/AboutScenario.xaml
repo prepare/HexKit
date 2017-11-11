@@ -1,0 +1,71 @@
+﻿<Window x:Class="Hexkit.Game.Dialog.AboutScenario"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="About Scenario" Width="550" Height="420" ResizeMode="CanResizeWithGrip" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition MinHeight="100" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <TextBlock Name="ScenarioInfo" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10">Scenario Title</TextBlock>
+    <GroupBox Grid.Column="0" Grid.Row="1" Header="Scenario Credits">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0">Author:</Label>
+        <TextBlock Name="ScenarioAuthorInfo" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">Scenario Author</TextBlock>
+        <Label Grid.Column="0" Grid.Row="1">Version:</Label>
+        <TextBlock Name="ScenarioVersionInfo" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">Scenario Version</TextBlock>
+        <TextBlock Name="ScenarioLegalInfo" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" TextWrapping="Wrap" Style="{StaticResource defaultStyle}">Scenario Copyright</TextBlock>
+      </Grid>
+    </GroupBox>
+    <GroupBox Grid.Column="1" Grid.Row="1" Header="Graphics Credits">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0">Author:</Label>
+        <TextBlock Name="GraphicsAuthorInfo" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">Graphics Author</TextBlock>
+        <Label Grid.Column="0" Grid.Row="1">Version:</Label>
+        <TextBlock Name="GraphicsVersionInfo" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">Graphics Version</TextBlock>
+        <TextBlock Name="GraphicsLegalInfo" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" TextWrapping="Wrap" Style="{StaticResource defaultStyle}">Graphics Copyright</TextBlock>
+      </Grid>
+    </GroupBox>
+    <TextBox Name="DetailsInfo" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" IsReadOnly="True" TextWrapping="Wrap" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" Style="{StaticResource defaultStyle}" />
+    <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsCancel="True" IsDefault="True" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button Name="ShowGraphicsButton" x:FieldModifier="private" Width="160" Click="OnShowGraphics" Style="{StaticResource dialogButtonStyle}">_Show Graphics Information</Button>
+      <Button Name="ShowScenarioButton" x:FieldModifier="private" Width="160" Click="OnShowScenario" Style="{StaticResource dialogButtonStyle}">_Show Scenario Information</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+  </Grid>
+</Window>

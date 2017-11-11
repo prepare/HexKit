@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Hexkit Game</title>
+</head>
+<body>
+  <h1>Hexkit Game</h1>
+  <p>The main program <code>Hexkit.Game.exe</code> provides the functionality for playing games. Visit the following sections for more information:</p>
+  <ul>
+    <li><a href="#Features">Features</a> (below) briefly describes the abilities of Hexkit Game.</li>
+    <li><a href="#Invocation">Invocation</a> (below) describes the command line parameters Hexkit Game will accept.</li>
+    <li><a href="GameInterface.html">Game Interface</a> describes how to enter commands and read the display in Hexkit Game.</li>
+  </ul>
+  <h2><a name="Features">Features</a></h2>
+  <p>Hexkit Game is a framework consisting of user interface, graphics engine, player management, and an implementation of fundamental game mechanics.</p>
+  <p>This framework can read user-created scenarios, rule scripts, and graphical tilesets which define the specifics of a game: units, terrains, effects, and upgrades; map layout; faction setup; game rules; and visual appearance.</p>
+  <p>All factions can be played by the computer or by other human players. Multiple human players can take turns via “hotseat” play or play-by-email.</p>
+  <p>Please refer to the <em>User’s Guide,</em> available as a separate download at the <a href="http://www.kynosarges.org/Hexkit.html" target="_blank">Hexkit home page</a>, for more information.</p>
+  <h2><a name="Invocation">Invocation</a></h2>
+  <p>You may supply the name of an XML file as a command line parameter to <code>Hexkit.Game.exe</code>, and you may drag &amp; drop an XML file on the Hexit program icon or on an instance of Hexkit that is already running. Hexkit will examine the XML file and automatically load it if it appears to be a scenario file or a saved game file. Unidentifiable files will generate an error message.</p>
+  <p>Hexkit Game accepts uncompressed XML files (extension “.xml”) as well as XML files that were compressed with the GZip algorithm (extension “.xml.gz”). All saved games are automatically compressed to save disk space and e-mail transmission time.</p>
+  <p>When specifying a file name on the command line, you may omit the file extension and use “wildcard” characters (? and *). If you specify a file name without a directory path, Hexkit Game will search for the file not only in the current directory, but also in the directory trees below the current user’s <code>Hexkt\Games</code> folder and below the <code>Scenario</code> folder in your Hexkit installation directory.</p>
+</body>
+</html>

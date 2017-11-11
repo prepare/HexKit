@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A31C9F76-095F-4978-A60A-D7BFFDC0FCB7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Hexkit.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Hexkit.Editor</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hexkit.Editor</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Hexkit.Editor.EditorApplication</StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>..\bin\</OutputPath>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.Editor.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.Editor.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Core\Tektosyne.Core.csproj">
+      <Project>{52F55B71-58AD-4231-8AB9-D2DF79ECCB73}</Project>
+      <Name>Tektosyne.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Windows\Tektosyne.Windows.csproj">
+      <Project>{2DAF2FD2-A2CF-4630-873A-CBCFFC5C91F1}</Project>
+      <Name>Tektosyne.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Global\Hexkit.Global.csproj">
+      <Name>Hexkit.Global</Name>
+      <Project>{F8FA30DD-F2B7-4446-A615-534749AF3FF7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Graphics\Hexkit.Graphics.csproj">
+      <Name>Hexkit.Graphics</Name>
+      <Project>{AB3DFFBA-2A71-4178-86CE-42045699AB76}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Options\Hexkit.Options.csproj">
+      <Name>Hexkit.Options</Name>
+      <Project>{40B9E5F5-F3B0-4BA2-B59F-540348015A67}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Players\Hexkit.Players.csproj">
+      <Project>{9F34A9F9-2A3F-4AD1-B461-C913B27BC37C}</Project>
+      <Name>Hexkit.Players</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Scenario\Hexkit.Scenario.csproj">
+      <Name>Hexkit.Scenario</Name>
+      <Project>{B5C0FEF9-C7E4-4735-A53F-025311B60E51}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.World\Hexkit.World.csproj">
+      <Name>Hexkit.World</Name>
+      <Project>{7F478772-4BAF-441B-9445-11F5C2F00144}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <Compile Include="AreasTabContent.xaml.cs">
+      <DependentUpon>AreasTabContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialog\ChangeEntity.xaml.cs">
+      <DependentUpon>ChangeEntity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeHomes.xaml.cs">
+      <DependentUpon>ChangeHomes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeOverlay.xaml.cs">
+      <DependentUpon>ChangeOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangePlacements.xaml.cs">
+      <DependentUpon>ChangePlacements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeImage.xaml.cs">
+      <DependentUpon>ChangeImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeSite.xaml.cs">
+      <DependentUpon>ChangeSite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeFrame.xaml.cs">
+      <DependentUpon>ChangeFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeColors.xaml.cs">
+      <DependentUpon>ChangeColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeConnections.xaml.cs">
+      <DependentUpon>ChangeConnections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeTemplate.xaml.cs">
+      <DependentUpon>ChangeTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeFaction.xaml.cs">
+      <DependentUpon>ChangeFaction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeGeometry.xaml.cs">
+      <DependentUpon>ChangeGeometry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeIdentifier.xaml.cs">
+      <DependentUpon>ChangeIdentifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeInformation.xaml.cs">
+      <DependentUpon>ChangeInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ChangeVariable.xaml.cs">
+      <DependentUpon>ChangeVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\VariableListItem.cs" />
+    <Compile Include="EditorApplication.xaml.cs">
+      <DependentUpon>EditorApplication.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntitiesTabContent.xaml.cs">
+      <DependentUpon>EntitiesTabContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FactionsTabContent.xaml.cs">
+      <DependentUpon>FactionsTabContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IEditorTabContent.cs" />
+    <Compile Include="ImagesTabContent.xaml.cs">
+      <DependentUpon>ImagesTabContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterTabContent.xaml.cs">
+      <DependentUpon>MasterTabContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SectionTabItem.xaml.cs">
+      <DependentUpon>SectionTabItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditorUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TileChecker.cs" />
+    <Compile Include="VariablesTabContent.xaml.cs">
+      <DependentUpon>VariablesTabContent.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Hexkit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="EditorApplication.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AreasTabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeEntity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeHomes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangePlacements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeSite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeConnections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeFaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeGeometry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeIdentifier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\ChangeVariable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EntitiesTabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FactionsTabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImagesTabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterTabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Commands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SectionTabItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VariablesTabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

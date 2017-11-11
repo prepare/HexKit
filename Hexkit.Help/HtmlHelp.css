@@ -1,0 +1,34 @@
+/*
+ *  Cascading Style Sheet for HTML Help projects
+ *
+ *  Created by Christoph Nahr 2001-2004
+ *  (based on the HTML Help Workshop online help)
+ */
+
+body        { font-size: 10pt; line-height: 12pt; font-family: Verdana, Arial, Helvetica }
+
+a:link      { color: #0000FF }
+a:active    { color: #FF33CC }
+a:visited   { color: #800080 }
+a.pseudo    { color: #0000FF; cursor: hand; text-decoration: underline }
+
+h1          { font-size: 15pt; line-height: 18pt; margin-bottom: 1em }
+h2          { font-size: 13pt; line-height: 15pt; margin-bottom: 1em }
+h3          { font-size: 10pt; line-height: 12pt; margin-bottom: 0.5em }
+
+code        { font-family: Lucida Console, Courier }
+p           { margin-top: .5em; margin-bottom: .5em }
+pre         { font-family: Lucida Console, Courier }
+
+dd          { margin-left: 1.5em }
+dl          { margin-top: 1em }
+dt          { margin-top: 1em; margin-left: 1.5em; font-weight: bold }
+dt.left     { margin-top: 1em; margin-left: 0em; font-weight: bold }
+
+li          { margin-top: .5em; margin-bottom: .5em; margin-left: -1em }
+ol          { margin-top: .5em; margin-bottom: .5em; margin-left: 3em }
+ul          { margin-top: .5em; margin-bottom: .5em; margin-left: 2.75em }
+
+table       { margin-top: 1em; margin-bottom: 1em; font-size: 100% }
+td          { margin: 3pt }
+th          { text-align: left; background: #dddddd; margin: 3pt }

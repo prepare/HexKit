@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Overlay Dialog</title>
+</head>
+<body>
+  <h1>Change Overlay Dialog</h1>
+  <p>This dialog allows you to define an overlay image that covers the entire game map.</p>
+  <p>Any changes immediately update the <a href="EditorTabAreas.html#Map">Map View</a> on the <a href="EditorTabAreas.html">Areas Page</a> so you can preview their effects. All changes are reverted if the dialog is cancelled.</p>
+  <ul>
+    <li><a href="#File">Image File</a></li>
+    <li><a href="#Coordinates">Coordinates</a></li>
+    <li><a href="#References">References</a></li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h2><a name="File">Image File</a></h2>
+  <p>The topmost controls allow you to select an overlay image or remove the current image.</p>
+  <ul>
+    <li><b>File</b> is a read-only text box that shows the file name of the current overlay image, if any.</li>
+    <li>Hover the mouse pointer over the <b>File</b> text box to display the complete (absolute or relative) file path.</li>
+    <li>Choose <b>Browse… (Alt+B)</b> to display a standard Windows “Open” dialog, allowing you to select a new overlay image.</li>
+    <li>Choose <b>Clear (Alt+C)</b> to remove the current overlay image.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. File paths are stored relative to the <code>Images</code> folder of your Hexkit installation directory, just as with other image files.</p>
+  <p>2. Loading a new overlay image may take a few seconds, depending on its size. The dialog controls are disabled until loading is complete.</p>
+  <h2><a name="Coordinates">Coordinates</a></h2>
+  <p>This box allows you to adjust the size and location of the overlay image.</p>
+  <ul>
+    <li>Use <b>Left (Alt+L)</b> and <b>Top (Alt+T)</b> to move the upper-left corner of the overlay image, relative to the <a href="#References">Map Borders</a> at the upper-left corner of the <a href="EditorTabAreas.html#Map">Map View</a>.</li>
+    <li>Use <b>Width (Alt+W)</b> and <b>Height (Alt+H)</b> to change the size at which the overlay image is drawn. The image will be stretched or compressed to fit the selected size.</li>
+    <li>Check <b>Preserve Original Aspect Ratio (Alt+A)</b> to indicate that both dimensions of the overlay image should be stretched or compressed simultaneously, so as to preserve its original aspect ratio. When this option is first checked, either <b>Width</b> or <b>Height</b> will shrink automatically to match the original aspect ratio.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. All sizes and locations are specified in pixels at the default zoom level of 100%.</p>
+  <p>2. Selecting a different overlay image does not change the currently selected coordinates.</p>
+  <p>3. If no overlay image has been selected, <b>Left</b> and <b>Top</b> default to zero, and <b>Width</b> and <b>Height</b> default to the <a href="#References">Map Size</a>.</p>
+  <p>4. Major size changes may take a few seconds to process. The dialog will be unresponsive during that time.</p>
+  <h2><a name="References">References</a></h2>
+  <p>This box shows several reference sizes to help you adjust the <a href="#Coordinates">Coordinates</a> of the overlay image.</p>
+  <ul>
+    <li><b>Image Size</b> shows the width and height of the current overlay image, if any.</li>
+    <li><b>Map Size</b> shows the width and height of the current game map.</li>
+    <li><b>Map Borders</b> shows the width of each horizontal border and the height of each vertical border around the four edges of the game map.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. All sizes are specified in pixels at the default zoom level of 100%.</p>
+  <p>2. Unlike all other sizes, the <b>Map Borders</b> are not scaled at non-default zoom levels.</p>
+  <p>3. <b>Image Size</b> may be greater or smaller than expected, relative to <b>Map Size</b>, if the overlay image specifies a resolution other than 96 dpi.</p>
+</body>
+</html>

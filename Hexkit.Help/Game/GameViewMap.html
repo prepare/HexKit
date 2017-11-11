@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Map View</title>
+</head>
+<body>
+  <h1>Map View</h1>
+  <p>The largest part of the Hexkit Game window is taken up by the map view. This view also appears on the <a href="EditorTabAreas.html">Areas Page</a> of Hexkit Editor, so most of the following description applies to both programs. Pick a subtopic to view:</p>
+  <ul>
+    <li><a href="#Contents">Map Contents</a></li>
+    <li><a href="#Mouse">Mouse Commands</a></li>
+    <li><a href="#Target">Target Selection</a></li>
+  </ul>
+  <h2><a name="Contents">Map Contents</a></h2>
+  <p>The map view shows the game map as defined by the current scenario and by the current game situation. This map is a rectangular grid composed of squares or hexagons, depending on the scenario. We refer to the individual squares or hexagons as map locations or “sites”.</p>
+  <ul>
+    <li>Sites are identified by coordinate pairs (<em>x</em>, <em>y</em>) where <em>x</em> indicates the site’s column index (starting with zero at the leftmost column) and <em>y</em> indicates the site’s row index (starting with zero at the topmost row).</li>
+    <li>Every site contains at least one background terrain type. Other terrain types, if any, visually appear on top of the background terrain; then any units on top of all terrain; and finally any local effects, such as fog or explosions.</li>
+    <li>If multiple units occupy the same site, only the topmost unit is visible.</li>
+  </ul>
+  <p>The <a href="GameMenuView.html">View Menu</a> provides additional visual effects, such as a color overlay to indicate terrain ownership. Moreover, some <a href="GameMenuCommand.html">Command Menu</a> items indicate possible target sites by a bright hue.</p>
+  <h2><a name="Mouse">Mouse Commands</a></h2>
+  <p>Please refer to the <a href="GameMenuView.html">View Menu</a> for other commands related to the map view.</p>
+  <ul>
+    <li>While moving the mouse cursor over the map, the coordinates of the <b>current site</b> will appear in the status bar’s <a href="GameViewStatus.html#Position">Mouse Position</a> field.</li>
+    <li><b>Left-click</b> on any map site to select it. The <b>selected site</b> is indicated by a white frame. Click on the border area of the map view to deselect the selected site.</li>
+    <li>If the map view is too small to hold the entire map, horizontal and/or vertical <b>scroll bars</b> will appear that you can use to shift the visible portion of the map.</li>
+    <li>If the application window is maximized, you can <b>auto-scroll</b> the map by moving the mouse cursor all the way towards an edge or corner of the screen.</li>
+    <li>When the map view has the input focus, you can rotate the <b>mouse wheel</b> (if present) to change the map view’s <a href="GameMenuView.html#Zoom">Zoom Level</a>.</li>
+    <li>Click the <b>mouse wheel</b> or the middle mouse button (if present) to restore the <a href="GameMenuView.html#ZoomStd">Standard Zoom Level</a>.</li>
+  </ul>
+  <p>The following functions apply to Hexkit Game only.</p>
+  <ul>
+    <li>The contents of the selected site are listed in the <a href="GameViewData.html#Site">Data View</a>.</li>
+    <li>When the selected site contains multiple units, <b>left-click repeatedly</b> on that site to cycle through the entire unit stack. The topmost unit is also selected in the data view.</li>
+  </ul>
+  <p><b>Note:</b> Windows sends mouse wheel messages to the control that has the input focus, not to the control under the mouse pointer. So if one of the list boxes on the <a href="GameViewData.html">Data View</a> is active, rotating the mouse wheel will not change the zoom level, but rather scroll that list box. In that case, you can return the input focus to the map view by clicking on it.</p>
+  <h2><a name="Target">Target Selection</a></h2>
+  <p>This subtopic applies to Hexkit Game only.</p>
+  <p>When the selected site contains friendly units that can attack or move, you can issue these commands directly on the map view, without going through the <a href="GameMenuCommand.html">Command Menu</a> and the corresponding dialogs.</p>
+  <ul>
+    <li>All map sites that are possible attack or move targets are automatically <b>highlighted</b> on the map view.</li>
+    <li><b>Hover</b> the mouse pointer over a highlighted attack target to show the projected losses for attackers and defenders in the <a href="GameViewStatus.html">Status Bar</a>.</li>
+    <li><b>Right-click</b> on a highlighted target to immediately attack or move to the target.</li>
+    <li>By default, right-click targeting applies to the <b>selected unit</b> only.</li>
+    <li>Hold down <b>Shift</b> to instead command <b>all eligible units</b> in the selected site. Target highlights, projected losses, and command execution will all change accordingly.</li>
+  </ul>
+  <p>When a right-click command has been executed and the selected unit has no other valid attack or movement targets, the selection automatically jumps to the active faction’s next unit that does have such targets.</p>
+  <p>Target selection is only available when Hexkit Game awaits a command by the local human player, i.e. while the <a href="GameMenuCommand.html">Command Menu</a> is enabled.</p>
+  <p><b>Note:</b> Right-click targeting is a convenient shortcut that does not expose the full power of Hexkit Game commands. Use the regular <a href="GameMenuCommand.html#Attack">Attack</a> and <a href="GameMenuCommand.html#Move">Move</a> commands to select specific units within a stack or to perform multi-pronged attacks.</p>
+</body>
+</html>

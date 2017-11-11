@@ -1,0 +1,3096 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.kynosarges.de/Diagrammer.Project">
+  <application product="Class Diagrammer" version="1.4.5" />
+  <title>Hexkit Diagrams</title>
+  <description>This project defines all class and package diagrams for the Hexkit User’s Guide.</description>
+  <display>
+    <showFamily value="false" />
+    <font size="10" headerSize="12">Myriad Pro</font>
+    <colorRight red="250" green="234" blue="209" />
+  </display>
+  <relativePaths value="true" />
+  <assembly>bin\Hexkit.Editor.exe</assembly>
+  <assembly>bin\Hexkit.Game.exe</assembly>
+  <assembly>bin\Hexkit.Global.dll</assembly>
+  <assembly>bin\Hexkit.Graphics.dll</assembly>
+  <assembly>bin\Hexkit.Options.dll</assembly>
+  <assembly>bin\Hexkit.Players.dll</assembly>
+  <assembly>bin\Hexkit.Scenario.dll</assembly>
+  <assembly>bin\Hexkit.World.dll</assembly>
+  <assembly>bin\Tektosyne.Core.dll</assembly>
+  <assembly>bin\Tektosyne.Windows.dll</assembly>
+  <diagram>
+    <name>AssemblyHierarchy</name>
+    <display>
+      <showNamespace value="true" />
+    </display>
+    <element left="168" minWidth="120">
+      <name>Hexkit.Editor</name>
+    </element>
+    <element minWidth="120">
+      <name>Hexkit.Game</name>
+    </element>
+    <element left="336" top="120" minWidth="120">
+      <name>Hexkit.Global</name>
+    </element>
+    <element top="120" minWidth="120">
+      <name>Hexkit.Graphics</name>
+    </element>
+    <element top="216" minWidth="120">
+      <name>Hexkit.Options</name>
+    </element>
+    <element left="168" top="120" minWidth="120">
+      <name>Hexkit.Players</name>
+    </element>
+    <element left="336" top="216" minWidth="120">
+      <name>Hexkit.Scenario</name>
+    </element>
+    <element left="168" top="216">
+      <name>Hexkit.World</name>
+    </element>
+    <element left="336" minWidth="120">
+      <name>Tektosyne.Core</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="336" top="48" minWidth="120">
+      <name>Tektosyne.Windows</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.Game</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Graphics</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="BottomRight">
+        <element>Hexkit.Game</element>
+      </source>
+      <target anchor="TopLeft" symbol="Arrow">
+        <element>Hexkit.Players</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="BottomLeft">
+        <element>Hexkit.Editor</element>
+      </source>
+      <target anchor="TopRight" symbol="Arrow">
+        <element>Hexkit.Graphics</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.Editor</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Players</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.Graphics</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Options</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource" dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.Players</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.Options</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.World</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.Scenario</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Global</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.Global</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Tektosyne.Windows</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>Command</name>
+    <element>
+      <name>Hexkit.World.Commands.Command</name>
+      <display>
+        <showAssembly value="true" />
+        <showMember value="false">get_XmlName</showMember>
+      </display>
+    </element>
+    <element left="408">
+      <name>Hexkit.World.Commands.CommandExecutor</name>
+      <display>
+        <showFamily value="true" />
+      </display>
+    </element>
+    <element left="408" top="288">
+      <name>Hexkit.World.Commands.ExecutionContext</name>
+    </element>
+    <element left="408" top="480">
+      <name>Hexkit.World.Commands.ExecutionCounters</name>
+    </element>
+    <element left="408" top="408">
+      <name>Hexkit.World.Instructions.Instruction</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation alignment="SourceToTarget">
+      <name>Context</name>
+      <source anchor="Right" symbol="HollowDiamond">
+        <element>Hexkit.World.Commands.Command</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Commands.ExecutionContext</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Counters</name>
+      <source anchor="Right">
+        <element>Hexkit.World.Commands.Command</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Commands.ExecutionCounters</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Program</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.Commands.Command</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Instructions.Instruction</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Queue</name>
+      <source anchor="Left" symbol="HollowDiamond">
+        <element>Hexkit.World.Commands.CommandExecutor</element>
+        <multiplicity>0…1</multiplicity>
+      </source>
+      <target anchor="Right" offset="18" symbol="Arrow">
+        <element>Hexkit.World.Commands.Command</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <name>QueueCommand</name>
+      <source anchor="Top">
+        <element>Hexkit.World.Commands.ExecutionContext</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Commands.CommandExecutor</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>CommandTree</name>
+    <display>
+      <showBaseType value="false" />
+      <showAttributes value="false" />
+      <showOperations value="false" />
+    </display>
+    <element left="552" top="144">
+      <name>Hexkit.World.Commands.AttackCommand</name>
+    </element>
+    <element left="360" top="144">
+      <name>Hexkit.World.Commands.AutomateCommand</name>
+    </element>
+    <element left="168" top="144">
+      <name>Hexkit.World.Commands.BeginTurnCommand</name>
+    </element>
+    <element left="360">
+      <name>Hexkit.World.Commands.BuildCommand</name>
+    </element>
+    <element left="168">
+      <name>Hexkit.World.Commands.ClassesCommand</name>
+    </element>
+    <element top="144">
+      <name>Hexkit.World.Commands.Command</name>
+    </element>
+    <element left="360" top="216">
+      <name>Hexkit.World.Commands.DestroyCommand</name>
+    </element>
+    <element left="168" top="216">
+      <name>Hexkit.World.Commands.EndTurnCommand</name>
+    </element>
+    <element left="168" top="72">
+      <name>Hexkit.World.Commands.EntitiesCommand</name>
+    </element>
+    <element left="344" top="72">
+      <name>Hexkit.World.Commands.EntitiesTargetCommand</name>
+    </element>
+    <element left="552" top="216">
+      <name>Hexkit.World.Commands.MoveCommand</name>
+    </element>
+    <element left="552" top="288">
+      <name>Hexkit.World.Commands.PlaceCommand</name>
+    </element>
+    <element left="360" top="288">
+      <name>Hexkit.World.Commands.RenameCommand</name>
+    </element>
+    <element left="168" top="288">
+      <name>Hexkit.World.Commands.ResignCommand</name>
+    </element>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.ClassesCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.Command</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.EntitiesCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.Command</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.BeginTurnCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.Command</element>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.EndTurnCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.Command</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.ResignCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.Command</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.BuildCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.ClassesCommand</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.EntitiesTargetCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesCommand</element>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.AutomateCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesCommand</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.DestroyCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesCommand</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.RenameCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesCommand</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.AttackCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesTargetCommand</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.MoveCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesTargetCommand</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Commands.PlaceCommand</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Commands.EntitiesTargetCommand</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+  </diagram>
+  <diagram>
+    <name>GeometryClasses</name>
+    <element left="528" top="432">
+      <name>Tektosyne.Geometry.Compass</name>
+    </element>
+    <element>
+      <name>Tektosyne.Geometry.PolygonGrid</name>
+    </element>
+    <element left="384" top="552">
+      <name>Tektosyne.Geometry.PolygonGridShift</name>
+    </element>
+    <element left="384" top="432">
+      <name>Tektosyne.Geometry.PolygonOrientation</name>
+    </element>
+    <element left="384">
+      <name>Tektosyne.Geometry.RegularPolygon</name>
+    </element>
+    <relation alignment="SourceToTarget">
+      <name>Element</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Tektosyne.Geometry.PolygonGrid</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Geometry.RegularPolygon</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>GridShift</name>
+      <source anchor="Right">
+        <element>Tektosyne.Geometry.PolygonGrid</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Geometry.PolygonGridShift</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Orientation</name>
+      <source anchor="Bottom">
+        <element>Tektosyne.Geometry.RegularPolygon</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Tektosyne.Geometry.PolygonOrientation</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Bottom">
+        <element>Tektosyne.Geometry.RegularPolygon</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Tektosyne.Geometry.Compass</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>InstructionTree</name>
+    <element left="264" minWidth="120">
+      <name>Hexkit.World.Instructions.BooleanInstruction</name>
+    </element>
+    <element left="264" top="72">
+      <name>Hexkit.World.Instructions.ImageInstruction</name>
+    </element>
+    <element top="120">
+      <name>Hexkit.World.Instructions.Instruction</name>
+    </element>
+    <element left="24">
+      <name>Hexkit.World.Instructions.InstructionCategory</name>
+    </element>
+    <element top="288">
+      <name>Hexkit.World.Instructions.InstructionResults</name>
+    </element>
+    <element left="264" top="192" minWidth="120">
+      <name>Hexkit.World.Instructions.IntegerInstruction</name>
+    </element>
+    <element left="480" top="312">
+      <name>Hexkit.World.Instructions.MessageInstruction</name>
+    </element>
+    <element left="264" top="264" minWidth="120">
+      <name>Hexkit.World.Instructions.PointInstruction</name>
+    </element>
+    <element left="480" top="240" minWidth="144">
+      <name>Hexkit.World.Instructions.StringBooleanInstruction</name>
+    </element>
+    <element left="264" top="336" minWidth="120">
+      <name>Hexkit.World.Instructions.StringInstruction</name>
+    </element>
+    <element left="480" top="168" minWidth="144">
+      <name>Hexkit.World.Instructions.StringIntegerInstruction</name>
+    </element>
+    <relation alignment="TargetToSource">
+      <name>Category</name>
+      <source anchor="Top">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Instructions.InstructionCategory</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Results</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Instructions.InstructionResults</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.BooleanInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.ImageInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.IntegerInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.PointInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.StringInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.Instruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.StringIntegerInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.StringInstruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.StringBooleanInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.StringInstruction</element>
+      </target>
+      <point x="-36" />
+      <point x="-36" fromTargetY="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Left">
+        <element>Hexkit.World.Instructions.MessageInstruction</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Instructions.StringInstruction</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>PathfindingClasses</name>
+    <display>
+      <showNamespace value="true" />
+      <hiddenNamespace>Tektosyne</hiddenNamespace>
+    </display>
+    <element top="120">
+      <name>Hexkit.Scenario.AreaSection</name>
+    </element>
+    <element top="408">
+      <name>Hexkit.World.Finder</name>
+    </element>
+    <element left="456" top="408">
+      <name>Hexkit.World.UnitAgent</name>
+    </element>
+    <element left="48">
+      <name>Tektosyne.Geometry.PolygonGrid</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="288" top="312" minWidth="118">
+      <name>Tektosyne.Graph.AStar`1</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="288" top="240">
+      <name>Tektosyne.Graph.Coverage`1</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="288" top="168" minWidth="118">
+      <name>Tektosyne.Graph.FloodFill`1</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="480">
+      <name>Tektosyne.Graph.IGraph2D`1</name>
+    </element>
+    <element left="480" top="240">
+      <name>Tektosyne.Graph.IGraphAgent`1</name>
+    </element>
+    <element left="288" top="96" minWidth="118">
+      <name>Tektosyne.Graph.Visibility`1</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation alignment="TargetToSource">
+      <name>MapGrid</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Tektosyne.Geometry.PolygonGrid</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>AStar</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.AStar`1</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Coverage</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.Coverage`1</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>FloodFill</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.FloodFill`1</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Visibility</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.Visibility`1</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <name>Proxy Properties</name>
+      <source anchor="Top">
+        <element>Hexkit.World.Finder</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.World.UnitAgent</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Tektosyne.Graph.IGraphAgent`1</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Agent</name>
+      <source anchor="Right" symbol="HollowDiamond">
+        <element>Tektosyne.Graph.AStar`1</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.IGraphAgent`1</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Agent</name>
+      <source anchor="Right" symbol="HollowDiamond">
+        <element>Tektosyne.Graph.Coverage`1</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.IGraphAgent`1</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Graph</name>
+      <source anchor="Right" symbol="HollowDiamond">
+        <element>Tektosyne.Graph.Visibility`1</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Graph.IGraph2D`1</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource" dashedLine="true">
+      <source anchor="Right">
+        <element>Tektosyne.Geometry.PolygonGrid</element>
+      </source>
+      <target anchor="Left" symbol="HollowArrow">
+        <element>Tektosyne.Graph.IGraph2D`1</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>ScenarioClasses</name>
+    <display>
+      <showInterface value="false" />
+      <showAttributes value="false" />
+      <showOperations value="false" />
+    </display>
+    <element left="840" top="264">
+      <name>Hexkit.Scenario.Area</name>
+    </element>
+    <element left="840" top="408">
+      <name>Hexkit.Scenario.AreaSection</name>
+    </element>
+    <element left="432" top="264">
+      <name>Hexkit.Scenario.AttributeClass</name>
+    </element>
+    <element left="552" top="264">
+      <name>Hexkit.Scenario.CounterClass</name>
+    </element>
+    <element left="264" top="336">
+      <name>Hexkit.Scenario.EffectClass</name>
+    </element>
+    <element left="192">
+      <name>Hexkit.Scenario.EntityCategory</name>
+    </element>
+    <element left="360" top="120">
+      <name>Hexkit.Scenario.EntityClass</name>
+    </element>
+    <element left="168" top="120">
+      <name>Hexkit.Scenario.EntityImage</name>
+    </element>
+    <element left="96" top="336">
+      <name>Hexkit.Scenario.EntitySection</name>
+    </element>
+    <element left="840">
+      <name>Hexkit.Scenario.EntityTemplate</name>
+    </element>
+    <element left="744" top="120">
+      <name>Hexkit.Scenario.FactionClass</name>
+    </element>
+    <element left="720" top="408">
+      <name>Hexkit.Scenario.FactionSection</name>
+    </element>
+    <element left="360">
+      <name>Hexkit.Scenario.IValuable</name>
+    </element>
+    <element top="120">
+      <name>Hexkit.Scenario.ImageFile</name>
+    </element>
+    <element>
+      <name>Hexkit.Scenario.ImageFrame</name>
+    </element>
+    <element top="408">
+      <name>Hexkit.Scenario.ImageSection</name>
+    </element>
+    <element left="96" top="528">
+      <name>Hexkit.Scenario.Information</name>
+    </element>
+    <element left="432" top="528">
+      <name>Hexkit.Scenario.MasterSection</name>
+    </element>
+    <element left="672" top="264">
+      <name>Hexkit.Scenario.ResourceClass</name>
+    </element>
+    <element left="432" top="408">
+      <name>Hexkit.Scenario.RuleScript</name>
+    </element>
+    <element left="264" top="264">
+      <name>Hexkit.Scenario.TerrainClass</name>
+    </element>
+    <element left="264" top="192">
+      <name>Hexkit.Scenario.UnitClass</name>
+    </element>
+    <element left="264" top="408">
+      <name>Hexkit.Scenario.UpgradeClass</name>
+    </element>
+    <element left="720" top="48">
+      <name>Hexkit.Scenario.VariableCategory</name>
+    </element>
+    <element left="552" top="120">
+      <name>Hexkit.Scenario.VariableClass</name>
+    </element>
+    <element left="552" top="408">
+      <name>Hexkit.Scenario.VariableSection</name>
+    </element>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Category</name>
+      <source anchor="TopLeft">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityCategory</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>ImageStack</name>
+      <source anchor="Left">
+        <element>Hexkit.Scenario.EntityClass</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityImage</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Source</name>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.ImageFrame</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageFile</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Frames</name>
+      <source anchor="TopLeft" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntityImage</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageFrame</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>ImageFiles</name>
+      <source anchor="Top" offset="-24" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageFile</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation nameSegment="1">
+      <name>Collection</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="BottomLeft" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityImage</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Right">
+        <element>Hexkit.Scenario.UnitClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+    <relation>
+      <source anchor="Right">
+        <element>Hexkit.Scenario.TerrainClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+    <relation>
+      <source anchor="Right">
+        <element>Hexkit.Scenario.EffectClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+    <relation>
+      <source anchor="Right">
+        <element>Hexkit.Scenario.UpgradeClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+    <relation>
+      <name>Units</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.UnitClass</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Terrains</name>
+      <source anchor="TopRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.TerrainClass</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Effects</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.EffectClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Upgrades</name>
+      <source anchor="BottomRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.UpgradeClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.AttributeClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </target>
+      <point y="48" fromTargetY="true" />
+      <point y="48" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.CounterClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </target>
+      <point y="48" fromTargetY="true" />
+      <point y="48" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.ResourceClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </target>
+      <point y="48" fromTargetY="true" />
+      <point y="48" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <name>Attributes</name>
+      <source anchor="TopLeft" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.AttributeClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Counters</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.CounterClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Resources</name>
+      <source anchor="TopRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.ResourceClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Variables</name>
+      <source anchor="Right">
+        <element>Hexkit.Scenario.EntityClass</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Collection</name>
+      <source anchor="TopRight" offset="-18" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.FactionSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.FactionClass</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Variables</name>
+      <source anchor="Left">
+        <element>Hexkit.Scenario.FactionClass</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Collection</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.Area</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Owner</name>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.Area</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.Scenario.FactionClass</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Category</name>
+      <source anchor="TopRight">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableCategory</element>
+      </target>
+    </relation>
+    <relation>
+      <name>EntityClass</name>
+      <source anchor="Left">
+        <element>Hexkit.Scenario.EntityTemplate</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="TopRight" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point x="96" fromTargetX="true" />
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Entities</name>
+      <source anchor="Top" offset="30" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.Area</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityTemplate</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="TopRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.FactionClass</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityTemplate</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Information</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="TopLeft" symbol="Arrow">
+        <element>Hexkit.Scenario.Information</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Information</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.Information</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Rules</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.RuleScript</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Variables</name>
+      <source anchor="Top" offset="24" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Bottom" offset="24" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Factions</name>
+      <source anchor="TopRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="BottomLeft" symbol="Arrow">
+        <element>Hexkit.Scenario.FactionSection</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Areas</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </target>
+      <point y="48" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="TopLeft" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </target>
+      <point y="72" fromTargetX="true" fromTargetY="true" />
+    </relation>
+  </diagram>
+  <diagram>
+    <name>ScenarioEntity</name>
+    <element left="144">
+      <name>Hexkit.Scenario.EntityCategory</name>
+    </element>
+    <element left="336">
+      <name>Hexkit.Scenario.EntityClass</name>
+    </element>
+    <element left="696">
+      <name>Hexkit.Scenario.IValuable</name>
+    </element>
+    <element top="168">
+      <name>Hexkit.Scenario.ImageStackEntry</name>
+    </element>
+    <element left="840">
+      <name>Hexkit.Scenario.ModifierTarget</name>
+    </element>
+    <element top="72">
+      <name>Hexkit.Scenario.ResourceTransferMode</name>
+    </element>
+    <element left="720" top="144">
+      <name>Hexkit.Scenario.VariableModifier</name>
+    </element>
+    <relation alignment="SourceToTarget">
+      <name>ImageStack</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageStackEntry</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableModifier</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Left" symbol="HollowArrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Top">
+        <element>Hexkit.Scenario.VariableModifier</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.ModifierTarget</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Category</name>
+      <source anchor="Left">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityCategory</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>ResourceTransfer</name>
+      <source anchor="Left">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.ResourceTransferMode</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>SectionAreas</name>
+    <display>
+      <showAssembly value="true" />
+      <showMember value="false">get_XmlName</showMember>
+      <showMember value="false">ProcessIdentifier</showMember>
+      <showMember value="false">Validate</showMember>
+    </display>
+    <element left="336" top="120">
+      <name>Hexkit.Scenario.Area</name>
+    </element>
+    <element top="120">
+      <name>Hexkit.Scenario.AreaSection</name>
+    </element>
+    <element left="264" top="432">
+      <name>Hexkit.Scenario.EntityTemplate</name>
+    </element>
+    <element left="384">
+      <name>Hexkit.Scenario.FactionClass</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element top="456">
+      <name>Hexkit.Scenario.OverlayImage</name>
+    </element>
+    <element>
+      <name>Tektosyne.Geometry.PolygonGrid</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="168">
+      <name>Tektosyne.Geometry.RegularPolygon</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation alignment="SourceToTarget">
+      <name>MapGrid</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Tektosyne.Geometry.PolygonGrid</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>DefaultPolygon</name>
+      <source anchor="Top" symbol="HollowDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Tektosyne.Geometry.RegularPolygon</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Element</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Tektosyne.Geometry.PolygonGrid</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Tektosyne.Geometry.RegularPolygon</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Overlay</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.OverlayImage</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Collection</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.Area</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Entities</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.Area</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityTemplate</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.Area</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.FactionClass</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Terrains</name>
+      <source anchor="Right" offset="48" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.AreaSection</element>
+      </source>
+      <target anchor="Top" offset="-48" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityTemplate</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>SectionEntities</name>
+    <element left="384" top="240">
+      <name>Hexkit.Scenario.EffectClass</name>
+    </element>
+    <element left="264">
+      <name>Hexkit.Scenario.EntityClass</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="216" top="408">
+      <name>Hexkit.Scenario.EntitySection</name>
+    </element>
+    <element top="288">
+      <name>Hexkit.Scenario.TargetMode</name>
+    </element>
+    <element left="432">
+      <name>Hexkit.Scenario.TerrainClass</name>
+    </element>
+    <element>
+      <name>Hexkit.Scenario.UnitClass</name>
+    </element>
+    <element left="144" top="240">
+      <name>Hexkit.Scenario.UpgradeClass</name>
+    </element>
+    <relation alignment="SourceToTarget">
+      <source anchor="Right">
+        <element>Hexkit.Scenario.UnitClass</element>
+      </source>
+      <target anchor="Left" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Left">
+        <element>Hexkit.Scenario.TerrainClass</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.UpgradeClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point y="144" fromTargetY="true" />
+      <point y="144" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.EffectClass</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+      <point y="144" fromTargetY="true" />
+      <point y="144" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>RangedAttack</name>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.UnitClass</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.TargetMode</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Units</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Bottom" offset="-12" symbol="Arrow">
+        <element>Hexkit.Scenario.UnitClass</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Upgrades</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.UpgradeClass</element>
+        <multiplicity>0…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Effects</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="Bottom" offset="24" symbol="Arrow">
+        <element>Hexkit.Scenario.EffectClass</element>
+        <multiplicity>0…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Terrains</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntitySection</element>
+      </source>
+      <target anchor="BottomRight" offset="24" symbol="Arrow">
+        <element>Hexkit.Scenario.TerrainClass</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+  </diagram>
+  <diagram>
+    <name>SectionFactions</name>
+    <element left="408" top="192">
+      <name>Hexkit.Scenario.Condition</name>
+      <display>
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="456" top="336">
+      <name>Hexkit.Scenario.ConditionParameter</name>
+    </element>
+    <element left="408">
+      <name>Hexkit.Scenario.CustomComputer</name>
+    </element>
+    <element left="312" top="432">
+      <name>Hexkit.Scenario.EntityTemplate</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element>
+      <name>Hexkit.Scenario.FactionClass</name>
+    </element>
+    <element top="432">
+      <name>Hexkit.Scenario.FactionSection</name>
+    </element>
+    <relation alignment="TargetToSource">
+      <name>Collection</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.FactionSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.FactionClass</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="BottomRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.FactionClass</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityTemplate</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Conditions</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.FactionClass</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.Condition</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Computer</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.FactionClass</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.CustomComputer</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Parameter</name>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.Condition</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.ConditionParameter</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>SectionImages</name>
+    <element left="120" top="504">
+      <name>Hexkit.Scenario.AnimationMode</name>
+    </element>
+    <element left="240" top="504">
+      <name>Hexkit.Scenario.AnimationSequence</name>
+    </element>
+    <element top="240">
+      <name>Hexkit.Scenario.EntityImage</name>
+    </element>
+    <element left="360" top="168">
+      <name>Hexkit.Scenario.ImageFile</name>
+    </element>
+    <element left="384" top="408">
+      <name>Hexkit.Scenario.ImageFrame</name>
+    </element>
+    <element top="504">
+      <name>Hexkit.Scenario.ImageScaling</name>
+    </element>
+    <element>
+      <name>Hexkit.Scenario.ImageSection</name>
+    </element>
+    <element left="336">
+      <name>Hexkit.Scenario.Information</name>
+    </element>
+    <relation alignment="SourceToTarget">
+      <name>ScalingX/Y</name>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.EntityImage</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageScaling</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Animation</name>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.EntityImage</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.AnimationMode</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Sequence</name>
+      <source anchor="BottomRight">
+        <element>Hexkit.Scenario.EntityImage</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.AnimationSequence</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Source</name>
+      <source anchor="Top">
+        <element>Hexkit.Scenario.ImageFrame</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageFile</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Frames</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.EntityImage</element>
+      </source>
+      <target anchor="TopLeft" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageFrame</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Collection</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityImage</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>ImageFiles</name>
+      <source anchor="BottomRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="Left" offset="24" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageFile</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Information</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="Left" offset="24" symbol="Arrow">
+        <element>Hexkit.Scenario.Information</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>SectionMaster</name>
+    <element left="432" top="312">
+      <name>Hexkit.Scenario.AreaSection</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="432" top="168">
+      <name>Hexkit.Scenario.EntitySection</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="432" top="240">
+      <name>Hexkit.Scenario.FactionSection</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="432" top="24">
+      <name>Hexkit.Scenario.ImageSection</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="120">
+      <name>Hexkit.Scenario.Information</name>
+    </element>
+    <element top="192">
+      <name>Hexkit.Scenario.MasterSection</name>
+    </element>
+    <element left="336" top="384">
+      <name>Hexkit.Scenario.RuleScript</name>
+      <display>
+        <showAssembly value="true" />
+      </display>
+    </element>
+    <element>
+      <name>Hexkit.Scenario.ScenarioSection</name>
+    </element>
+    <element left="432" top="96">
+      <name>Hexkit.Scenario.VariableSection</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation alignment="SourceToTarget">
+      <source anchor="Top">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.ScenarioSection</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Instance</name>
+      <source anchor="Top" offset="24">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Top" offset="-24" symbol="Arrow">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </target>
+      <point y="-48" />
+      <point y="-48" fromTargetX="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Information</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.Information</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Rules</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.RuleScript</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Images</name>
+      <source anchor="TopRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="BottomLeft" symbol="Arrow">
+        <element>Hexkit.Scenario.ImageSection</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Variables</name>
+      <source anchor="Right" offset="-132" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Left" offset="-12" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableSection</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="Right" offset="-96" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.EntitySection</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Factions</name>
+      <source anchor="Right" offset="-60" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.FactionSection</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Areas</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.MasterSection</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.AreaSection</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Information</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.ImageSection</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.Information</element>
+        <multiplicity>1</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>SectionVariables</name>
+    <element top="240">
+      <name>Hexkit.Scenario.AttributeClass</name>
+    </element>
+    <element left="264" top="240">
+      <name>Hexkit.Scenario.CounterClass</name>
+    </element>
+    <element left="504" top="240">
+      <name>Hexkit.Scenario.ResourceClass</name>
+    </element>
+    <element left="552" top="648">
+      <name>Hexkit.Scenario.VariableCategory</name>
+    </element>
+    <element left="168" top="432">
+      <name>Hexkit.Scenario.VariableClass</name>
+    </element>
+    <element left="216">
+      <name>Hexkit.Scenario.VariableSection</name>
+    </element>
+    <relation>
+      <name>Attributes</name>
+      <source anchor="BottomLeft" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.AttributeClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Counters</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.CounterClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Resources</name>
+      <source anchor="BottomRight" symbol="FilledDiamond">
+        <element>Hexkit.Scenario.VariableSection</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.Scenario.ResourceClass</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Category</name>
+      <source anchor="Right">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.Scenario.VariableCategory</element>
+      </target>
+    </relation>
+    <relation>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.AttributeClass</element>
+      </source>
+      <target anchor="Left" symbol="HollowArrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </target>
+      <point fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.ResourceClass</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </target>
+      <point fromTargetY="true" />
+    </relation>
+    <relation alignment="TargetToSource">
+      <source anchor="Bottom">
+        <element>Hexkit.Scenario.CounterClass</element>
+      </source>
+      <target anchor="Top" symbol="HollowArrow">
+        <element>Hexkit.Scenario.VariableClass</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>ValuableClasses</name>
+    <display>
+      <showInterface value="false" />
+      <showNamespace value="true" />
+      <showAttributes value="false" />
+      <showOperations value="false" />
+      <hiddenNamespace>Hexkit</hiddenNamespace>
+    </display>
+    <element minWidth="128">
+      <name>Hexkit.Scenario.EntityClass</name>
+    </element>
+    <element left="192" minWidth="128">
+      <name>Hexkit.Scenario.IValuable</name>
+      <display>
+        <showInterface value="true" />
+        <showAttributes value="true" />
+        <showOperations value="true" />
+      </display>
+    </element>
+    <element top="240" minWidth="128">
+      <name>Hexkit.World.Entity</name>
+    </element>
+    <element left="384" top="240" minWidth="128">
+      <name>Hexkit.World.Faction</name>
+    </element>
+    <element left="192" top="120" minWidth="128">
+      <name>Hexkit.World.Site</name>
+    </element>
+    <element left="384">
+      <name>Hexkit.World.ValuableComparer`1</name>
+      <display>
+        <showInterface value="true" />
+        <showAttributes value="true" />
+        <showOperations value="true" />
+      </display>
+    </element>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </source>
+      <target anchor="Left" symbol="HollowArrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <source anchor="TopRight" offset="-36">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="BottomLeft" symbol="HollowArrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.World.Site</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Left">
+        <element>Hexkit.World.ValuableComparer`1</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation dashedLine="true">
+      <name>Evaluate</name>
+      <source anchor="TopLeft" offset="36">
+        <element>Hexkit.World.Faction</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.Scenario.IValuable</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Faction</name>
+      <source anchor="Bottom">
+        <element>Hexkit.World.ValuableComparer`1</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>EntityClass</name>
+      <source anchor="Top">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.Scenario.EntityClass</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Site</name>
+      <source anchor="TopRight">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="BottomLeft" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Owner</name>
+      <source anchor="BottomRight">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="TopLeft" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Right">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldClasses</name>
+    <display>
+      <showInterface value="false" />
+      <showAttributes value="false" />
+      <showOperations value="false" />
+    </display>
+    <element left="552" top="192">
+      <name>Hexkit.World.Commands.Command</name>
+    </element>
+    <element left="240" top="408">
+      <name>Hexkit.World.Effect</name>
+    </element>
+    <element left="168" top="288">
+      <name>Hexkit.World.Entity</name>
+    </element>
+    <element top="264">
+      <name>Hexkit.World.EntityClassCache</name>
+    </element>
+    <element left="552" top="288">
+      <name>Hexkit.World.EntityHistory</name>
+    </element>
+    <element left="360" top="288">
+      <name>Hexkit.World.EntityReference</name>
+    </element>
+    <element left="168">
+      <name>Hexkit.World.Faction</name>
+    </element>
+    <element left="552">
+      <name>Hexkit.World.FactionHistory</name>
+    </element>
+    <element left="360">
+      <name>Hexkit.World.FactionReference</name>
+    </element>
+    <element left="648" top="96">
+      <name>Hexkit.World.History</name>
+    </element>
+    <element left="384" top="96">
+      <name>Hexkit.World.Site</name>
+    </element>
+    <element left="384" top="192">
+      <name>Hexkit.World.SiteReference</name>
+    </element>
+    <element left="120" top="408">
+      <name>Hexkit.World.Terrain</name>
+    </element>
+    <element top="408">
+      <name>Hexkit.World.Unit</name>
+    </element>
+    <element left="360" top="408">
+      <name>Hexkit.World.Upgrade</name>
+    </element>
+    <element top="24">
+      <name>Hexkit.World.Variable</name>
+    </element>
+    <element top="144">
+      <name>Hexkit.World.VariableContainer</name>
+    </element>
+    <element left="216" top="144">
+      <name>Hexkit.World.WorldState</name>
+    </element>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.World.Unit</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+      <point y="40" fromTargetY="true" />
+      <point y="40" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.World.Terrain</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+      <point y="40" fromTargetY="true" />
+      <point y="40" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.World.Effect</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+      <point y="40" fromTargetY="true" />
+      <point y="40" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation>
+      <source anchor="Top">
+        <element>Hexkit.World.Upgrade</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+      <point y="40" fromTargetY="true" />
+      <point y="40" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.World.VariableContainer</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.EntityClassCache</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Variables</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.World.VariableContainer</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Variable</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Variables</name>
+      <source anchor="BottomLeft" symbol="FilledDiamond">
+        <element>Hexkit.World.Faction</element>
+      </source>
+      <target anchor="TopRight" symbol="Arrow">
+        <element>Hexkit.World.VariableContainer</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Variables</name>
+      <source anchor="TopLeft" symbol="FilledDiamond">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.World.VariableContainer</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Top">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="Bottom" offset="24" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Owner</name>
+      <source anchor="TopLeft">
+        <element>Hexkit.World.Site</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Site</name>
+      <source anchor="TopRight">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="BottomLeft" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Top" offset="24" symbol="Arrow">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Factions</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Bottom" offset="-24" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Sites</name>
+      <source anchor="TopRight" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Value</name>
+      <source anchor="Left">
+        <element>Hexkit.World.FactionReference</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Value</name>
+      <source anchor="Left">
+        <element>Hexkit.World.EntityReference</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Value</name>
+      <source anchor="Top">
+        <element>Hexkit.World.SiteReference</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Factions</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.FactionHistory</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.FactionReference</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Entities</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.EntityHistory</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.EntityReference</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="BottomLeft" symbol="FilledDiamond">
+        <element>Hexkit.World.Commands.Command</element>
+      </source>
+      <target anchor="TopRight" symbol="Arrow">
+        <element>Hexkit.World.EntityReference</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Site</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.Commands.Command</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.SiteReference</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Faction</name>
+      <source anchor="TopLeft" symbol="FilledDiamond">
+        <element>Hexkit.World.Commands.Command</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.World.FactionReference</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Entities</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.World.History</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.EntityHistory</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+      <point fromTargetY="true" />
+    </relation>
+    <relation>
+      <name>Factions</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.World.History</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.FactionHistory</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+      <point fromTargetY="true" />
+    </relation>
+    <relation nameSegment="1">
+      <name>Commands</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.History</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Commands.Command</element>
+        <multiplicity>*</multiplicity>
+      </target>
+      <point fromTargetX="true" />
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldEntity</name>
+    <element>
+      <name>Hexkit.World.Entity</name>
+    </element>
+    <element left="432">
+      <name>Hexkit.World.EntityReference</name>
+    </element>
+    <element left="504" top="384">
+      <name>Hexkit.World.Faction</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="504" top="504">
+      <name>Hexkit.World.Site</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="504" top="240">
+      <name>Hexkit.World.VariableContainer</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="504" top="312">
+      <name>Hexkit.World.VariableModifierContainer</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation alignment="TargetToSource">
+      <name>Value</name>
+      <source anchor="Left">
+        <element>Hexkit.World.EntityReference</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Variables</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.VariableContainer</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>VariableModifiers</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.VariableModifierContainer</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Right">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Site</name>
+      <source anchor="Right">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Top">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldEntityTree</name>
+    <display>
+      <showFamily value="true" />
+    </display>
+    <element>
+      <name>Hexkit.World.Effect</name>
+    </element>
+    <element left="216">
+      <name>Hexkit.World.Entity</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element top="144">
+      <name>Hexkit.World.Terrain</name>
+    </element>
+    <element left="384">
+      <name>Hexkit.World.Unit</name>
+      <display>
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="336" top="144">
+      <name>Hexkit.World.Upgrade</name>
+    </element>
+    <relation alignment="SourceToTarget">
+      <source anchor="Left">
+        <element>Hexkit.World.Unit</element>
+      </source>
+      <target anchor="Right" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Right">
+        <element>Hexkit.World.Effect</element>
+      </source>
+      <target anchor="Left" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Top">
+        <element>Hexkit.World.Terrain</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+      <point y="48" fromTargetY="true" />
+      <point y="48" fromTargetX="true" fromTargetY="true" />
+    </relation>
+    <relation alignment="SourceToTarget">
+      <source anchor="Top">
+        <element>Hexkit.World.Upgrade</element>
+      </source>
+      <target anchor="Bottom" symbol="HollowArrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+      <point y="48" fromTargetY="true" />
+      <point y="48" fromTargetX="true" fromTargetY="true" />
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldFaction</name>
+    <element left="456" top="288">
+      <name>Hexkit.World.Entity</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element>
+      <name>Hexkit.World.Faction</name>
+      <display>
+        <showFamily value="true" />
+      </display>
+    </element>
+    <element left="456">
+      <name>Hexkit.World.FactionReference</name>
+    </element>
+    <element left="456" top="504">
+      <name>Hexkit.World.PlayerSettings</name>
+      <display>
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="456" top="408">
+      <name>Hexkit.World.Site</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="456" top="168">
+      <name>Hexkit.World.VariableContainer</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <relation alignment="TargetToSource">
+      <name>Value</name>
+      <source anchor="Left">
+        <element>Hexkit.World.FactionReference</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>PlayerSettings</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.Faction</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.PlayerSettings</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Variables</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.Faction</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.VariableContainer</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Variables</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.World.Entity</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.VariableContainer</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Site</name>
+      <source anchor="Bottom">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Owner</name>
+      <source anchor="Left">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Owner</name>
+      <source anchor="Left">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldSite</name>
+    <element left="384" top="144">
+      <name>Hexkit.World.Entity</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="384" top="264">
+      <name>Hexkit.World.Faction</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element>
+      <name>Hexkit.World.Site</name>
+    </element>
+    <element left="384" top="336">
+      <name>Hexkit.World.SiteConnection</name>
+    </element>
+    <element left="384">
+      <name>Hexkit.World.SiteReference</name>
+    </element>
+    <relation alignment="TargetToSource">
+      <name>Value</name>
+      <source anchor="Left">
+        <element>Hexkit.World.SiteReference</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.World.Site</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.SiteConnection</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Site</name>
+      <source anchor="Left">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Right">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Owner</name>
+      <source anchor="Bottom">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>0…1</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldState</name>
+    <element left="792" top="504">
+      <name>Hexkit.World.Commands.Command</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="432" top="144">
+      <name>Hexkit.World.Entity</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="696">
+      <name>Hexkit.World.EntityHistory</name>
+    </element>
+    <element left="384">
+      <name>Hexkit.World.EntityHistory+EntityEvent</name>
+    </element>
+    <element left="120">
+      <name>Hexkit.World.EntityHistory+EntityEventType</name>
+    </element>
+    <element left="432" top="384">
+      <name>Hexkit.World.Faction</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="576" top="504">
+      <name>Hexkit.World.FactionHistory</name>
+    </element>
+    <element left="264" top="504">
+      <name>Hexkit.World.FactionHistory+FactionEvent</name>
+    </element>
+    <element top="504">
+      <name>Hexkit.World.FactionHistory+FactionEventType</name>
+    </element>
+    <element left="648" top="216">
+      <name>Hexkit.World.History</name>
+      <display>
+        <showMember value="false">ReadXml</showMember>
+        <showMember value="false">WriteXml</showMember>
+      </display>
+    </element>
+    <element left="360" top="240">
+      <name>Hexkit.World.IRulesFactory</name>
+    </element>
+    <element top="24">
+      <name>Hexkit.World.Site</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element top="144">
+      <name>Hexkit.World.WorldState</name>
+    </element>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.IRulesFactory</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.World.IRulesFactory</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.World.IRulesFactory</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Sites</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.Site</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Entities</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Entity</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Factions</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>History</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.WorldState</element>
+      </source>
+      <target anchor="Left" offset="-36" symbol="Arrow">
+        <element>Hexkit.World.History</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Commands</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.World.History</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Commands.Command</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation>
+      <name>Id</name>
+      <source anchor="Left" offset="-24">
+        <element>Hexkit.World.EntityHistory</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Entity</element>
+      </target>
+    </relation>
+    <relation>
+      <name>Id</name>
+      <source anchor="TopLeft">
+        <element>Hexkit.World.FactionHistory</element>
+      </source>
+      <target anchor="BottomRight" symbol="Arrow">
+        <element>Hexkit.World.Faction</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Entities</name>
+      <source anchor="Top" symbol="FilledDiamond">
+        <element>Hexkit.World.History</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.EntityHistory</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Factions</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.World.History</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.FactionHistory</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Events</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.EntityHistory</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.EntityHistory+EntityEvent</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Events</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.FactionHistory</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.FactionHistory+FactionEvent</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>EventType</name>
+      <source anchor="Left">
+        <element>Hexkit.World.EntityHistory+EntityEvent</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.EntityHistory+EntityEventType</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>EventType</name>
+      <source anchor="Left">
+        <element>Hexkit.World.FactionHistory+FactionEvent</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.FactionHistory+FactionEventType</element>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldUnit</name>
+    <element left="504">
+      <name>Hexkit.World.CombatResults</name>
+      <display>
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element>
+      <name>Hexkit.World.Unit</name>
+      <display>
+        <showFamily value="true" />
+      </display>
+    </element>
+    <element left="504" top="192">
+      <name>Hexkit.World.UnitAgent</name>
+    </element>
+    <element left="528" top="432">
+      <name>Tektosyne.Graph.IGraphAgent`1</name>
+    </element>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Right">
+        <element>Hexkit.World.Unit</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.CombatResults</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Bottom">
+        <element>Hexkit.World.UnitAgent</element>
+      </source>
+      <target anchor="Top" symbol="HollowArrow">
+        <element>Tektosyne.Graph.IGraphAgent`1</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Units</name>
+      <source anchor="Left" symbol="HollowDiamond">
+        <element>Hexkit.World.UnitAgent</element>
+        <multiplicity>0…1</multiplicity>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Unit</element>
+        <multiplicity>1…*</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldVariable</name>
+    <element>
+      <name>Hexkit.World.Variable</name>
+      <display>
+        <showParamType value="false" />
+      </display>
+    </element>
+    <element left="360" top="216">
+      <name>Hexkit.World.VariableContainer</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="360" top="312">
+      <name>Hexkit.World.VariableModifierContainer</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="360" top="48">
+      <name>Hexkit.World.VariablePurpose</name>
+    </element>
+    <relation alignment="SourceToTarget">
+      <name>Purpose</name>
+      <source anchor="Right">
+        <element>Hexkit.World.Variable</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.VariablePurpose</element>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Variables</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.VariableContainer</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Variable</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="TargetToSource">
+      <name>Modifiers</name>
+      <source anchor="Left" symbol="FilledDiamond">
+        <element>Hexkit.World.VariableModifierContainer</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.Variable</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <diagram>
+    <name>WorldVariableCache</name>
+    <element>
+      <name>Hexkit.World.EntityClassCache</name>
+    </element>
+    <element left="432" top="360">
+      <name>Hexkit.World.Variable</name>
+      <display>
+        <showInterface value="false" />
+        <showAttributes value="false" />
+        <showOperations value="false" />
+      </display>
+    </element>
+    <element left="48" top="216">
+      <name>Hexkit.World.VariableContainer</name>
+    </element>
+    <element left="360">
+      <name>Hexkit.World.VariableModifierContainer</name>
+    </element>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Left">
+        <element>Hexkit.World.VariableModifierContainer</element>
+      </source>
+      <target anchor="Right" symbol="Arrow">
+        <element>Hexkit.World.EntityClassCache</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget" dashedLine="true">
+      <source anchor="Top">
+        <element>Hexkit.World.VariableContainer</element>
+      </source>
+      <target anchor="Bottom" symbol="Arrow">
+        <element>Hexkit.World.EntityClassCache</element>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Variables</name>
+      <source anchor="Right" symbol="FilledDiamond">
+        <element>Hexkit.World.VariableContainer</element>
+      </source>
+      <target anchor="Left" symbol="Arrow">
+        <element>Hexkit.World.Variable</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+    <relation alignment="SourceToTarget">
+      <name>Modifiers</name>
+      <source anchor="Bottom" symbol="FilledDiamond">
+        <element>Hexkit.World.VariableModifierContainer</element>
+      </source>
+      <target anchor="Top" symbol="Arrow">
+        <element>Hexkit.World.Variable</element>
+        <multiplicity>*</multiplicity>
+      </target>
+    </relation>
+  </diagram>
+  <output includeAll="true" format="Print">
+    <name>Adobe PDF Output</name>
+    <target>Adobe PDF</target>
+  </output>
+</project>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="Hexkit.Game.Dialog.CreateSession"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    ResizeMode="NoResize" ShowInTaskbar="False" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <StackPanel Orientation="Vertical">
+    <TextBlock Name="StatusInfo" x:FieldModifier="private" Width="200" Height="20" TextAlignment="Center" TextWrapping="Wrap" Style="{StaticResource defaultStyle}">Status Information</TextBlock>
+    <ProgressBar Name="StatusProgress" x:FieldModifier="private" Width="200" Height="20" Style="{StaticResource defaultStyle}" />
+    <Button Command="Help" HorizontalAlignment="Center" Style="{StaticResource dialogButtonStyle}">Help</Button>
+  </StackPanel>
+</Window>

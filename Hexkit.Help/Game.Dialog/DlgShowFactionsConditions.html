@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Faction Status: Conditions Page</title>
+</head>
+<body>
+  <h1>Faction Status: Conditions Page</h1>
+  <p>This tab page of the <a href="DlgShowFactions.html">Faction Status</a> dialog shows information on the selected faction’s victory and defeat conditions.</p>
+  <ul>
+    <li>The <b>Condition List</b> shows all relevant game parameters and their values for the selected faction.
+      <ul>
+        <li>Column <b>Parameter</b> shows the following four entries, followed by any resources that the faction owns.
+          <ul>
+            <li><b>Sites</b> indicates the number of sites owned by the faction.</li>
+            <li><b>Units</b> indicates the number of units owned by the faction.</li>
+            <li><b>Unit Strength</b> indicates the total strength of all units owned by the faction.</li>
+            <li><b>Turns</b> indicates the number of turns that have been played so far.</li>
+          </ul>
+        </li>
+        <li>Column <b>Defeat</b> shows the defeat threshold for each parameter. The faction will lose the game if the parameter’s current value falls to or below this threshold. A dash is shown for parameters without a defeat condition.</li>
+        <li>Column <b>Current</b> shows the current value of each parameter. For resources, this is the faction’s current stockpile of each resource.</li>
+        <li>Column <b>Victory</b> shows the victory threshold for each parameter. The faction will win the game if the parameter’s current value rises to or above this threshold. A dash is shown for parameters without a victory condition.</li>
+        <li><b>Double-click</b> on a resource to show its <a href="DlgShowVariables.html">Variables</a> dialog. Double-clicking on other parameters has no effect.</li>
+      </ul>
+    </li>
+    <li>See <a href="DlgShowFactions.html">Faction Status</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Condition List</b> is empty if the selected faction has already been eliminated from the game.</p>
+  <p>2. Victory and defeat conditions that are based on a resource apply equally to all factions that own the resource. Other conditions may vary from one faction to another.</p>
+</body>
+</html>

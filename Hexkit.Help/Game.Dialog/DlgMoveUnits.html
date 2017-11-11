@@ -1,0 +1,39 @@
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Move Units Dialog</title>
+</head>
+<body>
+  <h1>Move Units Dialog</h1>
+  <p>This dialog shows all units that can move away from the source site specified in the dialog’s title bar, and allows you to select the target site and the units to move.</p>
+  <ul>
+    <li><a href="#Map">Map View</a></li>
+    <li><a href="#Units">Unit List</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Map">Map View</a> and <a href="#Units">Unit List</a> to adjust their respective share of the current window width.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept the selected units and target site, dismiss the dialog, and execute the movement.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to dismiss the dialog without moving any units. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h2><a name="Map">Map View</a></h2>
+  <p>The left side of this dialog is taken up by a map view. The source site of the movement is initially centered and selected.</p>
+  <ul>
+    <li><b>Highlighted</b> sites are valid movement targets. The highlights always reflect the movement range of all units currently selected in the <a href="#Units">Unit List</a>.</li>
+    <li><b>Left-click</b> to select a highlighted site as the target site of the movement.</li>
+    <li><b>Double-click</b> to select a highlighted site as the target site and immediately close the dialog, as with the <b>OK</b> button.</li>
+  </ul>
+  <p>When a highlighted site is selected, the map view shows a sequence of blue arrows from the source site towards the target site, indicating the exact path that the moving units will take.</p>
+  <h2><a name="Units">Unit List</a></h2>
+  <p>This list shows all units in the source site that are eligible for movement, and allows you to select which units to move.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowClasses.html">Entity Classes</a> dialog.</li>
+    <li><b>Check</b> an entry to have the unit participate in the movement.</li>
+    <li><b>Uncheck</b> an entry to exclude the unit from the movement.</li>
+    <li>Choose <b>Check All (Alt+C)</b> to check all units.</li>
+    <li>Choose <b>Uncheck All (Alt+U)</b> to uncheck all units.</li>
+  </ul>
+  <p>The <b>Property List</b> shows the statistics of the selected unit. Please refer to the <a href="GameViewProperty.html">Property List</a> page for details.</p>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F34A9F9-2A3F-4AD1-B461-C913B27BC37C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Hexkit.Players</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hexkit.Players</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>obj\</OutputPath>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.Players.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <OutputPath>obj\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>obj\Hexkit.Players.xml</DocumentationFile>
+    <NoWarn>0419</NoWarn>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Core\Tektosyne.Core.csproj">
+      <Project>{52F55B71-58AD-4231-8AB9-D2DF79ECCB73}</Project>
+      <Name>Tektosyne.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tektosyne\Tektosyne.Windows\Tektosyne.Windows.csproj">
+      <Project>{2DAF2FD2-A2CF-4630-873A-CBCFFC5C91F1}</Project>
+      <Name>Tektosyne.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Global\Hexkit.Global.csproj">
+      <Name>Hexkit.Global</Name>
+      <Project>{F8FA30DD-F2B7-4446-A615-534749AF3FF7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.Scenario\Hexkit.Scenario.csproj">
+      <Name>Hexkit.Scenario</Name>
+      <Project>{B5C0FEF9-C7E4-4735-A53F-025311B60E51}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexkit.World\Hexkit.World.csproj">
+      <Name>Hexkit.World</Name>
+      <Project>{7F478772-4BAF-441B-9445-11F5C2F00144}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithm.cs" />
+    <Compile Include="AlgorithmGeneral.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AlgorithmOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComputerPlayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComputerThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComputerThreadArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FactionState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HumanPlayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seeker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlSerializable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

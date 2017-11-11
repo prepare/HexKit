@@ -1,0 +1,64 @@
+﻿<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css">
+  <title>Build Entities Dialog</title>
+</head>
+<body>
+  <h1>Build Entities Dialog</h1>
+  <p>This dialog shows the entity classes that the faction specified in the dialog’s title bar may build, and allows you to convert faction resources into new units and terrains.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Filter">Filter</a></li>
+    <li><a href="#Commands">Command</a></li>
+    <li><a href="#Classes">Entity Class List</a></li>
+    <li><a href="#Resources">Resource List</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Classes">Entity Class List</a> and <a href="#Resources">Resource List</a> to adjust their respective share of the current window width.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> (unless another button is selected) or <b>Escape</b> to dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the category of the entity classes to build.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to show unit classes.</li>
+    <li>Choose <b>Terrain (Alt+T)</b> to show terrain classes.</li>
+    <li>Choose <b>Upgrade (Alt+G)</b> to show upgrade classes.</li>
+  </ul>
+  <h2><a name="Filter">Filter</a></h2>
+  <p>This box allows you to filter the <a href="#Classes">Entity Class List</a>. A filter is set to “indeterminate” when its check box is filled rather than checked.</p>
+  <ul>
+    <li><b>On Site (Alt+S)</b> shows only entity classes that can be placed on the <a href="GameViewData.html#Site">Selected Site</a> if checked, and all classes without regard for placement sites if unchecked. Checking this filter also sets the <b>Can Place</b> filter to indeterminate if unchecked.</li>
+    <li><b>Can Place (Alt+P)</b> shows only entity classes that can be placed on the map if checked, only classes that cannot be placed if unchecked, and both if indeterminate.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Site</b> filter is checked by default if there are any entity classes that can be placed on the selected site, and the selected <a href="#Category">Category</a> defaults to <b>Terrains</b> if no <b>Units</b> can be placed there.</p>
+  <p>2. You cannot change the selected site from within the dialog.</p>
+  <h2><a name="Classes">Entity Class List</a></h2>
+  <p>This list shows all entity classes of the selected <a href="#Category">Category</a> that the specified faction may build, as well as the number of existing and potential entities based on each class.</p>
+  <ul>
+    <li>Column <b>Current</b> shows the number of existing entities based on each class that are currently owned by the specified faction.</li>
+    <li>Column <b>Build</b> shows the number of new entities based on each class that the faction may build, given its current stockpile as shown in the <a href="#Resources">Resource List</a>.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-Click</b> on an entry to show its <a href="DlgShowClasses.html">Entity Classes</a> dialog.</li>
+  </ul>
+  <h2><a name="Resources">Resource List</a></h2>
+  <p>This list shows the resources owned by the specified faction, as well as the resources required to build a new entity of the selected class.</p>
+  <ul>
+    <li>Column <b>Current</b> shows the faction’s current stockpile of each resource.</li>
+    <li>Column <b>Build</b> shows the amount of each resource required to build one entity of the selected class, or a dash if the resource is not required.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowVariables.html">Variables</a> dialog.</li>
+  </ul>
+  <p>The <b>Current</b> column is shaded red when less than the <b>Build</b> column, indicating that a lack of this resource prevents you from building a new entity of the selected class.</p>
+  <h2><a name="Command">Commands</a></h2>
+  <p>Both command buttons operate on the selected entity class in the <a href="#Classes">Entity Class List</a>.</p>
+  <ul>
+    <li>Choose <b>Build &amp; Place (Alt+B)</b> to build a new entity of the selected class that is immediately placed on the map.</li>
+    <li>Choose <b>Build &amp; Only (Alt+O)</b> to build a new entity of the selected class that remains unplaced for now.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Build &amp; Place</b> and <b>Build Only</b> buttons are disabled if no more entities of the selected class can be built. The <b>Build &amp; Place</b> button is also disabled if the current game situation offers no valid placement sites for entities of the selected class.</p>
+  <p>2. <b>Build &amp; Place</b> temporarily hides the dialog and prompts you to select a target site. The possible choices will be indicated on the default <a href="GameViewMap.html">Map View</a> by a bright hue. Click on a highlighted site to make your selection. Click on another site or press <b>Escape</b> to abort the command.</p>
+  <p>3. When using <b>Build Only</b> to build unplaced entities, you may later use the <a href="GameMenuCommand.html#Entities">Manage Entities</a> command to place the newly built entities on the map.</p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Entity Class: Variables Page</title>
+</head>
+<body>
+  <h1>Change Entity Class: Variables Page</h1>
+  <p>This tab page of the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog allows you to edit the variables of an entity class.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Variables">Entity Variables</a></li>
+    <li><a href="#Available">Available Variables</a></li>
+    <li>See <a href="DlgChangeEntity.html">Change Entity Class</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The values shown on this tab page are used as initial values for newly created entities, except for build costs. Once an entity has been created, its current values may differ from the corresponding initial values due to modifiers or changes enacted by the rule script. This applies to basic values as well as modifier values.</p>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the variable category shown in the <a href="#Variables">Entity Variables</a> and <a href="#Available">Available Variables</a> list.</p>
+  <ul>
+    <li>Choose <b>Attribute (Alt+A)</b> to show attribute variables and values.</li>
+    <li>Choose <b>Counter (Alt+C)</b> to show counter variables and values.</li>
+    <li>Choose <b>Resource (Alt+R)</b> to show resource variables, and the resource values used by the entity itself.</li>
+    <li>Choose <b>Build Cost (Alt+U)</b> to show resource variables, and the resource values used by factions to build the entity.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The <b>Resource</b> and <b>Build Cost</b> categories show the same resources in the <a href="#Available">Available Variables</a> list, but you may define different <a href="#Variables">Entity Variables</a> for either category.</p>
+  <p><b>Resource</b> values are directly assigned to each entity instance. <b>Build Cost</b> values represent the amount of resources that a faction must expend to build an entity instance.</p>
+  <h2><a name="Variables">Entity Variables</a></h2>
+  <p>This list shows the variable values of the selected <a href="#Category">Category</a> that are currently associated with the entity class.</p>
+  <ul>
+    <li>Column <b>Variable</b> shows the unique internal identifier associated with each variable.</li>
+    <li>Column <b>Value</b> shows the basic or modifier values for each variable. Modifier values are prefixed by the modifier target.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li>Use the <b>Variable Value (Alt+V)</b> field to change the current value of the selected entry.</li>
+    <li>Choose <b>Add Basic Value (Alt+B)</b> to add a basic value for the selected <a href="#Available">Available Variable</a> to the list.</li>
+    <li>Choose <b>Add Modifier (Alt+M)</b> to select a <em>modifier target</em>, and to add a modifier value for the selected target and <a href="#Available">Available Variable</a> to the list.</li>
+    <li>Choose <b>Remove Variable (Alt+E)</b> to delete the selected entry.</li>
+  </ul>
+  <p>The <b>Add Modifier</b> combo box is disabled if the selected <a href="#Category">Category</a> is <b>Counter</b> or <b>Build Cost</b>. Please refer to the <em>User’s Guide</em> for a description of the available modifier targets.</p>
+  <h3>Remarks</h3>
+  <p>Every <b>Attribute</b> and <b>Resource</b> identifier may appear multiple times in this list: as a <em>basic value</em> and as one or more <em>modifier values</em>, up to the number of possible modifier targets.</p>
+  <p>Every <b>Counter</b> and <b>Build Cost</b> identifier appears at most once, as you cannot define modifier values for counters and build costs.</p>
+  <h2><a name="Available">Available Variables</a></h2>
+  <p>This list shows the identifiers of all variables in the selected <a href="#Category">Category</a> currently defined on the <a href="EditorTabVariables.html">Variables Page</a>.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to add a basic value for the selected variable to the <a href="#Variables">Entity Variables</a> list, as with the <b>Add Basic</b> button.</li>
+    <li>Use the <b>Add Basic</b> button and the <b>Add Modifier</b> combo box to add the selected variable to the <a href="#Variables">Entity Variables</a> list, as described above.</li>
+  </ul>
+</body>
+</html>

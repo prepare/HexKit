@@ -1,0 +1,122 @@
+﻿<Window x:Class="Hexkit.Game.Dialog.ShowRanking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Faction Ranking" MinWidth="400" MinHeight="260" Width="500" Height="360" ResizeMode="CanResizeWithGrip" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <DockPanel>
+    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsCancel="True" IsDefault="True" Click="OnAccept" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+    <TabControl Name="DialogTabControl" x:FieldModifier="private" SelectionChanged="OnTabSelected">
+      <TabItem Name="TablesTab" x:FieldModifier="private" Header="Tables">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="120" Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition MinWidth="200" Width="3*" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <ListView Name="CompareTableList" x:FieldModifier="private" Grid.Column="0" Grid.Row="0" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnCompareActivate" SelectionChanged="OnCompareTableSelected">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by CompareTableList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="CompareTableColumn" x:FieldModifier="private" Header="Compare" DisplayMemberBinding="{Binding Item1}" />
+              </GridView>
+            </ListView.View>
+          </ListView>
+          <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0">Defeat:</Label>
+            <TextBox Name="DefeatInfo" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" IsReadOnly="true" HorizontalContentAlignment="Right" />
+            <Label Grid.Column="0" Grid.Row="1">Victory:</Label>
+            <TextBox Name="VictoryInfo" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" IsReadOnly="true" HorizontalContentAlignment="Right" />
+          </Grid>
+          <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="4" />
+          <ListView Name="FactionList" x:FieldModifier="private" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnFactionActivate">
+            <!-- HACK: allows centered & right-aligned column content -->
+            <ListView.ItemContainerStyle>
+              <Style TargetType="ListViewItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+              </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+              <GridView>
+                <GridViewColumn x:Name="FactionRankColumn" x:FieldModifier="private" Header="Rank" Width="50">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <TextBlock TextAlignment="Center" Text="{Binding Rank}" />
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <!-- column width is set by FactionList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="FactionColumn" x:FieldModifier="private" Header="Faction">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <TextBlock Background="{Binding Background}" Text="{Binding Faction}" Width="{Binding ElementName=FactionColumn, Path=ActualWidth}" />
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn x:Name="FactionValueColumn" x:FieldModifier="private" Header="Value" Width="70">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <TextBlock TextAlignment="Right" Text="{Binding ValueText}" />
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+              </GridView>
+            </ListView.View>
+          </ListView>
+        </Grid>
+      </TabItem>
+      <TabItem Name="GraphsTab" x:FieldModifier="private" Header="Graphs">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="120" Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition MinWidth="200" Width="3*" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <ListView Name="CompareGraphList" x:FieldModifier="private" Grid.Column="0" Grid.Row="0" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnCompareActivate" SelectionChanged="OnCompareGraphSelected">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by CompareGraphList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="CompareGraphColumn" x:FieldModifier="private" Header="Compare">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <TextBlock Background="{Binding Item2}" Text="{Binding Item1}" Width="{Binding ElementName=CompareGraphColumn, Path=ActualWidth}" />
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+              </GridView>
+            </ListView.View>
+          </ListView>
+          <GridSplitter Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="4" />
+          <UserControl Name="HistoryGraphHost" x:FieldModifier="private" Grid.Column="2" Grid.Row="0" Style="{StaticResource defaultStyle}" />
+        </Grid>
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</Window>

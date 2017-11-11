@@ -1,0 +1,151 @@
+﻿<Window x:Class="Hexkit.Editor.Dialog.ChangeGeometry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tw="clr-namespace:Tektosyne.Windows;assembly=Tektosyne.Windows"
+    Title="Change Map Geometry" ResizeMode="CanMinimize" ShowInTaskbar="False" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <StackPanel Orientation="Vertical">
+    <TabControl>
+      <TabItem Name="SizeTab" x:FieldModifier="private" Header="Size">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <GroupBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Header="Move Edges" >
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label Grid.Column="0" Grid.Row="0" Target="{Binding ElementName=LeftUpDownHost}">_Left:</Label>
+              <tw:WindowsFormsHostEx x:Name="LeftUpDownHost" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" Width="80">
+                <tw:NumericUpDownHost x:Name="LeftUpDown" x:FieldModifier="private" TextAlign="Right" ThousandsSeparator="True" ValueChanged="OnBoundsChanged" />
+              </tw:WindowsFormsHostEx>
+              <Label Grid.Column="0" Grid.Row="1" Target="{Binding ElementName=TopUpDownHost}">_Top:</Label>
+              <tw:WindowsFormsHostEx x:Name="TopUpDownHost" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" Width="80">
+                <tw:NumericUpDownHost x:Name="TopUpDown" x:FieldModifier="private" TextAlign="Right" ThousandsSeparator="True" ValueChanged="OnBoundsChanged" />
+              </tw:WindowsFormsHostEx>
+              <Label Grid.Column="2" Grid.Row="0" Target="{Binding ElementName=RightUpDownHost}">_Right:</Label>
+              <tw:WindowsFormsHostEx x:Name="RightUpDownHost" x:FieldModifier="private" Grid.Column="3" Grid.Row="0" Width="80">
+                <tw:NumericUpDownHost x:Name="RightUpDown" x:FieldModifier="private" TextAlign="Right" ThousandsSeparator="True" ValueChanged="OnBoundsChanged" />
+              </tw:WindowsFormsHostEx>
+              <Label Grid.Column="2" Grid.Row="1" Target="{Binding ElementName=BottomUpDownHost}">_Bottom:</Label>
+              <tw:WindowsFormsHostEx x:Name="BottomUpDownHost" x:FieldModifier="private" Grid.Column="3" Grid.Row="1" Width="80">
+                <tw:NumericUpDownHost x:Name="BottomUpDown" x:FieldModifier="private" TextAlign="Right" ThousandsSeparator="True" ValueChanged="OnBoundsChanged" />
+              </tw:WindowsFormsHostEx>
+            </Grid>
+          </GroupBox>
+          <GroupBox Grid.Column="0" Grid.Row="1" Header="Old Size">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="60" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label Grid.Column="0" Grid.Row="0">Width:</Label>
+              <TextBox Name="OldWidthBox" x:FieldModifier="private" Grid.Row="0" Grid.Column="1" IsReadOnly="True" TextAlignment="Right" />
+              <Label Grid.Column="0" Grid.Row="1">Height:</Label>
+              <TextBox Name="OldHeightBox" x:FieldModifier="private" Grid.Row="1" Grid.Column="1" IsReadOnly="True" TextAlignment="Right" />
+            </Grid>
+          </GroupBox>
+          <GroupBox Grid.Column="1" Grid.Row="1" Header="New Size">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="60" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Label Grid.Column="0" Grid.Row="0">Width:</Label>
+              <TextBox Name="NewWidthBox" x:FieldModifier="private" Grid.Row="0" Grid.Column="1" IsReadOnly="True" TextAlignment="Right" />
+              <Label Grid.Column="0" Grid.Row="1">Height:</Label>
+              <TextBox Name="NewHeightBox" x:FieldModifier="private" Grid.Row="1" Grid.Column="1" IsReadOnly="True" TextAlignment="Right" />
+            </Grid>
+          </GroupBox>
+        </Grid>
+      </TabItem>
+      <TabItem Name="StructureTab" x:FieldModifier="private" Header="Structure">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <GroupBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Header="Element Size">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                <Label DockPanel.Dock="Left" Target="{Binding ElementName=LengthUpDownHost}">S_ide Length:</Label>
+                <tw:WindowsFormsHostEx x:Name="LengthUpDownHost" x:FieldModifier="private" Width="80">
+                  <tw:NumericUpDownHost x:Name="LengthUpDown" x:FieldModifier="private" DecimalPlaces="2" TextAlign="Right" ValueChanged="OnLengthChanged" />
+                </tw:WindowsFormsHostEx>
+              </StackPanel>
+              <Button Name="CircumscribeButton" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" Click="OnCircumscribe">_Circumscribe</Button>
+              <Label Grid.Column="0" Grid.Row="1" Target="{Binding ElementName=ImageSizeCombo}">Defined Image _Frame Sizes:</Label>
+              <ComboBox Name="ImageSizeCombo" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" />
+            </Grid>
+          </GroupBox>
+          <GroupBox Grid.Column="0" Grid.Row="1" Header="Element Shape">
+            <StackPanel Orientation="Vertical">
+              <RadioButton Name="SquareOnEdgeToggle" x:FieldModifier="private" Checked="OnShapeChecked">_Square on Edge</RadioButton>
+              <RadioButton Name="SquareOnVertexToggle" x:FieldModifier="private" Checked="OnShapeChecked">S_quare on Vertex</RadioButton>
+              <RadioButton Name="HexagonOnEdgeToggle" x:FieldModifier="private" Checked="OnShapeChecked">_Hexagon on Edge</RadioButton>
+              <RadioButton Name="HexagonOnVertexToggle" x:FieldModifier="private" Checked="OnShapeChecked">H_exagon on Vertex</RadioButton>
+            </StackPanel>
+          </GroupBox>
+          <CheckBox Name="VertexNeighborsToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="2" ToolTip="Enable Diagonal Movement" HorizontalAlignment="Center" Click="OnVertexNeighbors">_Vertex Neighbors</CheckBox>
+          <GroupBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Header="Grid Shift">
+            <StackPanel Orientation="Vertical">
+              <RadioButton Name="ShiftNoneToggle" x:FieldModifier="private" ToolTip="Unshifted Rows &amp; Columns" Checked="OnShiftChecked">None</RadioButton>
+              <RadioButton Name="ColumnUpToggle" x:FieldModifier="private" ToolTip="Shift First Column Up" Checked="OnShiftChecked">Column _Up</RadioButton>
+              <RadioButton Name="ColumnDownToggle" x:FieldModifier="private" ToolTip="Shift First Column Down" Checked="OnShiftChecked">Column _Down</RadioButton>
+              <RadioButton Name="RowLeftToggle" x:FieldModifier="private" ToolTip="Shift First Row Left" Checked="OnShiftChecked">Row _Left</RadioButton>
+              <RadioButton Name="RowRightToggle" x:FieldModifier="private" ToolTip="Shift First Row Right" Checked="OnShiftChecked">Row _Right</RadioButton>
+            </StackPanel>
+          </GroupBox>
+        </Grid>
+      </TabItem>
+    </TabControl>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsDefault="True" Click="OnAccept" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button IsCancel="True" Style="{StaticResource dialogButtonStyle}">Cancel</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+  </StackPanel>
+</Window>

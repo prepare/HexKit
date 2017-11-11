@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Site Contents: Terrain Page</title>
+</head>
+<body>
+  <h1>Change Site Contents: Terrain Page</h1>
+  <p>This tab page of the <a href="DlgChangeSite.html">Change Site Contents</a> dialog allows you to edit the stack of terrain instances placed on a map site.</p>
+  <ul>
+    <li><a href="#Background">Background Terrain</a></li>
+    <li><a href="#Preview">Stack Preview</a></li>
+    <li><a href="#Entities">Terrain Stack</a></li>
+    <li><a href="#Available">Available Terrains</a></li>
+    <li>See <a href="DlgChangeSite.html">Change Site Contents</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Background">Background Terrain</a></h2>
+  <p>This box allows you to select a site’s background terrain, among all entity classes in the “Terrain” category currently defined on the <a href="EditorTabEntities.html">Entities Page</a> whose “Background Terrain” option is enabled.</p>
+  <ul>
+    <li>Use the <b>Class (Alt+C)</b> drop-down box to select a background terrain class by its unique internal identifier. When editing the contents of a single site, “(no background terrain)” is added as the first entry.</li>
+    <li>Choose <b>Change Terrain… (Alt+T)</b> to display the <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog for the selected background terrain, allowing you to edit the individual data of the terrain entity.</li>
+    <li>An <b>Asterisk (*)</b> indicates a terrain entity with edited individual data that differs from its default class data.</li>
+  </ul>
+  <p>When editing the contents of a single map site, selecting “(no background terrain)” will cause the site to use the default background terrain. This will disable the <b>Change Terrain</b> button.</p>
+  <h2><a name="Preview">Stack Preview</a></h2>
+  <p>This box shows a preview of the current stack of overlaid images, as defined by the terrain stack, or an “invalid” icon (red circle with a slash) if the stack is empty.</p>
+  <p>When editing the contents of a single map site, the preview will not show the default terrain stack. Moreover, the preview does not include any entity stacks for other entity categories.</p>
+  <h2><a name="Entities">Terrain Stack</a></h2>
+  <p>This list shows all entities in the current foreground terrain stack, as a list of terrain class identifiers.</p>
+  <ul>
+    <li><b>Asterisks (*)</b> indicate entities with edited individual data that differs from their default class data.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to display its <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog, as with the <b>Change Terrain</b> button.</li>
+    <li>Choose <font face="Wingdings">&#111;</font> <b>(Add Terrain)</b> to add an entity of the selected <a href="#Available">Available Class</a> to the entity stack. Duplicate identifiers are possible and will cause Hexkit Game to create multiple entities of the same class.</li>
+    <li>Choose <font face="Wingdings">&#033;</font> <b>(Change Terrain)</b> to display the <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog for the selected entry, allowing you to edit the individual data of the terrain entity.</li>
+    <li>Choose <font face="Wingdings">&#120;</font> <b>(Remove Terrain)</b> to remove the selected entry.</li>
+    <li>Choose <font face="Wingdings">&#241;</font> <b>(Move Terrain Up)</b> to move the selected entry towards the top of the list.</li>
+    <li>Choose <font face="Wingdings">&#242;</font> <b>(Move Terrain Down)</b> to move the selected entry towards the bottom of the list.</li>
+  </ul>
+  <h2><a name="Available">Available Terrains</a></h2>
+  <p>This list shows the identifiers of all entity classes in the “Terrain” category currently defined on the <a href="EditorTabEntities.html">Entities Page</a> whose “Background Terrain” option is disabled. These classes may be used to compose the foreground part of a site’s terrain stack.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to add it to the <a href="#Entities">Terrain Stack</a>, as with the <b>Add Terrain</b> button.</li>
+  </ul>
+</body>
+</html>

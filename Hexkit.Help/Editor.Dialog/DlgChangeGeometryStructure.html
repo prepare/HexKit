@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css" />
+  <title>Change Map Geometry Dialog: Structure Page</title>
+</head>
+<body>
+  <h1>Change Map Geometry Dialog: Structure Page</h1>
+  <p>This tab page of the <a href="DlgChangeGeometry.html">Change Map Geometry</a> dialog allows you to select the shape and size of each polygon that represents one map site.</p>
+  <ul>
+    <li><a href="#Size">Element Size</a></li>
+    <li><a href="#Shape">Element Shape</a></li>
+    <li><a href="#Neighbors">Vertex Neighbors</a></li>
+    <li><a href="#Shift">Grid Shift</a></li>
+    <li>See <a href="DlgChangeGeometry.html">Change Map Geometry</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Size">Element Size</a></h2>
+  <p>This box allows you to change the size of each polygonal element of the game map.</p>
+  <ul>
+    <li>Use <b>Side Length (Alt+I)</b> to change the length of one side of the polygon. The default and minimum is 10, the maximum is 100.</li>
+    <li><b>Defined Image Frame Sizes (Alt+F)</b> shows the distinct sizes of all image frames defined on the <a href="EditorTabImages.html">Images Page</a>.</li>
+    <li>Choose <b>Circumscribe (Alt+C)</b> to adjust the <b>Side Length</b> so that the polygon is circumscribed around the selected size in the <b>Defined Image Frame Sizes</b> list.</li>
+  </ul>
+  <p>If the <a href="EditorTabImages.html">Images Page</a> does not define any images, the <b>Defined Image Frame Sizes</b> list shows “(none)”, and both this list and the <b>Circumscribe</b> button are disabled.</p>
+  <h2><a name="Shape">Element Shape</a></h2>
+  <p>This box allows you to select the shape of each polygonal element of the game map.</p>
+  <ul>
+    <li>Choose <b>Square on Edge (Alt+S)</b> for a square lying on an edge.</li>
+    <li>Choose <b>Square on Vertex (Alt+Q)</b> for a square standing on a vertex.</li>
+    <li>Choose <b>Hexagon on Edge (Alt+H)</b> for a hexagon lying on an edge.</li>
+    <li>Choose <b>Hexagon on Vertex (Alt+E)</b> for a hexagon standing on a vertex.</li>
+  </ul>
+  <h2><a name="Neighbors">Vertex Neighbors</a></h2>
+  <p>Check <b>Vertex Neighbors (Alt+V)</b> to inform Hexkit Game that direct transitions from one map site to another are possible across the vertices of a polygon, as well as across the edges.</p>
+  <p>Since hexagons do not contact each other across vertices, this option is only available when a <b>Square</b> shape is selected in the <a href="#Shape">Element Shape</a> box.</p>
+  <p><b>Example:</b> When unchecked, unit movement paths resemble those of rooks in chess; when checked, those of queens. Hexkit does not support the movement style of bishops, i.e. direct transitions across vertices but not edges.</p>
+  <h2><a name="Shift">Grid Shift</a></h2>
+  <p>This box allows you to select the shifting of rows or columns within the game map, depending on the selected <a href="#Shape">Element Shape</a>.</p>
+  <ul>
+    <li><b>None (Alt+N)</b> is automatically selected for <b>Square on Edge</b>, and always disabled for any other element shape.</li>
+    <li>Choose <b>Column Up (Alt+U)</b> to shift each even-numbered column upward.</li>
+    <li>Choose <b>Column Down (Alt+D)</b> to shift each even-numbered column downward.</li>
+    <li>Choose <b>Row Left (Alt+L)</b> to shift each even-numbered row to the left.</li>
+    <li>Choose <b>Row Right (Alt+R)</b> to shift each even-numbered row to the right.</li>
+  </ul>
+  <p><b>Square on Vertex</b> enables all options except for <b>None</b>. The two <b>Column</b> options are also enabled for <b>Hexagon on Edge</b>, and the two <b>Row</b> options are also enabled for <b>Hexagon on Vertex</b>.</p>
+  <h3>Remarks</h3>
+  <p>1. All images shown on the <a href="EditorTabImages.html">Images Page</a> are surrounded by a polygon outline with the current side length, side count, and orientation.</p>
+  <p>2. The contents of the game map are never changed by the selections made on this tab page. However, changing the <a href="#Shape">Element Shape</a> and <a href="#Shift">Grid Shift</a> settings will change the relative positioning of existing map sites. You may have to manually adjust non-default site contents to match the new layout.</p>
+</body>
+</html>

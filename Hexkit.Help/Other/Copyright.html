@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+
+  <script type="text/javascript">
+      /*
+       * function openFile(file: String): void
+       *
+       * Opens the specified file in the (local or remote) directory of the current
+       * browser document. The file may contain a (relative) directory path.
+       *
+       * If the current document is inside a compiled HTML Help file, the specified
+       * file will be opened in the directory where the HTML Help file resides.
+       *
+       * This method is based on the "parse" method in the online help for the
+       * Microsoft HTML Help Workshop.
+       */
+
+      function openFile(file) {
+        var X, Y, link;
+
+        if (location.href.indexOf("ms-its:") == 0 ||
+            location.href.indexOf("mk:@MSITStore:") == 0) {
+          // prefix for embedded HTML Help files
+          X = location.href.indexOf(":", 3) + 1;
+        }
+        else {
+          // prefix "file://" "ftp://" "http://"
+          X = location.href.indexOf("//") + 2;
+        }
+
+        // remove file name to isolate directory
+        Y = location.href.lastIndexOf("\\") + 1;
+        if (Y == 0) Y = location.href.lastIndexOf("/") + 1;
+
+        // open specified file in current directory
+        link = 'file://' + location.href.substring(X, Y) + file;
+        location.href = link;
+      }
+  </script>
+
+  <title>Copyright Notice</title>
+</head>
+<body>
+  <h1>Copyright Notice</h1>
+  <table frame="void" cellpadding="0" cellspacing="0">
+    <tr>
+      <td nowrap="nowrap"><strong>Program:</strong></td>
+      <td nowrap="nowrap">&nbsp;Hexkit Strategy Game System</td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap"><strong>Version:</strong></td>
+      <td nowrap="nowrap">&nbsp;4.3.3</td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap"><strong>Released:</strong></td>
+      <td nowrap="nowrap">&nbsp;30 September 2015</td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap"><strong>Author:</strong></td>
+      <td nowrap="nowrap">&nbsp;Christoph Nahr</td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap"><strong>Contact:</strong></td>
+      <td nowrap="nowrap">&nbsp;<a href="mailto:christoph.nahr@kynosarges.org">christoph.nahr@kynosarges.org</a></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap"><strong>Website:</strong></td>
+      <td nowrap="nowrap">&nbsp;<a href="http://kynosarges.org/Hexkit.html" target="_blank">http://kynosarges.org/Hexkit.html</a></td>
+    </tr>
+  </table>
+  <h2>Copyright</h2>
+  <p>All files – individual files, multi-file packages, and individual files contained in multi-file packages – that constitute the original distribution of the Hexkit Strategy Game System are Copyright © 2000–2015 by Christoph Nahr, except where otherwise noted.</p>
+  <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+  <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+  <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+  <h2>Exceptions</h2>
+  <p>The fantasy tileset included in the binary and source packages is Copyright © 11 April 2000 by DeBray Bailey (used by permission). Please refer to the file <a class="pseudo" onclick="openFile('Images\\DeBray Bailey\\readme.txt')">Images\DeBray Bailey\readme.txt</a> for the full copyright statement regarding this tileset.</p>
+</body>
+</html>

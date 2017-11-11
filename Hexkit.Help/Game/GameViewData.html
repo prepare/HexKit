@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Data View</title>
+</head>
+<body>
+  <h1>Data View</h1>
+  <p>The data view panel occupies the right side of the Hexkit Game window. There are two display sections:</p>
+  <ul>
+    <li><a href="#Site">Selected Site</a></li>
+    <li><a href="#Counter">Turn/Faction Counter</a></li>
+  </ul>
+  <p></p>
+  <h2><a name="Site">Selected Site</a></h2>
+  <p>This box shows information on the selected map site, if any. Click on a site in the <a href="GameViewMap.html#Mouse">Map View</a> to select it.</p>
+  <ul>
+    <li><b>Site</b> (in the box title) shows the coordinates of the selected site.</li>
+    <li><b>Site Owner</b> shows the faction that owns the selected site, if any. Click on the faction name to show its <a href="DlgShowFactions.html">Faction Status</a> dialog.</li>
+    <li><b>Unit Owner</b> shows the faction that owns all units in the selected site, if any are present which do not belong to the site owner. Click on the faction name to show its <a href="DlgShowFactions.html">Faction Status</a> dialog.</li>
+    <li>The <b>Site Contents</b> list shows the entities present in the selected site, grouped by terrains, effects, and units. Click on an entry to select it, or double-click to show its <a href="DlgShowClasses.html">Entity Classes</a> dialog.</li>
+    <li>The <b>Property List</b> shows the statistics of the selected entity. Please refer to the <a href="GameViewProperty.html">Property List</a> page for details.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. When a map site is selected, the <b>Site Contents</b> list will automatically select the topmost unit or local effect, if any of those are present. Otherwise, the topmost terrain type is selected.</p>
+  <p>2. Conversely, when multiple units are present, selecting another unit in the <b>Site Contents</b> list also makes it the topmost unit in the <a href="GameViewMap.html#Contents">Map View</a>.</p>
+  <p>3. Selecting a friendly unit that can attack or move also highlights all map sites that are possible targets, as described in <a href="GameViewMap.html#Target">Target Selection</a>.</p>
+  <p>4. Clicking on a <b>Site Owner</b> or <b>Unit Owner</b> link while a human player command is executing or during an interactive game replay will automatically complete the execution or stop the replay, respectively.</p>
+  <h2><a name="Counter">Turn/Faction Counter</a></h2>
+  <p>This box shows the current turn and faction while a game is active.</p>
+  <ul>
+    <li><b>Turn</b> (in the box title) shows the index of the current turn and the total number of full turns played so far. The two numbers are identical except during replay.</li>
+    <li><b>Faction</b> (in the box title) shows the index of the active faction and the total number of surviving factions.</li>
+    <li>The box itself shows the <b>Name</b> of the active faction, underlaid with its <b>Color Code</b>.</li>
+    <li>Choose <b>End Turn</b> to end the turn for the active faction. This button has the same effect as the <a href="GameMenuCommand.html#EndTurn">End Turn</a> menu command.</li>
+  </ul>
+  <p>The <b>End Turn</b> button is disabled when the <a href="GameMenuCommand.html">Command Menu</a> is unavailable.</p>
+</body>
+</html>

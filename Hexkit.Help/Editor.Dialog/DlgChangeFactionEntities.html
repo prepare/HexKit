@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Faction: Entities Page</title>
+</head>
+<body>
+  <h1>Change Faction: Entities Page</h1>
+  <p>This tab page of the <a href="DlgChangeFaction.html">Change Faction</a> dialog allows you to edit the unplaced entities that initially belong to a player faction.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Entities">Faction Entities</a></li>
+    <li><a href="#Available">Available Entities</a></li>
+    <li>See <a href="DlgChangeFaction.html">Change Faction</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the entity category shown in the <a href="#Entities">Faction Entities</a> and <a href="#Available">Available Entities</a> lists.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to show units and unit classes.</li>
+    <li>Choose <b>Terrain (Alt+T)</b> to show terrains and terrain classes.</li>
+    <li>Choose <b>Upgrade (Alt+G)</b> to show upgrades and upgrade classes.</li>
+  </ul>
+  <h2><a name="Entities">Faction Entities</a></h2>
+  <p>This list shows all unplaced entities of the selected <a href="#Category">Category</a> that belong to this faction. Each entity is represented by the unique internal identifier associated with its class.</p>
+  <ul>
+    <li><b>Asterisks (*)</b> indicate entities with edited individual data that differs from their default class data.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to display its <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog, as with the <b>Change Entity</b> button.</li>
+    <li>Choose <b>Add Entity (Alt+A)</b> to add an instance of the selected <a href="#Available">Available Entity</a> to the faction entity list. Duplicate identifiers are possible and will cause Hexkit Game to create multiple instances of the same entity class.</li>
+    <li>Choose <b>Change Entity… (Alt+E)</b> to display the <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog for the selected entry, allowing you to edit the individual data of the entity.</li>
+    <li>Choose <b>Remove Entity (Alt+R)</b> to remove the selected entry.</li>
+  </ul>
+  <h2><a name="Available">Available Entities</a></h2>
+  <p>This list shows the identifiers of all entity classes in the selected <a href="#Category">Category</a> currently defined on the <a href="EditorTabEntities.html">Entities Page</a>.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to add it to the <a href="#Entities">Faction Entities</a> list, as with the <b>Add Entity</b> button.</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css" />
+  <title>Change Faction: Conditions Page</title>
+</head>
+<body>
+  <h1>Change Faction: Conditions Page</h1>
+  <p>This tab page of the <a href="DlgChangeFaction.html">Change Faction</a> dialog allows you to define the victory and defeat conditions for the player faction.</p>
+  <ul>
+    <li><a href="#Defeat">Defeat Conditions</a></li>
+    <li><a href="#Victory">Victory Conditions</a></li>
+    <li>See <a href="DlgChangeFaction.html">Change Faction</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Defeat">Defeat Conditions</a></h2>
+  <p>This box allows you to define the defeat conditions for the specified faction.</p>
+  <ul>
+    <li>Check <b>Site Count</b> to indicate that the faction loses when it owns the specified number of sites or less.</li>
+    <li>Check <b>Unit Count</b> to indicate that the faction loses when it owns the specified number of units or less.</li>
+    <li>Check <b>Unit Strength</b> to indicate that the faction loses when the total strength of its units reaches the specified value or less.</li>
+    <li>Check <b>Turn Count</b> to indicate that the faction loses when it has survived for the specified number of turns.</li>
+  </ul>
+  <h2><a name="Victory">Victory Conditions</a></h2>
+  <p>This box allows you to define the victory conditions for the specified faction.</p>
+  <ul>
+    <li>Check <b>Site Count</b> to indicate that the faction wins when it owns the specified number of sites or more.</li>
+    <li>Check <b>Unit Count</b> to indicate that the faction wins when it owns the specified number of units or more.</li>
+    <li>Check <b>Unit Strength</b> to indicate that the faction wins when the total strength of its units reaches the specified value or more.</li>
+    <li>Check <b>Turn Count</b> to indicate that the faction wins when it has survived for the specified number of turns.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. When a new faction is created, only the <b>Site Count</b> defeat condition is checked by default.</p>
+  <p>2. The <b>Turn Count</b> conditions are intended to force the players to seek a decision by other means, before the specified turn limit runs out.</p>
+  <p>3. Any resource-based conditions defined in the <a href="DlgChangeVariable.html">Change Variable</a> dialog apply to all factions using that resource, in addition to any individual conditions defined here.</p>
+</body>
+</html>

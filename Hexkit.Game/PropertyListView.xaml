@@ -1,0 +1,32 @@
+﻿<ListView x:Class="Hexkit.Game.PropertyListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    SelectionMode="Single" ListViewItem.MouseDoubleClick="OnItemActivate">
+  <!-- HACK: allows right-aligned column content -->
+  <ListView.ItemContainerStyle>
+    <Style TargetType="ListViewItem">
+      <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    </Style>
+  </ListView.ItemContainerStyle>
+  <ListView.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </ListView.Resources>
+  <ListView.View>
+    <GridView>
+      <GridViewColumn x:Name="PropertyCategoryColumn" x:FieldModifier="private" Header="Category" DisplayMemberBinding="{Binding Category}" Width="80" />
+      <!-- column widths are set by PropertyListView.ActualWidth.ValueChanged -->
+      <GridViewColumn x:Name="PropertyColumn" x:FieldModifier="private" Header="Property" DisplayMemberBinding="{Binding Name}" />
+      <GridViewColumn x:Name="PropertyValueColumn" x:FieldModifier="private" Header="Value">
+        <GridViewColumn.CellTemplate>
+          <DataTemplate>
+            <TextBlock Background="{Binding Background}" Text="{Binding Value}" TextAlignment="Right" />
+          </DataTemplate>
+        </GridViewColumn.CellTemplate>
+      </GridViewColumn>
+    </GridView>
+  </ListView.View>
+</ListView>

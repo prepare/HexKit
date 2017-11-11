@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Entity Classes Dialog</title>
+</head>
+<body>
+  <h1>Entity Classes Dialog</h1>
+  <p>This dialog shows all entity classes (units, terrains, effects, and upgrades) in the current scenario.</p>
+  <ul>
+    <li>The <b>Category</b> box allows you to select an entity category.
+      <ul>
+        <li>Choose <b>Unit (Alt+U)</b> to show all unit classes.</li>
+        <li>Choose <b>Terrain (Alt+T)</b> to show all terrain classes.</li>
+        <li>Choose <b>Effect (Alt+E)</b> to show all effect classes.</li>
+        <li>Choose <b>Upgrade (Alt+G)</b> to show all upgrade classes.</li>
+      </ul>
+    </li>
+    <li>The <b>Entity Class List</b> shows all entity classes in the selected category.
+      <ul>
+        <li><b>Left-click</b> on an entry to select it. The remaining dialog controls reflect the selected entry.</li>
+      </ul>
+    </li>
+    <li>The <b>Image</b> box shows an image frame of the selected entity class.
+      <ul>
+        <li>Use the <b>scroll bar</b> to browse through all frames of multi-frame images.</li>
+      </ul>
+    </li>
+    <li><a href="#Properties">Property List</a></li>
+    <li>Below appears a description of the selected entity class, or a notice if the scenario does not define any classes in the selected category.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> or <b>Escape</b> to dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The <b>Entity Class List</b> may show multiple entries with identical names. This is not an error but an indication that the scenario designer considered different classes similar enough that they should share the same name. Such classes typically differ only in their images but have otherwise identical properties.</p>
+  <h2><a name="#Properties">Property List</a></h2>
+  <p>This list shows the properties of the selected entity class, i.e. numerical variables and ability flags.</p>
+  <ul>
+    <li>Column <b>Category</b> shows “Attribute”, “Resource”, or “Build Cost”, indicating the category of each variable.</li>
+    <li>Column <b>Property</b> shows the name of each variable.</li>
+    <li>Column <b>Value</b> shows the initial basic or modifier values for each variable.</li>
+    <li><b>Left-click</b> on an entry to display its <a href="DlgShowVariables.html">Variables</a> dialog.</li>
+  </ul>
+  <p>Modifier values are displayed as in the standard <a href="GameViewProperty.html#Value">Property List</a>, except that <b>Owner Units</b> modifiers are always shown, even when identical to the corresponding <b>Units</b> modifiers.</p>
+  <h3>Unit Classes</h3>
+  <p>One additional “Ability” row appears for unit classes.</p>
+  <ul>
+    <li><b>Capture</b> indicates that units of the selected class capture any map site they occupy. The site must contain at least one terrain of a class that also has the “Capture” ability. Units without this ability cannot claim sites, although they still benefit from any bonuses provided by the local terrain.</li>
+  </ul>
+  <h3>Terrain Classes</h3>
+  <p>Two additional “Ability” rows appear for terrain classes.</p>
+  <ul>
+    <li><b>Can Capture</b> indicates that map sites containing at least one terrain of the selected class can be captured by occupying units. At least one unit must be of a class that also has the “Capture” ability.</li>
+    <li><b>Can Destroy</b> indicates that the owner may destroy terrains of the selected class at will. Terrains without this ability are indestructible under the default rules.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The current variable values of an individual entity may differ from the corresponding initial values of its entity class.</p>
+  <p>2. Build costs are expended by factions to build an instance of the selected entity class. Build costs never have modifier values, and they do not appear in an entity’s <a href="GameViewProperty.html">Property List</a>.</p>
+  <p>3. Hexkit Editor defines a third variable category, “Counter”. Variables of this category are intended only for internal use by the rule script, and therefore do not appear in the Hexkit Game GUI.</p>
+</body>
+</html>

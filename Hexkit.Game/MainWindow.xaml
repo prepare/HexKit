@@ -1,0 +1,314 @@
+﻿<Window x:Class="Hexkit.Game.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tw="clr-namespace:Tektosyne.Windows;assembly=Tektosyne.Windows"
+    xmlns:local="clr-namespace:Hexkit.Game"
+    Title="Hexkit Game" AllowDrop="True" MinWidth="460" MinHeight="400" Width="620" Height="460" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Game;component/Commands.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="New" CanExecute="CommandCanExecute" Executed="FileNewExecuted" />
+    <CommandBinding Command="Open" CanExecute="CommandCanExecute" Executed="FileOpenExecuted" />
+    <CommandBinding Command="{StaticResource fileCloseCommand}" CanExecute="SessionValidCanExecute" Executed="FileCloseExecuted" />
+    <CommandBinding Command="Save" CanExecute="SessionValidCanExecute" Executed="FileSaveExecuted" />
+    <CommandBinding Command="{StaticResource fileExitCommand}" CanExecute="CommandCanExecute" Executed="FileExitExecuted" />
+    <CommandBinding Command="{StaticResource gamePlayersCommand}" CanExecute="SessionValidCanExecute" Executed="GamePlayersExecuted" />
+    <CommandBinding Command="{StaticResource gameStopComputerCommand}" CanExecute="SessionComputerCanExecute" Executed="GameStopComputerExecuted" />
+    <CommandBinding Command="{StaticResource gameWaitCycleCommand}" CanExecute="SessionHumanCanExecute" Executed="GameWaitCycleExecuted" />
+    <CommandBinding Command="{StaticResource gameSkipCycleCommand}" CanExecute="SessionHumanCanExecute" Executed="GameSkipCycleExecuted" />
+    <CommandBinding Command="{StaticResource gameUnskipAllCommand}" CanExecute="SessionHumanCanExecute" Executed="GameUnskipAllExecuted" />
+    <CommandBinding Command="{StaticResource commandAttackCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandAttackExecuted" />
+    <CommandBinding Command="{StaticResource commandMoveCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandMoveExecuted" />
+    <CommandBinding Command="{StaticResource commandBuildCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandBuildExecuted" />
+    <CommandBinding Command="{StaticResource commandEntitiesCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandEntitiesExecuted" />
+    <CommandBinding Command="{StaticResource commandSiteCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandSiteExecuted" />
+    <CommandBinding Command="{StaticResource commandEndTurnCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandEndTurnExecuted" />
+    <CommandBinding Command="{StaticResource commandResignCommand}" CanExecute="SessionHumanCanExecute" Executed="CommandResignExecuted" />
+    <CommandBinding Command="{StaticResource infoScenarioCommand}" CanExecute="SessionValidCanExecute" Executed="InfoScenarioExecuted" />
+    <CommandBinding Command="{StaticResource infoClassesCommand}" CanExecute="SessionValidCanExecute" Executed="InfoClassesExecuted" />
+    <CommandBinding Command="{StaticResource infoVariablesCommand}" CanExecute="SessionValidCanExecute" Executed="InfoVariablesExecuted" />
+    <CommandBinding Command="{StaticResource infoFactionsCommand}" CanExecute="SessionValidCanExecute" Executed="InfoFactionsExecuted" />
+    <CommandBinding Command="{StaticResource infoRankingCommand}" CanExecute="SessionValidCanExecute" Executed="InfoRankingExecuted" />
+    <CommandBinding Command="{StaticResource infoCommandsCommand}" CanExecute="SessionValidCanExecute" Executed="InfoCommandsExecuted" />
+    <CommandBinding Command="{StaticResource infoPlacementsCommand}" CanExecute="SessionSelectionCanExecute" Executed="InfoPlacementsExecuted" />
+    <CommandBinding Command="{StaticResource replayAllCommand}" CanExecute="SessionClosedCanExecute" Executed="ReplayAllExecuted" />
+    <CommandBinding Command="{StaticResource replayLastCommand}" CanExecute="SessionClosedCanExecute" Executed="ReplayLastExecuted" />
+    <CommandBinding Command="{StaticResource replayFromCommand}" CanExecute="SessionClosedCanExecute" Executed="ReplayFromExecuted" />
+    <CommandBinding Command="{StaticResource replayPauseCommand}" CanExecute="SessionReplayCanExecute" Executed="ReplayPauseExecuted" />
+    <CommandBinding Command="{StaticResource replaySkipCommand}" CanExecute="SessionReplayCanExecute" Executed="ReplaySkipExecuted" />
+    <CommandBinding Command="{StaticResource replayStopCommand}" CanExecute="SessionReplayStopCanExecute" Executed="ReplayStopExecuted" />
+    <CommandBinding Command="{StaticResource replaySpeedSlowCommand}" CanExecute="SessionValidCanExecute" Executed="ReplaySpeedSlowExecuted" />
+    <CommandBinding Command="{StaticResource replaySpeedMediumCommand}" CanExecute="SessionValidCanExecute" Executed="ReplaySpeedMediumExecuted" />
+    <CommandBinding Command="{StaticResource replaySpeedFastCommand}" CanExecute="SessionValidCanExecute" Executed="ReplaySpeedFastExecuted" />
+    <CommandBinding Command="{StaticResource replaySpeedTurboCommand}" CanExecute="SessionValidCanExecute" Executed="ReplaySpeedTurboExecuted" />
+    <CommandBinding Command="{StaticResource replayScrollCommand}" CanExecute="SessionValidCanExecute" Executed="ReplayScrollExecuted" />
+    <CommandBinding Command="{StaticResource viewAnimationCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewAnimationExecuted" />
+    <CommandBinding Command="{StaticResource viewShowFlagsCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowFlagsExecuted" />
+    <CommandBinding Command="{StaticResource viewShowGridCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowGridExecuted" />
+    <CommandBinding Command="{StaticResource viewShowOwnerCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowOwnerExecuted" />
+    <CommandBinding Command="{StaticResource viewShowGaugesCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowGaugesExecuted" />
+    <CommandBinding Command="{StaticResource viewShowVariableCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowVariableExecuted" />
+    <CommandBinding Command="{StaticResource viewCenterSiteCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewCenterSiteExecuted" />
+    <CommandBinding Command="{StaticResource viewZoomStdCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewZoomStdExecuted" />
+    <CommandBinding Command="{StaticResource viewZoomInCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewZoomInExecuted" />
+    <CommandBinding Command="{StaticResource viewZoomOutCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewZoomOutExecuted" />
+    <CommandBinding Command="{StaticResource viewBitmapGridCommand}" CanExecute="CommandCanExecute" Executed="ViewBitmapGridExecuted" />
+    <CommandBinding Command="{StaticResource viewOpaqueImagesCommand}" CanExecute="CommandCanExecute" Executed="ViewOpaqueImagesExecuted" />
+    <CommandBinding Command="{StaticResource viewStaticArrowsCommand}" CanExecute="CommandCanExecute" Executed="ViewStaticArrowsExecuted" />
+    <CommandBinding Command="{StaticResource viewStaticMarkerCommand}" CanExecute="CommandCanExecute" Executed="ViewStaticMarkerExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeSystemCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeSystemExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeClassicCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeClassicExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeLunaCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeLunaExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeLunaHomesteadCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeLunaHomesteadExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeLunaMetallicCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeLunaMetallicExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeRoyaleCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeRoyaleExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeAeroCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeAeroExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeAero2Command}" CanExecute="CommandCanExecute" Executed="ViewThemeAero2Executed" />
+    <CommandBinding Command="{StaticResource viewThemeAeroLiteCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeAeroLiteExecuted" />
+    <CommandBinding Command="{StaticResource viewSaveWindowCommand}" CanExecute="CommandCanExecute" Executed="ViewSaveWindowExecuted" />
+    <CommandBinding Command="{StaticResource debugAreasCommand}" CanExecute="SessionValidCanExecute" Executed="DebugAreasExecuted" />
+    <CommandBinding Command="{StaticResource debugScenarioCommand}" CanExecute="SessionValidCanExecute" Executed="DebugScenarioExecuted" />
+    <CommandBinding Command="{StaticResource debugBitmapsCommand}" CanExecute="SessionValidCanExecute" Executed="DebugBitmapsExecuted" />
+    <CommandBinding Command="{StaticResource debugCountersCommand}" CanExecute="SessionValidCanExecute" Executed="DebugCountersExecuted" />
+    <CommandBinding Command="{StaticResource debugEventsCommand}" CanExecute="SessionValidCanExecute" Executed="DebugEventsExecuted" />
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+    <CommandBinding Command="{StaticResource helpReadMeCommand}" Executed="HelpReadMeExecuted" />
+    <CommandBinding Command="{StaticResource helpWhatsNewCommand}" Executed="HelpWhatsNewExecuted" />
+    <CommandBinding Command="{StaticResource helpAboutCommand}" Executed="HelpAboutExecuted" />
+  </Window.CommandBindings>
+  <DockPanel>
+    <Menu Name="MainMenu" x:FieldModifier="private" DockPanel.Dock="Top" Cursor="Arrow">
+      <MenuItem Header="_File" Tag="GameMenuFile.html" ToolTip="Loading and saving">
+        <MenuItem Header="_New…" Command="New" Tag="GameMenuFile.html#New" ToolTip="Start a new scenario" />
+        <MenuItem Header="_Open…" Command="Open" Tag="GameMenuFile.html#Open" ToolTip="Open a saved game" />
+        <Separator />
+        <MenuItem Header="_Close" Command="{StaticResource fileCloseCommand}" Tag="GameMenuFile.html#Close" ToolTip="Close the current game" />
+        <MenuItem Header="_Save…" Command="Save" Tag="GameMenuFile.html#Save" ToolTip="Save the current game" />
+        <Separator />
+        <MenuItem Header="E_xit" Command="{StaticResource fileExitCommand}" Tag="GameMenuFile.html#Exit" ToolTip="Exit Hexkit Game" />
+      </MenuItem>
+      <MenuItem Name="MenuGame" x:FieldModifier="private" Header="_Game" Tag="GameMenuGame.html" ToolTip="Game control and setup">
+        <MenuItem Header="_Player Setup…" Command="{StaticResource gamePlayersCommand}" Tag="GameMenuGame.html#Players" ToolTip="Assign factions to players and define players" />
+        <MenuItem Header="Stop _Computer" Command="{StaticResource gameStopComputerCommand}" Tag="GameMenuGame.html#StopComputer" ToolTip="Stop ongoing computer player calculations" />
+        <Separator />
+        <MenuItem Header="_Wait &amp; Cycle Units" Command="{StaticResource gameWaitCycleCommand}" InputGestureText="W" Tag="GameMenuGame.html#WaitCycle" ToolTip="Cycles through all units that can attack or move" />
+        <MenuItem Header="_Skip &amp; Cycle Units" Command="{StaticResource gameSkipCycleCommand}" InputGestureText="Space" Tag="GameMenuGame.html#SkipCycle" ToolTip="Removes the selected unit from the Wait cycle" />
+        <MenuItem Header="_Unskip All Units" Command="{StaticResource gameUnskipAllCommand}" Tag="GameMenuGame.html#UnskipAll" ToolTip="Adds all active units back to the Wait cycle" />
+      </MenuItem>
+      <MenuItem Name="MenuCommand" x:FieldModifier="private" Header="_Command" Tag="GameMenuCommand.html" ToolTip="Issue game commands">
+        <MenuItem Header="_Attack Site…" Command="{StaticResource commandAttackCommand}" InputGestureText="A" Tag="GameMenuCommand.html#Attack" ToolTip="Attack selected site, or with selected units" />
+        <MenuItem Header="_Move Units…" Command="{StaticResource commandMoveCommand}" InputGestureText="M" Tag="GameMenuCommand.html#Move" ToolTip="Move selected units to another location" />
+        <Separator />
+        <MenuItem Header="_Build Entities…" Command="{StaticResource commandBuildCommand}" InputGestureText="B" Tag="GameMenuCommand.html#Build" ToolTip="Build new units, items, and terrains" />
+        <MenuItem Header="Manage _Entities…" Command="{StaticResource commandEntitiesCommand}" InputGestureText="E" Tag="GameMenuCommand.html#Entities" ToolTip="Inspect, rename, place, and destroy entities" />
+        <MenuItem Header="_Selected Entities…" Command="{StaticResource commandSiteCommand}" InputGestureText="H" Tag="GameMenuCommand.html#Site" ToolTip="Manage entities in selected site" />
+        <Separator />
+        <MenuItem Header="_End Turn" Command="{StaticResource commandEndTurnCommand}" Tag="GameMenuCommand.html#EndTurn" ToolTip="End the turn for the active faction" />
+        <MenuItem Header="_Resign Game" Command="{StaticResource commandResignCommand}" Tag="GameMenuCommand.html#Resign" ToolTip="Resign the game for the active faction" />
+      </MenuItem>
+      <MenuItem Name="MenuInfo" x:FieldModifier="private" Header="_Info" Tag="GameMenuInfo.html" ToolTip="Show game information">
+        <MenuItem Header="About _Scenario…" Command="{StaticResource infoScenarioCommand}" Tag="GameMenuInfo.html#Scenario" ToolTip="Show basic scenario information" />
+        <MenuItem Header="_Entity Classes…" Command="{StaticResource infoClassesCommand}" Tag="GameMenuInfo.html#Classes" ToolTip="Show information on entity classes" />
+        <MenuItem Header="_Variables…" Command="{StaticResource infoVariablesCommand}" Tag="GameMenuInfo.html#Variables" ToolTip="Show information on attributes &amp; resources" />
+        <Separator />
+        <MenuItem Header="_Faction Status…" Command="{StaticResource infoFactionsCommand}" Tag="GameMenuInfo.html#Factions" ToolTip="Show current status of all factions" />
+        <MenuItem Header="Faction _Ranking…" Command="{StaticResource infoRankingCommand}" Tag="GameMenuInfo.html#Ranking" ToolTip="Show faction ranking by possessions" />
+        <MenuItem Header="Command _History…" Command="{StaticResource infoCommandsCommand}" Tag="GameMenuInfo.html#Commands" ToolTip="Show all commands executed so far" />
+        <Separator />
+        <MenuItem Header="Placement _Sites…" Command="{StaticResource infoPlacementsCommand}" Tag="GameMenuInfo.html#Placements" ToolTip="Show all placement sites for the active faction" />
+      </MenuItem>
+      <MenuItem Name="MenuReplay" x:FieldModifier="private" Header="_Replay" Tag="GameMenuReplay.html" ToolTip="Replay previous game turns">
+        <MenuItem Header="_Replay All Turns" Command="{StaticResource replayAllCommand}" Tag="GameMenuReplay.html#All" ToolTip="Replay all turns played so far" />
+        <MenuItem Header="Replay _Last Turn" Command="{StaticResource replayLastCommand}" Tag="GameMenuReplay.html#Last" ToolTip="Replay from faction’s last End Turn command" />
+        <MenuItem Header="Replay From _Turn…" Command="{StaticResource replayFromCommand}" Tag="GameMenuReplay.html#From" ToolTip="Replay from specified turn onward" />
+        <Separator />
+        <MenuItem Name="MenuReplayPause" x:FieldModifier="private" Header="_Pause Replay" Command="{StaticResource replayPauseCommand}" Tag="GameMenuReplay.html#Pause" ToolTip="Pause or resume ongoing replay" />
+        <MenuItem Header="Skip _Faction" Command="{StaticResource replaySkipCommand}" Tag="GameMenuReplay.html#Skip" ToolTip="Skip rest of faction’s turn" />
+        <MenuItem Header="_Stop Replay" Command="{StaticResource replayStopCommand}" Tag="GameMenuReplay.html#Stop" ToolTip="Stop ongoing command replay" />
+        <Separator />
+        <MenuItem Header="Replay Sp_eed" Tag="GameMenuReplay.html#Speed" ToolTip="Set speed for command replay">
+          <MenuItem Name="MenuReplaySpeedSlow" x:FieldModifier="private" Header="_1 – Slow" Command="{StaticResource replaySpeedSlowCommand}" Tag="GameMenuReplay.html#SpeedSlow" ToolTip="Slow speed – long delay and slow event display" />
+          <MenuItem Name="MenuReplaySpeedMedium" x:FieldModifier="private" Header="_2 – Medium" Command="{StaticResource replaySpeedMediumCommand}" Tag="GameMenuReplay.html#SpeedMedium" ToolTip="Medium speed – medium delay and normal event display" />
+          <MenuItem Name="MenuReplaySpeedFast" x:FieldModifier="private" Header="_3 – Fast" Command="{StaticResource replaySpeedFastCommand}" Tag="GameMenuReplay.html#SpeedFast" ToolTip="Fast speed – short delay and fast event display" />
+          <MenuItem Name="MenuReplaySpeedTurbo" x:FieldModifier="private" Header="_4 – Turbo" Command="{StaticResource replaySpeedTurboCommand}" Tag="GameMenuReplay.html#SpeedTurbo" ToolTip="Turbo speed – short delay and events are skipped" />
+        </MenuItem>
+        <MenuItem Name="MenuReplayScroll" x:FieldModifier="private" Header="Scroll Map _View" Command="{StaticResource replayScrollCommand}" Tag="GameMenuReplay.html#Scroll" ToolTip="Scroll map view to each command location" />
+      </MenuItem>
+      <MenuItem Header="_View" Tag="GameMenuView.html" ToolTip="Customize display">
+        <MenuItem Name="MenuViewAnimation" x:FieldModifier="private" Header="_Animation" Command="{StaticResource viewAnimationCommand}" Tag="GameMenuView.html#Animation" ToolTip="Toggle map animations" />
+        <MenuItem Name="MenuViewShowFlags" x:FieldModifier="private" Header="Show _Flags" Command="{StaticResource viewShowFlagsCommand}" Tag="GameMenuView.html#ShowFlags" ToolTip="Toggle flags for unit stacks" />
+        <MenuItem Name="MenuViewShowGrid" x:FieldModifier="private" Header="Show _Grid" Command="{StaticResource viewShowGridCommand}" Tag="GameMenuView.html#ShowGrid" ToolTip="Toggle grid outline for map sites" />
+        <MenuItem Name="MenuViewShowOwner" x:FieldModifier="private" Header="Show _Owner" Command="{StaticResource viewShowOwnerCommand}" Tag="GameMenuView.html#ShowOwner" ToolTip="Toggle owner colors for map sites" />
+        <MenuItem Header="Show Ga_uges…" Command="{StaticResource viewShowGaugesCommand}" Tag="GameMenuView.html#ShowGauges" ToolTip="Show resource gauges for units" />
+        <MenuItem Header="Show _Variable…" Command="{StaticResource viewShowVariableCommand}" Tag="GameMenuView.html#ShowVariable" ToolTip="Show attributes &amp; resources on map sites" />
+        <Separator />
+        <MenuItem Header="_Center Site" Command="{StaticResource viewCenterSiteCommand}" InputGestureText="C" Tag="GameMenuView.html#CenterSite" ToolTip="Center map view on selected site" />
+        <MenuItem Name="MenuViewZoom" x:FieldModifier="private" Header="_Zoom" Tag="GameMenuView.html#Zoom" ToolTip="Change zoom level">
+          <MenuItem Name="MenuViewZoomStd" x:FieldModifier="private" Header="_Standard" Command="{StaticResource viewZoomStdCommand}" Tag="GameMenuView.html#ZoomStd" ToolTip="Standard zoom level" />
+          <MenuItem Name="MenuViewZoomIn" x:FieldModifier="private" Header="Zoom _In" Command="{StaticResource viewZoomInCommand}" InputGestureText="Z" Tag="GameMenuView.html#ZoomIn" ToolTip="Increase zoom level" />
+          <MenuItem Name="MenuViewZoomOut" x:FieldModifier="private" Header="Zoom _Out" Command="{StaticResource viewZoomOutCommand}" InputGestureText="X" Tag="GameMenuView.html#ZoomOut" ToolTip="Decrease zoom level" />
+        </MenuItem>
+        <MenuItem Header="_Performance" Tag="GameMenuView.html#Performance" ToolTip="Change performance options">
+          <MenuItem Name="MenuViewBitmapGrid" x:FieldModifier="private" Header="Use _Bitmap Grid" Command="{StaticResource viewBitmapGridCommand}" Tag="GameMenuView.html#BitmapGrid" ToolTip="Draw map grid using fast but inaccurate bitmaps" />
+          <MenuItem Name="MenuViewOpaqueImages" x:FieldModifier="private" Header="Use _Opaque Images" Command="{StaticResource viewOpaqueImagesCommand}" Tag="GameMenuView.html#OpaqueImages" ToolTip="Assume images are opaque to avoid alpha blending" />
+          <MenuItem Name="MenuViewStaticArrows" x:FieldModifier="private" Header="Use Static _Arrows" Command="{StaticResource viewStaticArrowsCommand}" Tag="GameMenuView.html#StaticArrows" ToolTip="Draw attack &amp; move arrows without color animation" />
+          <MenuItem Name="MenuViewStaticMarker" x:FieldModifier="private" Header="Use Static _Marker" Command="{StaticResource viewStaticMarkerCommand}" Tag="GameMenuView.html#StaticMarker" ToolTip="Draw site selection marker without color animation" />
+        </MenuItem>
+        <Separator />
+        <MenuItem Header="Display _Theme" Tag="GameMenuView.html#Theme" ToolTip="Change display theme (requires restart)">
+          <MenuItem Name="MenuViewThemeSystem" x:FieldModifier="private" Header="_System" Command="{StaticResource viewThemeSystemCommand}" Tag="GameMenuView.html#ThemeSystem" ToolTip="Use default system theme" />
+          <MenuItem Name="MenuViewThemeClassic" x:FieldModifier="private" Header="_Classic" Command="{StaticResource viewThemeClassicCommand}" Tag="GameMenuView.html#ThemeClassic" ToolTip="Use Classic theme (Windows 2000)" />
+          <MenuItem Name="MenuViewThemeLuna" x:FieldModifier="private" Header="_Luna" Command="{StaticResource viewThemeLunaCommand}" Tag="GameMenuView.html#ThemeLuna" ToolTip="Use Luna theme (Windows XP)" />
+          <MenuItem Name="MenuViewThemeLunaHomestead" x:FieldModifier="private" Header="Luna _Homestead" Command="{StaticResource viewThemeLunaHomesteadCommand}" Tag="GameMenuView.html#ThemeLunaHomestead" ToolTip="Use Luna Homestead theme (Windows XP)" />
+          <MenuItem Name="MenuViewThemeLunaMetallic" x:FieldModifier="private" Header="Luna _Metallic" Command="{StaticResource viewThemeLunaMetallicCommand}" Tag="GameMenuView.html#ThemeLunaMetallic" ToolTip="Use Luna Metallic theme (Windows XP)" />
+          <MenuItem Name="MenuViewThemeRoyale" x:FieldModifier="private" Header="_Royale" Command="{StaticResource viewThemeRoyaleCommand}" Tag="GameMenuView.html#ThemeRoyale" ToolTip="Use Royale theme (Windows XP Media Center Edition)" />
+          <MenuItem Name="MenuViewThemeAero" x:FieldModifier="private" Header="_Aero" Command="{StaticResource viewThemeAeroCommand}" Tag="GameMenuView.html#ThemeAero" ToolTip="Use Aero theme (Windows Vista/7)" />
+          <MenuItem Name="MenuViewThemeAero2" x:FieldModifier="private" Header="Aero _2" Command="{StaticResource viewThemeAero2Command}" Tag="GameMenuView.html#ThemeAero2" ToolTip="Use Aero 2 theme (Windows 8)" />
+          <MenuItem Name="MenuViewThemeAeroLite" x:FieldModifier="private" Header="Aero L_ite" Command="{StaticResource viewThemeAeroLiteCommand}" Tag="GameMenuView.html#ThemeAeroLite" ToolTip="Use Aero Lite theme (Windows 8)" />
+        </MenuItem>
+        <MenuItem Header="_Save Window" Command="{StaticResource viewSaveWindowCommand}" Tag="GameMenuView.html#SaveWindow" ToolTip="Save current window size and location" />
+      </MenuItem>
+      <MenuItem Name="MenuDebug" x:FieldModifier="private" Header="_Debug" Tag="GameMenuDebug.html" ToolTip="Create debug output">
+        <MenuItem Header="Save _Map Contents" Command="{StaticResource debugAreasCommand}" Tag="GameMenuDebug.html#Areas" ToolTip="Save current map contents to Areas file" />
+        <MenuItem Header="Save _Scenario File" Command="{StaticResource debugScenarioCommand}" Tag="GameMenuDebug.html#Scenario" ToolTip="Save scenario description to debug file" />
+        <Separator />
+        <MenuItem Header="Show _Bitmap Catalogs" Command="{StaticResource debugBitmapsCommand}" Tag="GameMenuDebug.html#Bitmaps" ToolTip="Show original and scaled bitmap catalogs" />
+        <MenuItem Header="Show _Command Counters" Command="{StaticResource debugCountersCommand}" Tag="GameMenuDebug.html#Counters" ToolTip="Show command and instruction counters" />
+        <MenuItem Header="Show _Event History" Command="{StaticResource debugEventsCommand}" Tag="GameMenuDebug.html#Events" ToolTip="Show history of faction and entity events" />
+      </MenuItem>
+      <MenuItem Header="_Help" Tag="GameMenuHelp.html" ToolTip="Show online help">
+        <MenuItem Header="_Contents" Command="Help" Tag="GameMenuHelp.html#Contents" ToolTip="Show list of help topics" />
+        <MenuItem Header="_Read Me" Command="{StaticResource helpReadMeCommand}" Tag="GameMenuHelp.html#ReadMe" ToolTip="Read about installation and troubleshooting" />
+        <MenuItem Header="_What’s New" Command="{StaticResource helpWhatsNewCommand}" Tag="GameMenuHelp.html#WhatsNew" ToolTip="Show changes in this and earlier releases" />
+        <Separator />
+        <MenuItem Header="_About Hexkit" Command="{StaticResource helpAboutCommand}" Tag="GameMenuHelp.html#About" ToolTip="Show basic program information" />
+      </MenuItem>
+    </Menu>
+    <StatusBar DockPanel.Dock="Bottom">
+      <StatusBar.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+          </Grid>
+        </ItemsPanelTemplate>
+      </StatusBar.ItemsPanel>
+      <StatusBarItem Grid.Column="0" Grid.Row="0">
+        <tw:StackTextBlock Name="StatusMessage" x:FieldModifier="internal" />
+      </StatusBarItem>
+      <Separator Grid.Column="1" Grid.Row="0" />
+      <StatusBarItem Grid.Column="2" Grid.Row="0">
+        <tw:FormatTextBlock Name="StatusPositionFormat" x:FieldModifier="private" Format="({0:D3},{1:D3})" Width="60" />
+      </StatusBarItem>
+      <Separator Grid.Column="3" Grid.Row="0" />
+      <StatusBarItem Grid.Column="4" Grid.Row="0">
+        <TextBlock Name="ComputerMessage" x:FieldModifier="private" />
+      </StatusBarItem>
+    </StatusBar>
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition MinWidth="200" MaxWidth="400" Width="300" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <Grid Grid.Column="0" Grid.Row="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="4*" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <UserControl Name="MapViewHost" x:FieldModifier="internal" Grid.Column="0" Grid.Row="0" Style="{StaticResource defaultStyle}">
+          <GroupBox Name="QuickMenuGroup" x:FieldModifier="private" Header="Quick Menu"  HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+              <Button Command="New">Start _New Scenario</Button>
+              <Button Command="Open">_Open Saved Game</Button>
+              <Button Command="Help">Show Help _Topics</Button>
+              <Button Command="{StaticResource fileExitCommand}">E_xit Hexkit Game</Button>
+            </StackPanel>
+          </GroupBox>
+        </UserControl>
+        <GridSplitter Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" ResizeBehavior="PreviousAndNext" Height="4" />
+        <TextBox Name="EventMessage" x:FieldModifier="internal" Grid.Column="0" Grid.Row="2" IsEnabled="False" IsReadOnly="True" TextWrapping="Wrap" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Style="{StaticResource defaultStyle}" />
+      </Grid>
+      <GridSplitter Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="4" />
+      <DockPanel Grid.Column="2" Grid.Row="0">
+        <GroupBox Name="TurnFactionGroup" x:FieldModifier="private" DockPanel.Dock="Bottom" Header="Turn –/– Faction –/–">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Rectangle Name="FactionColorInfo" x:FieldModifier="private" Grid.Column="0" Grid.Row="0" RadiusX="10" RadiusY="10" />
+            <Label Name="FactionInfo" x:FieldModifier="private" Grid.Column="0" Grid.Row="0">Faction Name</Label>
+            <Button Grid.Column="1" Grid.Row="0" Command="{StaticResource commandEndTurnCommand}">End Turn</Button>
+          </Grid>
+        </GroupBox>
+        <GroupBox Name="SelectionGroup" x:FieldModifier="private" Header="Site (–,–)">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition />
+              <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" Margin="5,0,5,4">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="4" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <TextBlock Grid.Column="0" Grid.Row="0">Site Owner:</TextBlock>
+              <TextBlock Name="SiteOwnerInfo" x:FieldModifier="private" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" />
+              <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Center">
+                <Hyperlink Name="SiteOwnerLink" x:FieldModifier="private" ToolTip="Show Site Owner Faction" Click="OnLinkOwner">Owner Faction</Hyperlink>
+              </TextBlock>
+              <TextBlock Grid.Column="0" Grid.Row="1">Unit Owner:</TextBlock>
+              <TextBlock Name="UnitOwnerInfo" x:FieldModifier="private" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" />
+              <TextBlock Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
+                <Hyperlink Name="UnitOwnerLink" x:FieldModifier="private" ToolTip="Show Unit Owner Faction" Click="OnLinkOwner">Owner Faction</Hyperlink>
+              </TextBlock>
+            </Grid>
+            <ListView Name="EntityList" x:FieldModifier="private" Grid.Column="0" Grid.Row="1" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnEntityActivate" SelectionChanged="OnEntitySelected">
+              <ListView.View>
+                <GridView>
+                  <!-- column width is set by EntityList.ActualWidth.ValueChanged -->
+                  <GridViewColumn x:Name="EntityColumn" x:FieldModifier="private" Header="Site Contents" DisplayMemberBinding="{Binding Item2}" />
+                </GridView>
+              </ListView.View>
+            </ListView>
+            <local:PropertyListView x:Name="PropertyList" x:FieldModifier="private" Grid.Column="0" Grid.Row="2" />
+          </Grid>
+        </GroupBox>
+      </DockPanel>
+    </Grid>
+  </DockPanel>
+</Window>

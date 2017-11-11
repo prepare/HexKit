@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css">
+  <title>Faction Entities Dialog</title>
+</head>
+<body>
+  <h1>Faction Entities Dialog</h1>
+  <p>This dialog shows all units and terrains owned by the faction specified in the dialog’s title bar.</p>
+  <p>When invoked by the <a href="GameMenuCommand.html#Entities">Manage Entities</a> or <a href="GameMenuCommand.html#Site">Selected Entities</a> command, this dialog also allows you to rename, place, and destroy your faction’s entities.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Filter">Filter</a></li>
+    <li><a href="#Entities">Entity List</a></li>
+    <li><a href="#Command">Commands</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Entities">Entity List</a> and <b>Property List</b> to adjust their respective share of the current window width.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> (unless another button is selected) or <b>Escape</b> to dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. Any other dialogs that were active when the <b>Faction Entities</b> dialog is shown are temporarily hidden so that they don’t obscure the default <a href="GameViewMap.html">Map View</a>. Any hidden dialogs will automatically reappear when the <b>Faction Entities</b> dialog is closed.</p>
+  <p>2. The <b>Select Site</b> button is disabled if the selected entity is not placed on the map.</p>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select an entity category.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to show units.</li>
+    <li>Choose <b>Terrain (Alt+T)</b> to show terrains.</li>
+    <li>Choose <b>Upgrade (Alt+G)</b> to show upgrades.</li>
+  </ul>
+  <h2><a name="Filter">Filter</a></h2>
+  <p>This box allows you to filter the <a href="#Entities">Entity List</a>. A filter is set to “indeterminate” when its check box is filled rather than checked.</p>
+  <ul>
+    <li><b>On Site (Alt+O)</b> shows only entities placed on the <a href="GameViewData.html#Site">Selected Site</a> if checked, and all entities regardless of their location if unchecked. Checking this filter also sets the <b>Placed</b> filter to indeterminate if unchecked.</li>
+    <li><b>Placed (Alt+A)</b> shows only entities that are placed on the map if checked, only unplaced entities if unchecked, and both if indeterminate.</li>
+    <li><b>Mobile (Alt+M)</b> shows only mobile units if checked, only immobile units if unchecked, and both if indeterminate. This filter applies to <b>Units</b>.</li>
+    <li><b>Capture (Alt+C)</b> shows only terrains with the “Capture” ability if checked, only terrains without this ability if unchecked, and both if indeterminate. This filter applies to <b>Terrains</b>.</li>
+    <li></li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. Showing <b>Upgrades</b> automatically sets the <b>Placed</b> filter to indeterminate since upgrades are never placed on the map.</p>
+  <p>2. At most one of the <b>Mobile</b> and <b>Capture</b> filters is shown, depending on the selected <a href="#Category">Category</a>.</p>
+  <h2><a name="Entities">Entity List</a></h2>
+  <p>This list shows all entities of the selected <a href="#Category">Category</a> owned by the specified faction.</p>
+  <ul>
+    <li>Column <b>Site</b> shows the map coordinates of each entity, or a dash for those entities that are not placed on the map.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowClasses.html">Entity Classes</a> dialog.</li>
+    <li>Choose <b>Select Site (Alt+S)</b> to center the default <a href="GameViewMap.html">Map View</a> on the selected entity, making its location the new <a href="GameViewData.html#Site">Selected Site</a>. Clicking this button also checks the <b>Site</b> filter.</li>
+  </ul>
+  <p>The <b>Property List</b> shows the statistics of the selected entity. Please refer to the <a href="GameViewProperty.html">Property List</a> page for details.</p>
+  <h2><a name="Command">Commands</a></h2>
+  <p>Three additional command buttons appear if the dialog was invoked by the <a href="GameMenuCommand.html#Entities">Manage Entities</a> or <a href="GameMenuCommand.html#Site">Selected Entities</a> command. All command buttons operate on the selected entity in the <a href="#Entities">Entity List</a>.</p>
+  <ul>
+    <li>Choose <b>Rename… (Alt+R)</b> to show the <a href="DlgRenameEntity.html">Rename Entity</a> dialog, allowing you to rename the selected entity.</li>
+    <li>Choose <b>Place on Map (Alt+P)</b> to place the selected entity on the map.</li>
+    <li>Choose <b>Destroy (Alt+D)</b> to destroy the selected entity.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Place on Map</b> button is disabled if the selected entity is already placed on the map, or if the current game situation offers no valid placement sites for the selected entity.</p>
+  <p>2. <b>Place on Map</b> temporarily hides the dialog and prompts you to select a target site. The possible choices will be indicated on the default <a href="GameViewMap.html">Map View</a> by a bright hue. Click on a highlighted site to make your selection. Click on another site or press <b>Escape</b> to abort the command.</p>
+  <p>3. The <b>Destroy</b> button is disabled if the selected entity is indestructible. Under the default rules, you can destroy any of your units, as well as any terrain that has been marked as destructible by the scenario designer.</p>
+  <p>4. Depending on the scenario, destroying an entity may earn your faction a portion of the resources originally required to build the entity.</p>
+</body>
+</html>

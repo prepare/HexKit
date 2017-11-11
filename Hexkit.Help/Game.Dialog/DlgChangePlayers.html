@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Player Setup Dialog</title>
+</head>
+<body>
+  <h1>Player Setup Dialog</h1>
+  <p>This dialog allows you to assign factions to players, and to change the properties of all participating human and computer players.</p>
+  <ul>
+    <li><a href="#Factions">Faction List</a></li>
+    <li><a href="#Selected">Selected Faction</a></li>
+    <li><a href="DlgChangePlayersHuman.html">Selected Human Player</a> (described on a separate page)</li>
+    <li><a href="DlgChangePlayersComputer.html">Selected Computer Player</a> (described on a separate page)</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> when the focus is not on another button to dismiss the dialog. Pressing <b>Escape</b> or closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>Changes made on any tab page of this dialog take effect immediately, and persist regardless of how the dialog is dismissed. Changes can be manually reverted, however, and restarting the scenario will reset all player data to default values.</p>
+  <h2><a name="Factions">Faction List</a></h2>
+  <p>This list shows all surviving factions in the current scenario and indicates the players they are assigned to. During each game turn, factions will become active in the order in which they appear in this list.</p>
+  <ul>
+    <li>Column <b>Faction</b> shows the name of each faction.</li>
+    <li>Column <b>Player</b> shows the name of the player assigned to each faction.</li>
+    <li>Column <b>Details</b> shows various information on the assigned player.
+      <ul>
+        <li>For human players, this is the player’s e-mail address, or “Local (Hotseat)” if no e-mail address is defined.</li>
+        <li>For computer players, this is the employed algorithm.</li>
+      </ul>
+    </li>
+    <li><b>Left-click</b> on an entry to select it. The <a href="#Selected">Selected Faction</a> controls operate on the selected entry.</li>
+    <li><b>Double-click</b> on an entry to display its <a href="DlgShowFactions.html">Faction Status</a> dialog, as with the <b>Faction Status</b> button.</li>
+  </ul>
+  <h2><a name="Selected">Selected Faction</a></h2>
+  <p>This box allows you to assign the selected faction to a different player.</p>
+  <ul>
+    <li>Select <b>Human (Alt+H)</b> to assign the selected faction to a human player. Use the drop-down box to select a human player.</li>
+    <li>Select <b>Computer (Alt+C)</b> to assign the selected faction to a computer player. Use the drop-down box to select a computer player.</li>
+    <li>Choose <b>Faction Status… (Alt+F)</b> to display the <a href="DlgShowFactions.html">Faction Status</a> dialog for the selected faction.</li>
+  </ul>
+  <p>The dialog shows either the <a href="DlgChangePlayersHuman.html">Selected Human Player</a> or the <a href="DlgChangePlayersComputer.html">Selected Computer Player</a> box, depending on whether <b>Human</b> or <b>Computer</b> is checked. Use these boxes to inspect and change the properties of the assigned player.</p>
+</body>
+</html>

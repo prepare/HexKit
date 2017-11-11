@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Section Location</title>
+</head>
+<body>
+  <h1>Section Location</h1>
+  <p>The top of each section’s tab page hosts the following controls which determine the location of this section:</p>
+  <ul>
+    <li><a href="#Inline">Inline Option</a></li>
+    <li><a href="#Section">Section Path</a></li>
+    <li><a href="#Browse">Browse Button</a></li>
+  </ul>
+  <h2><a name="Inline">Inline Option</a></h2>
+  <p>This check box is enabled on the five subsection tab pages only.</p>
+  <ul>
+    <li>Check to place the active page’s data in the section file associated with the Master section.</li>
+    <li>Uncheck to place the active page’s data in the section file associated with the current section, as shown in the <b>Section Path</b> box.</li>
+  </ul>
+  <p><b>Note:</b> The current section path, if any, will be remembered until the active page’s data is completely cleared or replaced, or Hexkit Editor is exited. Simply uncheck the <b>Inline</b> option to restore a previously defined section path.</p>
+  <h2><a name="Section">Section Path</a></h2>
+  <p>This read-only text box shows the currently defined section file path, if any, for the active tab page. Use the <b>Browse</b> button or the <a href="EditorMenuFile.html#Open">Open</a> and <a href="EditorMenuFile.html#SaveAs">Save As</a> commands to change the section path.</p>
+  <p><b>Note:</b> The <b>Inline</b> option will be unchecked automatically when a valid section path is entered, by whatever means. You can manually re-check the <b>Inline</b> option if desired.</p>
+  <h2><a name="Browse">Browse Button</a></h2>
+  <p>This button displays a standard Windows “Open” dialog, allowing you to enter a new or existing section file to associate with the active tab page. This is an alternative to using similar <a href="EditorMenuFile.html">File Menu</a> commands.</p>
+  <ul>
+    <li>If the file exists, it will be read immediately as if you had issued an <a href="EditorMenuFile.html#Open">Open</a> command.</li>
+    <li>If the file does not exist, it will not be created until you issue a <a href="EditorMenuFile.html#Save">Save</a> or <a href="EditorMenuFile.html#SaveAll">Save All</a> command.</li>
+  </ul>
+  <p><b>Note:</b> Entering a new file, followed by a <b>Save</b> command, duplicates the effects of the <a href="EditorMenuFile.html#SaveAs">Save As</a> command.</p>
+  <h3>Remarks</h3>
+  <p>Changing the location of any subsection automatically marks the <a href="EditorTabMaster.html">Master Page</a> as changed because all subsection locations are stored in the Master section.</p>
+</body>
+</html>

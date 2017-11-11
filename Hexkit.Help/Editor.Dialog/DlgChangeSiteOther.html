@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Site Contents: Other Page</title>
+</head>
+<body>
+  <h1>Change Site Contents: Other Page</h1>
+  <p>This tab page of the <a href="DlgChangeSite.html">Change Site Contents</a> dialog allows you to edit the stacks of unit and effect entities placed on a map site – that is, any entity stack other than the terrain stack.</p>
+  <p>This tab page is only present when editing the contents of a single map site, but not when editing the default terrain stack.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#UnitOwner">Unit Owner</a></li>
+    <li><a href="#Preview">Stack Preview</a></li>
+    <li><a href="#Entities">Entity Stack</a></li>
+    <li><a href="#Available">Available Entities</a></li>
+    <li>See <a href="DlgChangeSite.html">Change Site Contents</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the entity category of the <a href="#Entities">Entity Stack</a> you wish to edit.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to edit the unit stack.</li>
+    <li>Choose <b>Effect (Alt+E)</b> to edit the effect stack.</li>
+  </ul>
+  <h2><a name="UnitOwner">Unit Owner</a></h2>
+  <p>Use the <b>Unit Owner (Alt+O)</b> drop-down box to select the owner of the unit stack. This box contains the unique internal identifiers of all factions currently defined on the <a href="EditorTabFactions.html">Factions Page</a>; plus any additional identifiers currently defined by the Areas section; and a default entry, “(same as site owner)”, indicating that the unit stack belongs to the faction that owns the <a href="EditorTabAreas.html#Site">Selected Site</a>.</p>
+  <h3>Remarks</h3>
+  <p>1. The <b>Unit Owner</b> setting will revert to its default value of “(same as site owner)” when explicitly set to the site owner, or if the unit stack is empty.</p>
+  <p>2. You must select a specific <b>Unit Owner</b> when adding units to an unowned site. Units always require a valid owner.</p>
+  <h2><a name="Preview">Stack Preview</a></h2>
+  <p>This box shows a preview of the current stack of overlaid images, as defined by the entity stack of the selected <a href="#Category">Category</a>, or an “invalid” icon (red circle with a slash) if the stack is empty.</p>
+  <p>Like the <a href="EditorTabAreas.html#Map">Map View</a>, the preview only shows the topmost stack entry if the <b>Unit</b> category is selected. Moreover, the preview does not include any entity stacks for other categories.</p>
+  <h2><a name="Entities">Entity Stack</a></h2>
+  <p>This list shows all entities in the current entity stack of the selected <a href="#Category">Category</a>, as a list of entity class identifiers.</p>
+  <ul>
+    <li><b>Asterisks (*)</b> indicate entities with edited individual data that differs from their default class data.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to display its <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog, as with the <b>Change Entity</b> button.</li>
+    <li>Choose <font face="Wingdings">&#111;</font> <b>(Add Entity)</b> to add an entity of the selected <a href="#Available">Available Class</a> to the entity stack. Duplicate identifiers are possible and will cause Hexkit Game to create multiple instances of the same entity class.</li>
+    <li>Choose <font face="Wingdings">&#033;</font> <b>(Change Entity)</b> to display the <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog for the selected entry, allowing you to edit the individual data of the entity.</li>
+    <li>Choose <font face="Wingdings">&#120;</font> <b>(Remove Entity)</b> to remove the selected entry.</li>
+    <li>Choose <font face="Wingdings">&#241;</font> <b>(Move Entity Up)</b> to move the selected entry towards the top of the list.</li>
+    <li>Choose <font face="Wingdings">&#242;</font> <b>(Move Entity Down)</b> to move the selected entry towards the bottom of the list.</li>
+  </ul>
+  <h2><a name="Available">Available Entities</a></h2>
+  <p>This list shows the identifiers of all entity classes in the selected <a href="#Category">Category</a> currently defined on the <a href="EditorTabEntities.html">Entities Page</a>. These classes may be used to create the <a href="#Entities">Entity Stack</a> for the same category.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to add it to the <a href="#Entities">Entity Stack</a>, as with the <b>Add Entity</b> button.</li>
+  </ul>
+</body>
+</html>

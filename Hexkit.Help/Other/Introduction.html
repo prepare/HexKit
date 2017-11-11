@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+
+  <script type="text/javascript">
+      /*
+       * function openFile(file: String): void
+       *
+       * Opens the specified file in the (local or remote)
+       * directory of the current browser document. The
+       * file may contain a (relative) directory path.
+       *
+       * If the current document is inside a compiled HTML
+       * Help file, the specified file will be opened in 
+       * the directory where the HTML Help file resides.
+       *
+       * This method is based on the "parse" method in the
+       * online help for the Microsoft HTML Help Workshop.
+       */
+
+      function openFile(file) {
+        var X, Y, link;
+
+        if (location.href.indexOf("ms-its:") == 0 ||
+            location.href.indexOf("mk:@MSITStore:") == 0) {
+          // prefix for embedded HTML Help files
+          X = location.href.indexOf(":", 3) + 1;
+        }
+        else {
+          // prefix "file://" "ftp://" "http://"
+          X = location.href.indexOf("//") + 2;
+        }
+
+        // remove file name to isolate directory
+        Y = location.href.lastIndexOf("\\") + 1;
+        if (Y == 0) Y = location.href.lastIndexOf("/") + 1;
+
+        // open specified file in current directory
+        link = 'file://' + location.href.substring(X, Y) + file;
+        location.href = link;
+      }
+  </script>
+
+  <title>Introduction</title>
+</head>
+<body>
+  <h1>Introducing Hexkit</h1>
+  <p>This is the online help for Hexkit, a construction kit for turn-based strategy games played on grids of squares or hexagons. The Hexkit binary package includes two applications:</p>
+  <ul>
+    <li><a href="IntroGame.html">Hexkit Game</a> (also simply called Hexkit) is the main program for playing games.</li>
+    <li><a href="IntroEditor.html">Hexkit Editor</a> is the companion program for creating or altering scenarios.</li>
+  </ul>
+  <h2>Other Information</h2>
+  <p>Consult the file <a class="pseudo" onclick="openFile('ReadMe.html')">ReadMe.html</a> in the Hexkit installation directory for additional technical information</p>
+  <p>The file <a class="pseudo" onclick="openFile('WhatsNew.html')">WhatsNew.html</a> in the same directory summarizes the changes in this and earlier Hexkit releases.</p>
+  <p>The <em>User’s Guide,</em> available as a separate download at the <a href="http://www.kynosarges.org/Hexkit.html" target="_blank">Hexkit home page</a>, describes fundamental concepts, gameplay procedures, and scenario design issues.</p>
+  <p>Please see the <a href="Copyright.html">Copyright Notice</a> for version information and legal ways to distribute or modify Hexkit packages.</p>
+  <h2><a name="Credits">Credits</a></h2>
+  <p>Thanks to DeBray Bailey for providing the fantasy tileset included in the binary and source packages!</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Variables Dialog</title>
+</head>
+<body>
+  <h1>Variables Dialog</h1>
+  <p>This dialog shows all variables (attributes and resources) in the current scenario. The “statistics” of entities and factions are expressed as a collection of variable values.</p>
+  <ul>
+    <li>The <b>Category</b> box allows you to select a variable category.
+      <ul>
+        <li>Choose <b>Attribute (Alt+A)</b> to show all attributes.</li>
+        <li>Choose <b>Resource (Alt+R)</b> to show all resources.</li>
+      </ul>
+    </li>
+    <li>The <b>Variable List</b> shows all variables in the selected category.
+      <ul>
+        <li><b>Left-click</b> on an entry to select it. The remaining dialog controls reflect the selected entry.</li>
+      </ul>
+    </li>
+    <li>Next to this list appears a description of the selected variable, or a notice if the scenario does not define any variables of the selected category.</li>
+    <li><a href="#Range">Target Range</a></li>
+    <li><a href="#Resource">Resource Options</a></li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> or <b>Escape</b> to dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>Hexkit Editor defines a third variable category, <b>Counter</b>. Variables of this category are intended only for internal use by the rule script, and therefore do not appear in the Hexkit Game GUI.</p>
+  <h2><a name="Range">Target Range</a></h2>
+  <p>This box shows the result range and step size for the selected variable.</p>
+  <ul>
+    <li><b>Minimum</b> shows the smallest possible result for calculations based on the selected variable.</li>
+    <li><b>Maximum</b> shows the greatest possible result for calculations based on the selected variable.</li>
+    <li><b>Step Size</b> shows the minimum amount by which the selected variable can increase or decrease. This value is either one or a fractional value.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>A variable’s target range is not the same as the legal range for variable values. For example, a “Defense” attribute might have a minimum value of one but terrains could still define a negative defense value. This would reduce an occupying unit’s defense, but not below one (the minimum value).</p>
+  <h2><a name="Resource">Resource Options</a></h2>
+  <p>This box shows additional options for resources. It is disabled for attributes. <b>Limit</b> only affects entity resources while the other settings only affect faction resources.</p>
+  <ul>
+    <li><b>Defeat</b> shows the defeat threshold for the selected faction resource. A faction will lose the game if its stockpile falls to or below this value. A dash is shown for resources without a defeat condition.</li>
+    <li><b>Victory</b> shows the victory threshold for the selected faction resource. A faction will win the game if its stockpile rises to or above this value. A dash is shown for resources without a victory condition.</li>
+    <li><b>Reset</b> shows whether faction resources of the selected type are reset to their initial values before adding modifiers. Such resources are recalculated for all factions at the beginning and end of each turn.</li>
+    <li><b>Limit</b> shows whether entity resources of the selected type are limited to their initial values, instead of the <b>Maximum</b> value.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The <em>initial value</em> used by the <b>Reset</b> and <b>Limit</b> options is the resource value defined by the scenario for the faction or entity in question. If no scenario value is defined, the initial value is the first resource value defined by the rule script.</p>
+</body>
+</html>

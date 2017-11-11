@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Entity Instance: Variables Page</title>
+</head>
+<body>
+  <h1>Change Entity Instance: Variables Page</h1>
+  <p>This tab page of the <a href="DlgChangeTemplate.html">Change Entity Instance</a> dialog allows you to modify the variables of an entity instance.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Variables">Entity Variables</a></li>
+    <li>See <a href="DlgChangeTemplate.html">Change Entity Instance</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The values shown on this tab page are used as initial values for the entity instance. Once created, its current values may differ from the corresponding initial values due to modifiers or changes enacted by the rule script. This applies to basic values as well as modifier values.</p>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the variable category shown in the <a href="#Variables">Entity Variables</a> list.</p>
+  <ul>
+    <li>Choose <b>Attribute (Alt+A)</b> to show attribute variables and values.</li>
+    <li>Choose <b>Counter (Alt+C)</b> to show counter variables and values.</li>
+    <li>Choose <b>Resource (Alt+R)</b> to show resource variables and values.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The <a href="DlgChangeEntityVars.html">Change Entity Class</a> dialog also offers a <b>Build Cost</b> category. This category is missing here since it does not apply to entity instances that have already been created.</p>
+  <h2><a name="Variables">Entity Variables</a></h2>
+  <p>This list shows the variable values of the selected <a href="#Category">Category</a> that are currently associated with the entity instance.</p>
+  <ul>
+    <li>Column <b>Variable</b> shows the unique internal identifier associated with each variable.</li>
+    <li>Column <b>Value</b> shows the basic or modifier values for each variable that apply to the entity instance. Modifier values are prefixed by the modifier target.</li>
+    <li>Column <b>Default</b> shows the basic or modifier values for each variable that are defined by the entity’s class. Modifier values are surrounded by parentheses. The modifier target is not repeated here to save space.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li>Use the <b>Variable Value (Alt+V)</b> field to change the current value of the selected entry.</li>
+    <li>Choose <b>Reset Variable (Alt+E)</b> to reset the selected entry to its default value.</li>
+    <li>Choose <b>Reset Category (Alt+G)</b> to reset all entries in the selected <a href="#Category">Category</a> to their default values.</li>
+    <li>Choose <b>Reset Globally (Alt+L)</b> to reset all entries in <em>all</em> categories to their default values.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The list shows all variables defined for the entity class in the <a href="DlgChangeEntityVars.html">Change Entity Class</a> dialog. You may change any listed value, but you cannot add or remove variable values.</p>
+  <p>2. Should an entity instance define a custom value for a variable that was deleted from the <a href="EditorTabVariables.html">Variables Page</a> or from the underlying entity class, the value will not appear in this list. Such entities are marked as “changed” in the <a href="DlgChangeFactionEntities.html">Change Faction</a> and <a href="DlgChangeSite.html">Change Site</a> dialogs, even if they are not visibly different from their entity class. Add the corresponding variable back to the Variables section or to the entity class to uncover the hidden values, or choose <b>Reset Category</b> or <b>Reset Globally</b> to permanently delete them.</p>
+</body>
+</html>

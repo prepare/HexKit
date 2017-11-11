@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Placement Sites Dialog</title>
+</head>
+<body>
+  <h1>Placement Sites Dialog</h1>
+  <p>This dialog shows all placement sites for the entity classes available to the faction specified in the dialog’s title bar. These are the map locations where the faction may place entities of a given class.</p>
+  <ul>
+    <li><a href="#MapView">Map View</a></li>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Classes">Entity Classes</a></li>
+    <li><a href="#Sites">Placement Sites</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Map">Map View</a> and <a href="#Classes">Entity Classes</a> to adjust their respective share of the current window width.</li>
+    <li><b>Drag</b> the horizontal splitter between <a href="#Classes">Entity Classes</a> and <a href="#Sites">Placement Sites</a> list to adjust their respective share of the current window height.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> or <b>Escape</b> to dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The dialog might show different placement sites for the same entity class, depending on the current game situation.</p>
+  <h2><a name="MapView">Map View</a></h2>
+  <p>The left side of the dialog is taken up by a map view. The site corresponding to the first entry in the <a href="#Sites">Placement Sites</a> list is initially centered and selected.</p>
+  <ul>
+    <li><b>Highlighted</b> sites indicate valid placement sites for the selected <a href="#Classes">Entity Class</a>. Each highlighted site corresponds to one entry in the <b>Placement Sites</b> list.</li>
+    <li><b>Left-click</b> on a map site to select it. If the site is highlighted, its corresponding entry is also selected in the <b>Placement Sites</b> list.</li>
+  </ul>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the entity category whose classes to show.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to show unit classes.</li>
+    <li>Choose <b>Terrain (Alt+T)</b> to show terrain classes.</li>
+  </ul>
+  <h2><a name="Classes">Entity Classes</a></h2>
+  <p>This list shows all entity classes of the selected <a href="#Category">Category</a>, or a subset thereof.</p>
+  <ul>
+    <li><b>Shown</b> are classes that the specified faction may build, as well as the classes of any entities that already belong to the faction, whether the faction may build them or not.</li>
+    <li><b>Hidden</b> are classes for which the current scenario and game situation do not define any valid placement sites.</li>
+    <li>Column <b>Build</b> shows a cross to indicate that the specified faction can build entities of the corresponding class.</li>
+    <li><b>Left-click</b> on an entry to select it. The associated placement sites are highlighted in the <a href="#MapView">Map View</a> and shown in the <a href="#Sites">Placement Sites</a> list.</li>
+  </ul>
+  <h2><a name="Sites">Placement Sites</a></h2>
+  <p>This list shows the map coordinates of all valid placement sites for the selected <a href="#Classes">Entity Class</a>.</p>
+  <ul>
+    <li>Column <b>Owner</b> shows the faction that owns each site, or “(unowned)” if the site has no owner.</li>
+    <li><b>Left-click</b> on an entry to select it. The corresponding site is also selected in the <a href="#MapView">Map View</a>, and scrolled into view if necessary.</li>
+  </ul>
+</body>
+</html>

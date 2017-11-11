@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Connections Dialog</title>
+</head>
+<body>
+  <h1>Change Connections Dialog</h1>
+  <p>This dialog allows you to define connections across neighboring map sites for a given image frame.</p>
+  <ul>
+    <li>The top left corner of the dialog shows the index of the image frame being edited, and the total number of frames defined by the image.</li>
+    <li>The image frame being edited is shown in the center of the dialog. A frame with invalid coordinates or an invalid source file will display an “invalid” icon (red circle with a slash).</li>
+    <li>The directions in which connections are possible depend on the polygon shape and vertex neighbors option defined in the <a href="DlgChangeGeometryStructure.html">Change Map Geometry</a> dialog on the <a href="EditorTabAreas.html">Areas Page</a>. The image frame is surrounded by the current polygon outline.</li>
+    <li>Press or release any of the eight arrow buttons surrounding the image frame to indicate whether a visual connection exists to a neighboring site on the corresponding edge or vertex. Only those buttons are enabled whose connections are possible for the current map geometry.
+      <p><b>Note:</b> You may need to move the mouse pointer away from a button to determine whether it is depressed.</p>
+    </li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>Image frame connections are ignored by the default rules of Hexkit Game. You should still define them where possible, however, so that scenario authors can use them in custom rule scripts.</p>
+</body>
+</html>

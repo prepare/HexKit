@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Command Menu</title>
+</head>
+<body>
+  <h1>Command Menu</h1>
+  <p>This menu is disabled unless an active game is expecting a human player command.</p>
+  <ul>
+    <li><a name="Attack"><b>Attack Site… (A)</b></a> shows the <a href="DlgAttackSite.html">Attack Site</a> dialog if the selected site does not contain any units owned by the active faction, allowing you to plan an attack on the selected site.
+      <p>If the selected site does contain owned units, the <a href="DlgAttackFromSite.html">Attack From Site</a> dialog is shown instead, allowing you to plan an attack <em>from</em> the selected site.</p>
+    </li>
+    <li><a name="Move"><b>Move Units… (M)</b></a> shows the <a href="DlgMoveUnits.html">Move Units</a> dialog, allowing you to move any eligible units in the selected site to another map location.</li>
+    <li><a name="Build"><b>Build Entities… (B)</b></a> shows the <a href="DlgBuildEntities.html">Build Entities</a> dialog, allowing you to build new units and terrains. You may immediately place newly built entities on the map, or leave them unplaced.</li>
+    <li><a name="Entities"><b>Manage Entities… (E)</b></a> shows the <a href="DlgShowEntities.html">Faction Entities</a> dialog, allowing you to inspect, rename, place, and destroy your faction’s units and terrains.</li>
+    <li><a name="Site"><b>Selected Entities… (H)</b></a> also shows the <a href="DlgShowEntities.html">Faction Entities</a> dialog, but only displays entities placed on the <a href="GameViewData.html#Site">Selected Site</a>.</li>
+    <li><a name="EndTurn"><b>End Turn (Ctrl+Enter)</b></a> ends the turn for the active faction. Clicking the <b>End Turn</b> button has the same effect.</li>
+    <li><a name="Resign"><b>Resign Game (Ctrl+Shift+R)</b></a> resigns the game for the active faction. You will be asked to confirm this command.</li>
+  </ul>
+  <h3><a name="#Remarks">Remarks</a></h3>
+  <p>You can also issue <b>Attack</b> and <b>Move</b> commands by right-clicking on a highlighted target site on the <a href="GameViewMap.html">Map View</a>, as described in <a href="GameViewMap.html#Target">Target Selection</a>. You must use the dialogs to select specific units within a stack or to perform multi-pronged attacks, however.</p>
+</body>
+</html>

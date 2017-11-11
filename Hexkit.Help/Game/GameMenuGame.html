@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Game Menu</title>
+</head>
+<body>
+  <h1>Game Menu</h1>
+  <p>The unit cycle commands in this menu are disabled unless an active game is expecting a human player command.</p>
+  <ul>
+    <li><a name="Players"><b>Player Setup… (Ctrl+Shift+P)</b></a> shows the <a href="DlgChangePlayers.html">Player Setup</a> dialog. This menu option is disabled if no game is active.</li>
+    <li><a name="StopComputer"><b>Stop Computer (Ctrl+C)</b></a> stops any ongoing computer player calculations and puts the local human player in charge of the active faction. Use <b>Player Setup</b> to assign the faction to another player.</li>
+    <li><a name="WaitCycle"><b>Wait &amp; Cycle Units (W)</b></a> cycles through all units of the active faction that can still attack or move during the current turn. This means units that are not only capable of such actions but also have valid targets.</li>
+    <li><a name="SkipCycle"><b>Skip &amp; Cycle Units (Space)</b></a> cycles through all units of the active faction that can still attack or move during the current turn, and also removes the currently selected unit (if any) from this cycle for the rest of the turn.</li>
+    <li><a name="UnskipAll"><b>Unskip All Units (Ctrl+U)</b></a> adds all skipped units back to the cycle of active units. Use <b>Wait</b> to find the next unit in this cycle.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. Choosing <b>Player Setup</b> while a human player command is executing or during an interactive game replay will automatically complete the execution or stop the replay, respectively.</p>
+  <p>2. When the player controlling the active faction is changed in the <a href="DlgChangePlayers.html">Player Setup</a> dialog, Hexkit will ask you to switch players immediately. If you agree, the new player will continue the active faction’s current turn. Otherwise, the new player will take control of the active faction at the start of its next turn.</p>
+  <p>3. <b>Stop Computer</b> is only enabled while a computer player is performing calculations in the background. This does not include the automatic replay of a computer player’s turn. Use the <a href="GameMenuReplay.html">Replay Menu</a> to stop or pause an ongoing replay.</p>
+  <p>4. <b>Wait &amp; Cycle Units</b> and <b>Skip &amp; Cycle Units</b> only find units that can <em>individually</em> attack or move. Depending on the scenario, some units may be able to attack or move only together with other units.</p>
+</body>
+</html>

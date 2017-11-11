@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>File Menu</title>
+</head>
+<body>
+  <h1>File Menu</h1>
+  <ul>
+    <li><a name="New"><b>New (Ctrl+N)</b></a> quits the current game (if any) and shows a standard Windows “Open” dialog, allowing you to select and start a new scenario.</li>
+    <li><a name="Open"><b>Open… (Ctrl+O)</b></a> quits the current game (if any) and shows a standard Windows “Open” dialog, allowing you to select and open a previously saved game.</li>
+    <li><a name="Close"><b>Close (Ctrl+F4)</b></a> quits the current game without loading a new game or scenario.</li>
+    <li><a name="Save"><b>Save… (Ctrl+S)</b></a> shows a standard Windows “Save” dialog, allowing you to save the current game.</li>
+    <li><a name="Exit"><b>Exit (Alt+F4)</b></a> exits the Hexkit Game application.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. All menu options except <b>Save</b> will offer to save the current game if the game state has changed since the game was last saved explicitly using the <b>Save</b> option.</p>
+  <p>2. Choosing a <b>File</b> menu option while a human player command is executing or during an interactive game replay will automatically complete the execution or stop the replay, respectively.</p>
+  <p>3. Hexkit games and scenarios are always stored as XML files. Scenarios are saved as plain XML files and carry an <code>.xml</code> extension. Games receive additional GZip compression and carry an <code>.xml.gz</code> extension, but may also be stored uncompressed with an <code>.xml</code> extension.</p>
+  <p>The most recent autosave files are stored as <code>AutoSave.xml.gz</code> (for human players) and <code>ComputerSave.xml.gz</code> (for computer players) in the current user’s <code>Hexkit\Games</code> folder.</p>
+  <p>Please refer to the <em>User’s Guide</em> for more details on Hexkit files.</p>
+</body>
+</html>

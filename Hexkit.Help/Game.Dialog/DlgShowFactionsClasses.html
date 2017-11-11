@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Faction Status: Classes Page</title>
+</head>
+<body>
+  <h1>Faction Status: Classes Page</h1>
+  <p>This tab page of the <a href="DlgShowFactions.html">Faction Status</a> dialog shows all entity classes available to the selected faction.</p>
+  <p>This includes all classes that the specified faction may build, as well as the classes of any entities that already belong to the faction, whether the faction may build them or not.</p>
+  <ul>
+    <li>The <b>Category</b> box allows you to select an entity category.
+      <ul>
+        <li>Choose <b>Unit (Alt+U)</b> to show unit classes.</li>
+        <li>Choose <b>Terrain (Alt+T)</b> to show terrain classes.</li>
+        <li>Choose <b>Upgrade (Alt+G)</b> to show upgrade classes.</li>
+      </ul>
+    </li>
+    <li>The <b>Entity Class List</b> shows all entity classes in the selected category that are available to the selected faction, and indicates the <b>Abilities</b> of each class.
+      <ul>
+        <li>“B” indicates an entity class that the selected faction may build.</li>
+        <li>“C” indicates a unit class that can capture map sites, or a terrain class that allows a site to be captured.</li>
+      </ul>
+      A dash indicates that the entity class does not have the corresponding ability.</li>
+    <li>Choose <b>Show Placement Sites… (Alt+P)</b> to show the <a href="DlgShowPlacements.html">Placement Sites</a> dialog for the selected faction.</li>
+    <li>See <a href="DlgShowFactions.html">Faction Status</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Entity Class List</b> is empty if there are no available classes in the selected <b>Category</b>, or if the selected faction has already been eliminated from the game. In either case, the <b>Show Placement Sites</b> button is disabled.</p>
+  <p>2. In games with limited visibility (“fog of war”), the <b>Show Placement Sites</b> button is also disabled if the selected faction is not under your control.</p>
+</body>
+</html>

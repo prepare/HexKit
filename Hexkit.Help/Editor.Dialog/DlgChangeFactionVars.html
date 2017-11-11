@@ -1,0 +1,50 @@
+﻿<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Faction: Variables Page</title>
+</head>
+<body>
+  <h1>Change Faction: Variables Page</h1>
+  <p>This tab page of the <a href="DlgChangeFaction.html">Change Faction</a> dialog allows you to edit the variables of a player faction.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Variables">Faction Variables</a></li>
+    <li><a href="#Available">Available Variables</a></li>
+    <li>See <a href="DlgChangeFaction.html">Change Faction</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>The values shown on this tab page are used as initial values for newly created factions. Once a faction has been created, its current values may differ from the corresponding initial values due to modifiers or changes enacted by the rule script. This applies to basic values as well as modifier values.</p>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the variable category shown in the <a href="#Variables">Faction Variables</a> and <a href="#Available">Available Variables</a> list.</p>
+  <ul>
+    <li>Choose <b>Counter (Alt+C)</b> to show counter variables and values.</li>
+    <li>Choose <b>Resource (Alt+R)</b> to show resource variables and values.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>Unlike entities, factions cannot have attributes or attribute modifiers.</p>
+  <h2><a name="Variables">Faction Variables</a></h2>
+  <p>This list shows the variable values of the selected <a href="#Category">Category</a> that are currently associated with the faction.</p>
+  <ul>
+    <li>Column <b>Variable</b> shows the unique internal identifier associated with each variable.</li>
+    <li>Column <b>Value</b> shows the basic or modifier value for each variable. Modifier values are surrounded by parentheses.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li>Use the <b>Variable Value (Alt+V)</b> field to change the current value of the selected entry.</li>
+    <li>Choose <b>Add Basic (Alt+B)</b> to add a basic value for the selected <a href="#Available">Available Variable</a> to the list.</li>
+    <li>Choose <b>Add Modifier (Alt+M)</b> to add a modifier value for the selected <a href="#Available">Available Variable</a> to the list.</li>
+    <li>Choose <b>Remove Variable (Alt+E)</b> to remove the selected entry.</li>
+  </ul>
+  <p>The <b>Add Modifier</b> button is disabled if the selected <a href="#Category">Category</a> is <b>Counter</b>.</p>
+  <h3>Remarks</h3>
+  <p>Every <b>Resource</b> identifier may appear twice in this list: as a <em>basic value</em> and as a <em>modifier value</em>. Either value may appear without the other.</p>
+  <p>Every <b>Counter</b> identifier appears at most once, as you cannot define modifier values for counters.</p>
+  <h2><a name="Available">Available Variables</a></h2>
+  <p>This list shows the identifiers of all variables in the selected <a href="#Category">Category</a> currently defined on the <a href="EditorTabVariables.html">Variables Page</a>.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to add a basic value for the selected variable to the <a href="#Variables">Faction Variables</a> list, as with the <b>Add Basic</b> button.</li>
+    <li>Use the <b>Add Basic</b> and <b>Add Modifier</b> buttons to add the selected variable to the <a href="#Variables">Faction Variables</a> list, as described above.</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>File Menu</title>
+</head>
+<body>
+  <h1>File Menu</h1>
+  <ul>
+    <li><a name="New"><b>New (Ctrl+N)</b></a> clears the contents of the active tab page, including the current section file association.</li>
+    <li><a name="Open"><b>Open… (Ctrl+O)</b></a> shows a standard Windows “Open” dialog, allowing you to select an existing section file to associate with the active tab page. The current page contents will be replaced by the contents of the section file.</li>
+    <li><a name="Revert"><b>Revert (Ctrl+R)</b></a> changes the contents of the active tab page back to those of its associated section file, effectively discarding all changes made since the last save. This command is disabled if the active tab page has no file association.</li>
+    <li><a name="Save"><b>Save (Ctrl+S)</b></a> saves the contents of the active tab page to its associated section file. This command is disabled if the active tab page has no file association.</li>
+    <li><a name="SaveAs"><b>Save As…</b></a> shows a standard Windows “Save” dialog, allowing you to choose a new or existing section file to associate with the active tab page. The page contents will then be saved to the section file, overwriting any existing file of the same name.</li>
+    <li><a name="SaveAll"><b>Save All (Ctrl+Shift+S)</b></a> saves the contents of all tab pages to their associated section files, if any. This command has no effect if all tab pages are unassociated.</li>
+    <li><a name="Exit"><b>Exit (Alt+F4)</b></a> exits the Hexkit Editor application.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>New</b>, <b>Open</b>, <b>Revert</b>, and <b>Exit</b> commands will prompt for confirmation if their execution would result in losing unsaved data. However, no prompt is displayed if only file associations have changed.</p>
+  <p>2. Executing the <b>New</b>, <b>Open</b>, or <b>Revert</b> command while the <a href="EditorTabMaster.html">Master Page</a> is active will discard all current data on <em>all</em> tab pages because the Master section determines all subsection data, either directly by inlining or indirectly by defining file associations. The warning prompts mentioned above will change to reflect this.</p>
+  <p>3. All “Open” and “Save” dialogs will automatically show the appropriate section file directory for the active tab page. However, if the currently associated section file resides in another directory, that directory will be shown instead.</p>
+</body>
+</html>

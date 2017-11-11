@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbbrevAttack" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="AbbrevBuild" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="AbbrevCapture" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="AbbrevMove" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="ArgumentContainsUnitsNotInSource" xml:space="preserve">
+    <value>Argument cannot contain units not in source location.</value>
+  </data>
+  <data name="ArgumentContainsUnplacedUnits" xml:space="preserve">
+    <value>Argument cannot contain unplaced units.</value>
+  </data>
+  <data name="ArgumentNotNullOrVariable" xml:space="preserve">
+    <value>Argument must be a null reference or a Variables element.</value>
+  </data>
+  <data name="ArgumentSpecifiesAnimation" xml:space="preserve">
+    <value>Argument cannot specify {0} with animated image stack.</value>
+  </data>
+  <data name="ArgumentSpecifiesSingleFrame" xml:space="preserve">
+    <value>Argument cannot specify {0} with less than two image frames.</value>
+  </data>
+  <data name="CommandEntityCategory" xml:space="preserve">
+    <value>{0} command specifies entity “{1}” with invalid category “{2}”.</value>
+  </data>
+  <data name="CommandEntityDestroy" xml:space="preserve">
+    <value>{0} command specifies entity “{1}” with cannot be destroyed.</value>
+  </data>
+  <data name="CommandEntityEmpty" xml:space="preserve">
+    <value>{0} command specifies empty entity identifier.</value>
+  </data>
+  <data name="CommandEntityInvalid" xml:space="preserve">
+    <value>{0} command specifies entity “{1}” which faction “{2}” does not own.</value>
+  </data>
+  <data name="CommandEntityNone" xml:space="preserve">
+    <value>{0} command does not specify any entities.</value>
+  </data>
+  <data name="CommandEntityPlaced" xml:space="preserve">
+    <value>{0} command specifies entity “{1}” which is already placed.</value>
+  </data>
+  <data name="CommandEntityUnplaced" xml:space="preserve">
+    <value>{0} command specifies entity “{1}” which is not yet placed.</value>
+  </data>
+  <data name="CommandEntityClassBuild" xml:space="preserve">
+    <value>{0} command specifies entity class “{1}” which faction “{2}” cannot build.</value>
+  </data>
+  <data name="CommandEntityClassEmpty" xml:space="preserve">
+    <value>{0} command specifies empty entity class identifier.</value>
+  </data>
+  <data name="CommandEntityClassInvalid" xml:space="preserve">
+    <value>{0} command specifies invalid entity class “{1}”.</value>
+  </data>
+  <data name="CommandEntityClassNone" xml:space="preserve">
+    <value>{0} command does not specify any entity classes.</value>
+  </data>
+  <data name="CommandFactionConflict" xml:space="preserve">
+    <value>{0} command specifies faction “{1}” instead of active faction “{2}”.</value>
+  </data>
+  <data name="CommandFactionInvalid" xml:space="preserve">
+    <value>{0} command specifies invalid faction “{1}”.</value>
+  </data>
+  <data name="CommandFactionNone" xml:space="preserve">
+    <value>{0} command does not specify a faction.</value>
+  </data>
+  <data name="CommandInlineInvalid" xml:space="preserve">
+    <value>{0} command cannot be inlined by another command.</value>
+  </data>
+  <data name="CommandInvalid" xml:space="preserve">
+    <value>Command contains invalid data.</value>
+  </data>
+  <data name="CommandQueueInvalid" xml:space="preserve">
+    <value>{0} command cannot be queued by another command.</value>
+  </data>
+  <data name="CommandQueueNull" xml:space="preserve">
+    <value>{0} command posted a null reference to Commands queue.</value>
+  </data>
+  <data name="CommandTargetClass" xml:space="preserve">
+    <value>{0} command specifies entities of class “{1}” which rejects target site {2}.</value>
+  </data>
+  <data name="CommandTargetEntities" xml:space="preserve">
+    <value>{0} command specifies entities that reject target site {1}.</value>
+  </data>
+  <data name="CommandTargetInvalid" xml:space="preserve">
+    <value>{0} command specifies invalid target site {1}.</value>
+  </data>
+  <data name="CommandTargetNone" xml:space="preserve">
+    <value>{0} command does not specify a target site.</value>
+  </data>
+  <data name="CommandTextNone" xml:space="preserve">
+    <value>{0} command does not specify additional text.</value>
+  </data>
+  <data name="CommandTurnInvalid" xml:space="preserve">
+    <value>{0} command specifies turn {1} instead of current turn {2}.</value>
+  </data>
+  <data name="DialogBackgroundNone" xml:space="preserve">
+    <value>You must define at least one background terrain,
+i.e. a terrain class with a background image,
+before you can add or change map contents.
+
+Use the Images page to define background images,
+and the Entities page to define terrain classes.</value>
+  </data>
+  <data name="DialogActiveUnitsNone" xml:space="preserve">
+    <value>This faction currently owns no units
+that can still take action.</value>
+  </data>
+  <data name="DialogAttackPlacedNone" xml:space="preserve">
+    <value>This faction currently owns no placed units.</value>
+  </data>
+  <data name="DialogAttackSourceNone" xml:space="preserve">
+    <value>None of the units in the selected
+site can perform an attack.</value>
+  </data>
+  <data name="DialogAttackTargetNone" xml:space="preserve">
+    <value>None of the units that belong to this
+faction can attack the selected site.</value>
+  </data>
+  <data name="DialogBuildAllowedNone" xml:space="preserve">
+    <value>The current scenario does not allow
+this faction to build any entities.</value>
+  </data>
+  <data name="DialogCommandCounters" xml:space="preserve">
+    <value>Executed Commands:&#09;{0}
+Executed Instructions:&#09;{1}
+— Event Instructions:&#09;{2}
+— Ineffectual Instrns.:&#09;{3}</value>
+  </data>
+  <data name="DialogCommandInvalid" xml:space="preserve">
+    <value>The command was invalid and could not be executed.</value>
+  </data>
+  <data name="DialogCommandResume" xml:space="preserve">
+    <value>An invalid command was found in saved game file
+“{0}”.
+
+Choose OK to discard this command and continue.
+Choose Cancel to abort opening this file.</value>
+  </data>
+  <data name="DialogComputerError" xml:space="preserve">
+    <value>The computer player for this faction was
+stopped due to an unrecoverable error.
+
+The faction is now controlled by the next
+local human player.</value>
+  </data>
+  <data name="DialogComputerStopped" xml:space="preserve">
+    <value>The computer player for this faction
+was stopped as requested.
+
+The faction is now controlled by the
+next local human player.</value>
+  </data>
+  <data name="DialogEntityClassMissing" xml:space="preserve">
+    <value>The selected entity instance refers to an entity class ID
+that does not match any of those defined by the Entities 
+section of this scenario.
+
+You cannot edit entity instances without an entity class.
+Use the Entities page to define a matching entity class.</value>
+  </data>
+  <data name="DialogEntityDestroy" xml:space="preserve">
+    <value>Are you sure you want to destroy this entity?</value>
+  </data>
+  <data name="DialogExplorerFileError" xml:space="preserve">
+    <value>Windows Explorer was unable to locate the file
+“{0}” in your Hexkit installation folder.</value>
+  </data>
+  <data name="DialogExplorerMailError" xml:space="preserve">
+    <value>Windows Explorer was unable to locate or
+start your system’s default e-mail client.</value>
+  </data>
+  <data name="DialogExplorerWebError" xml:space="preserve">
+    <value>Windows Explorer was unable to locate or
+start your system’s default web browser.</value>
+  </data>
+  <data name="DialogEventDefeatGlobal" xml:space="preserve">
+    <value>All surviving factions perished simultaneously.
+Everyone is defeated – there are no winners!</value>
+  </data>
+  <data name="DialogEventVictory" xml:space="preserve">
+    <value>Congratulations to the winning faction, led to victory by {0}!</value>
+  </data>
+  <data name="DialogFatalErrorMail" xml:space="preserve">
+    <value>Another error occurred while trying to create
+an e-mail message with attached files.
+
+Choose OK to try a simpler e-mail format without
+any file attachments that should always succeed.
+
+Choose Cancel to quit the program immediately.</value>
+  </data>
+  <data name="DialogFatalErrorModified" xml:space="preserve">
+    <value>An unrecoverable error has occurred. The program
+will now terminate. Sorry for the inconvenience.
+
+Detailed error information and current program data,
+if available, will be saved to the following files:
+
+“{0}”
+“{1}”
+“{2}”
+
+No e-mail message will be created since one or more
+Hexkit assemblies have been modified, compared to
+the distribution package. Click OK to continue.</value>
+  </data>
+  <data name="DialogFatalErrorOriginal" xml:space="preserve">
+    <value>An unrecoverable error has occurred. The program
+will now terminate. Sorry for the inconvenience.
+
+Detailed error information and current program data,
+if available, will be saved to the following files:
+
+“{0}”
+“{1}”
+“{2}”
+
+Choose OK to create an e-mail message to the author
+with these files attached. You may enter additional
+comments as you wish. Thanks for your support!
+
+Choose Cancel to quit the program without sending
+an e-mail. The files will be created regardless.</value>
+  </data>
+  <data name="DialogFatalErrorSave" xml:space="preserve">
+    <value>Another error occurred while trying to create
+one of the error data files.
+
+Click OK to terminate the program.</value>
+  </data>
+  <data name="DialogFatalErrorSaveMail" xml:space="preserve">
+    <value>Another error occurred while trying to create
+one of the file attachments.
+
+Choose OK to try a simpler e-mail format without
+any file attachments that should always succeed.
+
+Choose Cancel to quit the program immediately.</value>
+  </data>
+  <data name="DialogFileCreateError" xml:space="preserve">
+    <value>Failed to create file or directory
+“{0}”.
+
+Make sure you have write permission in the parent directory,
+and verify that some free space remains on the disk drive
+or in your file quota.
+
+Hexkit requires this directory to store user-specific data.
+The program cannot continue to run and will now terminate.</value>
+  </data>
+  <data name="DialogFileGame">
+    <value>The specified file appears to be a Hexkit save game
+file which cannot be loaded into Hexkit Editor.
+
+“{0}”</value>
+  </data>
+  <data name="DialogFileInvalid">
+    <value>The specified file does not appear to be a
+valid Hexkit scenario file or save game file.
+
+“{0}”</value>
+  </data>
+  <data name="DialogFileMissing">
+    <value>The specified file could not be found.
+
+“{0}”</value>
+  </data>
+  <data name="DialogGameUnsaved" xml:space="preserve">
+    <value>Are you sure you want to close
+this game without saving?</value>
+  </data>
+  <data name="DialogIdentifierChange" xml:space="preserve">
+    <value>The identifier you are about to change is referenced
+in {0} places throughout the current scenario.
+
+Do you want to change all of these references to the
+new identifier?
+
+Choose Yes to confirm, No to change this instance
+only, or Cancel to abort without any changes.</value>
+  </data>
+  <data name="DialogIdentifierDelete" xml:space="preserve">
+    <value>The identifier you are about to delete is referenced
+in {0} places throughout the current scenario.
+
+Do you want to delete all of these references?
+
+Choose Yes to confirm, No to delete this instance
+only, or Cancel to abort without any changes.</value>
+  </data>
+  <data name="DialogIdentifierDuplicate" xml:space="preserve">
+    <value>The identifier you entered already exists in this collection.
+Identifiers must be unique throughout the scenario.
+
+Please correct your input or cancel the dialog.</value>
+  </data>
+  <data name="DialogIdentifierMalformed" xml:space="preserve">
+    <value>The identifier you entered is not a well-formed NCName
+according to the XML 1.0 specification.
+
+Well-formed identifiers contain no spaces, and no punctuation
+other than periods, hyphens, and underscores. Digits are legal
+but the identifier must start with a letter or underscore.
+
+Please correct your input or cancel the dialog.</value>
+  </data>
+  <data name="DialogImageError" xml:space="preserve">
+    <value>Failed to display image file
+“{0}”.</value>
+  </data>
+  <data name="DialogImageFileNone" xml:space="preserve">
+    <value>You must define at least one image file
+before you can add or change images.</value>
+  </data>
+  <data name="DialogImageMissing" xml:space="preserve">
+    <value>The selected image ID does not match any of those
+defined by the Images section of this scenario.</value>
+  </data>
+  <data name="DialogImageNone" xml:space="preserve">
+    <value>You must define at least one image
+before you can add or change classes.
+
+Use the Images page to define images.</value>
+  </data>
+  <data name="DialogInstanceAnother" xml:space="preserve">
+    <value>The current user, {1}, is already running
+another instance of the {0} application.
+
+To avoid unintentional corruption of user-specific data,
+each user may only run a single instance at a time.</value>
+  </data>
+  <data name="DialogMailError" xml:space="preserve">
+    <value>An error occurred while creating the PBEM message.</value>
+  </data>
+  <data name="DialogMailErrorMapi" xml:space="preserve">
+    <value>Your e-mail client reported an error.
+The operation has been aborted.</value>
+  </data>
+  <data name="DialogMailInvalid" xml:space="preserve">
+    <value>The e-mail address you entered is not valid.
+Valid addresses are of the form "user@host".
+
+Please correct the entry or cancel the dialog.</value>
+  </data>
+  <data name="DialogMailInvalidMapi" xml:space="preserve">
+    <value>Your e-mail client returned an invalid address.
+Please enter a valid e-mail address manually.</value>
+  </data>
+  <data name="DialogMapBoundsInvalid" xml:space="preserve">
+    <value>The edge movements you entered would
+result in a map size that is less than one or
+greater than {0:N0} in either dimension.
+
+Please correct the values or cancel the dialog.</value>
+  </data>
+  <data name="DialogMoveSourceEmpty" xml:space="preserve">
+    <value>The selected site does not contain
+any units that belong to this faction.</value>
+  </data>
+  <data name="DialogMoveSourceNone" xml:space="preserve">
+    <value>None of the units in the selected
+site can move any further.</value>
+  </data>
+  <data name="DialogOptionsLoadError" xml:space="preserve">
+    <value>Failed to load options file
+“{0}”.
+
+All options that could not be read will assume default values.</value>
+  </data>
+  <data name="DialogOptionsSaveError" xml:space="preserve">
+    <value>Failed to write options file
+“{0}”.
+
+All unsaved options will be lost when the program terminates.</value>
+  </data>
+  <data name="DialogPlayerChanged" xml:space="preserve">
+    <value>You have assigned a new player to the active faction.
+Do you want to switch players immediately?
+
+Choose Yes to let {0} take control now.
+Choose No to let {1} complete this turn.</value>
+  </data>
+  <data name="DialogPlayerConflict" xml:space="preserve">
+    <value>Some factions are assigned to human players in hotseat mode
+while others are assigned to human players in e-mail mode.
+
+You cannot mix hotseat and e-mail mode in the same game.
+Please correct either the faction assignment or the properties
+of the conflicting human players.
+
+Note: If you want to set up an e-mail game with some human
+players sharing the same computer, simply give those players
+the same e-mail address.</value>
+  </data>
+  <data name="DialogPlayerLocal" xml:space="preserve">
+    <value>This faction is controlled by player {0}
+at e-mail address {1}.
+
+This address belongs to the local system.
+
+Choose Yes if this is correct.
+The player’s turn will begin on this computer.
+
+Choose No if the address belongs to a remote system.
+A PBEM message will be created and sent to the player.</value>
+  </data>
+  <data name="DialogPlayerRemote" xml:space="preserve">
+    <value>This faction is controlled by player {0}
+at e-mail address {1}.
+
+This address belongs to a remote system.
+
+Choose Yes if this is correct.
+A PBEM message will be created and sent to the player.
+
+Choose No if the address belongs to the local system.
+The player’s turn will begin on this computer.</value>
+  </data>
+  <data name="DialogPlayerRetry" xml:space="preserve">
+    <value>Hexkit failed to create the PBEM message.
+
+Choose OK for another attempt, or
+Cancel to abort and close the game.
+
+If you cancel now, you can later reload
+the last autosave file to try again.</value>
+  </data>
+  <data name="DialogPlayerStart" xml:space="preserve">
+    <value>This faction is controlled by player
+{0} on the local system.
+
+Click OK to start your turn.</value>
+  </data>
+  <data name="DialogReplayError" xml:space="preserve">
+    <value>A stored command could not be executed.
+The interactive replay has been stopped.</value>
+  </data>
+  <data name="DialogReplayNone" xml:space="preserve">
+    <value>There are no commands to replay.</value>
+  </data>
+  <data name="DialogResignFaction" xml:space="preserve">
+    <value>Are you sure you want to retire
+this faction from the game?</value>
+  </data>
+  <data name="DialogScenarioChanged" xml:space="preserve">
+    <value>The scenario on which this saved game is based
+has been changed since the game was saved.
+This could lead to errors or unpredictable behavior.
+
+Are you sure you want to open this game?</value>
+  </data>
+  <data name="DialogScenarioOpenError" xml:space="preserve">
+    <value>Failed to open scenario file
+“{0}”.</value>
+  </data>
+  <data name="DialogScenarioSave" xml:space="preserve">
+    <value>Scenario description written to file
+“{0}”.</value>
+  </data>
+  <data name="DialogScenarioSaveError" xml:space="preserve">
+    <value>Failed to write scenario description to file
+“{0}”.
+
+Hexkit Game is not affected by this failure.
+However, the cause for this error could lead
+to other (and possibly worse) errors later on.</value>
+  </data>
+  <data name="DialogSectionLoadError" xml:space="preserve">
+    <value>Failed to load section file
+“{0}”.</value>
+  </data>
+  <data name="DialogSectionSaveError" xml:space="preserve">
+    <value>Failed to write section file
+“{0}”.</value>
+  </data>
+  <data name="DialogSectionUnsaved" xml:space="preserve">
+    <value>All data in this section will be lost.
+
+Are you sure you want to continue
+without saving the current section?</value>
+  </data>
+  <data name="DialogSectionUnsavedAll" xml:space="preserve">
+    <value>All data in ALL sections will be lost.
+
+Are you sure you want to continue
+without saving the unsaved sections?</value>
+  </data>
+  <data name="DialogSessionOpenError" xml:space="preserve">
+    <value>Failed to open saved game file
+“{0}”.</value>
+  </data>
+  <data name="DialogSessionSaveError" xml:space="preserve">
+    <value>Failed to save game to file
+“{0}”.</value>
+  </data>
+  <data name="DialogSiteDelete" xml:space="preserve">
+    <value>Are you sure you want to delete {0} sites
+that contain customized entity stacks?</value>
+  </data>
+  <data name="DialogSiteEmpty" xml:space="preserve">
+    <value>The selected site does not contain
+any entities owned by this faction.</value>
+  </data>
+  <data name="DialogSiteUnowned" xml:space="preserve">
+    <value>This site has no owner. You must select
+a specific unit owner to place units here.</value>
+  </data>
+  <data name="DialogSiteUnselected" xml:space="preserve">
+    <value>No map location is currently selected.</value>
+  </data>
+  <data name="DialogTargetUnselected" xml:space="preserve">
+    <value>You must select a valid target
+site for the command.</value>
+  </data>
+  <data name="DialogUnitAbilites" xml:space="preserve">
+    <value>“A” indicates that the unit can still attack this turn.
+“M” indicates that the unit can still move this turn.
+“B” indicates that the owner may build units of this class.
+“C” indicates that the unit can capture map sites.
+
+A dash indicates that the unit does not have the
+corresponding ability.
+
+Please refer to the online help for further details.</value>
+  </data>
+  <data name="DialogUnitAttackInvalid" xml:space="preserve">
+    <value>The selected combination of units
+cannot attack the target site.</value>
+  </data>
+  <data name="DialogUnitUnselected" xml:space="preserve">
+    <value>You must select one or more units
+to execute the command.</value>
+  </data>
+  <data name="DialogVariableDuplicate" xml:space="preserve">
+    <value>The variable list already contains the selected
+value variant for the selected variable ID.
+
+You can only add a single basic value and one
+modifier value per target for each variable.</value>
+  </data>
+  <data name="DialogVariableScaleMismatch" xml:space="preserve">
+    <value>A value for variable ID “{0}”
+is not an even multiple of the variable’s
+display scale, or vice versa.
+
+Choose OK to accept the value regardless.
+Choose Cancel to return to the dialog.</value>
+  </data>
+  <data name="DialogVariablesNone" xml:space="preserve">
+    <value>The current scenario does not define
+any attributes or resources.</value>
+  </data>
+  <data name="ErrorEditorOnly" xml:space="preserve">
+    <value>Hexkit Game or the scenario rule script attempted to
+perform an operation valid only within Hexkit Editor.
+Please notify the scenario author.</value>
+  </data>
+  <data name="ErrorGameScenario" xml:space="preserve">
+    <value>Saved game specifies nonexistent scenario.</value>
+  </data>
+  <data name="ErrorIdentifierChanged" xml:space="preserve">
+    <value>Identifier has already been changed.</value>
+  </data>
+  <data name="ErrorImageFileOpen" xml:space="preserve">
+    <value>Failed to load image file
+“{0}”.</value>
+  </data>
+  <data name="ErrorOwnerAreaNone" xml:space="preserve">
+    <value>Unit placed on site {0} without unit owner.</value>
+  </data>
+  <data name="ErrorOwnerEffectConflict" xml:space="preserve">
+    <value>Effect “{0}” is assigned a different Owner than the Site owner.</value>
+  </data>
+  <data name="ErrorOwnerTerrainConflict" xml:space="preserve">
+    <value>Terrain “{0}” is assigned a different Owner than the Site owner.</value>
+  </data>
+  <data name="ErrorOwnerUnitConflict" xml:space="preserve">
+    <value>Unit “{0}” is assigned a different Owner than other units at the same Site.</value>
+  </data>
+  <data name="ErrorOwnerUnitNone" xml:space="preserve">
+    <value>Unit “{0}” is assigned a null Owner.</value>
+  </data>
+  <data name="ErrorOwnerUpgradeNone" xml:space="preserve">
+    <value>Upgrade “{0}” is assigned a null Owner.</value>
+  </data>
+  <data name="ErrorRulesAssembly" xml:space="preserve">
+    <value>Rule script assembly is a null reference.</value>
+  </data>
+  <data name="ErrorRulesCompile" xml:space="preserve">
+    <value>Failed to compile rule script file
+“{0}”.</value>
+  </data>
+  <data name="ErrorRulesFactory" xml:space="preserve">
+    <value>RulesFactory class not found.</value>
+  </data>
+  <data name="ErrorRulesFactoryCtor" xml:space="preserve">
+    <value>RulesFactory class has no default constructor.</value>
+  </data>
+  <data name="ErrorRulesFactoryObject" xml:space="preserve">
+    <value>Failed to instantiate RulesFactory class.</value>
+  </data>
+  <data name="ErrorRulesFile" xml:space="preserve">
+    <value>Rule script file “{0}”
+has an unrecognized file extension.</value>
+  </data>
+  <data name="ErrorRulesLoad" xml:space="preserve">
+    <value>Failed to load rule script from compiled assembly.</value>
+  </data>
+  <data name="ErrorRulesPathNull" xml:space="preserve">
+    <value>Attempting to load rule script from an empty path.</value>
+  </data>
+  <data name="ErrorScenarioTemporary" xml:space="preserve">
+    <value>Cannot read temporary file as scenario file.</value>
+  </data>
+  <data name="ErrorSiteEffectNone" xml:space="preserve">
+    <value>Effect “{0}” is assigned a null Site.</value>
+  </data>
+  <data name="ErrorSiteTerrainConflict" xml:space="preserve">
+    <value>Terrain “{0}” is assigned a valid Site with a different Owner.</value>
+  </data>
+  <data name="ErrorSiteUnitConflict" xml:space="preserve">
+    <value>Unit “{0}” is assigned a valid Site containing units with a different Owner.</value>
+  </data>
+  <data name="ErrorSiteUpgradeValid" xml:space="preserve">
+    <value>Upgrade “{0}” is assigned a valid Site.</value>
+  </data>
+  <data name="ErrorVariableValue" xml:space="preserve">
+    <value>Variable “{0}” is assigned an out-of-range value {1}.</value>
+  </data>
+  <data name="EventDefeat" xml:space="preserve">
+    <value>Defeat!</value>
+  </data>
+  <data name="EventDefeatResource" xml:space="preserve">
+    <value>This faction has insufficient {0} and will be removed from the game.</value>
+  </data>
+  <data name="EventDefeatSites" xml:space="preserve">
+    <value>This faction retains too little territory and will be removed from the game.</value>
+  </data>
+  <data name="EventDefeatTurns" xml:space="preserve">
+    <value>This faction has exceeded its turn limit and will be removed from the game.</value>
+  </data>
+  <data name="EventDefeatUnits" xml:space="preserve">
+    <value>This faction retains too few units and will be removed from the game.</value>
+  </data>
+  <data name="EventDefeatUnitStrength" xml:space="preserve">
+    <value>This faction has insufficient unit strength and will be removed from the game.</value>
+  </data>
+  <data name="EventEntityDepleted" xml:space="preserve">
+    <value>Depleted Entity</value>
+  </data>
+  <data name="EventLossesAttacker" xml:space="preserve">
+    <value>{0}% Attacker Losses</value>
+  </data>
+  <data name="EventLossesDefender" xml:space="preserve">
+    <value>{0}% Defender Losses</value>
+  </data>
+  <data name="EventResigned" xml:space="preserve">
+    <value>This faction has resigned in despair and will be removed from the game.</value>
+  </data>
+  <data name="EventResourcesGone" xml:space="preserve">
+    <value>Out of Resources!</value>
+  </data>
+  <data name="EventSiteCaptured" xml:space="preserve">
+    <value>Captured Site</value>
+  </data>
+  <data name="EventUnitsAutoDestroy" xml:space="preserve">
+    <value>This faction can no longer maintain its entire army.
+The following units were automatically disbanded:</value>
+  </data>
+  <data name="EventUnitsKilled" xml:space="preserve">
+    <value>The following units were destroyed in battle:</value>
+  </data>
+  <data name="EventVictory" xml:space="preserve">
+    <value>Victory!</value>
+  </data>
+  <data name="EventVictoryResource" xml:space="preserve">
+    <value>This faction has amassed enough {0} to win the game!</value>
+  </data>
+  <data name="EventVictorySites" xml:space="preserve">
+    <value>This faction has captured enough territory to win the game!</value>
+  </data>
+  <data name="EventVictorySurvivor" xml:space="preserve">
+    <value>This faction is the sole survivor as all its enemies have fallen!</value>
+  </data>
+  <data name="EventVictoryTurns" xml:space="preserve">
+    <value>This faction has survived long enough to win the game!</value>
+  </data>
+  <data name="EventVictoryUnits" xml:space="preserve">
+    <value>This faction has amassed enough units to win the game!</value>
+  </data>
+  <data name="EventVictoryUnitStrength" xml:space="preserve">
+    <value>This faction has amassed enough unit strength to win the game!</value>
+  </data>
+  <data name="FilterGame" xml:space="preserve">
+    <value>Hexkit Games (*.xml.gz;*.xml)|*.xml.gz;*.xml|Hexkit Games, compressed (*.xml.gz)|*.xml.gz|Hexkit Games, uncompressed (*.xml)|*.xml</value>
+  </data>
+  <data name="FilterImage" xml:space="preserve">
+    <value>Supported Images|*.bmp;*.gif;*.jpg;*.jpeg;*.png;*.tif;*.tiff|BMP Images (*.bmp)|*.bmp|GIF Images (*.gif)|*.gif|JPEG Images (*.jpg;*.jpeg)|*.jpg;*.jpeg|PNG Images (*.png)|*.png|TIFF Images (*.tif;*.tiff)|*.tif;*.tiff</value>
+  </data>
+  <data name="FilterRules" xml:space="preserve">
+    <value>Hexkit Rule Scripts (*.cs;*.dll;*.js;*.vb)|*.cs;*.dll;*.js;*.vb</value>
+  </data>
+  <data name="FilterScenario" xml:space="preserve">
+    <value>Hexkit Scenarios (*.xml)|*.xml</value>
+  </data>
+  <data name="FilterSection" xml:space="preserve">
+    <value>Hexkit Scenario Sections (*.xml)|*.xml</value>
+  </data>
+  <data name="HelpFile" xml:space="preserve">
+    <value>Hexkit.Help.chm</value>
+  </data>
+  <data name="InfoAttacker" xml:space="preserve">
+    <value>Attacker: {0:D}%</value>
+  </data>
+  <data name="InfoAttackLosses" xml:space="preserve">
+    <value>Attacker Losses: {0:D}% – Defender Losses: {1:D}%</value>
+  </data>
+  <data name="InfoDefender" xml:space="preserve">
+    <value>Defender: {0:D}%</value>
+  </data>
+  <data name="InfoEntityCategoryEmpty" xml:space="preserve">
+    <value>The current scenario does not define any entity classes of the selected category.</value>
+  </data>
+  <data name="InfoEntityFrame" xml:space="preserve">
+    <value>Using {0} of {1} image frames.
+Animation: {2}</value>
+  </data>
+  <data name="InfoEventUnknown" xml:space="preserve">
+    <value>An event occurred but no message was specified.</value>
+  </data>
+  <data name="InfoPlayerMail" xml:space="preserve">
+    <value>The attached file is a saved game for Hexkit.
+
+Drag &amp; drop the attachment on Hexkit Game, or use the menu command "File: Open" within Hexkit Game to open the attached file.
+
+</value>
+  </data>
+  <data name="InfoPlayerMailFinal" xml:space="preserve">
+    <value>The game is over. Hexkit Game will announce the winners and let you examine the situation.</value>
+  </data>
+  <data name="InfoPlayerMailPlay" xml:space="preserve">
+    <value>The name of the active faction is “{0}”. This faction should be controlled by player {1}.</value>
+  </data>
+  <data name="InfoTitleTurn" xml:space="preserve">
+    <value>{0} (turn {1})</value>
+  </data>
+  <data name="InfoTurnFaction" xml:space="preserve">
+    <value>Turn {0}/{1}  Faction {2}/{3}</value>
+  </data>
+  <data name="InfoTurnFactionNone" xml:space="preserve">
+    <value>Turn –/–  Faction –/–</value>
+  </data>
+  <data name="InfoVariableCategoryEmpty" xml:space="preserve">
+    <value>The current scenario does not define any variables of the selected category.</value>
+  </data>
+  <data name="InstructionClassInvalid" xml:space="preserve">
+    <value>{0} instruction specifies invalid entity class “{1}”.</value>
+  </data>
+  <data name="InstructionEntityInvalid" xml:space="preserve">
+    <value>{0} instruction specifies invalid entity “{1}”.</value>
+  </data>
+  <data name="InstructionFactionInvalid" xml:space="preserve">
+    <value>{0} instruction specifies invalid faction “{1}”.</value>
+  </data>
+  <data name="InstructionIdentifierEmpty" xml:space="preserve">
+    <value>{0} instruction specifies empty identifier.</value>
+  </data>
+  <data name="InstructionSiteInvalid" xml:space="preserve">
+    <value>{0} instruction specifies invalid site {1}.</value>
+  </data>
+  <data name="InstructionValueNegative" xml:space="preserve">
+    <value>{0} instruction specifies negative value.</value>
+  </data>
+  <data name="InstructionVariableInvalid" xml:space="preserve">
+    <value>{0} instruction specifies invalid variable “{1}”.</value>
+  </data>
+  <data name="InstructionVariableCategoryInvalid" xml:space="preserve">
+    <value>{0} instruction specifies invalid variable category “{1}”.</value>
+  </data>
+  <data name="LabelAbility" xml:space="preserve">
+    <value>Ability</value>
+  </data>
+  <data name="LabelAbilities" xml:space="preserve">
+    <value>Abilities</value>
+  </data>
+  <data name="LabelAttribute" xml:space="preserve">
+    <value>Attribute</value>
+  </data>
+  <data name="LabelBuildCost" xml:space="preserve">
+    <value>Build Cost</value>
+  </data>
+  <data name="LabelCapture" xml:space="preserve">
+    <value>Capture</value>
+  </data>
+  <data name="LabelCaptureDestroy" xml:space="preserve">
+    <value>Can Capt./Dest.</value>
+  </data>
+  <data name="LabelCapturePassive" xml:space="preserve">
+    <value>Can Capture</value>
+  </data>
+  <data name="LabelComputerCustom" xml:space="preserve">
+    <value>Computer – Custom</value>
+  </data>
+  <data name="LabelComputerEasy" xml:space="preserve">
+    <value>Computer – Easy</value>
+  </data>
+  <data name="LabelComputerHard" xml:space="preserve">
+    <value>Computer – Hard</value>
+  </data>
+  <data name="LabelComputerMedium" xml:space="preserve">
+    <value>Computer – Medium</value>
+  </data>
+  <data name="LabelDestroyPassive" xml:space="preserve">
+    <value>Can Destroy</value>
+  </data>
+  <data name="LabelEffects" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="LabelEntityUnknown" xml:space="preserve">
+    <value>Unknown Entity</value>
+  </data>
+  <data name="LabelError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="LabelEventUnknown" xml:space="preserve">
+    <value>Unknown Event</value>
+  </data>
+  <data name="LabelFactionUnknown" xml:space="preserve">
+    <value>Unknown Faction</value>
+  </data>
+  <data name="LabelImageNone" xml:space="preserve">
+    <value>(no image)</value>
+  </data>
+  <data name="LabelInline" xml:space="preserve">
+    <value>(inline)</value>
+  </data>
+  <data name="LabelLocalHotseat" xml:space="preserve">
+    <value>Local (Hotseat)</value>
+  </data>
+  <data name="LabelNone" xml:space="preserve">
+    <value>(none)</value>
+  </data>
+  <data name="LabelOther" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="LabelOwner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="LabelOwnerNone" xml:space="preserve">
+    <value>(unowned)</value>
+  </data>
+  <data name="LabelOwnerSame" xml:space="preserve">
+    <value>(same owner)</value>
+  </data>
+  <data name="LabelPlayerComputer" xml:space="preserve">
+    <value>Computer Player</value>
+  </data>
+  <data name="LabelPlayerHuman" xml:space="preserve">
+    <value>Human Player</value>
+  </data>
+  <data name="LabelPresentNone" xml:space="preserve">
+    <value>(none present)</value>
+  </data>
+  <data name="LabelProjectedLosses" xml:space="preserve">
+    <value>Projected Losses</value>
+  </data>
+  <data name="LabelResource" xml:space="preserve">
+    <value>Resource</value>
+  </data>
+  <data name="LabelSelf" xml:space="preserve">
+    <value>Self</value>
+  </data>
+  <data name="LabelShowAll" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="LabelShowGraphics" xml:space="preserve">
+    <value>Show Graphics Information</value>
+  </data>
+  <data name="LabelShowImmobile" xml:space="preserve">
+    <value>Show Immobile</value>
+  </data>
+  <data name="LabelShowMobile" xml:space="preserve">
+    <value>Show Mobile</value>
+  </data>
+  <data name="LabelShowPlaced" xml:space="preserve">
+    <value>Show Placed</value>
+  </data>
+  <data name="LabelShowScenario" xml:space="preserve">
+    <value>Show Scenario Information</value>
+  </data>
+  <data name="LabelShowSite" xml:space="preserve">
+    <value>Show Site</value>
+  </data>
+  <data name="LabelShowUnplaced" xml:space="preserve">
+    <value>Show Unplaced</value>
+  </data>
+  <data name="LabelSite" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="LabelSites" xml:space="preserve">
+    <value>Sites</value>
+  </data>
+  <data name="LabelSiteInvalid" xml:space="preserve">
+    <value>Invalid Site</value>
+  </data>
+  <data name="LabelSiteValues" xml:space="preserve">
+    <value>Site Values</value>
+  </data>
+  <data name="LabelStandardAttackRange" xml:space="preserve">
+    <value>Standard Attack Range</value>
+  </data>
+  <data name="LabelStandardDifficulty" xml:space="preserve">
+    <value>Standard Difficulty</value>
+  </data>
+  <data name="LabelStandardElevation" xml:space="preserve">
+    <value>Standard Elevation</value>
+  </data>
+  <data name="LabelStandardMorale" xml:space="preserve">
+    <value>Standard Morale</value>
+  </data>
+  <data name="LabelStandardMovement" xml:space="preserve">
+    <value>Standard Movement</value>
+  </data>
+  <data name="LabelStandardStrength" xml:space="preserve">
+    <value>Standard Strength</value>
+  </data>
+  <data name="LabelTerrains" xml:space="preserve">
+    <value>Terrains</value>
+  </data>
+  <data name="LabelTerrainBackgroundNone" xml:space="preserve">
+    <value>(no background terrain)</value>
+  </data>
+  <data name="LabelTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="LabelTurns" xml:space="preserve">
+    <value>Turns</value>
+  </data>
+  <data name="LabelUnitOwnerNone" xml:space="preserve">
+    <value>(same as site owner)</value>
+  </data>
+  <data name="LabelUnitStrength" xml:space="preserve">
+    <value>Unit Strength</value>
+  </data>
+  <data name="LabelUnitValues" xml:space="preserve">
+    <value>Unit Values</value>
+  </data>
+  <data name="LabelUnits" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="LabelUnitsAttacking" xml:space="preserve">
+    <value>Attacking Units</value>
+  </data>
+  <data name="LabelUnitsDefending" xml:space="preserve">
+    <value>Defending Units</value>
+  </data>
+  <data name="LabelUnitsOwner" xml:space="preserve">
+    <value>Owner Units</value>
+  </data>
+  <data name="LabelUpgrades" xml:space="preserve">
+    <value>Upgrades</value>
+  </data>
+  <data name="StatusAlgorithmExecuting" xml:space="preserve">
+    <value>{0} is executing…</value>
+  </data>
+  <data name="StatusAreasSaving" xml:space="preserve">
+    <value>Saving map contents to Areas file, please wait…</value>
+  </data>
+  <data name="StatusAreasSynchronize" xml:space="preserve">
+    <value>Synchronizing areas with map display, please wait…</value>
+  </data>
+  <data name="StatusCommandExecuting" xml:space="preserve">
+    <value>Executing command… press Escape to stop</value>
+  </data>
+  <data name="StatusCommandSelection" xml:space="preserve">
+    <value>Select a highlighted target site or press Escape to abort</value>
+  </data>
+  <data name="StatusCommandUnits" xml:space="preserve">
+    <value>Finding eligible units for command, please wait…</value>
+  </data>
+  <data name="StatusEntitiesCreating" xml:space="preserve">
+    <value>Creating game entities, please wait…</value>
+  </data>
+  <data name="StatusEntitiesOpening" xml:space="preserve">
+    <value>Generating entity list, please wait…</value>
+  </data>
+  <data name="StatusFactionsOpening" xml:space="preserve">
+    <value>Generating faction list, please wait…</value>
+  </data>
+  <data name="StatusGameOpening" xml:space="preserve">
+    <value>Opening saved game, please wait…</value>
+  </data>
+  <data name="StatusGameReading" xml:space="preserve">
+    <value>Reading game file, please wait…</value>
+  </data>
+  <data name="StatusGameSaving" xml:space="preserve">
+    <value>Saving current game, please wait…</value>
+  </data>
+  <data name="StatusImagesOpening" xml:space="preserve">
+    <value>Generating image list, please wait…</value>
+  </data>
+  <data name="StatusMapViewCreating" xml:space="preserve">
+    <value>Creating map view, please wait…</value>
+  </data>
+  <data name="StatusOverlayLoading" xml:space="preserve">
+    <value>Loading overlay image, please wait…</value>
+  </data>
+  <data name="StatusReplay" xml:space="preserve">
+    <value>Replaying… press Ctrl+P to pause, Ctrl+I to skip, Escape to stop</value>
+  </data>
+  <data name="StatusReplayCommands" xml:space="preserve">
+    <value>Replaying commands, please wait…</value>
+  </data>
+  <data name="StatusReplayCommandsCount" xml:space="preserve">
+    <value>Replaying command {0}/{1}…</value>
+  </data>
+  <data name="StatusReplayPaused" xml:space="preserve">
+    <value>Replay paused… press Ctrl+P to continue, Ctrl+I to skip, Escape to stop</value>
+  </data>
+  <data name="StatusScenarioReading" xml:space="preserve">
+    <value>Reading scenario files, please wait…</value>
+  </data>
+  <data name="StatusScenarioSaving" xml:space="preserve">
+    <value>Saving scenario data to file, please wait…</value>
+  </data>
+  <data name="StatusScenarioStarting" xml:space="preserve">
+    <value>Starting new scenario, please wait…</value>
+  </data>
+  <data name="StatusSectionOpening" xml:space="preserve">
+    <value>Opening section file, please wait…</value>
+  </data>
+  <data name="StatusSectionSaving" xml:space="preserve">
+    <value>Saving section file, please wait…</value>
+  </data>
+  <data name="StatusSitesCreating" xml:space="preserve">
+    <value>Creating map sites, please wait…</value>
+  </data>
+  <data name="StatusSitesCreatingCount" xml:space="preserve">
+    <value>Creating site {0}/{1}, please wait…</value>
+  </data>
+  <data name="StatusUnitProcessing" xml:space="preserve">
+    <value>Unit {0}/{1}: {2}</value>
+  </data>
+  <data name="StatusVariablesOpening" xml:space="preserve">
+    <value>Generating variable list, please wait…</value>
+  </data>
+  <data name="StatusWorldInitializing" xml:space="preserve">
+    <value>Initializing world state, please wait…</value>
+  </data>
+  <data name="StatusZoomChanging" xml:space="preserve">
+    <value>Changing zoom level, please wait…</value>
+  </data>
+  <data name="TitleAbilities" xml:space="preserve">
+    <value>About Abilities</value>
+  </data>
+  <data name="TitleActiveUnits" xml:space="preserve">
+    <value>Active Units: </value>
+  </data>
+  <data name="TitleAreaInvalid" xml:space="preserve">
+    <value>Invalid Area Operation</value>
+  </data>
+  <data name="TitleAttackSite" xml:space="preserve">
+    <value>Attack Site: </value>
+  </data>
+  <data name="TitleAvailableImages" xml:space="preserve">
+    <value>Available Images</value>
+  </data>
+  <data name="TitleBuildEntities" xml:space="preserve">
+    <value>Build Entities: </value>
+  </data>
+  <data name="TitleCatalogOriginal" xml:space="preserve">
+    <value>Original Bitmap Catalog</value>
+  </data>
+  <data name="TitleCatalogScaled" xml:space="preserve">
+    <value>Scaled Bitmap Catalog ({0}%)</value>
+  </data>
+  <data name="TitleChangeGraphics" xml:space="preserve">
+    <value>Change Graphics Information</value>
+  </data>
+  <data name="TitleChangeScenario" xml:space="preserve">
+    <value>Change Scenario Information</value>
+  </data>
+  <data name="TitleCommandCounters" xml:space="preserve">
+    <value>Command Counters</value>
+  </data>
+  <data name="TitleCommandInvalid" xml:space="preserve">
+    <value>Invalid Command</value>
+  </data>
+  <data name="TitleCommandLineError" xml:space="preserve">
+    <value>Command Line Argument Error</value>
+  </data>
+  <data name="TitleContentsChange" xml:space="preserve">
+    <value>Change Site Contents at </value>
+  </data>
+  <data name="TitleDragDropError" xml:space="preserve">
+    <value>Drag &amp; Drop Argument Error</value>
+  </data>
+  <data name="TitleEntityClassMissing" xml:space="preserve">
+    <value>Missing Entity Class</value>
+  </data>
+  <data name="TitleEntityDestroy" xml:space="preserve">
+    <value>Destroy: {0}</value>
+  </data>
+  <data name="TitleEntityIdChange" xml:space="preserve">
+    <value>Change Entity ID</value>
+  </data>
+  <data name="TitleEntityIdEnter" xml:space="preserve">
+    <value>Enter Entity ID</value>
+  </data>
+  <data name="TitleEventDefeat" xml:space="preserve">
+    <value>Defeat!</value>
+  </data>
+  <data name="TitleEventVictory" xml:space="preserve">
+    <value>{0}: Victory!</value>
+  </data>
+  <data name="TitleExplorerError" xml:space="preserve">
+    <value>Windows Explorer Error</value>
+  </data>
+  <data name="TitleFactionIdChange" xml:space="preserve">
+    <value>Change Faction ID</value>
+  </data>
+  <data name="TitleFactionIdEnter" xml:space="preserve">
+    <value>Enter Faction ID</value>
+  </data>
+  <data name="TitleFatalError" xml:space="preserve">
+    <value>Fatal Error</value>
+  </data>
+  <data name="TitleFileAccessError" xml:space="preserve">
+    <value>File Access Error</value>
+  </data>
+  <data name="TitleGameOpen" xml:space="preserve">
+    <value>Open Game</value>
+  </data>
+  <data name="TitleGameResuming" xml:space="preserve">
+    <value>Resuming Game</value>
+  </data>
+  <data name="TitleGameSave" xml:space="preserve">
+    <value>Save Game</value>
+  </data>
+  <data name="TitleGameUnsaved" xml:space="preserve">
+    <value>Close Unsaved Game</value>
+  </data>
+  <data name="TitleIdentifierInvalid" xml:space="preserve">
+    <value>Invalid Identifier</value>
+  </data>
+  <data name="TitleIdentifierReferenced" xml:space="preserve">
+    <value>Identifier Referenced</value>
+  </data>
+  <data name="TitleImageError" xml:space="preserve">
+    <value>Image File Error</value>
+  </data>
+  <data name="TitleImageFileIdChange" xml:space="preserve">
+    <value>Change Image File ID</value>
+  </data>
+  <data name="TitleImageFileIdEnter" xml:space="preserve">
+    <value>Enter Image File ID</value>
+  </data>
+  <data name="TitleImageFileNone" xml:space="preserve">
+    <value>No Image Files Defined</value>
+  </data>
+  <data name="TitleImageIdChange" xml:space="preserve">
+    <value>Change Image ID</value>
+  </data>
+  <data name="TitleImageIdEnter" xml:space="preserve">
+    <value>Enter Image ID</value>
+  </data>
+  <data name="TitleImageMissing" xml:space="preserve">
+    <value>Missing Image</value>
+  </data>
+  <data name="TitleImageNone" xml:space="preserve">
+    <value>No Images Defined</value>
+  </data>
+  <data name="TitleImageOpen" xml:space="preserve">
+    <value>Open Image File</value>
+  </data>
+  <data name="TitleInstanceAnother" xml:space="preserve">
+    <value>{0} Already Running</value>
+  </data>
+  <data name="TitleMailError" xml:space="preserve">
+    <value>Hexkit PBEM Error</value>
+  </data>
+  <data name="TitleMailErrorMapi" xml:space="preserve">
+    <value>MAPI Client Error</value>
+  </data>
+  <data name="TitleMailInvalid" xml:space="preserve">
+    <value>Invalid E-mail Address</value>
+  </data>
+  <data name="TitleMapBoundsInvalid">
+    <value>Invalid Map Bounds</value>
+  </data>
+  <data name="TitleMoveUnits" xml:space="preserve">
+    <value>Move Units: </value>
+  </data>
+  <data name="TitleOptionsError" xml:space="preserve">
+    <value>Hexkit Options File Error</value>
+  </data>
+  <data name="TitlePlayerChanged" xml:space="preserve">
+    <value>Player Changed: {0}</value>
+  </data>
+  <data name="TitlePlayerConflict" xml:space="preserve">
+    <value>Player Setup Conflict</value>
+  </data>
+  <data name="TitleReplay" xml:space="preserve">
+    <value>Game Replay</value>
+  </data>
+  <data name="TitleReplayError" xml:space="preserve">
+    <value>Game Replay Error</value>
+  </data>
+  <data name="TitleReplayFromTurn" xml:space="preserve">
+    <value>Replay From Turn</value>
+  </data>
+  <data name="TitleRulesOpen" xml:space="preserve">
+    <value>Open Rule Script</value>
+  </data>
+  <data name="TitleScenarioChanged" xml:space="preserve">
+    <value>Scenario Changed</value>
+  </data>
+  <data name="TitleScenarioError" xml:space="preserve">
+    <value>Hexkit Scenario Error</value>
+  </data>
+  <data name="TitleScenarioOpen" xml:space="preserve">
+    <value>Open Scenario</value>
+  </data>
+  <data name="TitleScenarioSave" xml:space="preserve">
+    <value>Save Scenario</value>
+  </data>
+  <data name="TitleScenarioStarting" xml:space="preserve">
+    <value>Starting Scenario</value>
+  </data>
+  <data name="TitleScenarioUntitled" xml:space="preserve">
+    <value>Untitled Scenario</value>
+  </data>
+  <data name="TitleSectionOpen" xml:space="preserve">
+    <value>Open Scenario Section</value>
+  </data>
+  <data name="TitleSectionError" xml:space="preserve">
+    <value>Hexkit Section File Error</value>
+  </data>
+  <data name="TitleSectionSave" xml:space="preserve">
+    <value>Save Scenario Section</value>
+  </data>
+  <data name="TitleSectionUnsaved" xml:space="preserve">
+    <value>Unsaved Section Data</value>
+  </data>
+  <data name="TitleSelectedEntities" xml:space="preserve">
+    <value>Selected Entities: </value>
+  </data>
+  <data name="TitleSelectionInvalid" xml:space="preserve">
+    <value>Invalid Selection</value>
+  </data>
+  <data name="TitleSessionError" xml:space="preserve">
+    <value>Hexkit Save Game Error</value>
+  </data>
+  <data name="TitleSiteDelete" xml:space="preserve">
+    <value>Confirm Site Deletion</value>
+  </data>
+  <data name="TitleSiteUnowned" xml:space="preserve">
+    <value>Site Unowned</value>
+  </data>
+  <data name="TitleVariableIdChange" xml:space="preserve">
+    <value>Change Variable ID</value>
+  </data>
+  <data name="TitleVariableIdEnter" xml:space="preserve">
+    <value>Enter Variable ID</value>
+  </data>
+  <data name="TitleVariableDuplicate" xml:space="preserve">
+    <value>Duplicate Variable Entry</value>
+  </data>
+  <data name="TitleVariableScaleMismatch" xml:space="preserve">
+    <value>Variable Scale Mismatch</value>
+  </data>
+  <data name="TitleVariables" xml:space="preserve">
+    <value>Variables</value>
+  </data>
+  <data name="XmlAlgorithmInvalid" xml:space="preserve">
+    <value>{0} tag refers to nonexistent algorithm ID "{1}".</value>
+  </data>
+  <data name="XmlAreaBounds" xml:space="preserve">
+    <value>Area bounds exceed map bounds.</value>
+  </data>
+  <data name="XmlControlsDuplicate" xml:space="preserve">
+    <value>Controls tag refers to faction ID “{0}” which is already assigned to a player.</value>
+  </data>
+  <data name="XmlControlsInvalid" xml:space="preserve">
+    <value>Controls tag refers to nonexistent faction ID “{0}”.</value>
+  </data>
+  <data name="XmlEntityClassInvalid" xml:space="preserve">
+    <value>{0} tag refers to nonexistent entity class ID “{1}”.</value>
+  </data>
+  <data name="XmlEntityNoImage" xml:space="preserve">
+    <value>Image tag missing for entity class ID “{0}”.</value>
+  </data>
+  <data name="XmlError" xml:space="preserve">
+    <value>An error occurred while parsing the XML document.</value>
+  </data>
+  <data name="XmlErrorSchema" xml:space="preserve">
+    <value>An error occurred while validating against the XML schema.</value>
+  </data>
+  <data name="XmlHomeInvalid" xml:space="preserve">
+    <value>HomeSite tag specifies invalid site for faction ID “{0}”.</value>
+  </data>
+  <data name="XmlImageNoFrame" xml:space="preserve">
+    <value>Frame tag missing for image ID “{0}”.</value>
+  </data>
+  <data name="XmlImageStackInvalid" xml:space="preserve">
+    <value>ImageStack tag refers to nonexistent image ID “{0}”.</value>
+  </data>
+  <data name="XmlMapGridSize" xml:space="preserve">
+    <value>MapGrid tag specifies invalid width or height.</value>
+  </data>
+  <data name="XmlOwnerInvalid" xml:space="preserve">
+    <value>Owner tag refers to nonexistent faction ID “{0}”.</value>
+  </data>
+  <data name="XmlPlaceInvalid" xml:space="preserve">
+    <value>PlaceSite tag specifies invalid site for entity class ID “{0}”.</value>
+  </data>
+  <data name="XmlReferenceInvalid" xml:space="preserve">
+    <value>{0} tag refers to nonexistent {1} ID “{2}”.</value>
+  </data>
+  <data name="XmlSourceInvalid" xml:space="preserve">
+    <value>Source tag refers to nonexistent file ID “{0}”.</value>
+  </data>
+  <data name="XmlTerrainDefault" xml:space="preserve">
+    <value>Terrain tag specifies no default background terrain.</value>
+  </data>
+  <data name="XmlUnitOwnerInvalid" xml:space="preserve">
+    <value>UnitOwner tag refers to nonexistent faction ID “{0}”.</value>
+  </data>
+</root>

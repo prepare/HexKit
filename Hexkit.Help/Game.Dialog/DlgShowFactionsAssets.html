@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Faction Status: Assets Page</title>
+</head>
+<body>
+  <h1>Faction Status: Assets Page</h1>
+  <p>This tab page of the <a href="DlgShowFactions.html">Faction Status</a> dialog shows information on the selected faction’s territory and entities.</p>
+  <ul>
+    <li>The <b>Sites</b> box shows an overview of the selected faction’s territory.
+      <ul>
+        <li><b>Owned</b> shows the number of map sites that belong to the selected faction.</li>
+        <li><b>Unowned</b> shows the number of map sites that either belong to another faction, or that can be captured but are currently unowned.</li>
+        <li><b>Conquest</b> shows the percentage of <b>Owned</b> sites relative to the sum of <b>Owned</b> and <b>Unowned</b> sites.</li>
+      </ul>
+    </li>
+    <li>The <b>Entities</b> box shows an overview of the selected faction’s entities.
+      <ul>
+        <li><b>Units</b> shows the number of units that belong to the selected faction, both placed and unplaced.</li>
+        <li><b>Terrains</b> shows the number of terrains that belong to the selected faction, both placed and unplaced.</li>
+        <li><b>Upgrades</b> shows the number of upgrades that the selected faction has obtained.</li>
+        <li>Choose <b>Show Units… (Alt+U)</b>, <b>Show Terrain… (Alt+T)</b>, <b>Show Upgrades… (Alt+G)</b> to show the <a href="DlgShowEntities.html">Faction Entities</a> dialog for the selected faction and the corresponding entity category.</li>
+      </ul>
+    </li>
+    <li>The <b>Home Site</b> box shows the home site of the selected faction.
+      <ul>
+        <li><b>Location</b> shows the map coordinates of the home site, or (–,–) to indicate that the selected faction does not have a home site.</li>
+        <li><b>Owner</b> indicates the current owner of the home site, if any. “Same owner” indicates that the selected faction itself owns its home site.</li>
+        <li>Choose <b>Select Site (Alt+S)</b> to center the <a href="GameViewMap.html">Map View</a> on the home site of the selected faction, and to make this location the new <a href="GameViewData.html#Site">Selected Site</a>. This button is disabled if there is no home site.</li>
+      </ul>
+    </li>
+    <li>See <a href="DlgShowFactions.html">Faction Status</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Show Units/Terrains/Upgrades</b> buttons are disabled if the selected faction has already been eliminated from the game. Also, most text boxes will show dashes in this case.</p>
+  <p>2. In games with limited visibility (“fog of war”), the <b>Show Units/Terrains/Upgrades</b> buttons are also disabled if the selected faction is not under your control.</p>
+  <p>3. The <b>Show Upgrades</b> button is also disabled if the current scenario does not define any upgrades.</p>
+</body>
+</html>

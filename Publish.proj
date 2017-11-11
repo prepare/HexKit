@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Publish" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Target Name="CleanAll">
+    <Message Text="Removing all temporary files..." />
+    <Delete Files="@(CleanFiles)" />
+    <!-- remove temporary files in each project directory -->
+    <RemoveDir Directories="@(Projects->'%(RelativeDir)obj\')" />
+    <RemoveDir Directories="bin\Scenario\Rules\obj\" />
+  </Target>
+  <Target Name="Publish" DependsOnTargets="CleanAll">
+    <MSBuild Projects="..\Tektosyne\Publish.proj" Targets="CleanAll" />
+    <Message Text="Creating distribution packages..." />
+    <!-- create ZIP archive using 7-Zip executable -->
+    <Exec Command="%22$(ProgramFiles)\7-Zip\7z.exe%22 a -r -mx=9 Hexkit\HexkitSource.zip Hexkit\* Tektosyne\* -x!*.cache -x!*.docstates -x!*.suo -x!.vs" WorkingDirectory=".." />
+    <Message Text="Creating signed release build..." />
+    <MSBuild Projects="..\Tektosyne\Tektosyne.Core\Tektosyne.Core.csproj" Properties="$(BuildOptions)" />
+    <MSBuild Projects="..\Tektosyne\Tektosyne.Windows\Tektosyne.Windows.csproj" Properties="$(BuildOptions)" />
+    <Copy SourceFiles="..\Tektosyne\bin\Tektosyne.Core.dll" DestinationFolder="bin" />
+    <Copy SourceFiles="..\Tektosyne\bin\Tektosyne.Windows.dll" DestinationFolder="bin" />
+    <MSBuild Projects="@(Projects)" Properties="$(BuildOptions)" />
+    <Message Text="Creating installer package..." />
+    <!-- requires Inno Setup 5 in default location -->
+    <Exec Command="%22$(ProgramFiles)\Inno Setup 5\iscc.exe%22 HexkitSetup.iss" />
+  </Target>
+  <PropertyGroup>
+    <!-- MSBuild project build options -->
+    <BuildOptions>Configuration=Release;DefineConstants=SIGNED,TRACE;DocumentationFile=;KeyContainerName=Kynosarges</BuildOptions>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- input projects to be published -->
+    <Projects Include="Hexkit.Global\Hexkit.Global.csproj" />
+    <Projects Include="Hexkit.Scenario\Hexkit.Scenario.csproj" />
+    <Projects Include="Hexkit.World\Hexkit.World.csproj" />
+    <Projects Include="Hexkit.Options\Hexkit.Options.csproj" />
+    <Projects Include="Hexkit.Graphics\Hexkit.Graphics.csproj" />
+    <Projects Include="Hexkit.Players\Hexkit.Players.csproj" />
+    <Projects Include="Hexkit.Help\Hexkit.Help.csproj" />
+    <Projects Include="Hexkit.Editor\Hexkit.Editor.csproj" />
+    <Projects Include="Hexkit.Game\Hexkit.Game.csproj" />
+    <!-- output files created by all builds -->
+    <CleanFiles Include="bin\*" Exclude="bin\*.html;bin\*.xsd" />
+    <!-- output files created by Publish builds -->
+    <CleanFiles Include="HexkitSetup.exe" />
+    <CleanFiles Include="HexkitSource.zip" />
+  </ItemGroup>
+</Project>

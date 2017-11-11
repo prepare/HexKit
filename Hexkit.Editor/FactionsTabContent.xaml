@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Hexkit.Editor.FactionsTabContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <Button Name="ChangeIdButton" x:FieldModifier="private" Grid.Column="0" Grid.Row="0" Click="OnFactionId">Change ID…</Button>
+    <Button Name="ChangeFactionButton" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" Click="OnFactionChange">Change Faction…</Button>
+    <Button Name="AddFactionButton" x:FieldModifier="private" Grid.Column="0" Grid.Row="1" Click="OnFactionAdd">Add Faction…</Button>
+    <Button Name="RemoveFactionButton" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" Click="OnFactionRemove">Remove Faction</Button>
+    <Button Name="MoveUpButton" x:FieldModifier="private" Grid.Column="0" Grid.Row="2" Click="OnFactionUp">Move _Up</Button>
+    <Button Name="MoveDownButton" x:FieldModifier="private" Grid.Column="1" Grid.Row="2" Click="OnFactionDown">Move _Down</Button>
+    <Button Name="ChangeHomesButton" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" Click="OnChangeHomes">Change Home _Sites…</Button>
+    <Button Name="ChangeColorsButton" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Center" Click="OnChangeColors">Change _Colors…</Button>
+    <ListView Name="FactionList" x:FieldModifier="private" Grid.Column="2" Grid.Row="0" Grid.RowSpan="6" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnFactionActivate">
+      <ListView.View>
+        <GridView>
+          <!-- column widths are set by FactionList.ActualWidth.ValueChanged -->
+          <GridViewColumn x:Name="FactionIdColumn" x:FieldModifier="private" Header="Faction ID" DisplayMemberBinding="{Binding Id}" />
+          <GridViewColumn x:Name="FactionNameColumn" x:FieldModifier="private" Header="Faction Name" DisplayMemberBinding="{Binding Name}" />
+        </GridView>
+      </ListView.View>
+    </ListView>
+  </Grid>
+</UserControl>

@@ -1,0 +1,52 @@
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Attack Site Dialog</title>
+</head>
+<body>
+  <h1>Attack Site Dialog</h1>
+  <p>This dialog shows all units that can attack the target site specified in the dialog’s title bar, and allows you to select the units to perform the attack.</p>
+  <ul>
+    <li><a href="#Map">Map View</a></li>
+    <li><a href="#Losses">Projected Losses</a></li>
+    <li>Choose <b>Select All Stacks (Alt+S)</b> to select all eligible units anywhere on the map to participate in the attack. This is the default selection.</li>
+    <li>Choose <b>Clear All Stacks (Alt+A)</b> to deselect all eligible units anywhere on the map. No unit will participate in the attack.</li>
+    <li><a href="#Units">Unit List</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Map">Map View</a> and <a href="#Units">Unit List</a> to adjust their respective share of the current window width.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept the current unit selection, dismiss the dialog, and execute the attack.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to dismiss the dialog without attacking. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h2><a name="Map">Map View</a></h2>
+  <p>The left side of this dialog is taken up by a map view. The target site of the attack is initially centered and selected.</p>
+  <ul>
+    <li><b>Highlighted</b> sites contain units that may attack the target site.</li>
+    <li><b>Left-click</b> to select a highlighted site or the target site for display in the <a href="#Units">Unit List</a>.</li>
+  </ul>
+  <p>The map view shows red arrows from all selected attackers towards the target site to visualize the directions of the attack.</p>
+  <h2><a name="Losses">Projected Losses</a></h2>
+  <p>This box shows the estimated losses for the attacker and the defender if the currently selected units performed the attack. Both numbers are given as percentages of the current combined strength of all attacking and defending units, respectively.</p>
+  <p>These numbers are not usually precise, and their exact meaning depends on the current scenario. In general, however, 100% means outright destruction of all units, while 0% means that no unit will suffer any damage whatsoever.</p>
+  <h2><a name="Units">Unit List</a></h2>
+  <p>This list shows the units occupying the site selected in the <a href="#Map">Map View</a>, and allows you to select the units that should participate in the attack.</p>
+  <p>If a highlighted site is selected, the list header reads “Attacking Units”, and the <b>Unit List</b> shows only those units that are eligible for attack.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowClasses.html">Entity Classes</a> dialog.</li>
+    <li><b>Check</b> an entry to have the unit participate in the attack.</li>
+    <li><b>Uncheck</b> an entry to exclude the unit from the attack.</li>
+    <li>Choose <b>Check All (Alt+C)</b> to check all units.</li>
+    <li>Choose <b>Uncheck All (Alt+U)</b> to uncheck all units.</li>
+  </ul>
+  <p>If the target site is selected, the list header reads “Defending Units”, and the <b>Unit List</b> shows all units in the selected site. This display is purely informational.</p>
+  <ul>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to show its <a href="DlgShowClasses.html">Entity Classes</a> dialog.</li>
+  </ul>
+  <p>If any other map site is selected, the list header reads “Invalid Site”, and the <b>Unit List</b> shows no data.</p>
+  <p>The <b>Property List</b> shows the statistics of the selected unit. Please refer to the <a href="GameViewProperty.html">Property List</a> page for details.</p>
+  </ul>
+</body>
+</html>

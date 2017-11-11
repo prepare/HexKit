@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Entities Page</title>
+</head>
+<body>
+  <h1>Entities Page</h1>
+  <p>This tab page consists of the common <a href="EditorViewLocation.html">Section Location</a> controls and editing facilities for the Entities section:</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Preview">Image Preview</a></li>
+    <li><a href="#Entities">Entity List</a></li>
+    <li><a href="#Places">Change Placement Sites (Alt+P)</a></li>
+  </ul>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the entity category shown in the <b>Entity List</b>.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to show all unit classes.</li>
+    <li>Choose <b>Terrain (Alt+T)</b> to show all terrain classes.</li>
+    <li>Choose <b>Effect (Alt+E)</b> to show all effect classes.</li>
+    <li>Choose <b>Upgrade (Alt+G)</b> to show all upgrade classes.</li>
+  </ul>
+  <h2><a name="Preview">Image Preview</a></h2>
+  <p>This box shows the stack of overlaid images that visually represents the entity class currently selected in the <b>Entity List</b>. The images are surrounded by a polygon outline as defined on the <a href="EditorTabAreas.html">Areas Page</a>.</p>
+  <p>An “invalid” icon (red circle with a slash) is shown if no valid image stack is defined for the selected entity class, or if the <b>Entity List</b> is empty.</p>
+  <h2><a name="Entities">Entity List</a></h2>
+  <p>This list shows all entity classes in the selected category currently defined in the Entities section.</p>
+  <ul>
+    <li>Column <b>Entity ID</b> shows the unique internal identifier associated with each entity class. The list entries are sorted by this column.</li>
+    <li>Column <b>Entity Name</b> shows the name that the game will display for this entity class.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to display its <a href="DlgChangeEntity.html">Change Entity Class</a> dialog, allowing you to change the name and definition of this entity class.</li>
+  </ul>
+  <p>Four buttons beside the list allow you to manipulate the list entries:</p>
+  <ul>
+    <li>Choose <b>Change ID…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, allowing you to the change the identifier associated with the selected entity class.</li>
+    <li>Choose <b>Change Entity…</b> to display the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog, allowing you to change the name and definition of the selected entity class.</li>
+    <li>Choose <b>Add Entity…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, followed by the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog, allowing you to enter the identifier and definition for a new entity class of the selected category.</li>
+    <li>Choose <b>Remove Entity</b> to delete the selected entity class.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. When adding a new entity class, the resulting <a href="DlgChangeEntity.html">Change Entity Class</a> dialog is initialized with the data of the currently selected entity class, if any.</p>
+  <p>2. Any identifier you enter will be checked for validity, as described on the <a href="DlgChangeIdentifier.html">Change Identifier</a> page, and uniqueness within the <b>Entity List</b>. Note that identifiers must actually be unique throughout all scenario sections, so Hexkit might still reject identifiers that were accepted by Hexkit Editor!</p>
+  <h2><a name="Places">Change Placement Sites</a> (<b>Alt+P</b>)</h2>
+  <p>Click this button to display the <a href="DlgChangePlacements.html">Change Placement Sites</a> dialog, allowing you to change the placement sites associated with the selected entity class.</p>
+  <p>This button is only enabled for entity classes of the <b>Unit</b> or <b>Terrain</b> category.</p>
+  <h3>Remarks</h3>
+  <p>Changing the placement sites of any entity class marks the <a href="EditorTabAreas.html">Areas Page</a> as changed, rather than the Entities page, because all map locations are stored in the Areas section.</p>
+</body>
+</html>

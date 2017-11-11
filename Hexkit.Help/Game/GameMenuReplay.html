@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Replay Menu</title>
+</head>
+<body>
+  <h1>Replay Menu</h1>
+  <p>This menu is disabled if no game is active.</p>
+  <ul>
+    <li><a name="All"><b>Replay All Turns</b></a> replays all commands that were executed since the start of the current game.</li>
+    <li><a name="Last"><b>Replay Last Turn</b></a> replays all commands that were executed since the active faction ended its previous turn.</li>
+    <li><a name="From"><b>Replay From Turn…</b></a> shows the <a href="DlgChangeTurn.html">Change Turn</a> dialog, allowing you to enter a turn index, and then replays all commands that were executed since the start of the specified game turn.</li>
+    <li><a name="Pause"><b>Pause Replay (Ctrl+P)</b></a> pauses or resumes an ongoing replay. A check mark is shown next to this option while the replay is paused.</li>
+    <li><a name="Skip"><b>Skip Faction (Ctrl+I)</b></a> skips all remaining commands of the current turn for the active faction during a replay.</li>
+    <li><a name="Stop"><b>Stop Replay (Escape)</b></a> stops an ongoing replay, or the execution of a human player command.</li>
+    <li><a name="Speed"><b>Replay Speed</b></a> opens a submenu allowing you to select the speed at which commands are executed and replayed on the <a href="GameViewMap.html">Map View</a>:
+      <ul>
+        <li><a name="SpeedSlow"><b>1 – Slow (Ctrl+1)</b></a> highlights map sites for one second, and shows display events at half speed.</li>
+        <li><a name="SpeedMedium"><b>2 – Medium (Ctrl+2)</b></a> highlights map sites for 500 msec, and shows display events at the default speed of 250 msec per event (unless specified otherwise by the scenario).</li>
+        <li><a name="SpeedFast"><b>3 – Fast (Ctrl+3)</b></a> highlights map sites for 100 msec, and shows display events at double speed.</li>
+        <li><a name="SpeedTurbo"><b>4 – Turbo (Ctrl+4)</b></a> highlights map sites for 100 msec, and skips display events entirely.</li>
+      </ul>
+      <p>Highlighted map sites include each command’s source and target sites (if any), and display events include the animation of moving units and the temporary appearance of visual effects.</p>
+    </li>
+    <li><a name="Scroll"><b>Scroll Map View (Scroll Lock)</b></a> enables or disables automatic <a href="GameViewMap.html">Map View</a> scrolling so that the effects of each command are visible. Uncheck this option if you want to retain full control over the map view.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. <b>Replay All Turns</b>, <b>Replay Last Turn</b>, and <b>Replay From Turn…</b> are disabled if a computer player is active, or if a game is already being replayed.</p>
+  <p>2. <b>Pause Replay</b>, <b>Skip Faction</b>, and <b>Stop Replay</b> are disabled <em>unless</em> a game is being replayed. <b>Stop Replay</b> is also enabled while a human player command is being executed.</p>
+  <p>3. The Hexkit Game interface remains useable while a game is being replayed, although some menu commands are disabled and response may be sluggish, especially at <b>Fast</b> speed.</p>
+  <p>4. Whenever the <b>Replay Speed</b> and <b>Scroll Map View</b> options change, they are automatically saved as the new default for the current user.</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Images Page</title>
+</head>
+<body>
+  <h1>Images Page</h1>
+  <p>This tab page consists of the common <a href="EditorViewLocation.html">Section Location</a> controls and editing facilities for the Images section:</p>
+  <ul>
+    <li><a href="#Transparency">Add Transparency (Alt+T)</a></li>
+    <li><a href="#Files">Image File List</a></li>
+    <li><a href="#Images">Image List</a></li>
+    <li><a href="#Information">Graphics Information (Alt+G)</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Files">Image File List</a> and <a href="#Images">Image List</a> to adjust their respective share of the current window width.</li>
+  </ul>
+  <h2><a name="Transparency">Add Transparency</a> (<b>Alt+T</b>)</h2>
+  <p>Check this option to display a standard Windows “Color” dialog, allowing you to define a color to be interpreted as transparent when images are overlaid on the map. If you check the <b>Add Transparency</b> option and then cancel the “Color” dialog, the option will be unchecked again.</p>
+  <ul>
+    <li>Choose <b>Change Color… (Alt+C)</b> to re-display the “Color” dialog and select a different color. If you confirm a new color choice while the <b>Add Transparency</b> option is unchecked, it will be checked automatically.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. Any user-defined color will be made transparent <em>in addition</em> to any transparent colors embedded in the image files; it is not possible to ignore the latter.</p>
+  <p>2. Changing transparency requires all image files to be unloaded and reloaded, which may take a few seconds on slower systems.</p>
+  <h2><a name="Files">Image File List</a></h2>
+  <p>This list shows all image files currently defined in the Images section. Image files supply the bitmap data used by all images.</p>
+  <ul>
+    <li>Column <b>Image File ID</b> shows the unique internal identifier associated with each image file. The list entries are sorted by this column.</li>
+    <li>Column <b>Image File Path</b> shows the path to the actual image file, relative to the <code>Images</code> folder of your Hexkit installation directory.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to show the contents of its image file in an independent window.</li>
+  </ul>
+  <p>Four buttons below the list allow you to manipulate the list entries:</p>
+  <ul>
+    <li>Choose <b>Change ID…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, allowing you to the change the identifier associated with the selected entry.</li>
+    <li>Choose <b>Change Path…</b> to display a standard Windows “Open” dialog, allowing you to change the file path associated with the selected entry.</li>
+    <li>Choose <b>Add File…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, followed by a standard Windows “Open” dialog, allowing you to enter the identifier and the file path for a new image file entry.</li>
+    <li>Choose <b>Remove File</b> to delete the selected entry. The actual file associated with this entry is unaffected.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. You cannot create or edit image files from within Hexkit Editor. You must use an external paint program for this task, such as Windows Paint.</p>
+  <p>2. Any identifier you enter will be checked for validity, as described on the <a href="DlgChangeIdentifier.html">Change Identifier</a> page, and uniqueness within the <b>Image File List</b>. Note that identifiers must actually be unique throughout all scenario sections, so Hexkit might still reject identifiers that were accepted by Hexkit Editor!</p>
+  <h2><a name="Images">Image List</a></h2>
+  <p>This list shows all images currently defined in the Images section. They provide the visual representation for the various object classes.</p>
+  <ul>
+    <li>Each image is labelled with its <b>identifier</b>. The list entries are sorted by identifiers.</li>
+    <li>Each image is represented by its <b>first frame</b>, surrounded by a polygon outline as defined on the <a href="EditorTabAreas.html">Areas Page</a>. Frames with invalid coordinates or an invalid source file will display an “invalid” icon (red circle with a slash).</li>
+    <li><b>Left-click</b> on an image to select it.</li>
+    <li><b>Double-click</b> on an image to display its <a href="DlgChangeImage.html">Change Image</a> dialog, allowing you to change its frames and other attributes.</li>
+  </ul>
+  <p>Four buttons below the list allow you to manipulate the list entries:</p>
+  <ul>
+    <li>Choose <b>Change ID…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, allowing you to the change the identifier associated with the selected image.</li>
+    <li>Choose <b>Change Image…</b> to display the <a href="DlgChangeImage.html">Change Image</a> dialog, allowing you to change the frames and other attributes of the selected image.</li>
+    <li>Choose <b>Add Image…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, followed by the <a href="DlgChangeImage.html">Change Image</a> dialog, allowing you to enter the identifier and definition for a new image.</li>
+    <li>Choose <b>Remove Image</b> to delete the selected image.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. When adding a new image, the resulting <a href="DlgChangeImage.html">Change Image</a> dialog is initialized with the data of the currently selected image, if any.</p>
+  <p>2. Any identifier you enter will be checked for validity, as described on the <a href="DlgChangeIdentifier.html">Change Identifier</a> page, and uniqueness within the <b>Image List</b>. Note that identifiers must actually be unique throughout all scenario sections, so Hexkit might still reject identifiers that were accepted by Hexkit Editor!</p>
+  <h2><a name="Information">Graphics Information (Alt+G)</a></h2>
+  <p>Click this button to display the <a href="DlgChangeInformation.html">Graphics Information</a> dialog, allowing you to edit various informational text associated with the graphical tileset.</p>
+</body>
+</html>

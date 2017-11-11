@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Areas Page</title>
+</head>
+<body>
+  <h1>Areas Page</h1>
+  <p>This tab page consists of the common <a href="EditorViewLocation.html">Section Location</a> controls and editing facilities for the Areas section (also known as “map editor”):</p>
+  <ul>
+    <li><a href="#Settings">Map Settings</a></li>
+    <li><a href="#Mode">Site Edit Mode</a></li>
+    <li><a href="#Site">Selected Site</a></li>
+    <li><a href="#Map">Map View</a></li>
+  </ul>
+  <h2><a name="Settings">Map Settings</a></h2>
+  <p>The topmost buttons allow you to change settings affecting the entire game map.</p>
+  <ul>
+    <li>Choose <b>Change Map Geometry… (Alt+G)</b> to display the <a href="DlgChangeGeometry.html">Change Map Geometry</a> dialog, allowing you to change the size and structure of the game map.</li>
+    <li>Choose <b>Change Default Contents… (Alt+D)</b> to display the <a href="DlgChangeSite.html">Change Default Contents</a> dialog, allowing you to edit the default terrain stack for all map sites.</li>
+    <li>Choose <b>Overlay… (Alt+L)</b> to display the <a href="DlgChangeOverlay.html">Change Overlay Image</a> dialog, allowing you to define an overlay image that appears <em>below</em> the game map within both Hexkit Editor and Hexkit Game.</li>
+    <li>Choose <b>Editor Overlay… (Alt+T)</b> to display the <a href="DlgChangeOverlay.html">Change Overlay Image</a> dialog, allowing you to define an overlay image that appears <em>above</em> the game map within Hexkit Editor only.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The current <b>Overlay</b> image is saved to the Areas section. One or more background terrains must be transparent for this image to be visible through the game map.</p>
+  <p>2. The current <b>Editor Overlay</b> image is saved to the Hexkit Editor options for the current user. Use the <a href="#Map">Opacity</a> slider to adjust the visibility of this image.</p>
+  <h2><a name="Mode">Site Edit Mode</a></h2>
+  <p>When a map site is selected on the <a href="#Map">Map View</a>, there are three ways to change or transfer its owner and contents:</p>
+  <ul>
+    <li>Choose <b>Modify (Alt+M)</b> to load the owner and contents of each newly selected site into the <a href="#Site">Selected Site</a> box, discarding the data of the previously selected site. This is the default setting.</li>
+    <li>Choose <b>Replace (Alt+R)</b> to replace the data of each newly selected site with the current owner and contents of the <a href="#Site">Selected Site</a> box, discarding the previous data of the newly selected site.</li>
+    <li>Choose <b>Fill (Alt+I)</b> to replace the data of each newly selected site, <em>and</em> of all contiguous sites with identical owner and contents, with the current owner and contents of the <a href="#Site">Selected Site</a> box.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Replace</b> and <b>Fill</b> buttons are disabled if no map site is selected. In this case, editing automatically reverts to <b>Modify</b> mode.</p>
+  <p>2. The <b>Replace</b> and <b>Fill</b> modes are useful for quickly “painting” multiple sites with the same owner and contents, but take care not to accidentally overwrite the wrong area! Make sure to revert to <b>Modify</b> mode if you just want to examine the map.</p>
+  <p>3. Filling a large area of the map can take a few seconds, even on fast systems.</p>
+  <h2><a name="Site">Selected Site</a></h2>
+  <p>This box shows information on the selected map site, if any. Click on a site in the <a href="#Map">Map View</a> to select it.</p>
+  <ul>
+    <li><b>Site</b> (in the box title) shows the map coordinates of the selected site.</li>
+    <li>Use the <b>Owner (Alt+O)</b> drop-down box to select the owner of the selected site. This box contains the unique internal identifiers of all factions currently defined on the <a href="EditorTabFactions.html">Factions Page</a>; plus any additional identifiers currently defined by the Areas section; and a default entry, “(unowned)”, indicating sites that do not belong to any faction.</li>
+    <li>Choose <b>Change Site Contents… (Alt+S)</b> to display the <a href="DlgChangeSite.html">Change Site Contents</a> dialog, allowing you to edit the entity stacks of the selected site.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Selected Site</b> box is disabled if no map site is selected.</p>
+  <p>2. Changing the <b>Owner</b> also changes the owner of any present units if they belong to the previous site owner; otherwise, the unit owner remains unchanged.</p>
+  <p>3. The Areas section stores the identifiers of all factions that own at least one site. Such data persists even when the faction identifier is no longer defined on the <a href="EditorTabFactions.html">Factions Page</a>.</p>
+  <p>To discard the identifier of a faction not defined on the <b>Factions Page</b>, set all sites it owns to “(unowned)”, then switch to a different tab and back to the <b>Areas Page</b>, or save and reload the current Areas XML file.</p>
+  <h2><a name="Map">Map View</a></h2>
+  <p>The rest of this tab page is taken up by the map view. Please refer to the <a href="GameViewMap.html">Map View</a> section of the Hexkit Game documentation for details, but note the following differences:</p>
+  <ul>
+    <li><b>Double-click</b> to show the <a href="DlgChangeSite.html">Change Site Contents</a> dialog, opening on the <a href="DlgChangeSiteTerrain.html">Terrain Page</a>.</li>
+    <li><b>Right-click</b> to show the <a href="DlgChangeSite.html">Change Site Contents</a> dialog, opening on the <a href="DlgChangeSiteOther.html">Other Page</a>. The first category that contains any local entities is selected by default, or the <b>Unit</b> category if there are no local entities.</li>
+    <li>Use the <b>Opacity</b> slider in the upper-left corner to change the opacity of the <a href="#Settings">Editor Overlay</a> image, if any.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <b>Opacity</b> slider appears only if an <a href="#Settings">Editor Overlay</a> image is currently defined.</p>
+  <p>2. Whenever you move the <b>Opacity</b> slider, its new value is automatically saved to the Hexkit Editor options for the current user.</p>
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿<Window x:Class="Hexkit.Editor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tw="clr-namespace:Tektosyne.Windows;assembly=Tektosyne.Windows"
+    xmlns:local="clr-namespace:Hexkit.Editor"
+    Title="Hexkit Editor" AllowDrop="True" MinWidth="460" MinHeight="420" Width="460" Height="420" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Editor;component/Commands.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="New" CanExecute="CommandCanExecute" Executed="FileNewExecuted" />
+    <CommandBinding Command="Open" CanExecute="CommandCanExecute" Executed="FileOpenExecuted" />
+    <CommandBinding Command="{StaticResource fileRevertCommand}" CanExecute="FileCommandCanExecute" Executed="FileRevertExecuted" />
+    <CommandBinding Command="Save" CanExecute="FileCommandCanExecute" Executed="FileSaveExecuted" />
+    <CommandBinding Command="{StaticResource fileSaveAsCommand}" CanExecute="CommandCanExecute" Executed="FileSaveAsExecuted" />
+    <CommandBinding Command="{StaticResource fileSaveAllCommand}" CanExecute="CommandCanExecute" Executed="FileSaveAllExecuted" />
+    <CommandBinding Command="{StaticResource fileExitCommand}" CanExecute="CommandCanExecute" Executed="FileExitExecuted" />
+    <CommandBinding Command="{StaticResource editMasterCommand}" CanExecute="CommandCanExecute" Executed="EditMasterExecuted" />
+    <CommandBinding Command="{StaticResource editImagesCommand}" CanExecute="CommandCanExecute" Executed="EditImagesExecuted" />
+    <CommandBinding Command="{StaticResource editVariablesCommand}" CanExecute="CommandCanExecute" Executed="EditVariablesExecuted" />
+    <CommandBinding Command="{StaticResource editEntitiesCommand}" CanExecute="CommandCanExecute" Executed="EditEntitiesExecuted" />
+    <CommandBinding Command="{StaticResource editFactionsCommand}" CanExecute="CommandCanExecute" Executed="EditFactionsExecuted" />
+    <CommandBinding Command="{StaticResource editAreasCommand}" CanExecute="CommandCanExecute" Executed="EditAreasExecuted" />
+    <CommandBinding Command="{StaticResource viewAnimationCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewAnimationExecuted" />
+    <CommandBinding Command="{StaticResource viewShowFlagsCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowFlagsExecuted" />
+    <CommandBinding Command="{StaticResource viewShowGridCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowGridExecuted" />
+    <CommandBinding Command="{StaticResource viewShowOwnerCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowOwnerExecuted" />
+    <CommandBinding Command="{StaticResource viewShowGaugesCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowGaugesExecuted" />
+    <CommandBinding Command="{StaticResource viewShowVariableCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewShowVariableExecuted" />
+    <CommandBinding Command="{StaticResource viewCenterSiteCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewCenterSiteExecuted" />
+    <CommandBinding Command="{StaticResource viewZoomStdCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewZoomStdExecuted" />
+    <CommandBinding Command="{StaticResource viewZoomInCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewZoomInExecuted" />
+    <CommandBinding Command="{StaticResource viewZoomOutCommand}" CanExecute="ViewCommandCanExecute" Executed="ViewZoomOutExecuted" />
+    <CommandBinding Command="{StaticResource viewBitmapGridCommand}" CanExecute="CommandCanExecute" Executed="ViewBitmapGridExecuted" />
+    <CommandBinding Command="{StaticResource viewOpaqueImagesCommand}" CanExecute="CommandCanExecute" Executed="ViewOpaqueImagesExecuted" />
+    <CommandBinding Command="{StaticResource viewStaticArrowsCommand}" CanExecute="CommandCanExecute" Executed="ViewStaticArrowsExecuted" />
+    <CommandBinding Command="{StaticResource viewStaticMarkerCommand}" CanExecute="CommandCanExecute" Executed="ViewStaticMarkerExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeSystemCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeSystemExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeClassicCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeClassicExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeLunaCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeLunaExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeLunaHomesteadCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeLunaHomesteadExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeLunaMetallicCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeLunaMetallicExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeRoyaleCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeRoyaleExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeAeroCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeAeroExecuted" />
+    <CommandBinding Command="{StaticResource viewThemeAero2Command}" CanExecute="CommandCanExecute" Executed="ViewThemeAero2Executed" />
+    <CommandBinding Command="{StaticResource viewThemeAeroLiteCommand}" CanExecute="CommandCanExecute" Executed="ViewThemeAeroLiteExecuted" />
+    <CommandBinding Command="{StaticResource viewSaveWindowCommand}" CanExecute="CommandCanExecute" Executed="ViewSaveWindowExecuted" />
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+    <CommandBinding Command="{StaticResource helpTabPageCommand}" Executed="HelpTabPageExecuted" />
+    <CommandBinding Command="{StaticResource helpReadMeCommand}" Executed="HelpReadMeExecuted" />
+    <CommandBinding Command="{StaticResource helpWhatsNewCommand}" Executed="HelpWhatsNewExecuted" />
+    <CommandBinding Command="{StaticResource helpAboutCommand}" Executed="HelpAboutExecuted" />
+  </Window.CommandBindings>
+  <DockPanel>
+    <Menu Name="MainMenu" x:FieldModifier="private" DockPanel.Dock="Top">
+      <MenuItem Header="_File" Tag="EditorMenuFile.html" ToolTip="Loading and saving">
+        <MenuItem Header="_New" Command="New" Tag="EditorMenuFile.html#New" ToolTip="Clear tab contents and file association" />
+        <MenuItem Header="_Open…" Command="Open" Tag="EditorMenuFile.html#Open" ToolTip="Change associated section file and open it" />
+        <MenuItem Header="_Revert" Command="{StaticResource fileRevertCommand}" Tag="EditorMenuFile.html#Revert" ToolTip="Revert tab contents to associated section file" />
+        <Separator />
+        <MenuItem Header="_Save" Command="Save" Tag="EditorMenuFile.html#Save" ToolTip="Save tab contents to associated section file" />
+        <MenuItem Header="Save _As…" Command="{StaticResource fileSaveAsCommand}" Tag="EditorMenuFile.html#SaveAs" ToolTip="Change associated section file and save it" />
+        <MenuItem Header="Save A_ll" Command="{StaticResource fileSaveAllCommand}" Tag="EditorMenuFile.html#SaveAll" ToolTip="Save all tab contents to associated files" />
+        <Separator />
+        <MenuItem Header="E_xit" Command="{StaticResource fileExitCommand}" Tag="EditorMenuFile.html#Exit" ToolTip="Exit Hexkit Editor" />
+      </MenuItem>
+      <MenuItem Name="MenuEdit" x:FieldModifier="private" Header="_Edit" Tag="EditorMenuEdit.html" ToolTip="Select tab to edit">
+        <MenuItem Header="_Master" Command="{StaticResource editMasterCommand}" Tag="EditorMenuEdit.html#Master" ToolTip="Edit title and description" />
+        <MenuItem Header="_Images" Command="{StaticResource editImagesCommand}" Tag="EditorMenuEdit.html#Images" ToolTip="Edit image definitions" />
+        <MenuItem Header="_Variables" Command="{StaticResource editVariablesCommand}" Tag="EditorMenuEdit.html#Variables" ToolTip="Edit attributes and resources" />
+        <MenuItem Header="_Entities" Command="{StaticResource editEntitiesCommand}" Tag="EditorMenuEdit.html#Entities" ToolTip="Edit entity classes" />
+        <MenuItem Header="_Factions" Command="{StaticResource editFactionsCommand}" Tag="EditorMenuEdit.html#Factions" ToolTip="Edit player factions" />
+        <MenuItem Header="_Areas" Command="{StaticResource editAreasCommand}" Tag="EditorMenuEdit.html#Areas" ToolTip="Edit the game map" />
+      </MenuItem>
+      <MenuItem Header="_View" Tag="EditorMenuView.html" ToolTip="Customize display">
+        <MenuItem Name="MenuViewAnimation" x:FieldModifier="private" Header="_Animation" Command="{StaticResource viewAnimationCommand}" Tag="EditorMenuView.html#Animation" ToolTip="Toggle map animations" />
+        <MenuItem Name="MenuViewShowFlags" x:FieldModifier="private" Header="Show _Flags" Command="{StaticResource viewShowFlagsCommand}" Tag="EditorMenuView.html#ShowFlags" ToolTip="Toggle flags for unit stacks" />
+        <MenuItem Name="MenuViewShowGrid" x:FieldModifier="private" Header="Show _Grid" Command="{StaticResource viewShowGridCommand}" Tag="EditorMenuView.html#ShowGrid" ToolTip="Toggle grid outline for map sites" />
+        <MenuItem Name="MenuViewShowOwner" x:FieldModifier="private" Header="Show _Owner" Command="{StaticResource viewShowOwnerCommand}" Tag="EditorMenuView.html#ShowOwner" ToolTip="Toggle owner colors for map sites" />
+        <MenuItem Header="Show Ga_uges…" Command="{StaticResource viewShowGaugesCommand}" Tag="EditorMenuView.html#ShowGauges" ToolTip="Show resource gauges for units" />
+        <MenuItem Header="Show _Variable…" Command="{StaticResource viewShowVariableCommand}" Tag="EditorMenuView.html#ShowVariable" ToolTip="Show attributes &amp; resources on map sites" />
+        <Separator />
+        <MenuItem Header="_Center Site" Command="{StaticResource viewCenterSiteCommand}" InputGestureText="C" Tag="EditorMenuView.html#CenterSite" ToolTip="Center map view on selected site" />
+        <MenuItem Name="MenuViewZoom" x:FieldModifier="private" Header="_Zoom" Tag="EditorMenuView.html#Zoom" ToolTip="Change zoom level">
+          <MenuItem Name="MenuViewZoomStd" x:FieldModifier="private" Header="_Standard" Command="{StaticResource viewZoomStdCommand}" Tag="EditorMenuView.html#ZoomStd" ToolTip="Standard zoom level" />
+          <MenuItem Name="MenuViewZoomIn" x:FieldModifier="private" Header="Zoom _In" Command="{StaticResource viewZoomInCommand}" InputGestureText="Z" Tag="EditorMenuView.html#ZoomIn" ToolTip="Increase zoom level" />
+          <MenuItem Name="MenuViewZoomOut" x:FieldModifier="private" Header="Zoom _Out" Command="{StaticResource viewZoomOutCommand}" InputGestureText="X" Tag="EditorMenuView.html#ZoomOut" ToolTip="Decrease zoom level" />
+        </MenuItem>
+        <MenuItem Header="_Performance" Tag="EditorMenuView.html#Performance" ToolTip="Change performance options">
+          <MenuItem Name="MenuViewBitmapGrid" x:FieldModifier="private" Header="Use _Bitmap Grid" Command="{StaticResource viewBitmapGridCommand}" Tag="EditorMenuView.html#BitmapGrid" ToolTip="Draw map grid using fast but inaccurate bitmaps" />
+          <MenuItem Name="MenuViewOpaqueImages" x:FieldModifier="private" Header="Use _Opaque Images" Command="{StaticResource viewOpaqueImagesCommand}" Tag="EditorMenuView.html#OpaqueImages" ToolTip="Assume images are opaque to avoid alpha blending" />
+          <MenuItem Name="MenuViewStaticArrows" x:FieldModifier="private" Header="Use Static _Arrows" Command="{StaticResource viewStaticArrowsCommand}" Tag="EditorMenuView.html#StaticArrows" ToolTip="Draw attack &amp; move arrows without color animation" />
+          <MenuItem Name="MenuViewStaticMarker" x:FieldModifier="private" Header="Use Static _Marker" Command="{StaticResource viewStaticMarkerCommand}" Tag="EditorMenuView.html#StaticMarker" ToolTip="Draw site selection marker without color animation" />
+        </MenuItem>
+        <Separator />
+        <MenuItem Header="Display _Theme" Tag="EditorMenuView.html#Theme" ToolTip="Change display theme (requires restart)">
+          <MenuItem Name="MenuViewThemeSystem" x:FieldModifier="private" Header="_System" Command="{StaticResource viewThemeSystemCommand}" Tag="EditorMenuView.html#ThemeSystem" ToolTip="Use default system theme" />
+          <MenuItem Name="MenuViewThemeClassic" x:FieldModifier="private" Header="_Classic" Command="{StaticResource viewThemeClassicCommand}" Tag="EditorMenuView.html#ThemeClassic" ToolTip="Use Classic theme (Windows 2000)" />
+          <MenuItem Name="MenuViewThemeLuna" x:FieldModifier="private" Header="_Luna" Command="{StaticResource viewThemeLunaCommand}" Tag="EditorMenuView.html#ThemeLuna" ToolTip="Use Luna theme (Windows XP)" />
+          <MenuItem Name="MenuViewThemeLunaHomestead" x:FieldModifier="private" Header="Luna _Homestead" Command="{StaticResource viewThemeLunaHomesteadCommand}" Tag="EditorMenuView.html#ThemeLunaHomestead" ToolTip="Use Luna Homestead theme (Windows XP)" />
+          <MenuItem Name="MenuViewThemeLunaMetallic" x:FieldModifier="private" Header="Luna _Metallic" Command="{StaticResource viewThemeLunaMetallicCommand}" Tag="EditorMenuView.html#ThemeLunaMetallic" ToolTip="Use Luna Metallic theme (Windows XP)" />
+          <MenuItem Name="MenuViewThemeRoyale" x:FieldModifier="private" Header="_Royale" Command="{StaticResource viewThemeRoyaleCommand}" Tag="EditorMenuView.html#ThemeRoyale" ToolTip="Use Royale theme (Windows XP Media Center Edition)" />
+          <MenuItem Name="MenuViewThemeAero" x:FieldModifier="private" Header="_Aero" Command="{StaticResource viewThemeAeroCommand}" Tag="EditorMenuView.html#ThemeAero" ToolTip="Use Aero theme (Windows Vista/7)" />
+          <MenuItem Name="MenuViewThemeAero2" x:FieldModifier="private" Header="Aero _2" Command="{StaticResource viewThemeAero2Command}" Tag="EditorMenuView.html#ThemeAero2" ToolTip="Use Aero 2 theme (Windows 8)" />
+          <MenuItem Name="MenuViewThemeAeroLite" x:FieldModifier="private" Header="Aero L_ite" Command="{StaticResource viewThemeAeroLiteCommand}" Tag="EditorMenuView.html#ThemeAeroLite" ToolTip="Use Aero Lite theme (Windows 8)" />
+        </MenuItem>
+        <MenuItem Header="_Save Window" Command="{StaticResource viewSaveWindowCommand}" Tag="EditorMenuView.html#SaveWindow" ToolTip="Save current window size and location" />
+      </MenuItem>
+      <MenuItem Header="_Help" Tag="EditorMenuHelp.html" ToolTip="Show online help">
+        <MenuItem Header="_Contents" Command="Help" Tag="EditorMenuHelp.html#Contents" ToolTip="Show list of help topics" />
+        <MenuItem Header="_Tab Page" Command="{StaticResource helpTabPageCommand}" Tag="EditorMenuHelp.html#TabPage" ToolTip="Show help for active tab page" />
+        <MenuItem Header="_Read Me" Command="{StaticResource helpReadMeCommand}" Tag="EditorMenuHelp.html#ReadMe" ToolTip="Read about installation and troubleshooting" />
+        <MenuItem Header="_What’s New" Command="{StaticResource helpWhatsNewCommand}" Tag="EditorMenuHelp.html#WhatsNew" ToolTip="Show changes in this and earlier releases" />
+        <Separator />
+        <MenuItem Header="_About Hexkit" Command="{StaticResource helpAboutCommand}" Tag="EditorMenuHelp.html#About" ToolTip="Show basic program information" />
+      </MenuItem>
+    </Menu>
+    <StatusBar DockPanel.Dock="Bottom">
+      <!-- placeholder for resizing grip -->
+      <StatusBarItem DockPanel.Dock="Right">
+        <TextBlock Width="10" />
+      </StatusBarItem>
+      <StatusBarItem DockPanel.Dock="Right">
+        <tw:FormatTextBlock Name="StatusPositionFormat" x:FieldModifier="private" Format="({0:D3},{1:D3})" Width="60" />
+      </StatusBarItem>
+      <Separator DockPanel.Dock="Right" />
+      <StatusBarItem>
+        <tw:StackTextBlock Name="StatusMessage" x:FieldModifier="private" />
+      </StatusBarItem>
+    </StatusBar>
+    <TabControl Name="EditorTabControl" x:FieldModifier="private" SelectionChanged="OnTabSelected">
+      <local:SectionTabItem x:Name="MasterTab" x:FieldModifier="internal" Header="Master" />
+      <local:SectionTabItem x:Name="ImagesTab" x:FieldModifier="internal" Header="Images" />
+      <local:SectionTabItem x:Name="VariablesTab" x:FieldModifier="private" Header="Variables" />
+      <local:SectionTabItem x:Name="EntitiesTab" x:FieldModifier="private" Header="Entities" />
+      <local:SectionTabItem x:Name="FactionsTab" x:FieldModifier="private" Header="Factions" />
+      <local:SectionTabItem x:Name="AreasTab" x:FieldModifier="internal" Header="Areas" />
+    </TabControl>
+  </DockPanel>
+</Window>

@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Hexkit.Editor.AreasTabContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition MinWidth="160" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <Grid Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Button Name="ChangeGeometryButton" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" Click="OnChangeGeometry">Change Map _Geometry…</Button>
+      <Button Name="ChangeDefaultButton" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" Click="OnChangeDefault">Change _Default Contents…</Button>
+      <Button Name="OverlayButton" x:FieldModifier="private" Grid.Column="0" Grid.Row="2" Click="OnChangeOverlay">Over_lay…</Button>
+      <Button Name="EditorOverlayButton" Grid.Column="1" Grid.Row="2" Click="OnChangeOverlay">Edi_tor Overlay…</Button>
+    </Grid>
+    <GroupBox Grid.Column="0" Grid.Row="1" Header="Site Edit Mode">
+      <StackPanel Orientation="Horizontal">
+        <StackPanel.Resources>
+          <Style TargetType="RadioButton" BasedOn="{StaticResource {x:Type RadioButton}}">
+            <Setter Property="Margin" Value="5,4" />
+          </Style>
+        </StackPanel.Resources>
+        <RadioButton Name="ModifyToggle" x:FieldModifier="private" ToolTip="Click Map to Modify Site" IsChecked="true">_Modify</RadioButton>
+        <RadioButton Name="ReplaceToggle" x:FieldModifier="private" ToolTip="Click Map to Replace Site" IsEnabled="false">_Replace</RadioButton>
+        <RadioButton Name="FillToggle" x:FieldModifier="private" ToolTip="Click Map to Flood-Fill Area" IsEnabled="false">F_ill</RadioButton>
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Name="SiteGroup" x:FieldModifier="private" Grid.Column="0" Grid.Row="2" Header="Site (–,–)">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Target="{Binding ElementName=OwnerCombo}">_Owner:</Label>
+        <ComboBox Name="OwnerCombo" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" SelectionChanged="OnOwnerSelected" />
+        <Button Name="ChangeSiteButton" x:FieldModifier="private" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="OnChangeSite">Change _Site Contents…</Button>
+      </Grid>
+    </GroupBox>
+    <UserControl Name="MapViewHost" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Style="{StaticResource defaultStyle}" />
+    <Slider Name="OpacitySlider" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,10,0,0" Orientation="Vertical"
+            Minimum="0" Maximum="1" LargeChange="0.1" SmallChange="0.1" TickFrequency="0.1" TickPlacement="TopLeft" ValueChanged="OnOpacityChanged" />
+  </Grid>
+</UserControl>

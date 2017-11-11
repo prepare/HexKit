@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Entity Class: Other Page</title>
+</head>
+<body>
+  <h1>Change Entity Class: Other Page</h1>
+  <p>This tab page of the <a href="DlgChangeEntity.html">Change Entity Class</a> dialog allows you to edit various unrelated settings of an entity class that don’t fit anywhere else.</p>
+  <ul>
+    <li><a href="#ModifierRange">Modifier Range (Alt+R)</a></li>
+    <li><a href="#Valuation">Computer Valuation (Alt+V)</a></li>
+    <li><a href="#MapView">Map View Options</a></li>
+    <li>See <a href="DlgChangeEntity.html">Change Entity Class</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="ModifierRange">Modifier Range (Alt+R)</a></h2>
+  <p>Use this field to change the range of any <b>UnitsRanged</b> or <b>OwnerUnitsRanged</b> modifiers defined on the <a href="DlgChangeEntityVars.html">Variables Page</a>. Zero indicates that ranged modifiers apply to all eligible units placed anywhere on the map.</p>
+  <p>Positive values apply ranged modifiers only within the indicated map distance around the entity’s current site (for placed entities) or the owning faction’s home site (for upgrades).</p>
+  <h2><a name="Valuation">Computer Valuation (Alt+V)</a></h2>
+  <p>Use this field to change the valuation of the entity class. Legal values range from zero to one. Higher values indicate that the entity class, and any entities based on it, are more “desirable” to computer players.</p>
+  <p>The actual effect of this value depends on the the rule script, the computer player algorithm in use, and the concrete game situation. Generally, however, the valuation should reflect the relative value of an entity class within its category. Entity classes that are worthless or cannot belong to a faction should have a valuation of zero.</p>
+  <h2><a name="MapView">Map View Options</a></h2>
+  <p>This box contains options that affect an entity’s visual appearance on a map view. They have no effect on the entity’s visual appearance in other contexts, such as dialogs and image lists.</p>
+  <ul>
+    <li>Check <b>Show Images (Alt+S)</b> to show the combined image stack on map views. Uncheck this option for background terrains after defining an overlay image on the <a href="EditorTabAreas.html">Areas Page</a> so that the overlay image provides the visual background for the entity’s map site.</li>
+    <li>Check <b>Add Drop Shadow (Alt+D)</b> to apply a drop shadow effect to the combined image stack, for clearer distinction against background terrain. Drop shadows are enabled by default for units, disabled by default for all other entity classes, and unavailable for background terrains.</li>
+    <li>Check <b>Translucent Images (Alt+T)</b> to inform Hexkit that the combined image stack contains semi-transparent pixels. Hexkit will always use alpha blending to draw translucent image stacks, even when the <a href="EditorMenuView.html#OpaqueImages">Use Opaque Images</a> performance option is enabled.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The other two options have no effect if the <b>Show Images</b> option is disabled.</p>
+  <p>2. Use the <a href="DlgChangeTemplateText.html">Change Entity Instance</a> dialog to override the <b>Show Images</b> option for individual entities.</p>
+</body>
+</html>

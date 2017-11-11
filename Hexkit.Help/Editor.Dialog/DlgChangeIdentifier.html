@@ -1,0 +1,22 @@
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Identifier Dialog</title>
+</head>
+<body>
+  <h1>Change Identifier Dialog</h1>
+  <p>This dialog allows you to edit the unique identifier of a given scenario element, as specified in the dialog’s title bar.</p>
+  <ul>
+    <li>Use the <b>Identifier (Alt+I)</b> field to enter or change the identifier.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept any changes made and dismiss the dialog. If an illegal identifier was entered (see below), a notification message will appear and the dialog will stay open.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. All identifiers must be valid NCNames according to the W3C XML 1.0 specification. That is, they must contain no spaces, and no punctuation other than periods, hyphens, and underscores. Digits are legal but the identifier must start with a letter or underscore.</p>
+  <p>2. All identifiers must be unique throughout all scenario sections. Hexkit Editor does not currently verify this restriction but it does check for uniqueness within the identifier’s collection, e.g. the list of unit classes for a unit class ID.</p>
+  <p>3. Choosing <b>OK</b> or pressing <b>Enter</b> while the <b>Identifier</b> field is empty has the same effect as choosing <b>Cancel</b> or pressing <b>Escape</b>. That is, the identifier remains unchanged and the current operation is aborted.</p>
+</body>
+</html>

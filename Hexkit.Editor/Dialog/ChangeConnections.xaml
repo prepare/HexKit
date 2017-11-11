@@ -1,0 +1,44 @@
+﻿<Window x:Class="Hexkit.Editor.Dialog.ChangeConnections"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:hg="clr-namespace:Hexkit.Graphics;assembly=Hexkit.Graphics"
+    Title="Change Connections" ResizeMode="CanMinimize" ShowInTaskbar="False" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <StackPanel Orientation="Vertical">
+    <Canvas Width="260" Height="180">
+      <Canvas.Resources>
+        <Style TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
+          <Setter Property="IsThreeState" Value="false" />
+          <Setter Property="Height" Value="24" />
+          <Setter Property="Margin" Value="0" />
+          <Setter Property="Padding" Value="0,1,0,0" />
+          <Setter Property="Width" Value="24" />
+        </Style>
+      </Canvas.Resources>
+      <Label Name="FrameInfo" x:FieldModifier="private" Canvas.Left="0" Canvas.Top="0">Frame</Label>
+      <hg:ImageFrameRenderer x:Name="FramePreview" x:FieldModifier="private" Canvas.Left="75" Canvas.Top="35" Width="114" Height="114" />
+      <ToggleButton Name="NorthToggle" x:FieldModifier="private" Canvas.Left="120" Canvas.Top="10" />
+      <ToggleButton Name="NorthEastToggle" x:FieldModifier="private" Canvas.Left="165" Canvas.Top="35" />
+      <ToggleButton Name="EastToggle" x:FieldModifier="private" Canvas.Left="190" Canvas.Top="80" />
+      <ToggleButton Name="SouthEastToggle" x:FieldModifier="private" Canvas.Left="165" Canvas.Top="125" />
+      <ToggleButton Name="SouthToggle" x:FieldModifier="private" Canvas.Left="120" Canvas.Top="150" />
+      <ToggleButton Name="SouthWestToggle" x:FieldModifier="private" Canvas.Left="75" Canvas.Top="125" />
+      <ToggleButton Name="WestToggle" x:FieldModifier="private" Canvas.Left="50" Canvas.Top="80" />
+      <ToggleButton Name="NorthWestToggle" x:FieldModifier="private" Canvas.Left="75" Canvas.Top="35" />
+    </Canvas>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsDefault="True" Click="OnAccept" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button IsCancel="True" Style="{StaticResource dialogButtonStyle}">Cancel</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+  </StackPanel>
+</Window>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Faction: Classes Page</title>
+</head>
+<body>
+  <h1>Change Faction: Classes Page</h1>
+  <p>This tab page of the <a href="DlgChangeFaction.html">Change Faction</a> dialog allows you to edit the list of entity classes that the player faction may build.</p>
+  <ul>
+    <li><a href="#Category">Category</a></li>
+    <li><a href="#Classes">Entity Classes</a></li>
+    <li>See <a href="DlgChangeFaction.html">Change Faction</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>Any faction may own entities of any class that are predefined in the scenario or explicitly created in the rule script, regardless of whether the corresponding entry is checked in the <a href="#Classes">Entity Classes</a> list.</p>
+  <h2><a name="Category">Category</a></h2>
+  <p>This box allows you to select the entity category shown in the <a href="#Classes">Entity Classes</a> list.</p>
+  <ul>
+    <li>Choose <b>Unit (Alt+U)</b> to show unit classes.</li>
+    <li>Choose <b>Terrain (Alt+T)</b> to show terrain classes.</li>
+    <li>Choose <b>Upgrade (Alt+G)</b> to show upgrade classes.</li>
+  </ul>
+  <h2><a name="Classes">Entity Classes</a></h2>
+  <p>This list shows the identifiers of all entity classes of the selected <a href="#Category">Category</a> currently defined on the <a href="EditorTabEntities.html">Entities Page</a>.</p>
+  <ul>
+    <li><b>Check</b> an entry to indicate that this faction may build the selected entity class, provided the faction’s resources meet the required build costs.</li>
+    <li><b>Uncheck</b> on an entry to indicate that this faction may not build the selected entity class.</li>
+  </ul>
+</body>
+</html>

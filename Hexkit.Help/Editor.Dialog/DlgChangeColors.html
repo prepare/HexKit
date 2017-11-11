@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Faction Colors Dialog</title>
+</head>
+<body>
+  <h1>Change Faction Colors Dialog</h1>
+  <p>This dialog allows you to edit the color codes for all player factions.</p>
+  <ul>
+    <li>Choose <b>Change Color… (Alt+C)</b> to display a standard Windows “Color” dialog, allowing you to change the color of the selected faction in the <a href="#Factions">Faction List</a>.</li>
+    <li>Choose <b>Reset Colors (Alt+R)</b> to reset the colors of <em>all</em> factions to their default values, according to the current faction sequence.</li>
+    <li><a href="#Factions">Faction List</a></li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> when the focus is on the list to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h2><a name="Factions">Faction List</a></h2>
+  <p>This list shows the identifiers of all factions currently defined on the <a href="EditorTabFactions.html">Factions Page</a>, along with their current colors.</p>
+  <ul>
+    <li>Column <b>Faction</b> shows the unique internal identifier associated with each faction.</li>
+    <li>Column <b>Color</b> shows the color that represents each faction on a color-coded display, as well as its hexadecimal ARGB representation.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to display a standard Windows “Color” dialog for the selected faction, as with the <b>Change Color…</b> button.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. The <a href="#Factions">Faction List</a> is empty only if no factions are currently defined. Every faction is always associated with a color code.</p>
+  <p>2. The default color for a faction is one out of eight predefined colors which correspond to positions on the <a href="EditorTabFactions.html">Factions Page</a>. Once created, a faction will keep its assigned color, default or otherwise, even when it is moved to another list position. The <b>Reset Colors</b> button will reassign default colors based on each faction’s <em>current</em> list position, however.</p>
+</body>
+</html>

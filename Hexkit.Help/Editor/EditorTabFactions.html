@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Factions Page</title>
+</head>
+<body>
+  <h1>Factions Page</h1>
+  <p>This tab page consists of the common <a href="EditorViewLocation.html">Section Location</a> controls and editing facilities for the Factions section.</p>
+  <ul>
+    <li><a href="#Factions">Faction List</a></li>
+    <li><a href="#Homes">Change Home Sites (Alt+S)</a></li>
+    <li><a href="#Colors">Change Colors (Alt+C)</a></li>
+  </ul>
+  <h2><a name="Factions">Faction List</a></h2>
+  <p>This list shows all factions currently defined in the Factions section. During each game turn, factions will become active in the order in which they appear in this list.</p>
+  <ul>
+    <li>Column <b>Faction ID</b> shows the unique internal identifier associated with each faction.</li>
+    <li>Column <b>Faction Name</b> shows the name that the game will display for this faction.</li>
+    <li><b>Left-click</b> on an entry to select it.</li>
+    <li><b>Double-click</b> on an entry to display its <a href="DlgChangeFaction.html">Change Faction</a> dialog, allowing you to change the name and definition of this faction.</li>
+  </ul>
+  <p>Six buttons beside the list allow you to manipulate the list entries:</p>
+  <ul>
+    <li>Choose <b>Change ID…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, allowing you to the change the identifier associated with the selected faction.</li>
+    <li>Choose <b>Change Faction</b> to display the <a href="DlgChangeFaction.html">Change Faction</a> dialog, allowing you to change the name and definition of the selected faction.</li>
+    <li>Choose <b>Add Faction…</b> to display the <a href="DlgChangeIdentifier.html">Change Identifier</a> dialog, followed by the <a href="DlgChangeFaction.html">Change Faction</a> dialog, allowing you to enter the identifier and definition for a new player faction.</li>
+    <li>Choose <b>Remove Faction</b> to delete the selected faction.</li>
+    <li>Choose <b>Move Up (Alt+U)</b> to move the selected faction towards the beginning of the list (and towards the start of the turn sequence).</li>
+    <li>Choose <b>Move Down (Alt+D)</b> to move the selected faction towards the end of the list (and towards the end of the turn sequence).</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. When adding a new faction, the resulting <a href="DlgChangeFaction.html">Change Faction</a> dialog is initialized with the data of the currently selected faction, if any.</p>
+  <p>2. Any identifier you enter will be checked for validity, as described on the <a href="DlgChangeIdentifier.html">Change Identifier</a> page, and uniqueness within the <b>Faction List</b>. Note that identifiers must actually be unique throughout all scenario sections, so Hexkit might still reject identifiers that were accepted by Hexkit Editor!</p>
+  <h2><a name="Homes">Change Home Sites</a> (<b>Alt+S</b>)</h2>
+  <p>Click this button to display the <a href="DlgChangeHomes.html">Change Home Sites</a> dialog, allowing you to edit the home sites of all player factions.</p>
+  <p><b>Note:</b> This button is disabled if the <b>Faction List</b> is empty.</p>
+  <h3>Remarks</h3>
+  <p>Changing the home sites of any faction marks the <a href="EditorTabAreas.html">Areas Page</a> as changed, rather than the Factions page, because all map locations are stored in the Areas section.</p>
+  <h2><a name="Colors">Change Colors</a> (<b>Alt+C</b>)</h2>
+  <p>Click this button to display the <a href="DlgChangeColors.html">Change Faction Colors</a> dialog, allowing you to edit the color codes for all player factions.</p>
+  <p><b>Note:</b> This button is disabled if the <b>Faction List</b> is empty.</p>
+</body>
+</html>

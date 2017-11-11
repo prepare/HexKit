@@ -1,0 +1,292 @@
+﻿<Window x:Class="Hexkit.Editor.Dialog.ChangeFaction"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    xmlns:tw="clr-namespace:Tektosyne.Windows;assembly=Tektosyne.Windows"
+    Title="Change Faction: " MinWidth="350" MinHeight="350" Width="480" Height="400" ResizeMode="CanResizeWithGrip" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <DockPanel>
+    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsDefault="True" Click="OnAccept" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button IsCancel="True" Style="{StaticResource dialogButtonStyle}">Cancel</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+    <TabControl>
+      <TabItem Name="TextTab" x:FieldModifier="private" Header="Text">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Label Grid.Column="0" Grid.Row="0" Target="{Binding ElementName=NameBox}">Faction _Name:</Label>
+          <TextBox Name="NameBox" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" TextChanged="OnTextChanged" />
+          <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Target="{Binding ElementName=DetailBox}">_Informational Text (use blank lines to separate paragraphs):</Label>
+          <TextBox Name="DetailBox" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Style="{StaticResource labelAboveStyle}" AcceptsReturn="true" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" TextChanged="OnTextChanged" />
+        </Grid>
+      </TabItem>
+      <TabItem Name="VariablesTab" x:FieldModifier="private" Header="Variables">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Orientation="Vertical">
+            <GroupBox Header="Category">
+              <StackPanel Orientation="Vertical">
+                <RadioButton Name="CounterToggle" x:FieldModifier="private" ToolTip="Show Counter Variables" Checked="OnVariableCategory">_Counter</RadioButton>
+                <RadioButton Name="ResourceToggle" x:FieldModifier="private" ToolTip="Show Resource Variables" Checked="OnVariableCategory">_Resource</RadioButton>
+              </StackPanel>
+            </GroupBox>
+            <Label Target="{Binding ElementName=VariableUpDownHost}">Variable _Value:</Label>
+            <tw:WindowsFormsHostEx x:Name="VariableUpDownHost" x:FieldModifier="private" Width="100">
+              <tw:NumericUpDownHost x:Name="VariableUpDown" x:FieldModifier="private" TextAlign="Right" ThousandsSeparator="True" ValueChanged="OnVariableChanged" />
+            </tw:WindowsFormsHostEx>
+            <Label Height="10" />
+            <Button Name="AddVariableBasicButton" x:FieldModifier="private" Click="OnVariableAdd">Add _Basic Value</Button>
+            <Button Name="AddVariableModifyButton" x:FieldModifier="private" Click="OnVariableAdd">Add _Modifier</Button>
+            <Button Name="RemoveVariableButton" x:FieldModifier="private" Click="OnVariableRemove">R_emove Variable</Button>
+          </StackPanel>
+          <ListView Name="VariableList" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" SelectionMode="Single" SelectionChanged="OnVariableSelected">
+            <!-- HACK: allows right-aligned column content -->
+            <ListView.ItemContainerStyle>
+              <Style TargetType="ListViewItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+              </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by VariableList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="VariableColumn" x:FieldModifier="private" Header="Variable" DisplayMemberBinding="{Binding Id}" />
+                <GridViewColumn x:Name="VariableValueColumn" x:FieldModifier="private" Header="Value" Width="90">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <TextBlock Text="{Binding Value}" TextAlignment="Right" />
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+              </GridView>
+            </ListView.View>
+          </ListView>
+          <ListView Name="AvailableVariableList" x:FieldModifier="private" Grid.Column="1" Grid.Row="2" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnAvailableVariableActivate">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by LayoutUpdated -->
+                <GridViewColumn x:Name="AvailableVariableColumn" x:FieldModifier="private" Header="Available Variables" DisplayMemberBinding="{Binding Id}" />
+              </GridView>
+            </ListView.View>
+          </ListView>
+        </Grid>
+      </TabItem>
+      <TabItem Name="SupplyTab" x:FieldModifier="private" Header="Supply">
+        <DockPanel>
+          <TextBlock DockPanel.Dock="Left" Margin="10">
+            Check all resources<LineBreak />
+            that placed entities<LineBreak />
+            may resupply to<LineBreak />
+            owned local units.
+          </TextBlock>
+          <ListView Name="SupplyList" x:FieldModifier="private" SelectionMode="Single">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by SupplyList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="SupplyColumn" x:FieldModifier="private" Header="Supply Resource">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding Path=Item2, Mode=OneTime}" Click="OnSupplyChanged" />
+                        <TextBlock Text="{Binding Path=Item1}" />
+                      </StackPanel>
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+              </GridView>
+            </ListView.View>
+          </ListView>
+        </DockPanel>
+      </TabItem>
+      <TabItem Name="ClassesTab" x:FieldModifier="private" Header="Classes">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <GroupBox Grid.Column="0" Grid.Row="0" Header="Category">
+            <StackPanel Orientation="Vertical">
+              <RadioButton Name="UnitClassToggle" x:FieldModifier="private" ToolTip="Show Unit Classes" Checked="OnClassCategory">_Unit</RadioButton>
+              <RadioButton Name="TerrainClassToggle" x:FieldModifier="private" ToolTip="Show Terrain Classes" Checked="OnClassCategory">_Terrain</RadioButton>
+              <RadioButton Name="UpgradeClassToggle" x:FieldModifier="private" ToolTip="Show Upgrade Classes" Checked="OnClassCategory">Up_grade</RadioButton>
+            </StackPanel>
+          </GroupBox>
+          <TextBlock Grid.Column="0" Grid.Row="1" Margin="10">
+            Check all entity<LineBreak />
+            classes that the<LineBreak />
+            faction can build.
+          </TextBlock>
+          <ListView Name="ClassList" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" SelectionMode="Single">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by ClassList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="ClassColumn" x:FieldModifier="private" Header="Entity Class">
+                  <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                      <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding Path=Item2, Mode=OneTime}" Click="OnClassChanged" />
+                        <TextBlock Text="{Binding Path=Item1}" />
+                      </StackPanel>
+                    </DataTemplate>
+                  </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+              </GridView>
+            </ListView.View>
+          </ListView>
+        </Grid>
+      </TabItem>
+      <TabItem Name="EntitiesTab" x:FieldModifier="private" Header="Entities">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Orientation="Vertical">
+            <GroupBox Header="Category">
+              <StackPanel Orientation="Vertical">
+                <RadioButton Name="UnitToggle" x:FieldModifier="private" ToolTip="Show Unit Classes" Checked="OnEntityCategory">_Unit</RadioButton>
+                <RadioButton Name="TerrainToggle" x:FieldModifier="private" ToolTip="Show Terrain Classes" Checked="OnEntityCategory">_Terrain</RadioButton>
+                <RadioButton Name="UpgradeToggle" x:FieldModifier="private" ToolTip="Show Upgrade Classes" Checked="OnEntityCategory">Up_grade</RadioButton>
+              </StackPanel>
+            </GroupBox>
+            <Label Height="5" />
+            <Button Name="AddEntityButton" x:FieldModifier="private" Click="OnEntityAdd">_Add Entity</Button>
+            <Button Name="ChangeEntityButton" x:FieldModifier="private" Click="OnEntityChange">Change _Entity…</Button>
+            <Button Name="RemoveEntityButton" x:FieldModifier="private" Click="OnEntityRemove">_Remove Entity</Button>
+          </StackPanel>
+          <ListView Name="EntityList" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnEntityActivate" SelectionChanged="OnEntitySelected">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by EntityList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="EntityColumn" x:FieldModifier="private" Header="Entity" DisplayMemberBinding="{Binding Item1}" />
+              </GridView>
+            </ListView.View>
+          </ListView>
+          <ListView Name="AvailableEntityList" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" SelectionMode="Single" ListViewItem.MouseDoubleClick="OnAvailableEntityActivate">
+            <ListView.View>
+              <GridView>
+                <!-- column width is set by AvailableEntityList.ActualWidth.ValueChanged -->
+                <GridViewColumn x:Name="AvailableEntityColumn" x:FieldModifier="private" Header="Available Entities" DisplayMemberBinding="{Binding Id}"  />
+              </GridView>
+            </ListView.View>
+          </ListView>
+        </Grid>
+      </TabItem>
+      <TabItem Name="ConditionsTab" x:FieldModifier="private" Header="Conditions">
+        <StackPanel Orientation="Vertical">
+          <GroupBox Header="Defeat Conditions" HorizontalAlignment="Left">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <CheckBox Name="DefeatSitesToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="0">Site Count is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="0" Width="110">
+                <tw:NumericUpDownHost x:Name="DefeatSitesUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="99999" TextAlign="Right"/>
+              </tw:WindowsFormsHostEx>
+              <CheckBox Name="DefeatUnitsToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="1">Unit Count is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="1" Width="110">
+                <tw:NumericUpDownHost x:Name="DefeatUnitsUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="99999" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+              <CheckBox Name="DefeatUnitStrengthToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="2">Unit Strength is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="2" Width="110">
+                <tw:NumericUpDownHost x:Name="DefeatUnitStrengthUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="1000000000" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+              <CheckBox Name="DefeatTurnsToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="3">Turn Count is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="3" Width="110">
+                <tw:NumericUpDownHost x:Name="DefeatTurnsUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="99999" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+            </Grid>
+          </GroupBox>
+          <GroupBox Header="Victory Conditions" HorizontalAlignment="Left">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <CheckBox Name="VictorySitesToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="0">Site Count is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="0" Width="110">
+                <tw:NumericUpDownHost x:Name="VictorySitesUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="99999" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+              <CheckBox Name="VictoryUnitsToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="1">Unit Count is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="1" Width="110">
+                <tw:NumericUpDownHost x:Name="VictoryUnitsUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="99999" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+              <CheckBox Name="VictoryUnitStrengthToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="2">Unit Strength is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="2" Width="110">
+                <tw:NumericUpDownHost x:Name="VictoryUnitStrengthUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="1000000000" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+              <CheckBox Name="VictoryTurnsToggle" x:FieldModifier="private" Grid.Column="0" Grid.Row="3">Turn Count is</CheckBox>
+              <tw:WindowsFormsHostEx Grid.Column="1" Grid.Row="3" Width="110">
+                <tw:NumericUpDownHost x:Name="VictoryTurnsUpDown" x:FieldModifier="private" ThousandsSeparator="True" Maximum="99999" TextAlign="Right" />
+              </tw:WindowsFormsHostEx>
+            </Grid>
+          </GroupBox>
+        </StackPanel>
+      </TabItem>
+      <TabItem Name="PlayerTab" x:FieldModifier="private" Header="Player">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Label Grid.Column="0" Grid.Row="0" Target="{Binding ElementName=AlgorithmCombo}">Computer Player _Algorithm:</Label>
+          <ComboBox Name="AlgorithmCombo" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" SelectionChanged="OnAlgorithmSelected" />
+          <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">Available Options for Selected Algorithm:</Label>
+          <WindowsFormsHost Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Style="{StaticResource labelAboveStyle}">
+            <wf:PropertyGrid x:Name="OptionsGrid" x:FieldModifier="private" PropertyValueChanged="OnOptionsChanged" />
+          </WindowsFormsHost>
+        </Grid>
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</Window>

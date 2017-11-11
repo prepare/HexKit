@@ -1,0 +1,40 @@
+﻿<Window x:Class="Hexkit.Global.AboutDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Hexkit.Global"
+    Title="About Hexkit" ResizeMode="CanMinimize" ShowInTaskbar="False" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.CommandBindings>
+    <CommandBinding Command="Help" Executed="HelpExecuted" />
+  </Window.CommandBindings>
+  <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Horizontal">
+      <Image Source="Hexkit.png" Margin="10" VerticalAlignment="Top" />
+      <StackPanel Orientation="Vertical" Margin="0,10,10,10">
+        <TextBlock FontSize="18" FontWeight="Bold" Text="{Binding Source={x:Static local:ApplicationInfo.Signature}}" />
+        <TextBlock Margin="0,5,0,0">
+          Copyright &#xA9;
+          <Hyperlink ToolTip="Send E-Mail to Author" Click="OnLinkAuthor">Christoph Nahr</Hyperlink>
+          <LineBreak />
+          <Hyperlink ToolTip="Visit Author’s Website" Click="OnLinkWebsite">http://www.kynosarges.org/</Hyperlink>
+        </TextBlock>
+        <TextBlock Margin="0,5,0,0">
+          This program is free and comes<LineBreak />with no warranties whatsoever.
+        </TextBlock>
+      </StackPanel>
+    </StackPanel>
+    <TextBlock Name="ModifiedNote" x:FieldModifier="private" FontWeight="Bold" HorizontalAlignment="Center" Margin="10,0,10,10">
+      *** UNSUPPORTED DEVELOPER VERSION ***
+    </TextBlock>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+      <Button IsCancel="True" IsDefault="True" Style="{StaticResource dialogButtonStyle}">OK</Button>
+      <Button Command="Help" Style="{StaticResource dialogButtonStyle}">Help</Button>
+    </StackPanel>
+  </StackPanel>
+</Window>

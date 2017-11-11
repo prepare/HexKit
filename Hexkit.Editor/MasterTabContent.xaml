@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Hexkit.Editor.MasterTabContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Hexkit.Global;component/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <Label Grid.Column="0" Grid.Row="0" Target="{Binding ElementName=TitleBox}">Scenario _Title:</Label>
+    <TextBox Name="TitleBox" x:FieldModifier="private" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" TextChanged="OnTitleChanged" />
+    <Label Grid.Column="0" Grid.Row="1">Rule Script:</Label>
+    <TextBox Name="RulesPathBox" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" IsReadOnly="true" TextChanged="OnRulesChanged" />
+    <Button Name="RulesBrowseButton" x:FieldModifier="private" Grid.Column="2" Grid.Row="1" Click="OnRulesBrowse">B_rowse…</Button>
+    <GroupBox Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Header="Subsection Locations (use tabs to change)">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0">Images</Label>
+        <Label Name="ImagesChangedLabel" x:FieldModifier="private" Grid.Column="1" Grid.Row="0" FontWeight="Bold">*</Label>
+        <TextBox Name="ImagesPathBox" x:FieldModifier="private" Grid.Column="2" Grid.Row="0" IsReadOnly="True" />
+        <Label Grid.Column="0" Grid.Row="1">Variables</Label>
+        <Label Name="VariablesChangedLabel" x:FieldModifier="private" Grid.Column="1" Grid.Row="1" FontWeight="Bold">*</Label>
+        <TextBox Name="VariablesPathBox" x:FieldModifier="private" Grid.Column="2" Grid.Row="1" IsReadOnly="True" />
+        <Label Grid.Column="0" Grid.Row="2">Entities</Label>
+        <Label Name="EntitiesChangedLabel" x:FieldModifier="private" Grid.Column="1" Grid.Row="2" FontWeight="Bold">*</Label>
+        <TextBox Name="EntitiesPathBox" x:FieldModifier="private" Grid.Column="2" Grid.Row="2" IsReadOnly="True" />
+        <Label Grid.Column="0" Grid.Row="3">Factions</Label>
+        <Label Name="FactionsChangedLabel" x:FieldModifier="private" Grid.Column="1" Grid.Row="3" FontWeight="Bold">*</Label>
+        <TextBox Name="FactionsPathBox" x:FieldModifier="private" Grid.Column="2" Grid.Row="3" IsReadOnly="True" />
+        <Label Grid.Column="0" Grid.Row="4">Areas</Label>
+        <Label Name="AreasChangedLabel" x:FieldModifier="private" Grid.Column="1" Grid.Row="4" FontWeight="Bold">*</Label>
+        <TextBox Name="AreasPathBox" x:FieldModifier="private" Grid.Column="2" Grid.Row="4" IsReadOnly="True" />
+      </Grid>
+    </GroupBox>
+    <Button Name="ScenarioInfoButton" x:FieldModifier="private" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" HorizontalAlignment="Center" Click="OnScenarioInfo">Scenario _Information…</Button>
+  </Grid>
+</UserControl>

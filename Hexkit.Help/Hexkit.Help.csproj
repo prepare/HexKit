@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  C# Project File for Microsoft MSBuild and HTML Help Compiler
+  (C) 2005–2008 by Christoph Nahr
+
+  This file controls the Hexkit.Help project. While nominally a C# project,
+  its properties and tasks are customized for HTML Help file creation.
+
+  The "Build" task calls the HTML Help Compiler (hhc.exe) to compile
+  all project files into the Hexkit online help file, Hexkit.Help.chm.
+  This file is placed in the Hexkit solution output directory (..\bin).
+-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{490F6ACB-D1C9-4804-8758-C51A14230F94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hexkit.Help</RootNamespace>
+    <AssemblyName>Hexkit.Help</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>..\bin\</OutputPath>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoWarn>0419</NoWarn>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <NoWarn>0419</NoWarn>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Custom properties for HTML Help Compiler task -->
+    <CompilerPath>"$(ProgramFiles)\HTML Help Workshop\hhc.exe"</CompilerPath>
+    <CompilerExitCode>1</CompilerExitCode>
+    <!-- default to success -->
+    <HtmlHelpProject>$(AssemblyName).hhp</HtmlHelpProject>
+    <HtmlHelpOutput>$(OutputPath)\$(AssemblyName).chm</HtmlHelpOutput>
+  </PropertyGroup>
+  <Target Name="Build" Inputs="@(Content); @(None)" Outputs="$(HtmlHelpOutput)">
+    <Exec Command="$(CompilerPath) $(HtmlHelpProject)" IgnoreExitCode="true">
+      <Output TaskParameter="ExitCode" PropertyName="CompilerExitCode" />
+    </Exec>
+    <!-- HHC succeeds with exit code one, not zero as usual! -->
+    <Error Text="HTML Help Compiler failed." Condition="$(CompilerExitCode) != 1" />
+  </Target>
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+  <Target Name="Clean">
+    <Delete Files="$(HtmlHelpOutput)" />
+  </Target>
+  <ItemGroup>
+    <Content Include="Editor.Dialog\DlgChangeEntityAbilities.html" />
+    <Content Include="Editor.Dialog\DlgChangeEntityImages.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionPlayer.html" />
+    <Content Include="Editor.Dialog\DlgChangeOverlay.html" />
+    <Content Include="Game.Dialog\DlgShowEvent.html" />
+    <Content Include="Game.Dialog\DlgShowEvents.html" />
+    <Content Include="Game.Dialog\DlgShowEventsEntities.html" />
+    <Content Include="Game.Dialog\DlgShowEventsFactions.html" />
+    <Content Include="Game.Dialog\DlgShowFactionsConditions.html" />
+    <Content Include="HtmlHelp.css" />
+    <Content Include="Other\Copyright.html" />
+    <Content Include="Other\DlgAbout.html" />
+    <Content Include="Other\DlgShowGauges.html" />
+    <Content Include="Other\DlgShowVariable.html" />
+    <Content Include="Other\Introduction.html" />
+    <Content Include="Other\IntroEditor.html" />
+    <Content Include="Other\IntroGame.html" />
+    <Content Include="Editor.Dialog\DlgChangeGeometry.html" />
+    <Content Include="Editor.Dialog\DlgChangeGeometrySize.html" />
+    <Content Include="Editor.Dialog\DlgChangeGeometryStructure.html" />
+    <Content Include="Editor.Dialog\DlgChangeColors.html" />
+    <Content Include="Editor.Dialog\DlgChangeConnections.html" />
+    <Content Include="Editor.Dialog\DlgChangeEntity.html" />
+    <Content Include="Editor.Dialog\DlgChangeEntityOther.html" />
+    <Content Include="Editor.Dialog\DlgChangeEntityText.html" />
+    <Content Include="Editor.Dialog\DlgChangeEntityVars.html" />
+    <Content Include="Editor.Dialog\DlgChangeFaction.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionClasses.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionConditions.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionEntities.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionSupply.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionText.html" />
+    <Content Include="Editor.Dialog\DlgChangeFactionVars.html" />
+    <Content Include="Editor.Dialog\DlgChangeFrame.html" />
+    <Content Include="Editor.Dialog\DlgChangeSite.html" />
+    <Content Include="Editor.Dialog\DlgChangeSiteOther.html" />
+    <Content Include="Editor.Dialog\DlgChangeSiteTerrain.html" />
+    <Content Include="Editor.Dialog\DlgChangeHomes.html" />
+    <Content Include="Editor.Dialog\DlgChangeIdentifier.html" />
+    <Content Include="Editor.Dialog\DlgChangeImage.html" />
+    <Content Include="Editor.Dialog\DlgChangeInformation.html" />
+    <Content Include="Editor.Dialog\DlgChangePlacements.html" />
+    <Content Include="Editor.Dialog\DlgChangeTemplate.html" />
+    <Content Include="Editor.Dialog\DlgChangeTemplateFrame.html" />
+    <Content Include="Editor.Dialog\DlgChangeTemplateText.html" />
+    <Content Include="Editor.Dialog\DlgChangeTemplateVars.html" />
+    <Content Include="Editor.Dialog\DlgChangeVariable.html" />
+    <Content Include="Editor\EditorDialogs.html" />
+    <Content Include="Editor\EditorDisplay.html" />
+    <Content Include="Editor\EditorInterface.html" />
+    <Content Include="Editor\EditorMenuEdit.html" />
+    <Content Include="Editor\EditorMenuFile.html" />
+    <Content Include="Editor\EditorMenuHelp.html" />
+    <Content Include="Editor\EditorMenus.html" />
+    <Content Include="Editor\EditorMenuView.html" />
+    <Content Include="Editor\EditorTabAreas.html" />
+    <Content Include="Editor\EditorTabEntities.html" />
+    <Content Include="Editor\EditorTabFactions.html" />
+    <Content Include="Editor\EditorTabImages.html" />
+    <Content Include="Editor\EditorTabMaster.html" />
+    <Content Include="Editor\EditorTabVariables.html" />
+    <Content Include="Editor\EditorViewLocation.html" />
+    <Content Include="Editor\EditorViewStatus.html" />
+    <Content Include="Game.Dialog\DlgAboutScenario.html" />
+    <Content Include="Game.Dialog\DlgAttackFromSite.html" />
+    <Content Include="Game.Dialog\DlgAttackSite.html" />
+    <Content Include="Game.Dialog\DlgBuildEntities.html" />
+    <Content Include="Game.Dialog\DlgChangeEmail.html" />
+    <Content Include="Game.Dialog\DlgChangePlayers.html" />
+    <Content Include="Game.Dialog\DlgChangePlayersComputer.html" />
+    <Content Include="Game.Dialog\DlgChangePlayersHuman.html" />
+    <Content Include="Game.Dialog\DlgChangeTurn.html" />
+    <Content Include="Game.Dialog\DlgCreateSession.html" />
+    <Content Include="Game.Dialog\DlgMoveUnits.html" />
+    <Content Include="Game.Dialog\DlgRenameEntity.html" />
+    <Content Include="Game.Dialog\DlgShowClasses.html" />
+    <Content Include="Game.Dialog\DlgShowCommands.html" />
+    <Content Include="Game.Dialog\DlgShowEntities.html" />
+    <Content Include="Game.Dialog\DlgShowFactions.html" />
+    <Content Include="Game.Dialog\DlgShowFactionsAssets.html" />
+    <Content Include="Game.Dialog\DlgShowFactionsClasses.html" />
+    <Content Include="Game.Dialog\DlgShowFactionsGeneral.html" />
+    <Content Include="Game.Dialog\DlgShowFactionsVars.html" />
+    <Content Include="Game.Dialog\DlgShowPlacements.html" />
+    <Content Include="Game.Dialog\DlgShowRanking.html" />
+    <Content Include="Game.Dialog\DlgShowRankingGraphs.html" />
+    <Content Include="Game.Dialog\DlgShowRankingTables.html" />
+    <Content Include="Game.Dialog\DlgShowVariables.html" />
+    <Content Include="Game\GameDialogs.html" />
+    <Content Include="Game\GameDisplay.html" />
+    <Content Include="Game\GameInterface.html" />
+    <Content Include="Game\GameMenuCommand.html" />
+    <Content Include="Game\GameMenuDebug.html" />
+    <Content Include="Game\GameMenuFile.html" />
+    <Content Include="Game\GameMenuGame.html" />
+    <Content Include="Game\GameMenuHelp.html" />
+    <Content Include="Game\GameMenuInfo.html" />
+    <Content Include="Game\GameMenuReplay.html" />
+    <Content Include="Game\GameMenus.html" />
+    <Content Include="Game\GameMenuView.html" />
+    <Content Include="Game\GameViewData.html" />
+    <Content Include="Game\GameViewEvent.html" />
+    <Content Include="Game\GameViewMap.html" />
+    <Content Include="Game\GameViewProperty.html" />
+    <Content Include="Game\GameViewQuick.html" />
+    <Content Include="Game\GameViewStatus.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hexkit.Help.hhc" />
+    <None Include="Hexkit.Help.hhp" />
+  </ItemGroup>
+</Project>

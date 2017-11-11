@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Image Dialog</title>
+</head>
+<body>
+  <h1>Change Image Dialog</h1>
+  <p>This dialog allows you to edit the frames and other elements of an image definition, as specified in the dialog’s title bar.</p>
+  <ul>
+    <li><a href="#Source">Source File (Alt+F)</a></li>
+    <li><a href="#Animation">Animation Options</a></li>
+    <li><a href="#Scaling">Scaling Options</a></li>
+    <li><a href="#Frames">Image Frames</a></li>
+    <li><a href="#Selected">Selected Frame</a></li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>Hexkit Editor offers no facilities to create or edit the actual image bitmaps. You must use an external paint program for this task, such as Windows Paint.</p>
+  <h2><a name="Source">Source File (Alt+F)</a></h2>
+  <p>Use this drop-down list to select the bitmap file containing the selected image frame. Each frame may use a different source file.</p>
+  <p>The drop-down list shows the identifiers of all files defined on the <a href="EditorTabImages.html">Images Page</a>; plus any additional identifiers defined by existing image frames.</p>
+  <p>If a known bitmap file is selected, its contents are shown in a <b>scrollable panel</b> below the drop-down list.</p>
+  <ul>
+    <li>The selected image frame is centered and highlighted by a dashed red outline.</li>
+    <li><b>Left-click</b> to set the upper-left corner of the selected frame.</li>
+    <li><b>Right-click</b> to set the lower-right corner of the selected frame.</li>
+  </ul>
+  <p>Invalid coordinates are ignored. Use the controls in the <a href="#Selected">Selected Frame</a> box for precise sizing and positioning.</p>
+  <h2><a name="Animation">Animation Options</a></h2>
+  <p>Use the <b>Animation</b> and <b>Sequence</b> drop-down lists to determine if and how Hexkit should animate the image when it appears on the map view.</p>
+  <p><b>Animation (Alt+A)</b> enables or disables animation and specifies animation timing.</p>
+  <ul>
+    <li><b>None</b> disables animation entirely. One single frame is displayed at all times. This is the first frame by default, but individual entities may select a different frame.</li>
+    <li><b>Random</b> starts the selected <b>Sequence</b> at random intervals when it is not already running. Once started, the sequence proceeds to its end.</li>
+    <li><b>Continuous</b> always starts the selected <b>Sequence</b> whenever it is not running. This immediately restarts the sequence when it has finished.</li>
+  </ul>
+  <p><b>Sequence (Alt+S)</b> specifies the animation sequence in which the defined <a href="#Frames">Image Frames</a> are played back.</p>
+  <ul>
+    <li><b>Random</b> switches to a single random frame, then terminates.</li>
+    <li><b>Forward</b> proceeds from first to last frame.</li>
+    <li><b>Backward</b> proceeds from last to first frame.</li>
+    <li><b>Cycle</b> proceeds from first to last frame, then back to the first frame.</li>
+  </ul>
+  <p>The <b>Sequence</b> drop-down list is disabled if the selected <b>Animation</b> mode is <b>None</b>.</p>
+  <h2><a name="Scaling">Scaling Options</a></h2>
+  <p>Use the <b>X-Scaling</b> and <b>Y-Scaling</b> drop-down lists to determine if and how Hexkit should scale each frame to the size and shape of a map polygon.</p>
+  <ul>
+    <li><b>None</b> specifies no scaling. Each frame is drawn once, at its original size.</li>
+    <li><b>Repeat</b> specifies scaling by repeatedly drawing each frame, at its original size, until the polygon is filled.</li>
+    <li><b>Stretch</b> specifies scaling by growing or shrinking each frame to the polygon’s bounding box.</li>
+  </ul>
+  <p><b>X-Scaling (Alt+X)</b> controls scaling in the horizontal direction, and <b>Y-Scaling (Alt+Y)</b> independently controls scaling in the vertical direction. To completely fill a map polygon, you must specify <b>Repeat</b> or <b>Stretch</b> in both dimensions.</p>
+  <h2><a name="Frames">Image Frames</a></h2>
+  <p>This list shows all currently defined frames, surrounded by a polygon outline as defined on the <a href="EditorTabAreas.html">Areas Page</a>. Frames with invalid coordinates or an invalid source file will display an “invalid” icon (red circle with a slash).</p>
+  <ul>
+    <li><b>Left-click</b> on a frame to select it.</li>
+    <li>Choose <font face="Wingdings">&#111;</font> <b>(Add New Frame)</b> to add a new frame to the end of the list. The new frame defaults to the size and location of the selected frame.</li>
+    <li>Choose <font face="Wingdings">&#120;</font> <b>(Remove Frame)</b> to remove the selected frame. This button is disabled if only one frame exists.</li>
+    <li>Choose <font face="Wingdings">&#239;</font> <b>(Move Frame Left)</b> to move the selected frame towards the start of the sequence.</li>
+    <li>Choose <font face="Wingdings">&#240;</font> <b>(Move Frame Right)</b> to move the selected frame towards the end of the sequence.</li>
+  </ul>
+  <h2><a name="Selected">Selected Frame</a></h2>
+  <p>This box shows the coordinates of the selected frame. These may be changed by clicking on the source file panel, or by changing individual coordinates as follows:</p>
+  <ul>
+    <li>Use the <b>Left (Alt+L)</b> field to change the left frame edge.</li>
+    <li>Use the <b>Top (Alt+T)</b> field to change the top frame edge.</li>
+    <li>Use the <b>Width (Alt+W)</b> field to change the frame width.</li>
+    <li>Use the <b>Height (Alt+H)</b> field to change the frame height.</li>
+    <li>Choose <b>Change Connections… (Alt+C)</b> to display the <a href="DlgChangeConnections.html">Change Connections</a> dialog for the selected frame, allowing you to define connections across neighboring map sites.</li>
+  </ul>
+</body>
+</html>

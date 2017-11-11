@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css">
+  <title>Event History: Entities Page</title>
+</head>
+<body>
+  <h1>Event History: Entities Page</h1>
+  <p>This tab page of the <a href="DlgShowEvents.html">Event History</a> dialog shows the history of all entities in the current game, including those that were already eliminated.</p>
+  <ul>
+    <li>The <b>Entity List</b> shows the internal identifiers of all entities.
+      <ul>
+        <li>All identifiers are composed of an entity class identifier (up to the final dash) and an instance count (after the final dash).</li>
+        <li>The list entries are sorted alphabetically by entity class identifiers, and numerically by instance counts within the same entity class.</li>
+        <li><b>Left-click</b> on an entry to select it. The <b>Event List</b> reflects the selected entry.</li>
+      </ul>
+    </li>
+    <li>The <b>Event List</b> shows the internal “events” that Hexkit recorded for the selected entity.
+      <ul>
+        <li><b>Turn</b> shows the game turn during which the event was recorded.</li>
+        <li><b>Event</b> shows the type of the event.
+          <ul>
+            <li><b>Create</b> means that the entity was created.</li>
+            <li><b>Delete</b> means that the entity was deleted from the game.</li>
+            <li><b>SetName</b> means that the entity’s instance name has changed.</li>
+          </ul>
+        </li>
+        <li><b>Value</b> shows other data associated with the event. This is usually the active faction at the time of the event, but it is the new instance name for the <b>SetName</b> event.</li>
+      </ul>
+    </li>
+    <li><b>Drag</b> the vertical splitter between <b>Entity List</b> and <b>Event List</b> to adjust their respective share of the current dialog width.</li>
+    <li>See <a href="DlgShowEvents.html">Event History</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>All entities that were created by the scenario, and possibly by the <code>Faction.Initialize</code> method if it was overriden in the rule script, will appear with a <b>Create</b> event during the first turn and with the first active faction.</p>
+</body>
+</html>

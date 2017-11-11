@@ -1,0 +1,991 @@
+<!DOCTYPE HTML PUBLIC "-//IETFutf-8 HTML//EN">
+<HTML>
+<HEAD>
+  <meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+  <!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="Other\Introduction.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Hexkit Game">
+			<param name="Local" value="Other\IntroGame.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Features">
+				<param name="Local" value="Other\IntroGame.html#Features">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Invocation">
+				<param name="Local" value="Other\IntroGame.html#Invocation">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Hexkit Editor">
+			<param name="Local" value="Other\IntroEditor.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Features">
+				<param name="Local" value="Other\IntroEditor.html#Features">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Invocation">
+				<param name="Local" value="Other\IntroEditor.html#Invocation">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Game Interface">
+		<param name="Local" value="Game\GameInterface.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Game Display">
+			<param name="Local" value="Game\GameDisplay.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Quick Menu">
+				<param name="Local" value="Game\GameViewQuick.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Map View">
+				<param name="Local" value="Game\GameViewMap.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Map Contents">
+					<param name="Local" value="Game\GameViewMap.html#Contents">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Mouse Commands">
+					<param name="Local" value="Game\GameViewMap.html#Mouse">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Target Selection">
+					<param name="Local" value="Game\GameViewMap.html#Target">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Data View">
+				<param name="Local" value="Game\GameViewData.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Selected Site">
+					<param name="Local" value="Game\GameViewData.html#Site">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Turn/Faction Counter">
+					<param name="Local" value="Game\GameViewData.html#Counter">
+					</OBJECT>
+			    <LI> <OBJECT type="text/sitemap">
+				    <param name="Name" value="Property List">
+				    <param name="Local" value="Game\GameViewProperty.html">
+				    </OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Event View">
+				<param name="Local" value="Game\GameViewEvent.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Last Command">
+					<param name="Local" value="Game\GameViewEvent.html#Command">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Event Messages">
+					<param name="Local" value="Game\GameViewEvent.html#Message">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Status Bar">
+				<param name="Local" value="Game\GameViewStatus.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Message Field">
+					<param name="Local" value="Game\GameViewStatus.html#Message">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Mouse Position">
+					<param name="Local" value="Game\GameViewStatus.html#Position">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Computer Player">
+					<param name="Local" value="Game\GameViewStatus.html#Computer">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Game Menus">
+			<param name="Local" value="Game\GameMenus.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File Menu">
+				<param name="Local" value="Game\GameMenuFile.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="New">
+					<param name="Local" value="Game\GameMenuFile.html#New">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Open">
+					<param name="Local" value="Game\GameMenuFile.html#Open">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Close">
+					<param name="Local" value="Game\GameMenuFile.html#Close">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save">
+					<param name="Local" value="Game\GameMenuFile.html#Save">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exit">
+					<param name="Local" value="Game\GameMenuFile.html#Exit">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Game Menu">
+				<param name="Local" value="Game\GameMenuGame.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Player Setup">
+					<param name="Local" value="Game\GameMenuGame.html#Players">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Stop Computer">
+					<param name="Local" value="Game\GameMenuGame.html#StopComputer">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Wait &amp; Cycle Units">
+					<param name="Local" value="Game\GameMenuGame.html#WaitCycle">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Skip &amp; Cycle Units">
+					<param name="Local" value="Game\GameMenuGame.html#SkipCycle">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Unskip All Units">
+					<param name="Local" value="Game\GameMenuGame.html#UnskipAll">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Command Menu">
+				<param name="Local" value="Game\GameMenuCommand.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Attack Site">
+					<param name="Local" value="Game\GameMenuCommand.html#Attack">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Move Units">
+					<param name="Local" value="Game\GameMenuCommand.html#Move">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Build Entities">
+					<param name="Local" value="Game\GameMenuCommand.html#Build">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Manage Entities">
+					<param name="Local" value="Game\GameMenuCommand.html#Entities">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Selected Entities">
+					<param name="Local" value="Game\GameMenuCommand.html#Site">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="End Turn">
+					<param name="Local" value="Game\GameMenuCommand.html#EndTurn">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Resign Game">
+					<param name="Local" value="Game\GameMenuCommand.html#Resign">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Info Menu">
+				<param name="Local" value="Game\GameMenuInfo.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Scenario">
+					<param name="Local" value="Game\GameMenuInfo.html#Scenario">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Entity Classes">
+					<param name="Local" value="Game\GameMenuInfo.html#Entities">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Variables">
+					<param name="Local" value="Game\GameMenuInfo.html#Variables">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Faction Status">
+					<param name="Local" value="Game\GameMenuInfo.html#Factions">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Faction Ranking">
+					<param name="Local" value="Game\GameMenuInfo.html#Ranking">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Command History">
+					<param name="Local" value="Game\GameMenuInfo.html#Commands">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Placement Sites">
+					<param name="Local" value="Game\GameMenuInfo.html#Placements">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Replay Menu">
+				<param name="Local" value="Game\GameMenuReplay.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Replay All Turns">
+					<param name="Local" value="Game\GameMenuReplay.html#All">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Replay Last Turn">
+					<param name="Local" value="Game\GameMenuReplay.html#Last">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Replay From Turn">
+					<param name="Local" value="Game\GameMenuReplay.html#From">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Pause Replay">
+					<param name="Local" value="Game\GameMenuReplay.html#Pause">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Skip Faction">
+					<param name="Local" value="Game\GameMenuReplay.html#Skip">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Stop Replay">
+					<param name="Local" value="Game\GameMenuReplay.html#Stop">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Replay Speed">
+					<param name="Local" value="Game\GameMenuReplay.html#Speed">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Scroll Map View">
+					<param name="Local" value="Game\GameMenuReplay.html#Scroll">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="View Menu">
+				<param name="Local" value="Game\GameMenuView.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Animation">
+					<param name="Local" value="Game\GameMenuView.html#Animation">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Flags">
+					<param name="Local" value="Game\GameMenuView.html#ShowFlags">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Grid">
+					<param name="Local" value="Game\GameMenuView.html#ShowGrid">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Owner">
+					<param name="Local" value="Game\GameMenuView.html#ShowOwner">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Variable">
+					<param name="Local" value="Game\GameMenuView.html#ShowVariable">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Center Site">
+					<param name="Local" value="Game\GameMenuView.html#CenterSite">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Zoom">
+					<param name="Local" value="Game\GameMenuView.html#Zoom">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Performance">
+					<param name="Local" value="Game\GameMenuView.html#Performance">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save Window">
+					<param name="Local" value="Game\GameMenuView.html#SaveWindow">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Debug Menu">
+				<param name="Local" value="Game\GameMenuDebug.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save Map Contents">
+					<param name="Local" value="Game\GameMenuDebug.html#Areas">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save Scenario File">
+					<param name="Local" value="Game\GameMenuDebug.html#Scenario">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Bitmap Catalogs">
+					<param name="Local" value="Game\GameMenuDebug.html#Bitmaps">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Command Counters">
+					<param name="Local" value="Game\GameMenuDebug.html#Counters">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Event History">
+					<param name="Local" value="Game\GameMenuDebug.html#Events">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Help Menu">
+				<param name="Local" value="Game\GameMenuHelp.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Contents">
+					<param name="Local" value="Game\GameMenuHelp.html#Contents">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ReadMe">
+					<param name="Local" value="Game\GameMenuHelp.html#ReadMe">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WhatsNew">
+					<param name="Local" value="Game\GameMenuHelp.html#WhatsNew">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Hexkit">
+					<param name="Local" value="Game\GameMenuHelp.html#About">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Game Dialogs">
+			<param name="Local" value="Game\GameDialogs.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="About Hexkit">
+				<param name="Local" value="Other\DlgAbout.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="About Scenario">
+				<param name="Local" value="Game.Dialog\DlgAboutScenario.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Attack From Site">
+				<param name="Local" value="Game.Dialog\DlgAttackFromSite.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Attack Site">
+				<param name="Local" value="Game.Dialog\DlgAttackSite.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Build Entities">
+				<param name="Local" value="Game.Dialog\DlgBuildEntities.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change E-mail">
+				<param name="Local" value="Game.Dialog\DlgChangeEmail.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Turn">
+				<param name="Local" value="Game.Dialog\DlgChangeTurn.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Command History">
+				<param name="Local" value="Game.Dialog\DlgShowCommands.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Create Session">
+				<param name="Local" value="Game.Dialog\DlgCreateSession.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Entity Classes">
+				<param name="Local" value="Game.Dialog\DlgShowClasses.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Event History">
+				<param name="Local" value="Game.Dialog\DlgShowEvents.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Factions">
+					<param name="Local" value="Game.Dialog\DlgShowEventsFactions.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Entities">
+					<param name="Local" value="Game.Dialog\DlgShowEventsEntities.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Event Message">
+				<param name="Local" value="Game.Dialog\DlgShowEvent.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Faction Entities">
+				<param name="Local" value="Game.Dialog\DlgShowEntities.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Faction Ranking">
+				<param name="Local" value="Game.Dialog\DlgShowRanking.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Tables">
+					<param name="Local" value="Game.Dialog\DlgShowRankingTables.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Graphs">
+					<param name="Local" value="Game.Dialog\DlgShowRankingGraphs.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Faction Status">
+				<param name="Local" value="Game.Dialog\DlgShowFactions.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="General">
+					<param name="Local" value="Game.Dialog\DlgShowFactionsGeneral.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Assets">
+					<param name="Local" value="Game.Dialog\DlgShowFactionsAssets.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Classes">
+					<param name="Local" value="Game.Dialog\DlgShowFactionsClasses.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Resources">
+					<param name="Local" value="Game.Dialog\DlgShowFactionsVars.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Conditions">
+					<param name="Local" value="Game.Dialog\DlgShowFactionsConditions.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Move Units">
+				<param name="Local" value="Game.Dialog\DlgMoveUnits.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Placement Sites">
+				<param name="Local" value="Game.Dialog\DlgShowPlacements.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Player Setup">
+				<param name="Local" value="Game.Dialog\DlgChangePlayers.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Selected Human Player">
+					<param name="Local" value="Game.Dialog\DlgChangePlayersHuman.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Selected Computer Player">
+					<param name="Local" value="Game.Dialog\DlgChangePlayersComputer.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Rename Entity">
+				<param name="Local" value="Game.Dialog\DlgRenameEntity.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Show Gauges">
+				<param name="Local" value="Other\DlgShowGauges.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Show Variable">
+				<param name="Local" value="Other\DlgShowVariable.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Variables">
+				<param name="Local" value="Game.Dialog\DlgShowVariables.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Editor Interface">
+		<param name="Local" value="Editor\EditorInterface.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Editor Display">
+			<param name="Local" value="Editor\EditorDisplay.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Master Page">
+				<param name="Local" value="Editor\EditorTabMaster.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Scenario Title">
+					<param name="Local" value="Editor\EditorTabMaster.html#Title">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Rule Script">
+					<param name="Local" value="Editor\EditorTabMaster.html#Rules">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Subsection Locations">
+					<param name="Local" value="Editor\EditorTabMaster.html#Sections">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Scenario Information">
+					<param name="Local" value="Editor\EditorTabMaster.html#Scenario">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Images Page">
+				<param name="Local" value="Editor\EditorTabImages.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Add Transparency">
+					<param name="Local" value="Editor\EditorTabImages.html#Transparency">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Image File List">
+					<param name="Local" value="Editor\EditorTabImages.html#Files">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Class Image List">
+					<param name="Local" value="Editor\EditorTabImages.html#Images">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Graphics Information">
+					<param name="Local" value="Editor\EditorTabImages.html#Information">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Variables Page">
+				<param name="Local" value="Editor\EditorTabVariables.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Category Selection">
+					<param name="Local" value="Editor\EditorTabVariables.html#Category">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Variable List">
+					<param name="Local" value="Editor\EditorTabVariables.html#Variables">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Entities Page">
+				<param name="Local" value="Editor\EditorTabEntities.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Category Selection">
+					<param name="Local" value="Editor\EditorTabEntities.html#Category">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Image Stack">
+					<param name="Local" value="Editor\EditorTabEntities.html#Image">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Entity List">
+					<param name="Local" value="Editor\EditorTabEntities.html#Entities">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Factions Page">
+				<param name="Local" value="Editor\EditorTabFactions.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Change Colors">
+					<param name="Local" value="Editor\EditorTabFactions.html#Colors">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Faction List">
+					<param name="Local" value="Editor\EditorTabFactions.html#Factions">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Areas Page">
+				<param name="Local" value="Editor\EditorTabAreas.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Map Settings">
+					<param name="Local" value="Editor\EditorTabAreas.html#Map">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Site Edit Mode">
+					<param name="Local" value="Editor\EditorTabAreas.html#Mode">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Selected Site">
+					<param name="Local" value="Editor\EditorTabAreas.html#Site">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Map View">
+					<param name="Local" value="Editor\EditorTabAreas.html#Map">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Section Location">
+				<param name="Local" value="Editor\EditorViewLocation.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Inline Option">
+					<param name="Local" value="Editor\EditorViewLocation.html#Inline">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Section Path">
+					<param name="Local" value="Editor\EditorViewLocation.html#Section">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Browse Button">
+					<param name="Local" value="Editor\EditorViewLocation.html#Browse">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Status Bar">
+				<param name="Local" value="Editor\EditorViewStatus.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Message Field">
+					<param name="Local" value="Editor\EditorViewStatus.html#Message">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Mouse Position">
+					<param name="Local" value="Editor\EditorViewStatus.html#Position">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Editor Menus">
+			<param name="Local" value="Editor\EditorMenus.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File Menu">
+				<param name="Local" value="Editor\EditorMenuFile.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="New">
+					<param name="Local" value="Editor\EditorMenuFile.html#New">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Open">
+					<param name="Local" value="Editor\EditorMenuFile.html#Open">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Revert">
+					<param name="Local" value="Editor\EditorMenuFile.html#Revert">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save">
+					<param name="Local" value="Editor\EditorMenuFile.html#Save">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save As">
+					<param name="Local" value="Editor\EditorMenuFile.html#SaveAs">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save All">
+					<param name="Local" value="Editor\EditorMenuFile.html#SaveAll">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exit">
+					<param name="Local" value="Editor\EditorMenuFile.html#Exit">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Edit Menu">
+				<param name="Local" value="Editor\EditorMenuEdit.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Scenario">
+					<param name="Local" value="Editor\EditorMenuEdit.html#Scenario">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Images">
+					<param name="Local" value="Editor\EditorMenuEdit.html#Images">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Variables">
+					<param name="Local" value="Editor\EditorMenuEdit.html#Variables">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Entities">
+					<param name="Local" value="Editor\EditorMenuEdit.html#Entities">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Factions">
+					<param name="Local" value="Editor\EditorMenuEdit.html#Factions">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Areas">
+					<param name="Local" value="Editor\EditorMenuEdit.html#Areas">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="View Menu">
+				<param name="Local" value="Editor\EditorMenuView.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Animation">
+					<param name="Local" value="Editor\EditorMenuView.html#Animation">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Flags">
+					<param name="Local" value="Editor\EditorMenuView.html#ShowFlags">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Grid">
+					<param name="Local" value="Editor\EditorMenuView.html#ShowGrid">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Owner">
+					<param name="Local" value="Editor\EditorMenuView.html#ShowOwner">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show Variable">
+					<param name="Local" value="Editor\EditorMenuView.html#ShowVariable">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Center Site">
+					<param name="Local" value="Editor\EditorMenuView.html#CenterSite">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Zoom">
+					<param name="Local" value="Editor\EditorMenuView.html#Zoom">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Performance">
+					<param name="Local" value="Editor\EditorMenuView.html#Performance">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Save Window">
+					<param name="Local" value="Editor\EditorMenuView.html#SaveWindow">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Help Menu">
+				<param name="Local" value="Editor\EditorMenuHelp.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Contents">
+					<param name="Local" value="Editor\EditorMenuHelp.html#Contents">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="TabPage">
+					<param name="Local" value="Editor\EditorMenuHelp.html#TabPage">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ReadMe">
+					<param name="Local" value="Editor\EditorMenuHelp.html#ReadMe">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WhatsNew">
+					<param name="Local" value="Editor\EditorMenuHelp.html#WhatsNew">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Hexkit">
+					<param name="Local" value="Editor\EditorMenuHelp.html#About">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Editor Dialogs">
+			<param name="Local" value="Editor\EditorDialogs.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="About Hexkit">
+				<param name="Local" value="Other\DlgAbout.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Connections">
+				<param name="Local" value="Editor.Dialog\DlgChangeConnections.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Entity Class">
+				<param name="Local" value="Editor.Dialog\DlgChangeEntity.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Text Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeEntityText.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Images Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeEntityImages.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Variables Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeEntityVars.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Abilities Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeEntityAbilities.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Other Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeEntityOther.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Entity Instance">
+				<param name="Local" value="Editor.Dialog\DlgChangeTemplate.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Text Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeTemplateText.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Frame Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeTemplateFrame.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Variables Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeTemplateVars.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Faction">
+				<param name="Local" value="Editor.Dialog\DlgChangeFaction.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Text Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionText.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Variables Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionVars.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Supply Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionSupply.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Classes Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionClasses.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Entities Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionEntities.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Conditions Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionConditions.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Player Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeFactionPlayer.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Faction Colors">
+				<param name="Local" value="Editor.Dialog\DlgChangeColors.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Frame">
+				<param name="Local" value="Editor.Dialog\DlgChangeFrame.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Home Sites">
+				<param name="Local" value="Editor.Dialog\DlgChangeHomes.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Identifier">
+				<param name="Local" value="Editor.Dialog\DlgChangeIdentifier.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Image">
+				<param name="Local" value="Editor.Dialog\DlgChangeImage.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Information">
+				<param name="Local" value="Editor.Dialog\DlgChangeInformation.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Map Geometry">
+				<param name="Local" value="Editor.Dialog\DlgChangeGeometry.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Size Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeGeometrySize.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Structure Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeGeometryStructure.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Overlay Image">
+				<param name="Local" value="Editor.Dialog\DlgChangeOverlay.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Placement Sites">
+				<param name="Local" value="Editor.Dialog\DlgChangePlacements.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Site Contents">
+				<param name="Local" value="Editor.Dialog\DlgChangeSite.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Terrain Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeSiteTerrain.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Other Page">
+					<param name="Local" value="Editor.Dialog\DlgChangeSiteOther.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Variable">
+				<param name="Local" value="Editor.Dialog\DlgChangeVariable.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Show Gauges">
+				<param name="Local" value="Other\DlgShowGauges.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Show Variable">
+				<param name="Local" value="Other\DlgShowVariable.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Copyright">
+		<param name="Local" value="Other\Copyright.html">
+		</OBJECT>
+</UL>
+</BODY>
+</HTML>

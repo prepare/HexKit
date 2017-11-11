@@ -1,0 +1,123 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <RoutedUICommand x:Key="fileRevertCommand" Text="Revert">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+R</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="fileSaveAsCommand" Text="Save As" />
+  <RoutedUICommand x:Key="fileSaveAllCommand" Text="Save All">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+S</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="fileExitCommand" Text="Exit">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Alt+F4</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="editMasterCommand" Text="Master">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+M</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="editImagesCommand" Text="Images">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+I</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="editVariablesCommand" Text="Variables">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+V</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="editEntitiesCommand" Text="Entities">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+E</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="editFactionsCommand" Text="Factions">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+F</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="editAreasCommand" Text="Areas">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+A</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewAnimationCommand" Text="Animation">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+A</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewShowFlagsCommand" Text="Show Flags">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+F</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewShowGridCommand" Text="Show Grid">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+G</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewShowOwnerCommand" Text="Show Owner">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+O</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewShowGaugesCommand" Text="Show Gauges">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+U</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewShowVariableCommand" Text="Show Variable">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Shift+V</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewCenterSiteCommand" Text="Center Site">
+    <RoutedUICommand.InputGestures>
+      <!--<KeyGesture>C</KeyGesture>-->
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewZoomStdCommand" Text="Standard">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+Z</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewZoomInCommand" Text="Zoom In">
+    <RoutedUICommand.InputGestures>
+      <!--<KeyGesture>Z</KeyGesture>-->
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewZoomOutCommand" Text="Zoom Out">
+    <RoutedUICommand.InputGestures>
+      <!--<KeyGesture>X</KeyGesture>-->
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="viewBitmapGridCommand" Text="Use Bitmap Grid" />
+  <RoutedUICommand x:Key="viewOpaqueImagesCommand" Text="Use Opaque Images" />
+  <RoutedUICommand x:Key="viewStaticArrowsCommand" Text="Use Static Arrows" />
+  <RoutedUICommand x:Key="viewStaticMarkerCommand" Text="Use Static Marker" />
+  <RoutedUICommand x:Key="viewThemeSystemCommand" Text="Use System Theme" />
+  <RoutedUICommand x:Key="viewThemeClassicCommand" Text="Use Classic Theme" />
+  <RoutedUICommand x:Key="viewThemeLunaCommand" Text="Use Luna Theme" />
+  <RoutedUICommand x:Key="viewThemeLunaHomesteadCommand" Text="Use Luna Homestead Theme" />
+  <RoutedUICommand x:Key="viewThemeLunaMetallicCommand" Text="Use Luna Metallic Theme" />
+  <RoutedUICommand x:Key="viewThemeRoyaleCommand" Text="Use Royale Theme" />
+  <RoutedUICommand x:Key="viewThemeAeroCommand" Text="Use Aero Theme" />
+  <RoutedUICommand x:Key="viewThemeAero2Command" Text="Use Aero 2 Theme" />
+  <RoutedUICommand x:Key="viewThemeAeroLiteCommand" Text="Use Aero Lite Theme" />
+  <RoutedUICommand x:Key="viewSaveWindowCommand" Text="Save Window" />
+  <RoutedUICommand x:Key="helpTabPageCommand" Text="Tab Page">
+    <RoutedUICommand.InputGestures>
+      <KeyGesture>Ctrl+F1</KeyGesture>
+    </RoutedUICommand.InputGestures>
+  </RoutedUICommand>
+  <RoutedUICommand x:Key="helpReadMeCommand" Text="Read Me" />
+  <RoutedUICommand x:Key="helpWhatsNewCommand" Text="What’s New" />
+  <RoutedUICommand x:Key="helpAboutCommand" Text="About Hexkit" />
+</ResourceDictionary>
+  

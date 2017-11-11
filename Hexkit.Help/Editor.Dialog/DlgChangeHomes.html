@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="HtmlHelp.css" />
+  <title>Change Home Sites Dialog</title>
+</head>
+<body>
+  <h1>Change Home Sites Dialog</h1>
+  <p>This dialog allows you to edit the home sites of all player factions.</p>
+  <ul>
+    <li><a href="#Map">Map View</a></li>
+    <li><a href="#Factions">Faction List</a></li>
+    <li><a href="#Site">Selected Site</a></li>
+    <li><b>Drag</b> the vertical splitter between <a href="#Map">Map View</a> and <a href="#Factions">Faction List</a> to adjust their respective share of the current dialog width.</li>
+    <li>Choose <b>OK</b> or press <b>Enter</b> when the focus is not on another button to accept any changes made and dismiss the dialog.</li>
+    <li>Choose <b>Cancel</b> or press <b>Escape</b> to discard any changes made and dismiss the dialog. Closing the window using <b>X (Close)</b> or <b>Alt+F4</b> has the same effect.</li>
+    <li>Choose <b>Help</b> or press <b>F1</b> to show this help page.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. You cannot assign the same home site to more than one faction.</p>
+  <p>2. You may define home sites that are initially unowned, or not owned by the faction whose home they are. In that case, you may want to ensure that the map site can be captured, or that the rule script transfers ownership of the site to the proper faction.</p>
+  <p>3. Changing home sites marks the Areas section as changed, not the Factions section, because all map locations are stored with the Areas section.</p>
+  <h2><a name="Map">Map View</a></h2>
+  <p>The left side of this dialog is taken up by a map view. The site corresponding to the first entry in the <a href="#Factions">Faction List</a> is initially centered and selected.</p>
+  <ul>
+    <li><b>Highlighted</b> sites indicate faction home sites. Each highlighted site corresponds to one entry in the <b>Faction List</b>.</li>
+    <li><b>Left-click</b> on a site to select it. If the site is highlighted, its corresponding entry is also selected in the <b>Faction List</b>.</li>
+    <li><b>Double-click</b> on a site that is <em>not</em> highlighted to set its coordinates as the new home site of the selected faction in the <b>Faction List</b>, as with the <b>Set As Home Site</b> button. The site is now highlighted.</li>
+  </ul>
+  <h2><a name="Factions">Faction List</a></h2>
+  <p>This list shows all player factions and their current home sites.</p>
+  <ul>
+    <li>Column <b>Faction</b> shows the unique internal identifiers of all factions currently defined on the <a href="EditorTabFactions.html">Factions Page</a>. The list entries appear in the same order as on that page.</li>
+    <li>Column <b>Home</b> shows the map coordinates of the current home site of each faction. The default is (–,–) for all factions, indicating that no home site is defined.</li>
+    <li><b>Left-click</b> on an entry to select it. The corresponding site, if any, is also selected in the <a href="#Map">Map View</a>, and scrolled into view if necessary.</li>
+    <li><b>Double-click</b> on a selected entry to re-select the corresponding site in the <a href="#Map">Map View</a>.</li>
+  </ul>
+  <h2><a name="Site">Selected Site</a></h2>
+  <p>This box shows information on the selected site, if any. Click on a site in the <a href="#Map">Map View</a> to select it. You can also click on its corresponding entry in the <a href="#Factions">Faction List</a>.</p>
+  <ul>
+    <li><b>Site</b> (in the box title) shows the map coordinates of the selected site.</li>
+    <li><b>Owner</b> shows the unique internal identifiers of the faction that owns the selected site, or “(unowned)” if the site has no owner.</li>
+    <li><b>Units Can Capture</b> shows a check mark if the selected site contains at least one terrain with the “Capture” ability.</li>
+    <li>Choose <b>Clear Home Site (Alt+C)</b> to clear the current home site of the selected faction in the <b>Faction List</b>. This button appears only when the selected site is already in the list.</li>
+    <li>Choose <b>Set As Home Site (Alt+H)</b> to set the selected site as the new home site of the selected faction in the <b>Faction List</b>. This button appears only when the selected site is not in the list.</li>
+  </ul>
+</body>
+</html>

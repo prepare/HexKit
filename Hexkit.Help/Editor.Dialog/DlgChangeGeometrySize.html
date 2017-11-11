@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <link href="HtmlHelp.css" rel="stylesheet" type="text/css" />
+  <title>Change Map Geometry Dialog: Size Page</title>
+</head>
+<body>
+  <h1>Change Map Geometry Dialog: Size Page</h1>
+  <p>This tab page of the <a href="DlgChangeGeometry.html">Change Map Geometry</a> dialog allows you to change the number of site rows and columns by moving any of the map edges.</p>
+  <ul>
+    <li><a href="#Edges">Move Edges</a></li>
+    <li><a href="#OldSize">Old Size</a></li>
+    <li><a href="#NewSize">New Size</a></li>
+    <li>See <a href="DlgChangeGeometry.html">Change Map Geometry</a> for a description of other controls in this dialog.</li>
+  </ul>
+  <h2><a name="Edges">Move Edges</a></h2>
+  <p>This box allows you to move any or all map edges. Grow the map with <em>negative</em> movements of the left and top edge, and with <em>positive</em> movements of the right and bottom edge. Shrink the map with the opposite movements.</p>
+  <ul>
+    <li>Use <b>Left (Alt+L)</b> to move the left map edge.
+      <ul>
+        <li>Each negative unit <em>adds</em> one column to the left edge.</li>
+        <li>Each positive unit <em>removes</em> one column from the left edge.</li>
+      </ul>
+    </li>
+    <li>Use <b>Top (Alt+T)</b> to move the top map edge.
+      <ul>
+        <li>Each negative unit <em>adds</em> one column to the top edge.</li>
+        <li>Each positive unit <em>removes</em> one column from the top edge.</li>
+      </ul>
+    </li>
+    <li>Use <b>Right (Alt+R)</b> to move the right map edge.
+      <ul>
+        <li>Each negative unit <em>removes</em> one column from the right edge.</li>
+        <li>Each positive unit <em>adds</em> one column to the right edge.</li>
+      </ul>
+    </li>
+    <li>Use <b>Bottom (Alt+B)</b> to move the bottom map edge.
+      <ul>
+        <li>Each negative unit <em>removes</em> one column from the bottom edge.</li>
+        <li>Each positive unit <em>adds</em> one column to the bottom edge.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>All entry fields start out with a default value of zero, indicating that the corresponding map edge should remain unchanged.</p>
+  <h2><a name="OldSize">Old Size</a></h2>
+  <p>This box shows the map size before any edges were moved.</p>
+  <ul>
+    <li>The <b>Width</b> field shows the old map width, in site columns.</li>
+    <li>The <b>Height</b> field shows the old map height, in site rows.</li>
+  </ul>
+  <h2><a name="NewSize">New Size</a></h2>
+  <p>This box shows the effective map size if the current values in the <a href="#Edges">Move Edges</a> box were to take effect.</p>
+  <ul>
+    <li>The <b>Width</b> field shows the new map width, in site columns.</li>
+    <li>The <b>Height</b> field shows the new map height, in site rows.</li>
+  </ul>
+  <h3>Remarks</h3>
+  <p>1. When you choose <b>OK</b> to close the dialog, the new map dimensions shown in <a href="#NewSize">New Size</a> will be checked against the valid range of 1 to 10,000 sites. A message will notify you if the new width or height is outside the valid range, and the dialog will stay open.</p>
+  <p>2. If the new map size would cause the deletion of any site contents other than the default terrain stack, another message will appear and request that you confirm the operation.</p>
+</body>
+</html>
